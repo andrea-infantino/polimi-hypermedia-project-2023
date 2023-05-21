@@ -1,0 +1,14 @@
+html, body
+{
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    height: 100%; 
+}
+
+body
+{
+  margin: 0;
+  background-image: url("~/assets/img/wallpaper_1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+}
