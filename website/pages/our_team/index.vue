@@ -27,6 +27,9 @@
     flex-direction: row;
     justify-content: center;
     gap: 50px;
+    width: auto;
+    max-width: 1200px;
+    align-self: center;
   }
 
   main

@@ -48,11 +48,12 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    width: 100%;
+    max-width: 520px;
   }
   .person-img
   {
-    height: 100%;
+    border-radius: 5px;
+    height: 420px;
     width: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-image:url('~/assets/img/user_default_photo.jpg');
@@ -61,10 +62,14 @@
   {
     display: flex;
     flex-direction: row;
-    justify-content:baseline;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 60px;
-    margin: 30px;
-    height: 72vh;
+    width: auto;
+    max-width: 1000px;
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   .person-name-and-surname
   {
@@ -79,6 +84,7 @@
     padding-bottom: 10px;
     width: fit-content;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
   }
   .person-role
   {
