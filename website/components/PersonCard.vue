@@ -1,13 +1,15 @@
 <template>
+    <NuxtLink :to = "link" >
     <div class="card">
         <img class="img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/People/${id}.jpg`" />
         <span class="name_surname">{{ name }} {{ surname }}</span>
         <span class="role">{{ role }}</span>
     </div>
+</NuxtLink>
 </template>
 
 <script setup>
-    const props = defineProps(['id', 'name', 'surname', 'role']);
+    const props = defineProps(['id', 'name', 'surname', 'role', 'link']);
 </script>
 
 <style>
@@ -47,6 +49,7 @@
         flex-flow: column;
         padding: 10px;
         border-radius: 5px;
+        text-decoration: none;
     }
     .card:hover {
         background-color:rgba(248, 248, 255, 0.8);

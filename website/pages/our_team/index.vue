@@ -1,16 +1,13 @@
 <template>
   <main>
     <div class="title-area">
-      <div class="breadcrumbs">
-        Home / Our Team
-      </div>
       <div class="title">
         OUR TEAM
       </div>
     </div>
 
     <div id="list-container">
-      <PersonCard v-for = "person of people" :id = "person.id" :name = "person.name" :surname = "person.surname" :role = "person.role" />
+      <PersonCard v-for = "person of people" :id = "person.id" :name = "person.name" :surname = "person.surname" :role = "person.role" :link = "'/our_team/' + person.id" />
     </div>
 
   </main>
@@ -38,7 +35,6 @@
     flex-direction: column;
     justify-content: center;
     align-content: flex-start;
-    gap: 10px;
   }
 
   .title-area {
@@ -55,11 +51,6 @@
     margin: 20px;
     text-align: center;
     color: black;
-  }
-  .breadcrumbs {
-    color:black;
-    position: absolute;
-    margin-left: 30px;
   }
 
 </style>

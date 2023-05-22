@@ -6,6 +6,6 @@
 <style>
  a {
   color: aliceblue;
-  text-decoration: underline;
+  text-decoration: none;
  }
 </style>

@@ -1,6 +1,9 @@
 html, body
 {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: medium;
+    text-align: justify;
+    text-decoration: none;
     height: 100%; 
 }
 
