@@ -25,7 +25,7 @@
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
-      justify-content: center;
+      justify-content:center;
       gap: 50px;
     }
   
@@ -53,10 +53,5 @@
       text-align: center;
       color: black;
     }
-    .breadcrumbs {
-      color:black;
-      position: absolute;
-      margin-left: 30px;
-    }
-  
+    
   </style>
