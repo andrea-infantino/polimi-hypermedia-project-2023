@@ -7,7 +7,7 @@
       </div>
   
       <div id="list-container">
-        <ProjectCard v-for = "project of Projects" :id = "project.id" :title  = "project.title" :presentation_text = "project.presentation_text" :score = "project.score" :link = "'/projects/' + project.id"/>
+        <ProjectCard v-for = "project of Projects" :id = "project.id" :title  = "project.title" :link = "'/projects/' + project.id"/>
       </div>
   
     </main>
