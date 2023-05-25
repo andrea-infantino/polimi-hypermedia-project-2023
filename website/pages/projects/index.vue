@@ -9,12 +9,17 @@
       <div id="list-container">
         <ProjectCard v-for = "project of Projects" :id = "project.id" :title  = "project.title" :link = "'/projects/' + project.id"/>
       </div>
+      
   
     </main>
   </template>
   
   <script setup>
     const { data: Projects } = await useFetch('/api/projects')
+  </script>
+
+  <script>
+    //prova ciclo 
   </script>
   
   

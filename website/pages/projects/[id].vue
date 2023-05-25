@@ -30,7 +30,7 @@
     export default defineNuxtComponent({
         async asyncData() {
             const route = useRoute()
-            const person = await $fetch('/api/projects/' + route.params.id)
+            const project = await $fetch('/api/projects/' + route.params.id)
 
             return {
                 project
