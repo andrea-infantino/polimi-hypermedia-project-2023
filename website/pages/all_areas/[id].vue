@@ -9,10 +9,9 @@
         <div class="Area_container">
             <img class="area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.jpg`" />
             <div class="area-info">
-                <!-- <span class="area-name">{{ area.name }} </span> -->
                 <span class="area-description"> {{ area.description }} </span>
-                <span>
-                    <b>Projects:</b> <br>
+                <span class="related-projects">
+                    <b>Related projects:</b> <br> <br>
                     <div class="area-projects-container">
                         <img class="area-imgs" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.jpg`" />
                         <img class="area-imgs" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.jpg`" />
@@ -30,7 +29,6 @@
         async asyncData() {
             const route = useRoute()
             const area = await $fetch('/api/all_areas/' + route.params.id)
-
             return {
                 area
             }
@@ -46,14 +44,20 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
-    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 50px;
+    max-width: 75%;
+    margin-top: 30px;
   }
   .area-img
   {
+    display: flex;
+    width: 40%;
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-image:url('~/assets/img/user_default_photo.jpg');
   }
@@ -61,31 +65,37 @@
   .area-imgs
   {
     border-radius: 5px;
-    height: 220px;
-    width: auto;
+    height: auto;
+    width: 35%;
+    margin: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .related-projects{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
  
   .area-projects-container
   {
     display: flex;
+    gap: 5px;
     flex-wrap: wrap;
-    flex-direction:column;
-    justify-content: baseline;
+    flex-direction: row;
+    justify-content: center;
   }
   .area-projects-container>*
   {
     padding: 3px;
-    text-decoration: underline;
   }
+
   .area-projects-container>*:hover
   {
-    text-decoration: none;
+    transform: translate3d(0px, -5px, 5px);
     background-color: ghostwhite;
     opacity: 0.9;
     color: black;
-    cursor: pointer;
-    width: fit-content;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 </style>
