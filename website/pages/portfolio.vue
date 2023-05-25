@@ -14,6 +14,11 @@
 
         <div class="most_relevant_projects">
             <h1 class="header">Our most relevant projects</h1>
+            
+            <div id="list-container">
+                <ProjectCard v-for = "project of Projects" :id = "project.id" :title  = "project.title" :link = "'/projects/' + project.id"/>
+            </div>
+
         </div>
 
         <div class="links">
@@ -23,31 +28,14 @@
     </main>
 </template>
 
+<script setup>
+    const { data: Projects } = await useFetch('/api/portfolio')
+</script>
+
 <style>
-    .title-area {
-    position: sticky;
-    top: 0;
-    padding: 10px;
-    background-color:white;
-    opacity: 0.9;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    .title {
-    font-weight: bold;
-    font-size: 40px;
-    margin: 20px;
-    text-align: center;
-    color: black;
-    }
-
-    .links {
-        font-size: 30px;
-        text-align: center;
-    }
 
     .text-content {
-        background-color: #f9f7f281;
+        background-color: #fff6f6d2;
         -webkit-box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
         box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
         padding: 40px;
@@ -59,7 +47,7 @@
     }
 
     .text-content:hover {
-        background-color: #f9f7f2d3;
+        background-color: rgba(255, 252, 244, 0.979);
         box-shadow: 40px 40px 80px 0  rgba(172,172,172,.5);
     }
 
