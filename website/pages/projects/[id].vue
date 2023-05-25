@@ -11,13 +11,18 @@
             
             <div class="project-info">
                 <span class="project-title">{{ project.title }} </span>
-                <span class="project-area">{{ project.area }}</span>
+                <span>
+                    <b>Areas:</b> <br>
+                    <div class="project-area-container-tab">
+                        <span v-for = "area of project.Areas">• {{ area.name }}</span>
+                    </div>
+                </span>
                 <span class="description-text"><b>Description:</b> <br> 
                     <span class="tab">{{ project.presentation_text }}</span></span>
                 <span>
                     <b>Team:</b> <br>
                     <div class="project-people-container-tab">
-                        <span v-for = "person of project.People">• {{ person.surname }}</span>
+                        <span v-for = "person of project.People">• {{ person.surname }} <br> </span>
                     </div>
                 </span>
                 
@@ -90,11 +95,11 @@
     flex-direction:column;
     justify-content: baseline;
   }
-  .project-people-container>* {
+  .project-people-container>*, .project-area-container>* {
     padding: 3px;
     text-decoration: underline;
   }
-  .project-people-container>*:hover {
+  .project-people-container>*:hover, .project-area-container>*:hover {
     text-decoration: none;
     background-color: ghostwhite;
     opacity: 0.9;

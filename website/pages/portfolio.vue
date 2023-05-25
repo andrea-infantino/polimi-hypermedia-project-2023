@@ -22,7 +22,7 @@
         </div>
 
         <div class="links">
-            <NuxtLink id="to_all_projects" to="/all_projects" class="my_link">All Projects</NuxtLink><br>
+            <NuxtLink id="to_all_projects" to="/projects" class="my_link">All Projects</NuxtLink><br>
             <NuxtLink id="to_projects_by_area" to="/projects_by_area" class="my_link">Projects by Area</NuxtLink>
         </div>
     </main>

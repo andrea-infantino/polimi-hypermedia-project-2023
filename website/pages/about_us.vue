@@ -76,11 +76,14 @@
         color: black;
     }
     
+    .links {
+        text-align: center;
+    }
+
     .my_link {
         color: rgba(255, 255, 255, 0.826);
         font-size: 30px;
         font-weight: 700;
-        text-align: center;
         text-decoration: none;
         margin-left: 40px;
         margin-right: 40px;

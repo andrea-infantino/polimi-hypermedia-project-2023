@@ -7,7 +7,7 @@
         </div>
         <div class="contacts-info">
             <div class="mail-number">
-                <div class="text-1">Contact us for more information about our investments</div><br>
+                <div class="text-1">Contact us for more information<br>about our investments</div><br>
                 <a class="num-1" href="tel:123-456-7890">123-456-7890</a><br>
                 <a class="num-2" href="tel:123-456-7891">123-456-7891</a><br><br>
                 <a class="mail" href="mailto:info@webwizards.com">
