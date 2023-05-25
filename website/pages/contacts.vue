@@ -13,9 +13,9 @@
                 <a class="mail" href="mailto:info@webwizards.com">
                     <strong>info@webwizards.com</strong></a>
                 <div class="social-media">
-                    <a href="https://twitter.com/home"><img src="../assets/img/contacts/twitter_logo.png" alt="Twitter Logo" style="width:35px;height:40px;padding-right:10px;"></a>
-                    <a href="https://www.instagram.com"><img src="../assets/img/contacts/instagram_logo.png" alt="Instagram Logo" style="width:35x;height:35px;padding-right:10px;"></a>
-                    <a href="https://www.linkedin.com"><img src="../assets/img/contacts/linkedin_logo.png" alt="LinkedIn Logo" style="width:40px;height:35px;"></a>
+                    <a href="https://twitter.com/home"><img src="../assets/img/contacts/twitter_logo.png" alt="Twitter Logo" class="twitter-logo"></a>
+                    <a href="https://www.instagram.com"><img src="../assets/img/contacts/instagram_logo.png" alt="Instagram Logo" class="instagram-logo"></a>
+                    <a href="https://www.linkedin.com"><img src="../assets/img/contacts/linkedin_logo.png" alt="LinkedIn Logo" class="linkedin-logo"></a>
                 </div>
             </div>
             <div class="contacts-img">
@@ -42,24 +42,7 @@
   };
 </script>
 
-<style>
-    .title-area {
-    position: sticky;
-    top: 0;
-    padding: 10px;
-    background-color:white;
-    opacity: 0.9;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    .title {
-    font-weight: bold;
-    font-size: 40px;
-    margin: 20px;
-    text-align: center;
-    color: black;
-    }
-
+<style scoped>
     .map, .contacts-info {
         padding: 20px;
         justify-content: space-evenly;
@@ -72,6 +55,11 @@
         color:white;
     }
 
+    .mail, .num-1, .num-2, .address {
+        color: white;
+        font-size: 19px;
+    }
+
     .mail:hover, .num-1:hover, .num-2:hover {
         text-decoration: underline;
     }
@@ -81,12 +69,30 @@
         font-size: 30px;
     }
 
-    .address {
-        font-size: 18px;
-    }
-
     .social-media {
         padding-top: 10px;
+    }
+
+    .twitter-logo {
+        width: 35px;
+        height: 40px;
+        padding-right: 10px;
+    }
+
+    .instagram-logo {
+        width: 35px;
+        height: 35px;
+        padding-right: 10px;
+    }
+
+    .linkedin-logo {
+        width: 40px;
+        height: 35px;
+    }
+
+    .twitter-logo:hover, .instagram-logo:hover, .linkedin-logo:hover {
+        transform: scale3d(1.3, 1.3, 1.3);
+        transition: ease-in-out 0.3s;
     }
 
 </style>

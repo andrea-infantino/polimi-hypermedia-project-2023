@@ -1,12 +1,12 @@
 <template>
     <NuxtLink :to = "link" >
-    <div class="card">
+        <div class="card">
 
         
-        <span class="project_title">{{ title }}</span>
-        <span class="area">{{ area }}</span>
-    </div>
-</NuxtLink>
+            <span class="project_title">{{ title }}</span>
+            <span class="area">{{ area }}</span>
+        </div>
+    </NuxtLink>
 </template>
 
 <script setup>

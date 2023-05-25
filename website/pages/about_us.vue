@@ -38,22 +38,6 @@
 </template>
 
 <style>
-    .title-area {
-    position: sticky;
-    top: 0;
-    padding: 10px;
-    background-color:white;
-    opacity: 0.9;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    .title {
-    font-weight: bold;
-    font-size: 40px;
-    margin: 20px;
-    text-align: center;
-    color: black;
-    }
 
     .intro, .outro {
         color:white;
@@ -62,16 +46,17 @@
     }
 
     .about-vision, .about-partnerships, .about-team, .about-activities {
-        background-color: #f9f7f281;
+        background-color: #fff6f6d2;
         -webkit-box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
         box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
         padding: 40px;
         margin: 30px;
         height: 100%;
+        border-radius: 10px;
     }
 
     .about-vision:hover, .about-partnerships:hover, .about-team:hover, .about-activities:hover {
-        background-color: #f9f7f2d3;
+        background-color: rgba(255, 252, 244, 0.979);
         box-shadow: 40px 40px 80px 0  rgba(172,172,172,.5);
     }
 
@@ -90,10 +75,22 @@
         line-height: 1.6;
         color: black;
     }
-
-    .links {
+    
+    .my_link {
+        color: rgba(255, 255, 255, 0.826);
         font-size: 30px;
+        font-weight: 700;
         text-align: center;
+        text-decoration: none;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .my_link:hover {
+        color: #ffffff;
+        font-size: 32px;
+        font-weight: 700;
+        text-decoration: underline;
     }
     
 </style>
