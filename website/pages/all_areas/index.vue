@@ -7,7 +7,7 @@
     </div>
 
     <div id="list-container">
-      <SingleArea v-for = "area of areas" :id = "area.id" :name = "area.Name" :link = "'/all_areas/' + area.id" />
+      <SingleArea v-for = "area of areas" :id = "area.id" :name = "area.name" :link = "'/all_areas/' + area.id" />
     </div>
   </main>
 </template>
