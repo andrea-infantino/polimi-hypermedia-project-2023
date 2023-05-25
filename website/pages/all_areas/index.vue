@@ -1,57 +1,56 @@
 <template>
-    <main>
-      <div class="title-area">
-        <div class="title">
-          ALL AREAS
-        </div>
+  <main>
+    <div class="title-area">
+      <div class="title">
+        ALL AREAS
       </div>
+    </div>
+
+    <div id="list-container">
+      <SingleArea v-for = "area of areas" :id = "area.id" :name = "area.Name" :link = "'/all_areas/' + area.id" />
+    </div>
+  </main>
+</template>
   
-      <div id="list-container">
-        <SingleArea v-for = "area of Areas" :id = "area.id" :name = "area.Name" :description = "area.Description" />
-      </div>
-  
-    </main>
-  </template>
-  
-  <script setup>
-    const { data: Areas } = await useFetch('/api/all_areas')
-  </script>
+<script setup>
+  const { data: areas } = await useFetch('/api/all_areas')
+</script>
   
   
-  <style>
-    #list-container
-    {
-      padding: 30px;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content:center;
-      gap: 50px;
-    }
+<style>
+  #list-container
+  {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  main
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 10px;
+  }
+
+  .title-area {
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    background-color:white;
+    opacity: 0.9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .title {
+    font-weight: bold;
+    font-size: 40px;
+    margin: 20px;
+    text-align: center;
+    color: black;
+  }
   
-    main
-    {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-content: flex-start;
-      gap: 10px;
-    }
-  
-    .title-area {
-      position: sticky;
-      top: 0;
-      padding: 10px;
-      background-color:white;
-      opacity: 0.9;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    .title {
-      font-weight: bold;
-      font-size: 40px;
-      margin: 20px;
-      text-align: center;
-      color: black;
-    }
-    
-  </style>
+</style>

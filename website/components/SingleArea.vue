@@ -1,13 +1,14 @@
 <template>
-    <div class="area">
-        <img class="img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${id}.jpg`" />
-        <span class="name">{{ name }}</span>
-        <span class="description">{{ description }}</span>
-    </div>
+    <NuxtLink :to = "link">
+        <div class="area">
+            <img class="img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${id}.jpg`"/>
+            <span class="name">{{ name }}</span>
+        </div>
+    </NuxtLink>
 </template>
 
 <script setup>
-    const props = defineProps(['id', 'name', 'description']);
+    const props = defineProps(['id', 'name', 'link']);
 </script>
 
 <style>
@@ -15,6 +16,7 @@
     {
         display: flex;
         border-radius: 5px;
+        margin: auto;
         vertical-align: middle;
         height: 300px;
         width: 300px;
@@ -29,11 +31,6 @@
         margin: 2px;
     }
 
-    .description{
-        font-size: 15px;
-        margin: 2px;
-    }
-
     .area
     {
         color: ghostwhite;
@@ -45,8 +42,9 @@
         background-color: transparent;
         text-align: center;
         flex-flow: column;
-        padding: 10px;
+        padding: 5px;
         border-radius: 5px;
+        max-width: 350px;
     }
     .area:hover {
         background-color:rgba(248, 248, 255, 0.8);
