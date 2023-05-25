@@ -29,6 +29,6 @@
     justify-content: center;
     align-self: center;
     gap: 50px;
-    max-width: 1100px;
+    max-width: 1200px;
   }
 </style>

@@ -20,15 +20,16 @@
         <span class="desc-container"><div class="space-between-line">Description:</div> 
           <span class="person-description tab">{{ person.description }}<div class="scrollable-desc"></div></span>
         </span>
+        <nuxt-link v-if="person.cv_link != null" id="person-cv" :to="`${person.cv_link}`" target="_blank">See {{ person.name }} {{ person.surname }}'s CV</nuxt-link>
       </div>
     </div>
 
     <hr class="separator " />
     
     <span class="person-projects-title">{{ person.name }} {{ person.surname }}'s projects:</span>    
-    <div class="person-projects-container">
-        <span v-for = "project of person.Projects">{{ project.title }}</span>
-    </div>
+      <div class="person-projects-container">
+          <NuxtLink v-for = "project of person.Projects" :to="`/projects/${project.id}`">{{ project.title }}</NuxtLink>
+      </div>
 
   </main>
 </template>
@@ -55,7 +56,7 @@
     justify-content: center;
     align-self: center;
     gap: 60px;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 30px;
   }
 
@@ -103,23 +104,48 @@
     align-self: center;
   }
 
-  .desc-container {
+  .desc-container
+  {
     overflow: hidden;
   }
 
   .person-description
   {
     overflow-y: scroll;
-    max-height: 190px;
+    max-height: 130px;
     -webkit-mask-image: -webkit-gradient(linear,right 75%,right bottom,from(black),to(rgba(0,0,0,0)));
   }
 
-  .person-description::-webkit-scrollbar{
+  .person-description::-webkit-scrollbar
+  {
     display: none;
   }
 
-  .scrollable-desc {
+  .scrollable-desc
+  {
     height: 40px;
+  }
+
+  #person-cv
+  {
+    font-size: medium;
+    color: black;
+    background-color: ghostwhite;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    width: fit-content;
+    opacity: 0.9;
+    align-self: center;
+    text-align: center;
+    padding: 5px;
+    transition: transform 0.5s, padding-left 0.5s, padding-right 0.5s;
+  }
+
+  #person-cv:hover
+  {
+    transform: translate3d(0px, -5px, 5px);
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .person-projects-title
@@ -147,16 +173,17 @@
     padding: 5px;
     width: fit-content;
     border-radius: 5px;
-    transition: background-color 0.5s, transform 0.5s, color 0.5s;
-  }
-
-  .person-projects-container>*:hover
-  {
-    transform: translate3d(0px, -5px, 5px);
     background-color: ghostwhite;
     opacity: 0.9;
     color: black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: padding 0.5s;
+  }
+
+  .person-projects-container>*:hover
+  {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .tab
