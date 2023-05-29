@@ -1,7 +1,7 @@
 <template>
     <NuxtLink :to = "link">
         <div class="area">
-            <img class="img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${id}.jpg`"/>
+            <img class="img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${id}.png`"/>
             <span class="name">{{ name }}</span>
         </div>
     </NuxtLink>
@@ -21,7 +21,6 @@
         height: 300px;
         width: 300px;
         margin-bottom: 10px;
-        background-image:url('~/assets/img/user_default_photo.jpg');
         background-size: cover;
     }
 

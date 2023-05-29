@@ -19,7 +19,6 @@
         height: 300px;
         width: 300px;
         margin-bottom: 10px;
-        background-image:url('~/assets/img/user_default_photo.jpg');
         background-size: cover;
     }
 

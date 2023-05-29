@@ -7,7 +7,7 @@
         </div>
         
         <div class="Area_container">
-            <img class="area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.jpg`" />
+            <img class="area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" />
             <div class="area-info">
                 <span class="area-description"> {{ area.description }} </span>
                 <span class="related-projects">
@@ -64,7 +64,6 @@
     margin-right: auto;
     margin-top: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-image:url('~/assets/img/user_default_photo.jpg');
   }
 
   .area-imgs
