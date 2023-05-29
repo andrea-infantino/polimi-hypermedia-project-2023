@@ -1,5 +1,6 @@
 <template>
     <div class = 'page'>
+        <Header />
         <slot />
     </div>
 </template>

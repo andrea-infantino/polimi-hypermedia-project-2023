@@ -41,21 +41,5 @@
       align-content: flex-start;
       gap: 10px;
     }
-  
-    .title-area {
-      position: sticky;
-      top: 0;
-      padding: 10px;
-      background-color:white;
-      opacity: 0.9;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    .title {
-      font-weight: bold;
-      font-size: 40px;
-      margin: 20px;
-      text-align: center;
-      color: black;
-    }
     
   </style>

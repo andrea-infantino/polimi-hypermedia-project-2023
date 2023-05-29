@@ -25,15 +25,27 @@ main
       color: ghostwhite;
 }
 
+.landmark
+{
+      color:black;
+      border-radius: 5px;
+      transition: 0.5s;
+      padding: 10px 20px 10px 20px;
+      align-self: center;
+      vertical-align: center;
+}
+
+.landmark:hover
+{
+      transform: translate3d(0px, -5px, 5px);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .title-area 
 {
-      position: sticky;
-      top: 0;
       padding: 10px;
       background-color:ghostwhite;
-      opacity: 0.9;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      z-index: 1;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
 }
 
 .title {
@@ -50,7 +62,7 @@ main
       color: black;
       font-weight: bolder;
       font-size: xx-large;
-      top: 25%;
+      top: 96px;
       margin-left: 20px;
       padding: 5px;
       border-radius: 5px;
