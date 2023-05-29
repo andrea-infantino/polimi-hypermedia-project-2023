@@ -1,27 +1,19 @@
 <template>
     <NuxtLink :to = "link" >
-        <div class="card">
-
-        
+        <div class="card">   
             <span class="project_title">{{ title }}</span>
-            <span class="area">{{ area }}</span>
         </div>
     </NuxtLink>
 </template>
 
 <script setup>
-    const props = defineProps(['id', 'score', 'title', 'presentation_text', 'link']);
+    const props = defineProps(['id', 'title', 'link']);
 </script>
 
 <style>
     .project_title {
         font-weight: bold;
         font-size: 20px;
-        margin: 2px;
-    }
-
-    .area {
-        font-size: 15px;
         margin: 2px;
     }
 
