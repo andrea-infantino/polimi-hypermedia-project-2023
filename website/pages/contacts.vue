@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="contacts-img">
-                <img alt="Team photo" src="../assets/img/contacts/contacts_photo.jpg" width="700" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <img alt="Team photo" src="../assets/img/contacts/contacts_photo.jpg" width="90%" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
             </div>
         </div>
         <div class="map">

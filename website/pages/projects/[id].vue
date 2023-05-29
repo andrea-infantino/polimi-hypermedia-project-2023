@@ -14,7 +14,7 @@
                 <span>
                     <b>Areas:</b> <br>
                     <div class="project-area-container-tab">
-                        <span v-for = "area of project.Areas">• {{ area.name }}</span>
+                        <NuxtLink v-for = "area of project.Areas" :to="`/all_areas/${area.id}`" class="area-person-link">• {{ area.name }}</NuxtLink>
                     </div>
                 </span>
                 <span class="description-text"><b>Description:</b> <br> 
@@ -22,7 +22,7 @@
                 <span>
                     <b>Team:</b> <br>
                     <div class="project-people-container-tab">
-                        <span v-for = "person of project.People">• {{ person.surname }} {{ person.name }} <br> </span>
+                        <NuxtLink v-for = "person of project.People" :to="`/our_team/${person.id}`" class="area-person-link">• {{ person.surname }} {{ person.name }} <br> </NuxtLink>
                     </div>
                 </span>
                 
@@ -107,5 +107,12 @@
     cursor: pointer;
     width: fit-content;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .area-person-link {
+    padding: 3px;
+    color: ghostwhite;
+  }
+  .area-person-link:hover {
+    text-decoration: underline;
   }
 </style>

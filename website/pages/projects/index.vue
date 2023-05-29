@@ -19,7 +19,6 @@
   </script>
 
   <script>
-    for
   </script>
   
   

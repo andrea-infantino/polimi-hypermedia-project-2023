@@ -11,12 +11,17 @@
             <div class="area-info">
                 <span class="area-description"> {{ area.description }} </span>
                 <span class="related-projects">
-                    <b>Related projects:</b> <br> <br>
-                    <div class="area-projects-container">
+                    <div class ="related-projects-title">
+                        <b>Related projects:</b> <br> <br>
+                    </div>
+                  <!--  <div class="area-projects-container">
                         <img class="area-imgs" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.jpg`" />
                         <img class="area-imgs" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.jpg`" />
                         <img class="area-imgs" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.jpg`" />
                         <img class="area-imgs" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.jpg`" />
+                    </div> -->
+                    <div class="related-projects-container">
+                        <NuxtLink v-for = "project of area.Projects" :to="`/projects/${project.id}`">{{ project.title }}</NuxtLink>
                     </div>
                 </span>
             </div>
@@ -76,26 +81,43 @@
     margin-left: auto;
     margin-right: auto;
   }
- 
-  .area-projects-container
+
+  .related-projects-title
   {
-    display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .area-projects-container>*
-  {
-    padding: 3px;
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-top: 20px;
+    align-self: center;
   }
 
-  .area-projects-container>*:hover
+  .related-projects-container
   {
-    transform: translate3d(0px, -5px, 5px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 700px;
+    align-self: center;
+    margin: 20px;
+  }
+
+  .related-projects-container>*
+  {
+    padding: 5px;
+    width: fit-content;
+    border-radius: 5px;
     background-color: ghostwhite;
     opacity: 0.9;
     color: black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: padding 0.5s;
   }
+
+  .related-projects-container>*:hover
+  {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
 </style>
