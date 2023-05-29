@@ -22,7 +22,7 @@
                 <span>
                     <b>Team:</b> <br>
                     <div class="project-people-container-tab">
-                        <span v-for = "person of project.People">• {{ person.surname }} <br> </span>
+                        <span v-for = "person of project.People">• {{ person.surname }} {{ person.name }} <br> </span>
                     </div>
                 </span>
                 
