@@ -15,8 +15,13 @@
         <div class="most_relevant_projects">
             <h1 class="header">Our most relevant projects</h1>
             
+            <div class="first">
+                <ProjectCard :id = "first.id" :title  = "first.title" :link = "'/projects/' + first.id"/>
+                <!-- <h3>#1<br></h3> -->
+            </div>
+
             <div id="list-container">
-                <ProjectCard v-for = "project of Projects" :id = "project.id" :title  = "project.title" :link = "'/projects/' + project.id"/>
+                <ProjectCard v-for = "project of others" :id = "project.id" :title  = "project.title" :link = "'/projects/' + project.id"/>
             </div>
 
         </div>
@@ -29,10 +34,21 @@
 </template>
 
 <script setup>
-    const { data: Projects } = await useFetch('/api/portfolio')
+    const { data: Projects } = await useFetch('/api/portfolio');
+
+    //split the projects so we can display the first one differently
+    const first = Projects.value[0];
+    const others = Projects.value.slice(1, 5);
+
 </script>
 
 <style>
+    .first {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
 
     .text-content {
         background-color: #fff6f6d2;
@@ -61,6 +77,26 @@
     .header {
         color:white;
         text-align: center;
+    }
+
+    .links {
+        text-align: center;
+    }
+
+    .my_link {
+        color: rgba(255, 255, 255, 0.826);
+        font-size: 20px;
+        font-weight: 700;
+        text-decoration: none;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .my_link:hover {
+        color: #ffffff;
+        font-size: 22px;
+        font-weight: 700;
+        text-decoration: underline;
     }
 
 </style>

@@ -12,6 +12,12 @@
             <div class="project-info">
                 <span class="project-title">{{ project.title }} </span>
                 <span>
+                    <b>Supervisor:</b> <br>
+                    <div class="project-people-container-tab">
+                        <NuxtLink :to="`/our_team/${supervisor.id}`" class="area-person-link">• {{ supervisor.surname }} {{ supervisor.name }} <br> </NuxtLink>
+                    </div>
+                </span>
+                <span>
                     <b>Areas:</b> <br>
                     <div class="project-area-container-tab">
                         <NuxtLink v-for = "area of project.Areas" :to="`/all_areas/${area.id}`" class="area-person-link">• {{ area.name }}</NuxtLink>
@@ -22,10 +28,9 @@
                 <span>
                     <b>Team:</b> <br>
                     <div class="project-people-container-tab">
-                        <NuxtLink v-for = "person of project.People" :to="`/our_team/${person.id}`" class="area-person-link">• {{ person.surname }} {{ person.name }} <br> </NuxtLink>
+                        <NuxtLink v-for = "person of team" :to="`/our_team/${person.id}`" class="area-person-link">• {{ person.surname }} {{ person.name }} <br> </NuxtLink>
                     </div>
                 </span>
-                
             </div>
         </div>
     </main>
@@ -37,8 +42,21 @@
             const route = useRoute()
             const project = await $fetch('/api/projects/' + route.params.id)
 
+            //to distinguish between supervisor and other members of the team
+            const team = ref([])
+            const supervisor = ref({})
+
+            for(let entry of project.Partecipations) {
+                for(let person of project.People) {
+                    if(person.id == entry.person_id) {
+                        if(entry.is_project_manager == true) supervisor.value = person
+                        else team.value.push(person)
+                    }
+                }
+            }
+
             return {
-                project
+                project, team, supervisor
             }
         }
     })

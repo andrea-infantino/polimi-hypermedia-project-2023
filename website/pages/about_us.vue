@@ -82,7 +82,7 @@
 
     .my_link {
         color: rgba(255, 255, 255, 0.826);
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 700;
         text-decoration: none;
         margin-left: 40px;
@@ -91,7 +91,7 @@
 
     .my_link:hover {
         color: #ffffff;
-        font-size: 32px;
+        font-size: 27px;
         font-weight: 700;
         text-decoration: underline;
     }
