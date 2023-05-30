@@ -7,8 +7,6 @@
         </div>
 
         <div class="project-container">
-            
-            
             <div class="project-info">
                 <span class="project-title">{{ project.title }} </span>
                 <span>
@@ -54,7 +52,6 @@
                     }
                 }
             }
-
             return {
                 project, team, supervisor
             }
