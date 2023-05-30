@@ -15,7 +15,12 @@
         <span class="person-role">{{ person.role }}</span>
         <hr class="separator" />
         <span> <div class="space-between-line">E-Mail:</div>
-          <span class="tab">{{ person.email }}</span>
+          <nuxt-link class="mail" :to="`mailto:${person.email}`">{{ person.email }}</nuxt-link>
+        </span>
+        <span> <div class="space-between-line">Social:</div>
+          <a href="https://twitter.com/home"><img src="../../assets/img/contacts/twitter_logo.png" alt="Twitter Logo" class="twitter-logo"></a>
+          <a href="https://www.instagram.com"><img src="../../assets/img/contacts/instagram_logo.png" alt="Instagram Logo" class="instagram-logo"></a>
+          <a href="https://www.linkedin.com"><img src="../../assets/img/contacts/linkedin_logo.png" alt="LinkedIn Logo" class="linkedin-logo"></a>
         </span>
         <span class="desc-container"><div class="space-between-line">Description:</div> 
           <span class="person-description tab">{{ person.description }}<div class="scrollable-desc"></div></span>
@@ -186,15 +191,42 @@
     padding-right: 20px;
   }
 
-  .tab
+  .tab, .mail
   {
     display: inline-block;
     margin-left: 1em;
+  }
+
+  .mail:hover
+  {
+    text-decoration: underline;
   }
 
   .space-between-line
   {
     font-weight: bold;
     margin-bottom: 5px;
+  }
+
+  .twitter-logo {
+    width: 35px;
+    height: 40px;
+    padding-right: 10px;
+  }
+
+  .instagram-logo {
+    width: 35px;
+    height: 35px;
+    padding-right: 10px;
+  }
+
+  .linkedin-logo {
+    width: 40px;
+    height: 35px;
+  }
+
+  .twitter-logo:hover, .instagram-logo:hover, .linkedin-logo:hover {
+    transform: scale3d(1.3, 1.3, 1.3);
+    transition: ease-in-out 0.3s;
   }
 </style>
