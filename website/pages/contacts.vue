@@ -26,7 +26,7 @@
             <Map />
             <div class="map-description">
                 <div class="text-2">You can find us here</div><br>
-                <div class="address">Piazza Leonardo Da Vinci, 32<br>20133 - Milan</div>
+                <div class="address">Platform 9 ¾<br>London, United Kingdom</div>
             </div>
         </div>
     </main>

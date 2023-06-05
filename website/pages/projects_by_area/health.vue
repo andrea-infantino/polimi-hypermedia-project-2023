@@ -13,7 +13,7 @@
                     <div class="related-projects-container">
                         <NuxtLink v-for = "project of area.Projects" :to="`/projects/${project.id}`">
                             
-                            <img class="prj-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" />
+                            <img class="prj-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" />
                             
                             <div>{{ project.title }}</div>
                         </NuxtLink>

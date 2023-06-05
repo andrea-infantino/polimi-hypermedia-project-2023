@@ -26,7 +26,7 @@
             }),
           ],
           view: new View({
-            center: fromLonLat([9.227090817264186, 45.47896101516622]), // set the initial center coordinates
+            center: fromLonLat([-0.12384846823434997, 51.53220785612703]), // set the initial center coordinates
             zoom: 14, // set the initial zoom level
           }),
         });
@@ -35,7 +35,7 @@
         const pinSource = new VectorSource({
           features: [
             new Feature({
-              geometry: new Point(fromLonLat([9.227090817264186, 45.47896101516622])), // longitude and latitude for the pin's location
+              geometry: new Point(fromLonLat([-0.12384846823434997, 51.53220785612703])), // longitude and latitude for the pin's location
             }),
           ],
         });
@@ -44,11 +44,11 @@
             source: pinSource,
             style: new Style({
             image: new Icon({
-                anchor: [422, 758],
-                width: 50,
+                anchor: [186, 593],
+                width: 40,
                 anchorXUnits: 'pixels',
                 anchorYUnits: 'pixels',
-                src: 'https://www.freepnglogos.com/uploads/pin-png/location-pin-connectsafely-37.png', // find a way to do it locally ??
+                src: 'https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Assets/pin.png?t=2023-06-05T14%3A54%3A27.626Z', // or find a way to do it locally
             }),
             }),
         });
