@@ -5,9 +5,10 @@
                 <img src="../assets/img/logo.png" id="logo" />
             </NuxtLink>
             <nav id="top-bar">
+                <NuxtLink class="landmark" to="/top_projects">TOP 5 PROJECTS</NuxtLink>
                 <NuxtLink class="landmark" to="/portfolio">PORTFOLIO</NuxtLink>
-                <NuxtLink class="landmark" to="/all_areas">AREAS</NuxtLink>
                 <NuxtLink class="landmark" to="/projects">PROJECTS</NuxtLink>
+                <NuxtLink class="landmark" to="/all_areas">AREAS</NuxtLink>
                 <NuxtLink class="landmark" to="/our_team">OUR TEAM</NuxtLink>
                 <NuxtLink class="landmark" to="/about_us">ABOUT US</NuxtLink>
                 <NuxtLink class="landmark" to="/contacts">CONTACTS</NuxtLink>
