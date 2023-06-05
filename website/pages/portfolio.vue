@@ -16,7 +16,7 @@
             <h1 class="header">Our most relevant project</h1>
             
             <div class="first">
-                <ProjectCard :id = "first.id" :title  = "first.title" :link = "'/projects/' + first.id"/>
+                <ProjectCard :id = "first.id" :title  = "first.title" :link = "'/projects/' + first.id" :img_bool="true" />
             </div>
 
         </div>

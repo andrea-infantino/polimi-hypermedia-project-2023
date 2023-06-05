@@ -33,7 +33,7 @@
     
     <span class="person-projects-title">{{ person.name }} {{ person.surname }}'s projects:</span>    
       <div class="person-projects-container">
-          <NuxtLink v-for = "project of person.Projects" :to="`/projects/${project.id}`">{{ project.title }}</NuxtLink>
+          <ProjectCard v-for = "project of person.Projects" :id="project.id" :title="project.title" :link="'/projects/' + project.id" :img_bool="true" />
       </div>
 
   </main>
@@ -161,34 +161,16 @@
     align-self: center;
   }
 
-  .person-projects-container
-  {
+  .person-projects-container{
+    padding: 30px;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
-    gap: 20px;
-    max-width: 700px;
     align-self: center;
-    margin: 20px;
-  }
-
-  .person-projects-container>*
-  {
-    padding: 5px;
-    width: fit-content;
-    border-radius: 5px;
-    background-color: ghostwhite;
-    opacity: 0.9;
-    color: black;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: padding 0.5s;
-  }
-
-  .person-projects-container>*:hover
-  {
-    padding-left: 20px;
-    padding-right: 20px;
+    gap: 50px;
+    max-width: 1200px;
+    
   }
 
   .tab, .mail

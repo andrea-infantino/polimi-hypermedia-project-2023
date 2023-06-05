@@ -9,12 +9,12 @@
         <div class="most_relevant_projects">
             
             <div class="first">
-                <ProjectCard :id = "first.id" :title  = "first.title" :link = "'/projects/' + first.id"/>
+                <ProjectCard :id = "first.id" :title  = "first.title" :link = "'/projects/' + first.id" :img_bool="true" />
                 <!-- <h3>#1<br></h3> -->
             </div>
 
             <div id="list-container">
-                <ProjectCard v-for = "project of others" :id = "project.id" :title  = "project.title" :link = "'/projects/' + project.id"/>
+                <ProjectCard v-for = "project of others" :id = "project.id" :title  = "project.title" :link = "'/projects/' + project.id" :img_bool="true" />
             </div>
 
         </div>

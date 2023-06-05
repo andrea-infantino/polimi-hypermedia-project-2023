@@ -2,19 +2,21 @@
     <main>
         <div class="title-area">
             <div class="title">
-                ALL PROJECTS
+                {{ project.title }}
             </div>
         </div>
 
         <div class="project-container">
             <div class="project-info">
-                <span class="project-title">{{ project.title }} </span>
+                <!-- <span class="project-title">{{ project.title }} </span> -->
                 <span>
                     <b>Supervisor:</b> <br>
                     <div class="project-people-container-tab">
                         <NuxtLink :to="`/our_team/${supervisor.id}`" class="area-person-link">• {{ supervisor.surname }} {{ supervisor.name }} <br> </NuxtLink>
                     </div>
                 </span>
+                <span class="project-year">
+                    <b>Foundation year:</b> {{ project.foundation_year }} </span>
                 <span>
                     <b>Areas:</b> <br>
                     <div class="project-area-container-tab">
@@ -29,6 +31,9 @@
                         <NuxtLink v-for = "person of team" :to="`/our_team/${person.id}`" class="area-person-link">• {{ person.surname }} {{ person.name }} <br> </NuxtLink>
                     </div>
                 </span>
+            </div>
+            <div class="project-img-container">
+                  <img class="project_img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" />
             </div>
         </div>
     </main>
@@ -82,7 +87,8 @@
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  .project-title {
+  
+  /* .project-title {
     font-size: xx-large;
     font-weight: bold;
     color: black;
@@ -95,7 +101,8 @@
     width: fit-content;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5px;
-  }
+  } */
+  
   .project-area {
     font-size: x-large;
     font-weight: bold;
@@ -127,7 +134,20 @@
     padding: 3px;
     color: ghostwhite;
   }
+
   .area-person-link:hover {
     text-decoration: underline;
+  }
+
+  .project-img-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    overflow: hidden;
+  }
+
+  .project_img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 </style>

@@ -10,13 +10,13 @@
         <div class="proj-left">
           <div v-for="letter of letters1" class="letter-block">
               <span class="letter">{{ letter }}</span>
-              <ProjectCard v-for = "project of Projects" v-show="project.title[0] === letter" :id = "project.id" :title  = "project.title" :link = "'/projects/' + project.id"/>
+              <ProjectCard v-for = "project of Projects" v-show="project.title[0] === letter" :id = "project.id" :title  = "project.title" :link = "'/projects/' + project.id" :img_bool="false"/>
           </div>
         </div>
         <div class="proj-right">
           <div v-for="letter of letters2" class="letter-block">
               <span class="letter">{{ letter }}</span>
-              <ProjectCard v-for = "project of Projects" v-show="project.title[0] === letter" :id = "project.id" :title  = "project.title" :link = "'/projects/' + project.id"/>
+              <ProjectCard v-for = "project of Projects" v-show="project.title[0] === letter" :id = "project.id" :title  = "project.title" :link = "'/projects/' + project.id" :img_bool="false"/>
           </div>
         </div>
       </div>

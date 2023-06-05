@@ -11,10 +11,7 @@
                 <img class="area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`"/>           
                 <span class="related-projects">
                     <div class="related-projects-container">
-                        <NuxtLink v-for = "project of area.Projects" :to="`/projects/${project.id}`">
-                            <img class="prj-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" />
-                            <div>{{ project.title }}</div>
-                        </NuxtLink>
+                        <ProjectCard v-for = "project of area.Projects" :id="project.id" :title="project.title" :link="'/projects/' + project.id" :img_bool="true" />
                     </div>
                 </span>
             </div>
@@ -57,51 +54,16 @@
     margin: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
-
-  .prj-img
-  {
-    border-radius: 5px;
-    height: auto;
-    width: 25%;
-    margin: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-
-  .related-projects{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-  }
-
-  .related-projects-container
-  {
+  
+  .related-projects-container{
+    padding: 30px;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
-    gap: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    align-content: flex-start;
+    align-self: center;
+    gap: 50px;
+    max-width: 1200px;
   }
-
-  .related-projects-container>*
-  {
-    padding: 5px;
-    width: fit-content;
-    border-radius: 5px;
-    background-color: ghostwhite;
-    opacity: 0.9;
-    color: black;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: padding 0.5s;
-  }
-
-  .related-projects-container>*:hover
-  {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
+  
 </style>
