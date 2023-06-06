@@ -31,10 +31,24 @@
 
     <hr class="separator " />
     
-    <span class="person-projects-title">{{ person.name }} {{ person.surname }}'s projects:</span>    
-      <div class="person-projects-container">
-          <ProjectCard v-for = "project of person.Projects" :id="project.id" :title="project.title" :link="'/projects/' + project.id" :img_bool="true" />
-      </div>
+    <div class="person-projects-container">
+        <div class="person-projects-title">{{ person.name }} {{ person.surname }}'s projects</div>    
+        
+        <div class="supervised-projects-container" v-show="supervised_proj.length!=0">
+            <div class="supervised-title">As supervisor:</div>
+            <div class="person-supervised-projects">
+                <ProjectCard v-for = "project of supervised_proj" :id="project.id" :title="project.title" :link="'/projects/' + project.id" :img_bool="true" />
+            </div>
+        </div>
+
+        <div class="team-projects-container">
+            <div class="team-title">As team member:</div>
+            <div class="person-team-projects">
+                <ProjectCard v-for = "project of team_proj" :id="project.id" :title="project.title" :link="'/projects/' + project.id" :img_bool="true" />
+            </div>
+        </div>
+
+    </div>
 
   </main>
 </template>
@@ -45,8 +59,21 @@
       const route = useRoute()
       const person = await $fetch('/api/our_team/' + route.params.id)
 
+      const supervised_proj = ref([])
+      const team_proj = ref([])
+
+      for (let project of person.Projects) {
+          for(let entry of person.Partecipations) {
+              if (project.id == entry.project_id && entry.is_project_manager) {
+                  supervised_proj.value.push(project)
+              } else if (project.id == entry.project_id && !entry.is_project_manager) {
+                  team_proj.value.push(project)
+              }
+          }
+      }
+
       return {
-        person
+        person, supervised_proj, team_proj
       }
     }
   })
@@ -161,16 +188,38 @@
     align-self: center;
   }
 
-  .person-projects-container{
+  .person-projects-container
+  {
     padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    gap: 50px;
+    max-width: 90%;
+  }
+
+  .supervised-projects-container, .team-projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 3%;
+  }
+
+  .person-supervised-projects, .person-team-projects {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-self: center;
-    gap: 50px;
-    max-width: 1200px;
-    
+  }
+
+  .supervised-title, .team-title {
+    font-size: x-large;
+    align-self: center;
   }
 
   .tab, .mail

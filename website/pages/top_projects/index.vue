@@ -2,7 +2,7 @@
     <main>
         <div class="title-area">
             <div class="title">
-                MOST RELEVANT PROJECT
+                MOST RELEVANT PROJECTS
             </div>
         </div>
 
@@ -31,7 +31,8 @@
 
     //split the projects so we can display the first one differently
     const first = Projects.value[0];
-    const others = Projects.value.slice(1, 5);
+    const others = Projects.value.slice(1, Projects.value.length);
+    
 </script>
 
 <style>

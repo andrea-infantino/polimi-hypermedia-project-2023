@@ -1,6 +1,9 @@
 <template>
     <main>
         <div class="title-area">
+            <NuxtLink to="/projects_by_area">
+                <div class="back-button">&lArr;</div>
+            </NuxtLink>
             <div class="title">
                 {{ area.name }} Projects
             </div>
@@ -23,7 +26,9 @@
     export default defineNuxtComponent({
         async asyncData() {
             const route = useRoute()
-            const area = await $fetch('/api/projects_by_area/renewable_energies')
+            
+            const area = await $fetch('/api/projects_by_area/' + route.params.id)
+
             return {
                 area
             }
@@ -54,7 +59,7 @@
     margin: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
-  
+
   .related-projects-container{
     padding: 30px;
     display: flex;

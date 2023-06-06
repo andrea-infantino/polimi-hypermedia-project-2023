@@ -52,6 +52,7 @@
     max-width: 75%;
     margin-top: 30px;
   }
+  
   .area-img
   {
     display: flex;
@@ -63,16 +64,8 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
-  .area-imgs
+  .related-projects
   {
-    border-radius: 5px;
-    height: auto;
-    width: 35%;
-    margin: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-
-  .related-projects{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -86,7 +79,8 @@
     align-self: center;
   }
 
-  .related-projects-container{
+  .related-projects-container
+  {
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
