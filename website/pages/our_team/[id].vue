@@ -14,13 +14,16 @@
         <span class="person-name-and-surname">{{ person.name }} {{ person.surname }}</span>
         <span class="person-role">{{ person.role }}</span>
         <hr class="separator" />
+        
         <span> <div class="space-between-line">E-Mail:</div>
           <nuxt-link class="mail" :to="`mailto:${person.email}`">{{ person.email }}</nuxt-link>
         </span>
+
+
         <span> <div class="space-between-line">Social:</div>
-          <a href="https://twitter.com/home"><img src="../../assets/img/contacts/twitter_logo.png" alt="Twitter Logo" class="twitter-logo"></a>
-          <a href="https://www.instagram.com"><img src="../../assets/img/contacts/instagram_logo.png" alt="Instagram Logo" class="instagram-logo"></a>
-          <a href="https://www.linkedin.com"><img src="../../assets/img/contacts/linkedin_logo.png" alt="LinkedIn Logo" class="linkedin-logo"></a>
+          <a href="https://twitter.com/home"><img src="../../assets/img/contacts/twitter_logo_hover.png" class="twitter-logo-hover"><img src="../../assets/img/contacts/twitter_logo.png" alt="Twitter Logo" class="twitter-logo"></a>
+          <a href="https://www.instagram.com"><img src="../../assets/img/contacts/instagram_logo_hover.png" class="instagram-logo-hover"><img src="../../assets/img/contacts/instagram_logo.png" alt="Instagram Logo" class="instagram-logo"></a>
+          <a href="https://www.linkedin.com"><img src="../../assets/img/contacts/linkedin_logo_hover.png" class="linkedin-logo-hover"><img src="../../assets/img/contacts/linkedin_logo.png" alt="LinkedIn Logo" class="linkedin-logo"></a>
         </span>
         <span class="desc-container"><div class="space-between-line">Description:</div> 
           <span class="person-description tab">{{ person.description }}<div class="scrollable-desc"></div></span>
@@ -80,8 +83,7 @@
 </script>
 
 <style>
-  .person-container
-  {
+  .person-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -92,8 +94,7 @@
     margin: 30px;
   }
 
-  .person-img
-  {
+  .person-img {
     border-radius: 5px;
     height: 420px;
     width: 420px;
@@ -102,8 +103,7 @@
     background-size: cover;
   }
 
-  .person-info
-  {
+  .person-info {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -112,8 +112,7 @@
     max-width: 500px;
   }
 
-  .person-name-and-surname
-  {
+  .person-name-and-surname {
     font-size: xx-large;
     font-weight: bold;
     color: black;
@@ -129,37 +128,17 @@
     padding-bottom: 10px;
   }
 
-  .person-role
-  {
+  .person-role {
     font-size: x-large;
     font-weight: bold;
     align-self: center;
   }
 
-  .desc-container
-  {
+  .desc-container {
     overflow: hidden;
   }
 
-  .person-description
-  {
-    overflow-y: scroll;
-    max-height: 130px;
-    -webkit-mask-image: -webkit-gradient(linear,right 75%,right bottom,from(black),to(rgba(0,0,0,0)));
-  }
-
-  .person-description::-webkit-scrollbar
-  {
-    display: none;
-  }
-
-  .scrollable-desc
-  {
-    height: 40px;
-  }
-
-  #person-cv
-  {
+  #person-cv {
     font-size: medium;
     color: black;
     background-color: ghostwhite;
@@ -173,23 +152,20 @@
     transition: transform 0.5s, padding-left 0.5s, padding-right 0.5s;
   }
 
-  #person-cv:hover
-  {
+  #person-cv:hover {
     transform: translate3d(0px, -5px, 5px);
     padding-left: 30px;
     padding-right: 30px;
   }
 
-  .person-projects-title
-  {
+  .person-projects-title {
     font-size: xx-large;
     font-weight: bolder;
     margin-top: 20px;
     align-self: center;
   }
 
-  .person-projects-container
-  {
+  .person-projects-container {
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
@@ -222,42 +198,35 @@
     align-self: center;
   }
 
-  .tab, .mail
-  {
+  .tab, .mail {
     display: inline-block;
     margin-left: 1em;
   }
 
-  .mail:hover
-  {
+  .mail:hover {
     text-decoration: underline;
   }
 
-  .space-between-line
-  {
+  .space-between-line {
     font-weight: bold;
     margin-bottom: 5px;
   }
 
-  .twitter-logo {
+  .twitter-logo, .twitter-logo-hover, .instagram-logo, .instagram-logo-hover, .linkedin-logo, .linkedin-logo-hover {
     width: 35px;
-    height: 40px;
+    height: auto;
     padding-right: 10px;
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
   }
 
-  .instagram-logo {
-    width: 35px;
-    height: 35px;
-    padding-right: 10px;
+  .twitter-logo-hover, .instagram-logo-hover, .linkedin-logo-hover {
+    position: absolute;
   }
 
-  .linkedin-logo {
-    width: 40px;
-    height: 35px;
-  }
-
-  .twitter-logo:hover, .instagram-logo:hover, .linkedin-logo:hover {
-    transform: scale3d(1.3, 1.3, 1.3);
-    transition: ease-in-out 0.3s;
+  .twitter-logo:hover, .linkedin-logo:hover, .instagram-logo:hover {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
   }
 </style>
