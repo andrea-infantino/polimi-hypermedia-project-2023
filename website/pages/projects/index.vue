@@ -48,6 +48,7 @@
 
     .letter {
       font-size: 40px;
+      color: ghostwhite;
       font-weight: bold;
       margin-bottom: 10px;
       margin-left: 2%;

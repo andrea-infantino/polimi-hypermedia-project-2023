@@ -3,7 +3,7 @@
         <div class="bottom">          
             <div>
                 <NuxtLink to="/">
-                    <img src="../assets/img/logo.png" id="logo" />
+                    <img src="../assets/img/logo.png" id="logo" class="logo-footer"/>
                 </NuxtLink>
 
                 <span class="copyright">
@@ -25,18 +25,19 @@
 
 <style>
     footer {
-        background-color: ghostwhite;
+        background-color: #E8EEF1;
         flex-shrink: 0;
         text-align: center;
         margin-top: auto;
-        border-top: 5px solid rgb(80, 80, 80);
+        border-top: 5px solid #1E3D58;
         padding: 10px;
         min-height: 1vh;
+        color: black;
     }
 
-    .logo { 
-        margin: 10px 20px 10px 20px;
-        text-align: left;
+    .logo-footer { 
+        height: 500px;
+        width: auto;
     }
 
     .copyright {

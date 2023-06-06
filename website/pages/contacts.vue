@@ -13,9 +13,9 @@
                 <a class="mail" href="mailto:info@webwizards.com">
                     <strong>info@webwizards.com</strong></a>
                 <div class="social-media">
-                    <a href="https://twitter.com/home"><img src="../assets/img/contacts/twitter_logo.png" alt="Twitter Logo" class="twitter-logo"></a>
-                    <a href="https://www.instagram.com"><img src="../assets/img/contacts/instagram_logo.png" alt="Instagram Logo" class="instagram-logo"></a>
-                    <a href="https://www.linkedin.com"><img src="../assets/img/contacts/linkedin_logo.png" alt="LinkedIn Logo" class="linkedin-logo"></a>
+                    <a href="https://twitter.com/home"><img src="../assets/img/contacts/twitter_logo_hover.png" alt="Twitter Logo" class="twitter-logo-footer"></a>
+                    <a href="https://www.instagram.com"><img src="../assets/img/contacts/instagram_logo_hover.png" alt="Instagram Logo" class="instagram-logo-footer"></a>
+                    <a href="https://www.linkedin.com"><img src="../assets/img/contacts/linkedin_logo_hover.png" alt="LinkedIn Logo" class="linkedin-logo-footer"></a>
                 </div>
             </div>
             <div class="contacts-img">
@@ -73,24 +73,14 @@
         padding-top: 10px;
     }
 
-    .twitter-logo {
+    .twitter-logo-footer, .instagram-logo-footer, .linkedin-logo-footer {
         width: 35px;
-        height: 40px;
+        height: auto;
         padding-right: 10px;
+        transition: ease-in-out 0.3s;
     }
 
-    .instagram-logo {
-        width: 35px;
-        height: 35px;
-        padding-right: 10px;
-    }
-
-    .linkedin-logo {
-        width: 40px;
-        height: 35px;
-    }
-
-    .twitter-logo:hover, .instagram-logo:hover, .linkedin-logo:hover {
+    .twitter-logo-footer:hover, .instagram-logo-footer:hover, .linkedin-logo-footer:hover {
         transform: scale3d(1.3, 1.3, 1.3);
         transition: ease-in-out 0.3s;
     }

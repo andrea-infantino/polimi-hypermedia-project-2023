@@ -1,33 +1,36 @@
-html, body
-{
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+@font-face {
+      font-family: "Poppins";
+      src: local("Poppins"),
+       url(../font/Poppins.ttf) format("truetype");
+  }
+
+html, body {
+      font-family: Poppins, sans-serif;
       font-size: medium;
       text-align: justify;
       text-decoration: none;
       height: 100%; 
+      color: ghostwhite;
 }
 
-body
-{
+body {
       margin: 0;
-      background-image: url("~/assets/img/wallpaper_1.jpg");
-      background-repeat: no-repeat;
+      background-image: url("~/assets/img/background.jpg");
       background-attachment: fixed;
-      background-size:cover;
+      background-repeat: no-repeat;
+      background-size: cover;
 }
 
-main
-{
+main {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-content: flex-start;
-      color: ghostwhite;
+      color: gho;
 }
 
-.landmark
-{
-      color:black;
+.landmark {
+      color: black;
       border-radius: 5px;
       transition: 0.5s;
       padding: 10px 20px 10px 20px;
@@ -35,16 +38,14 @@ main
       vertical-align: center;
 }
 
-.landmark:hover
-{
+.landmark:hover {
       transform: translate3d(0px, -5px, 5px);
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.title-area 
-{
+.title-area {
       padding: 10px;
-      background-color:ghostwhite;
+      background-color: #E8EEF1;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
 }
 
@@ -56,8 +57,7 @@ main
       color: black;
 }
 
-.back-button
-{
+.back-button {
       position: absolute;
       color: black;
       font-weight: bolder;
@@ -69,14 +69,12 @@ main
       transition: 0.5s;
 }
 
-.back-button:hover
-{
+.back-button:hover {
       transform: translate3d(0px, -5px, 5px);
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.separator
-{
+.separator {
       width: 95%;
       align-self: center;
       height: 1px;

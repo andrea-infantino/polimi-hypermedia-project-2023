@@ -19,18 +19,17 @@
 </template>
 
 <style>
-    header
-    {
-        background-color: ghostwhite;
+    header {
+        background-color: #E8EEF1;
         position: sticky;
         top: 0;
         z-index: 1;
         display: flex;
         flex-direction: column;
+        border-bottom: 5px solid #1E3D58;
     }
 
-    #landmarks-list
-    {
+    #landmarks-list {
         display: flex;
         justify-content: space-between;
         padding-left: 30px;
@@ -39,8 +38,7 @@
         padding-bottom: 5px;
     }
 
-    #top-bar 
-    {
+    #top-bar {
         display: flex;
         padding: 10px;
         font-size: 15px;
@@ -49,17 +47,15 @@
         gap: 5px;
     }
 
-    #logo
-    {
-        height: 33px;
+    #logo {
+        height: 37px;
         width: auto;
         padding: 10px 20px 10px 20px;
         align-self: center;
         vertical-align: center;
     }
 
-    #landmarks-separator
-    {
+    #landmarks-separator {
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(200, 200, 200, 1), rgba(0, 0, 0, 0));
         width: 99%;
     }

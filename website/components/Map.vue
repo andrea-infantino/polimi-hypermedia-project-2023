@@ -27,7 +27,7 @@
           ],
           view: new View({
             center: fromLonLat([-0.12384846823434997, 51.53220785612703]), // set the initial center coordinates
-            zoom: 14, // set the initial zoom level
+            zoom: 16, // set the initial zoom level
           }),
         });
   
