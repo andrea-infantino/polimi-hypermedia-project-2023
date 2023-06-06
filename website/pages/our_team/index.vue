@@ -8,7 +8,7 @@
     </div>
 
     <div id="people-container">
-      <PersonCard v-for = "person of people" :id = "person.id" :name = "person.name" :surname = "person.surname" :role = "person.role" :link = "'/our_team/' + person.id" />
+      <PersonCard v-for = "person of importance_order" :id = "person.id" :name = "person.name" :surname = "person.surname" :role = "person.role" :link = "'/our_team/' + person.id" />
     </div>
 
   </main>
@@ -16,6 +16,20 @@
 
 <script setup>
   const { data: people } = await useFetch('/api/our_team')
+
+  //to order people by role
+  const roles = ['Founder', 'Co-Founder', 'CFO', 'Investment Manager', 'Investment Analyst', 'Head of Impact', 'Office Manager', 'Partner']
+
+  const importance_order = ref([])
+
+  for (let role of roles) {
+    for (let person of people.value) {
+      if (person.role === role) {
+        importance_order.value.push(person)
+      }
+    }
+  }
+
 </script>
 
 

@@ -14,6 +14,8 @@
         <span class="person-name-and-surname">{{ person.name }} {{ person.surname }}</span>
         <span class="person-role">{{ person.role }}</span>
         <hr class="separator" />
+
+        <div><strong>Joined</strong> {{ person.hiring_date }}</div> 
         
         <span> <div class="space-between-line">E-Mail:</div>
           <nuxt-link class="mail" :to="`mailto:${person.email}`">{{ person.email }}</nuxt-link>
