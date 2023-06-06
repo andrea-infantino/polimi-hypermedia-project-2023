@@ -12,8 +12,7 @@
 </script>
 
 <style>
-    .img
-    {
+    .img {
         display: flex;
         border-radius: 5px;
         margin: auto;
@@ -22,6 +21,12 @@
         width: 300px;
         margin-bottom: 10px;
         background-size: cover;
+        transition: 0.5s;
+    }
+
+    .area:hover .img {
+        filter: invert(1);
+        transition: 0.5s;
     }
 
     .name {
@@ -30,8 +35,7 @@
         margin: 2px;
     }
 
-    .area
-    {
+    .area {
         color: ghostwhite;
         display: flex;
         width: fit-content;
@@ -44,10 +48,15 @@
         padding: 5px;
         border-radius: 5px;
         max-width: 350px;
+        transition: background-color 0.5s, color 0.5s, transform 0.5s;
     }
+
     .area:hover {
         background-color:rgba(248, 248, 255, 0.8);
         cursor: pointer;
         color: black;
+        transform: translate3d(0px, -5px, 5px);
+        transition: background-color 0.5s, color 0.5s, transform 0.5s;
     }
+
 </style>
