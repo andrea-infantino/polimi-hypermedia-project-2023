@@ -13,13 +13,18 @@
             <img class="area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" />
             <div class="area-info">
                 <span class="area-description"> {{ area.description }} </span>
+
                 <span class="related-projects">
                     <div class ="related-projects-title">
-                        <b>Related projects:</b> <br> <br>
+                      Related projects:
                     </div>
+
+                    <button class="button-carousel prev">prev</button>
+                    <button class="button-carousel next">next</button>
                     <div class="related-projects-container">
                         <ProjectCard v-for = "project of area.Projects" :id="project.id" :title="project.title" :link="'/projects/' + project.id" :img_bool="true" />
                     </div>
+
                 </span>
             </div>
         </div>
@@ -39,8 +44,7 @@
 </script>
 
 <style>
-  .area-info
-  {
+  .area-info {
     color: ghostwhite;
     display: flex;
     flex-wrap: wrap;
@@ -53,34 +57,28 @@
     margin-top: 30px;
   }
   
-  .area-img
-  {
+  .area-img {
     display: flex;
-    width: 40%;
-    border-radius: 5px;
+    width: 20%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
-  .related-projects
-  {
+  .related-projects {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .related-projects-title
-  {
+  .related-projects-title {
     font-size: xx-large;
     font-weight: bolder;
-    margin-top: 20px;
+    margin-top: 20px 0px;
     align-self: center;
   }
 
-  .related-projects-container
-  {
+  .related-projects-container {
     padding: 30px;
     display: flex;
     flex-wrap: wrap;

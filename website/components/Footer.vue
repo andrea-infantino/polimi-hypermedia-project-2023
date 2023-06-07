@@ -6,9 +6,6 @@
                     <img src="../assets/img/logo.png" id="logo" class="logo-footer"/>
                 </NuxtLink>
 
-                <span class="copyright">
-                    © 2023 by Web Wizards
-                </span>  
             </div>
                    
 
@@ -18,6 +15,11 @@
                 <a href="https://www.linkedin.com"><img src="../assets/img/contacts/linkedin_logo_hover.png" alt="LinkedIn Logo" class="linkedin-footer"></a>
             </div>
 
+        </div>
+
+        <div class="rights">
+            <strong>© 2023 Wizarding Ventures S.P.A.</strong><br>
+            All rights reserved. <NuxtLink id="to_privacy_policy" to="/privacy_policy">Privacy Policy</NuxtLink> · <NuxtLink id="to_cookie_policy" to="/cookie_policy">Cookie Policy</NuxtLink>
         </div>
 
     </footer>
@@ -42,7 +44,7 @@
 
     .copyright {
         font-size: 12px;
-        font-style: italic;
+        font-weight: bold;
     }
 
     .socials {
@@ -69,6 +71,22 @@
         display: flex;
         vertical-align: middle;
         justify-content: space-evenly;
+    }
+
+    .rights {
+        font-size: 13px;
+        color: black;
+    }
+
+    #to_privacy_policy, #to_cookie_policy {
+        color: #1E3D58;
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+    #to_privacy_policy:hover, #to_cookie_policy:hover {
+        color: #1E3D58;
+        text-decoration: underline;
     }
     
 </style>

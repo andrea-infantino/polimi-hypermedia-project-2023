@@ -50,14 +50,9 @@
         -webkit-box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
         box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
         padding: 40px;
-        margin: 30px;
+        margin: 40px 150px;
         height: 100%;
         border-radius: 10px;
-    }
-
-    .about-vision:hover, .about-partnerships:hover, .about-team:hover, .about-activities:hover {
-        background-color: rgba(255, 252, 244, 0.979);
-        box-shadow: 40px 40px 80px 0  rgba(172,172,172,.5);
     }
 
     .heading {

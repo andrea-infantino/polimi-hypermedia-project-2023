@@ -48,18 +48,11 @@
     .text-content {
         background-color: #fff6f6d2;
         -webkit-box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
-        box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
+        box-shadow: 15px 15px 30px 0 rgba(172,172,172,.5);
         padding: 40px;
-        margin-top: 30px;
-        margin-bottom:30px;
-        margin-left: 100px;
-        margin-right: 100px;
+        margin: 40px 150px;
         height: 100%;
-    }
-
-    .text-content:hover {
-        background-color: rgba(255, 252, 244, 0.979);
-        box-shadow: 40px 40px 80px 0  rgba(172,172,172,.5);
+        border-radius: 10px;
     }
 
     .par {
