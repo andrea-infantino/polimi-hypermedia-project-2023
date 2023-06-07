@@ -25,14 +25,13 @@
           <nuxt-link class="mail" :to="`mailto:${person.email}`">{{ person.email }}</nuxt-link>
         </span>
 
-
         <span> <div class="space-between-line">Social:</div>
           <a href="https://twitter.com/home"><img src="../../assets/img/contacts/twitter_logo_hover.png" class="twitter-logo-hover"><img src="../../assets/img/contacts/twitter_logo.png" alt="Twitter Logo" class="twitter-logo"></a>
           <a href="https://www.instagram.com"><img src="../../assets/img/contacts/instagram_logo_hover.png" class="instagram-logo-hover"><img src="../../assets/img/contacts/instagram_logo.png" alt="Instagram Logo" class="instagram-logo"></a>
           <a href="https://www.linkedin.com"><img src="../../assets/img/contacts/linkedin_logo_hover.png" class="linkedin-logo-hover"><img src="../../assets/img/contacts/linkedin_logo.png" alt="LinkedIn Logo" class="linkedin-logo"></a>
         </span>
         <span class="desc-container"><div class="space-between-line">Description:</div> 
-          <span class="person-description tab">{{ person.description }}<div class="scrollable-desc"></div></span>
+          <div class="person-description-tab">{{ person.description }}</div>
         </span>
         <nuxt-link v-if="person.cv_link != null" id="person-cv" :to="`${person.cv_link}`" target="_blank">See {{ person.name }} {{ person.surname }}'s CV</nuxt-link>
       </div>
@@ -154,14 +153,23 @@
     opacity: 0.9;
     align-self: center;
     text-align: center;
-    padding: 5px;
-    transition: transform 0.5s, padding-left 0.5s, padding-right 0.5s;
+    padding: 5px 15px;
+    transition: opacity 0.1s, padding 0.3s;
   }
 
   #person-cv:hover {
-    transform: translate3d(0px, -5px, 5px);
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 5px 30px;
+    text-decoration: underline;
+    opacity: 1;
+    box-shadow: 4px 4px 8px 1px rgba(141, 141, 141, 0.462);
+  }
+
+  .person-description-tab {
+    color: black;
+    background-color: #fff6f6d2;
+    box-shadow: 15px 15px 30px 0 rgba(172,172,172,.5);
+    padding: 10px;
+    border-radius: 10px;
   }
 
   .person-projects-title {
@@ -202,15 +210,23 @@
   .supervised-title, .team-title {
     font-size: x-large;
     align-self: center;
+    padding-bottom: 12px;
   }
 
   .tab, .mail {
     display: inline-block;
     margin-left: 1em;
+    border-radius: 5px;
+    padding: 2px 5px;
+    transition: padding 0.3s, background-color 0.3s, color 0.3s;
   }
 
   .mail:hover {
     text-decoration: underline;
+    color: black;
+    background-color: rgba(248, 248, 255, 0.900);
+    padding: 2px 15px;
+    transition: padding 0.3s, background-color 0.3s, color 0.3s;
   }
 
   .space-between-line {

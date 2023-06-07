@@ -8,6 +8,10 @@
 
             </div>
                    
+            <div class="rights">
+                <strong>© 2023 Wizarding Ventures S.P.A.</strong><br>
+                All rights reserved. <NuxtLink id="to_privacy_policy" to="/privacy_policy">Privacy Policy</NuxtLink> · <NuxtLink id="to_cookie_policy" to="/cookie_policy">Cookie Policy</NuxtLink>
+            </div>
 
             <div class="socials"> <b>Follow us:</b>
                 <a href="https://twitter.com/home"><img src="../assets/img/contacts/twitter_logo_hover.png" alt="Twitter Logo" class="twitter-footer"></a>
@@ -17,10 +21,6 @@
 
         </div>
 
-        <div class="rights">
-            <strong>© 2023 Wizarding Ventures S.P.A.</strong><br>
-            All rights reserved. <NuxtLink id="to_privacy_policy" to="/privacy_policy">Privacy Policy</NuxtLink> · <NuxtLink id="to_cookie_policy" to="/cookie_policy">Cookie Policy</NuxtLink>
-        </div>
 
     </footer>
 </template>
@@ -74,6 +74,7 @@
     }
 
     .rights {
+        padding-top: 20px;
         font-size: 13px;
         color: black;
     }
