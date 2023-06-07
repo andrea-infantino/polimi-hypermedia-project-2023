@@ -1,4 +1,8 @@
 <template>
+    <Head>
+        <Title>About us - Wizarding Ventures</Title>
+    </Head>
+
     <main>
         <div class="title-area">
             <div class="title">

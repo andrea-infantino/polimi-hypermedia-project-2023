@@ -1,4 +1,8 @@
 <template>
+    <Head>
+        <Title>Projects by Area - Wizarding Ventures</Title>
+    </Head>
+
     <main>
       <div class="title-area">
         <div class="title">

@@ -1,4 +1,8 @@
 <template>
+    <Head>
+        <Title>{{ area.name }} - Wizarding Ventures</Title>
+    </Head>
+
     <main>
         <div class="title-area">
             <NuxtLink to="/projects_by_area">

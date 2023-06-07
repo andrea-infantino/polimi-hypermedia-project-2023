@@ -1,5 +1,9 @@
 <template>
-  <main>
+  <Head>
+        <Title>Areas - Wizarding Ventures</Title>
+    </Head>
+
+    <main>
     <div class="title-area">
       <div class="title">
         ALL AREAS

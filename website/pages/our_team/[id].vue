@@ -1,5 +1,9 @@
 <template>
-  <main>
+  <Head>
+        <Title>{{ person.name }} {{ person.surname }} - Wizarding Ventures</Title>
+    </Head>
+
+    <main>
 
     <div class="title-area">
       <NuxtLink to="/our_team">

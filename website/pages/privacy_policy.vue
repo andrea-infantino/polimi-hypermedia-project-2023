@@ -1,4 +1,8 @@
 <template>
+    <Head>
+        <Title>Privacy Policy - Wizarding Ventures</Title>
+    </Head>
+
     <main>
         <div class="title-area">
             <div class="title">

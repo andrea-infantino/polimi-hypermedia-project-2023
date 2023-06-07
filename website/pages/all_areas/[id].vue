@@ -1,4 +1,8 @@
 <template>
+    <Head>
+        <Title>{{ area.name }} - Wizarding Ventures</Title>
+    </Head>
+
     <main>
         <div class="title-area">
           <NuxtLink to="/all_areas">
@@ -19,8 +23,6 @@
                       Related projects:
                     </div>
 
-                    <button class="button-carousel prev">prev</button>
-                    <button class="button-carousel next">next</button>
                     <div class="related-projects-container">
                         <ProjectCard v-for = "project of area.Projects" :id="project.id" :title="project.title" :link="'/projects/' + project.id" :img_bool="true" />
                     </div>

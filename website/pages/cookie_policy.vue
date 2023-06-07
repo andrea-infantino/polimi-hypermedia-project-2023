@@ -1,4 +1,8 @@
 <template>
+    <Head>
+        <Title>Cookie Policy - Wizarding Ventures</Title>
+    </Head>
+
     <main>
         <div class="title-area">
             <div class="title">
