@@ -24,9 +24,8 @@
     
     
   <style>
-    #list-container
-    {
-      padding: 30px;
+    #list-container {
+      padding: 3% 15%;
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;

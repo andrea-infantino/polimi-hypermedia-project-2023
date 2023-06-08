@@ -1,9 +1,9 @@
 <template>
     <footer>
         <div class="bottom">          
-            <div>
+            <div class="logo-footer">
                 <NuxtLink to="/">
-                    <img src="../assets/img/logo.png" id="logo" class="logo-footer"/>
+                    <img src="../assets/img/logo.png" id="logo" class="logo-img"/>
                 </NuxtLink>
 
             </div>
@@ -37,9 +37,13 @@
         color: black;
     }
 
-    .logo-footer { 
-        height: 500px;
+    .logo-footer, .logo-img { 
+        height: 35px;
         width: auto;
+    }
+
+    .logo-footer {
+        padding: 10px
     }
 
     .copyright {
@@ -55,21 +59,20 @@
     }
 
     .linkedin-footer, .instagram-footer, .twitter-footer {
-        width: 35px;
+        width: 30px;
         height: auto;
         padding-left: 10px;
         position: relative;
         vertical-align: middle;
-        transition: 0.2s ease-in-out;
+        transition: 0.1s ease-in-out;
     }
 
     .linkedin-footer:hover, .instagram-footer:hover, .twitter-footer:hover {
-        transform: scale(1.1);
+        transform: scale(1.15);
     }
     
     .bottom {
         display: flex;
-        vertical-align: middle;
         justify-content: space-evenly;
     }
 

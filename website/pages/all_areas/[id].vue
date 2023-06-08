@@ -16,7 +16,7 @@
         <div class="Area_container">
             <img class="area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" />
             <div class="area-info">
-                <span class="area-description"> {{ area.description }} </span>
+                <div class="area-description"> {{ area.description }} </div>
 
                 <span class="related-projects">
                     <div class ="related-projects-title">
@@ -67,6 +67,15 @@
     margin-top: 30px;
   }
 
+  .area-description {
+    color: black;
+    background-color: #fff6f6d2;
+    box-shadow: 15px 15px 30px 0 rgba(172,172,172,.5);
+    padding: 40px 60px;
+    border-radius: 10px;
+    white-space: pre-wrap;
+  }
+
   .related-projects {
     text-align: center;
     margin-left: auto;
@@ -88,7 +97,7 @@
     justify-content: center;
     align-self: center;
     gap: 50px;
-    max-width: 1200px;
+    max-width: 1200px;  
   }
 
 </style>

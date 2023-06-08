@@ -41,8 +41,7 @@
 </script>
 
 <style>
-  .area-info
-  {
+  .area-info {
     color: ghostwhite;
     display: flex;
     flex-wrap: wrap;
@@ -55,16 +54,13 @@
     margin-top: 30px;
   }
 
-  .area-img
-  {
-    border-radius: 5px;
+  .area-img {
     height: auto;
     width: 25%;
     margin: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
-  .related-projects-container{
+  .related-projects-container {
     padding: 30px;
     display: flex;
     flex-wrap: wrap;

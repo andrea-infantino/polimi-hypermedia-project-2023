@@ -22,7 +22,7 @@
         <div><strong>Joined</strong> {{ person.hiring_date }}</div> 
         
         <span> <div class="space-between-line">E-Mail:</div>
-          <nuxt-link class="mail" :to="`mailto:${person.email}`">{{ person.email }}</nuxt-link>
+          <nuxt-link class="mail" :to="`mailto:${person.email}`">&#9993;&emsp;{{ person.email }}</nuxt-link>
         </span>
 
         <span> <div class="space-between-line">Social:</div>
@@ -226,7 +226,7 @@
     color: black;
     background-color: rgba(248, 248, 255, 0.900);
     padding: 2px 15px;
-    transition: padding 0.3s, background-color 0.3s, color 0.3s;
+
   }
 
   .space-between-line {

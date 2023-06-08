@@ -2,10 +2,10 @@
     <header>
         <div id="landmarks-list">
             <NuxtLink to="/">
-                <img src="../assets/img/logo.png" id="logo" />
+                <img src="../assets/img/logo.png" id="logo" class="logo-header" />
             </NuxtLink>
             <nav id="top-bar">
-                <NuxtLink class="landmark" to="/top_projects">MOST RELEVANT PROJECTS</NuxtLink>
+                <NuxtLink class="landmark" to="/most_relevant_projects">MOST RELEVANT PROJECTS</NuxtLink>
                 <NuxtLink class="landmark" to="/portfolio">PORTFOLIO</NuxtLink>
                 <NuxtLink class="landmark" to="/projects">PROJECTS</NuxtLink>
                 <NuxtLink class="landmark" to="/all_areas">AREAS</NuxtLink>
@@ -47,8 +47,8 @@
         gap: 5px;
     }
 
-    #logo {
-        height: 37px;
+    .logo-header {
+        height: 40px;
         width: auto;
         padding: 10px 20px 10px 20px;
         align-self: center;

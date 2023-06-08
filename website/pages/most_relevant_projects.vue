@@ -44,6 +44,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-top: 30px;
         margin-bottom: 30px;
     }
 
