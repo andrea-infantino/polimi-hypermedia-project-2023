@@ -19,7 +19,7 @@
         <span class="person-role">{{ person.role }}</span>
         <hr class="separator" />
 
-        <div><strong>Joined</strong> {{ person.hiring_date }}</div> 
+        <div><strong>Joined</strong> &emsp; {{ person.hiring_date }}</div> 
         
         <span> <div class="space-between-line">E-Mail:</div>
           <nuxt-link class="mail" :to="`mailto:${person.email}`">&#9993;&emsp;{{ person.email }}</nuxt-link>
@@ -168,7 +168,7 @@
     color: black;
     background-color: #fff6f6d2;
     box-shadow: 15px 15px 30px 0 rgba(172,172,172,.5);
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 10px;
   }
 

@@ -14,7 +14,27 @@
         </div>
         
         <div class="Area_container">
+          <div class="area-header">
+            <NuxtLink v-if="area.id!=0" :to="`/all_areas/${area.id-1}`">
+              <span class="arrow-enabled">&#8249;</span>
+            </NuxtLink>
+
+            <span v-if="area.id==0">
+              <span class="arrow-disabled">&#8249;</span>
+            </span>
+
             <img class="area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" />
+
+            <NuxtLink v-if="area.id<4" :to="`/all_areas/${area.id+1}`">
+              <span class="arrow-enabled">&#8250;</span>
+            </NuxtLink>
+
+            <span v-if="area.id>=4">
+              <span class="arrow-disabled">&#8250;</span>
+            </span>
+
+          </div>
+
             <div class="area-info">
                 <div class="area-description"> {{ area.description }} </div>
 
@@ -46,6 +66,14 @@
 </script>
 
 <style>
+
+  .area-header {
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
   .area-info {
     color: ghostwhite;
     display: flex;
@@ -62,9 +90,34 @@
   .area-img {
     display: flex;
     width: 20%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     margin-top: 30px;
+    justify-content: center;
+  }
+  
+  .arrow-enabled {
+    font-size: 3em;
+    color: ghostwhite;
+    margin: 0px 250px;
+    border-radius: 10px;
+    padding: 10px 25px;
+    transition: all 0.2s;
+  }
+
+  .arrow-enabled:hover {
+    color: black;
+    background-color: ghostwhite;
+    box-shadow: 3px 5px 30px 0 rgba(172,172,172,.5);
+  }
+
+  .arrow-disabled {
+    font-size: 3em;
+    margin: 0px 250px;
+    border-radius: 10px;
+    padding: 10px 25px;
+    color: gray;
+    cursor: not-allowed;
+    
   }
 
   .area-description {

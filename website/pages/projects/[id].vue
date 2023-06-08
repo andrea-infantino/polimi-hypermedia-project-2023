@@ -1,13 +1,13 @@
 <template>
     <Head>
-        <NuxtLink to="/projects">
-            <div class="back-button">&lArr;</div>
-        </NuxtLink>
         <Title>{{ project.title }} - Wizarding Ventures</Title>
     </Head>
 
     <main>
         <div class="title-area">
+          <NuxtLink to="/projects">
+            <div class="back-button">&lArr;</div>
+          </NuxtLink>
             <div class="title">
                 {{ project.title }}
             </div>
@@ -23,7 +23,7 @@
                     </div>
                 </span>
                 <span class="project-year">
-                    <b>Foundation year:</b> {{ project.foundation_year }} </span>
+                    <b>Foundation year:</b>&emsp; {{ project.foundation_year }} </span>
                 <span>
                     <b>Areas:</b> <br>
                     <div class="project-area-container-tab">
@@ -31,7 +31,9 @@
                     </div>
                 </span>
                 <span class="description-text"><b>Description:</b> <br> 
-                    <span class="tab">{{ project.presentation_text }}</span></span>
+                    <span class="tab">{{ project.presentation_text }}</span>
+                </span>
+                
                 <span>
                     <b>Team:</b> <br>
                     <div class="project-people-container-tab">
@@ -114,20 +116,30 @@
     font-size: x-large;
     font-weight: bold;
   }
+
   .tab {
     display: inline-block;
-    margin-left: 1em;
+    margin: 1em;
+
+    color: black;
+    background-color: #fff6f6d2;
+    box-shadow: 10px 10px 20px 0 rgba(172,172,172,.5);
+    padding: 50px;
+    border-radius: 10px;
   }
+  
   .project-people-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction:column;
     justify-content: baseline;
   }
+
   .project-people-container>*, .project-area-container>* {
     padding: 3px;
     text-decoration: underline;
   }
+
   .project-people-container>*:hover, .project-area-container>*:hover {
     text-decoration: none;
     background-color: ghostwhite;
@@ -137,13 +149,20 @@
     width: fit-content;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
+
   .area-person-link {
-    padding: 3px;
     color: ghostwhite;
+    margin-left: 1em;
+    border-radius: 5px;
+    padding: 3px 5px;
+    transition: padding 0.3s, background-color 0.3s, color 0.3s;
   }
 
   .area-person-link:hover {
     text-decoration: underline;
+    color: black;
+    background-color: rgba(248, 248, 255, 0.900);
+    padding: 3px 15px;
   }
 
   .project-img-container {

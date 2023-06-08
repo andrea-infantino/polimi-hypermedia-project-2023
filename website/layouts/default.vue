@@ -2,6 +2,7 @@
     <div class = 'page'>
         <Header />
         <slot />
+        <ScrollToTop />
         <Footer />
     </div>
 </template>

@@ -37,13 +37,13 @@
                 <h3 class="par-pp-title">2.1. Personal Information</h3>
                 <p class="par-pp">
                 We may use your personal information for the following purposes:<br>
-                 - To respond to your inquiries and provide you with information about our services.<br>
-                 - To send you newsletters or promotional emails with your consent.<br>
-                 - To improve and personalize your experience on our website.<br>
-                 - To analyze website usage and trends.<br>
-                 - To enforce our Terms of Service and protect the rights and safety of our users.<br>
-                 - To comply with applicable laws and regulations.<br>
-                 - To perform any other function that we believe in good faith is necessary to protect the security or proper functioning of our website.<br>
+                &ensp;• To respond to your inquiries and provide you with information about our services.<br>
+                &ensp;• To send you newsletters or promotional emails with your consent.<br>
+                &ensp;• To improve and personalize your experience on our website.<br>
+                &ensp;• To analyze website usage and trends.<br>
+                &ensp;• To enforce our Terms of Service and protect the rights and safety of our users.<br>
+                &ensp;• To comply with applicable laws and regulations.<br>
+                &ensp;• To perform any other function that we believe in good faith is necessary to protect the security or proper functioning of our website.<br>
                 </p>
 
                 <h3 class="par-pp-title">2.2. Non-Personal Information</h3>
@@ -107,7 +107,7 @@
             <NuxtLink id="to_homepage" to="/" class="my_link">Homepage</NuxtLink>
         </div>
         -->
-
+        
     </main>
 </template>
 
