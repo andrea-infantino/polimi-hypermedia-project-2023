@@ -10,7 +10,7 @@
         </div>
       </div>
 
-      <h1 class="intro"><strong>Check the projects for each area</strong></h1>
+      <h1 class="intro"><center><strong>Check our projects for each area of investment:</strong></center></h1>
   
       <div id="list-container">
         <SingleArea v-for = "area of areas" :id = "area.id" :name = "area.name + ' projects'" :link = "'/projects_by_area/' + area.id" />

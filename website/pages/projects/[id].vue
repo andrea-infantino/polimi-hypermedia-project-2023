@@ -1,5 +1,8 @@
 <template>
     <Head>
+        <NuxtLink to="/projects">
+            <div class="back-button">&lArr;</div>
+        </NuxtLink>
         <Title>{{ project.title }} - Wizarding Ventures</Title>
     </Head>
 

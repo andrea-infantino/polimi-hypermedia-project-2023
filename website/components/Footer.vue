@@ -10,7 +10,7 @@
                    
             <div class="rights">
                 <strong>© 2023 Wizarding Ventures S.P.A.</strong><br>
-                All rights reserved. <NuxtLink id="to_privacy_policy" to="/privacy_policy">Privacy Policy</NuxtLink> · <NuxtLink id="to_cookie_policy" to="/cookie_policy">Cookie Policy</NuxtLink>
+                All rights reserved. <NuxtLink id="to_privacy_policy" to="/privacy_policy"> Privacy Policy</NuxtLink> · <NuxtLink id="to_cookie_policy" to="/cookie_policy">Cookie Policy</NuxtLink>
             </div>
 
             <div class="socials"> <b>Follow us:</b>
@@ -54,7 +54,7 @@
     .socials {
         text-align: right;
         vertical-align: text-bottom;
-        margin-top: 10px;
+        margin-top: 13px;
         padding-right: 20px;
     }
 
@@ -77,7 +77,7 @@
     }
 
     .rights {
-        padding-top: 20px;
+        padding-top: 10px;
         font-size: 13px;
         color: black;
     }

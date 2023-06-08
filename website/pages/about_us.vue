@@ -10,7 +10,7 @@
             </div>
         </div>
 
-        <h1 class="intro"><strong>Welcome to our enchanted realm of venture capital for wizards!</strong></h1>
+        <h1 class="intro"><strong><center>Welcome to our enchanted realm of venture capital for wizards!</center></strong></h1>
         
         <div class="paragraphs">
             <section class="about-vision">
@@ -44,10 +44,21 @@
 
 <style>
 
-    .intro, .outro {
+    .intro {
         color:white;
         margin-left: 40px;
         margin-right: 40px;
+        margin-top: 40px;
+        margin-bottom: -10px;
+    }
+
+    .outro {
+        color:white;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        text-align: center;
     }
 
     .about-vision, .about-partnerships, .about-team, .about-activities {

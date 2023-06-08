@@ -11,6 +11,7 @@
     <NuxtLink id="to_about_us" to="/about_us">About Us</NuxtLink>
     <NuxtLink id="to_projects_by_area" to="/projects_by_area">Projects by Area</NuxtLink>
     <NuxtLink id="to_portfolio" to="/portfolio">Portfolio</NuxtLink>
+    <NuxtLink id="to_404" to="/error">porca vacca</NuxtLink>
 </template>
 
 <style>

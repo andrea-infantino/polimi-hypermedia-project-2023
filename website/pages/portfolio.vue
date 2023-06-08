@@ -100,6 +100,7 @@
 
     .links {
         text-align: center;
+        margin-bottom: 3%;
     }
 
     .my_link {

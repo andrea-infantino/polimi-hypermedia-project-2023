@@ -102,10 +102,11 @@
 
         </div>
         
-        
+        <!--
         <div class="links">
             <NuxtLink id="to_homepage" to="/" class="my_link">Homepage</NuxtLink>
         </div>
+        -->
 
     </main>
 </template>
