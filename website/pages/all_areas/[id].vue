@@ -36,7 +36,7 @@
           </div>
 
             <div class="area-info">
-                <div class="area-description"> {{ area.description }} </div>
+              <div v-html="renderedDescription"></div>
 
                 <span class="related-projects">
                     <div class ="related-projects-title">
@@ -61,8 +61,23 @@
             return {
                 area
             }
+        },
+
+        computed: {
+          renderedDescription() {
+            // Assuming you have retrieved the area description from the database and assigned it to the 'area.description' variable
+            let description = this.area.description;
+
+            // Use DOMParser to parse the HTML tags and create a DOM object
+            let parser = new DOMParser();
+            let parsedDescription = parser.parseFromString(description, "text/html");
+
+            // Return the innerHTML of the parsed DOM object
+            return parsedDescription.body.innerHTML;
+          }
         }
-    })
+
+    })  
 </script>
 
 <style>
@@ -100,7 +115,7 @@
     color: ghostwhite;
     margin: 0px 250px;
     border-radius: 10px;
-    padding: 10px 25px;
+    padding: 70px 25px;
     transition: all 0.2s;
   }
 
@@ -114,7 +129,7 @@
     font-size: 3em;
     margin: 0px 250px;
     border-radius: 10px;
-    padding: 10px 25px;
+    padding: 70px 25px;
     color: gray;
     cursor: not-allowed;
     
@@ -125,6 +140,7 @@
     background-color: #fff6f6d2;
     box-shadow: 15px 15px 30px 0 rgba(172,172,172,.5);
     padding: 40px 60px;
+    margin: 25px 0px;
     border-radius: 10px;
     white-space: pre-wrap;
   }
