@@ -47,11 +47,13 @@ export default {
   color: black;
   font-size: 16px;
   cursor: pointer;
-  transition: all 0.1s;
+  transition: all 0.2s;
   border: 3px solid #1E3D58;
 }
 
 .scroll-to-top-btn:hover {
+  font-weight: bold;
+  padding: 15px 17px;
   box-shadow: 3px 5px 10px 0 rgba(172,172,172,.5);
 }
 

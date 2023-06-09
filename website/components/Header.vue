@@ -7,8 +7,9 @@
             <nav id="top-bar">
                 <NuxtLink class="landmark" to="/most_relevant_projects">MOST RELEVANT PROJECTS</NuxtLink>
                 <NuxtLink class="landmark" to="/portfolio">PORTFOLIO</NuxtLink>
-                <NuxtLink class="landmark" to="/projects">PROJECTS</NuxtLink>
-                <NuxtLink class="landmark" to="/all_areas">AREAS</NuxtLink>
+                <NuxtLink class="landmark" to="/projects">ALL PROJECTS</NuxtLink>
+                <NuxtLink class="landmark" to="/projects_by_area">PROJECTS BY AREA</NuxtLink>
+                <NuxtLink class="landmark" to="/all_areas">ALL AREAS</NuxtLink>
                 <NuxtLink class="landmark" to="/our_team">OUR TEAM</NuxtLink>
                 <NuxtLink class="landmark" to="/about_us">ABOUT US</NuxtLink>
                 <NuxtLink class="landmark" to="/contacts">CONTACTS</NuxtLink>

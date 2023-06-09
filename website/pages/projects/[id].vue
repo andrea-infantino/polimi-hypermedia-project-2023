@@ -13,9 +13,20 @@
             </div>
         </div>
 
+      <div class="project-page">
+
+        <NuxtLink v-if="project.id!=0" :to="`/projects/${project.id-1}`">
+          <span class="prj-arrow-enabled">&#8249;</span>
+        </NuxtLink>
+
+        <span v-if="project.id==0">
+            <span class="prj-arrow-disabled">&#8249;</span>
+        </span>
+
+
+
         <div class="project-container">
             <div class="project-info">
-                <!-- <span class="project-title">{{ project.title }} </span> -->
                 <span>
                     <b>Supervisor:</b> <br>
                     <div class="project-people-container-tab">
@@ -31,7 +42,7 @@
                     </div>
                 </span>
                 <span class="description-text"><b>Description:</b> <br> 
-                    <span class="tab">{{ project.presentation_text }}</span>
+                    <span class="prj-description">{{ project.presentation_text }}</span>
                 </span>
                 
                 <span>
@@ -45,6 +56,19 @@
                   <img class="project_img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" />
             </div>
         </div>
+
+
+        <NuxtLink v-if="project.id<19" :to="`/projects/${project.id+1}`">
+          <span class="prj-arrow-enabled">&#8250;</span>
+        </NuxtLink>
+
+        <span v-if="project.id>=19">
+          <span class="prj-arrow-disabled">&#8250;</span>
+        </span>
+
+      </div>
+
+
     </main>
 </template>
 
@@ -96,6 +120,38 @@
     margin-top: 30px;
     margin-bottom: 30px;
   }
+
+  .project-page {
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .prj-arrow-enabled {
+    font-size: 3em;
+    color: ghostwhite;
+    margin: 0px 100px;
+    border-radius: 10px;
+    padding: 70px 20px;
+    transition: all 0.2s;
+  }
+
+  .prj-arrow-enabled:hover {
+    color: black;
+    background-color: ghostwhite;
+    box-shadow: 3px 5px 30px 0 rgba(172,172,172,.5);
+  }
+
+  .prj-arrow-disabled {
+    font-size: 3em;
+    margin: 0px 100px;
+    border-radius: 10px;
+    padding: 10px 25px;
+    color: gray;
+    cursor: not-allowed;
+    
+  }
   
   /* .project-title {
     font-size: xx-large;
@@ -117,14 +173,13 @@
     font-weight: bold;
   }
 
-  .tab {
+  .prj-description {
     display: inline-block;
     margin: 1em;
-
     color: black;
     background-color: #fff6f6d2;
     box-shadow: 10px 10px 20px 0 rgba(172,172,172,.5);
-    padding: 50px;
+    padding: 20px 30px;
     border-radius: 10px;
   }
   

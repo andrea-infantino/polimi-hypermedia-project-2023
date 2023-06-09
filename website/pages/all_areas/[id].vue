@@ -23,7 +23,7 @@
               <span class="arrow-disabled">&#8249;</span>
             </span>
 
-            <img class="area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" />
+            <img class="full-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" />
 
             <NuxtLink v-if="area.id<4" :to="`/all_areas/${area.id+1}`">
               <span class="arrow-enabled">&#8250;</span>
@@ -87,9 +87,9 @@
     margin-top: 30px;
   }
   
-  .area-img {
+  .full-area-img {
     display: flex;
-    width: 20%;
+    width: 25%;
     margin: 0 auto;
     margin-top: 30px;
     justify-content: center;

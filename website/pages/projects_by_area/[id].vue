@@ -15,7 +15,26 @@
         
         <div class="Area_container">
             <div class="area-info">
-                <img class="area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`"/>           
+                <div class="area-header">
+                    <NuxtLink v-if="area.id!=0" :to="`/projects_by_area/${area.id-1}`">
+                        <span class="arrow-enabled">&#8249;</span>
+                    </NuxtLink>
+
+                    <span v-if="area.id==0">
+                        <span class="arrow-disabled">&#8249;</span>
+                    </span>
+
+                    <img class="prj-by-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" />
+
+                    <NuxtLink v-if="area.id<4" :to="`/projects_by_area/${area.id+1}`">
+                        <span class="arrow-enabled">&#8250;</span>
+                    </NuxtLink>
+
+                    <span v-if="area.id>=4">
+                        <span class="arrow-disabled">&#8250;</span>
+                    </span>
+
+                </div>          
                 <span class="related-projects">
                     <div class="related-projects-container">
                         <ProjectCard v-for = "project of area.Projects" :id="project.id" :title="project.title" :link="'/projects/' + project.id" :img_bool="true" />
@@ -54,9 +73,9 @@
     margin-top: 30px;
   }
 
-  .area-img {
+  .prj-by-area-img {
     height: auto;
-    width: 25%;
+    width: 15%;
     margin: 10px;
   }
 

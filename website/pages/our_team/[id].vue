@@ -12,30 +12,55 @@
       <div class="title">OUR TEAM</div>
     </div>
 
-    <div class="person-container">
-      <img class="person-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/People/${person.id}.jpg`" />
-      <div class="person-info">
-        <span class="person-name-and-surname">{{ person.name }} {{ person.surname }}</span>
-        <span class="person-role">{{ person.role }}</span>
-        <hr class="separator" />
 
-        <div><strong>Joined</strong> &emsp; {{ person.hiring_date }}</div> 
-        
-        <span> <div class="space-between-line">E-Mail:</div>
-          <nuxt-link class="mail" :to="`mailto:${person.email}`">&#9993;&emsp;{{ person.email }}</nuxt-link>
-        </span>
+    <div class="person-page">
 
-        <span> <div class="space-between-line">Social:</div>
-          <a href="https://twitter.com/home"><img src="../../assets/img/contacts/twitter_logo_hover.png" class="twitter-logo-hover"><img src="../../assets/img/contacts/twitter_logo.png" alt="Twitter Logo" class="twitter-logo"></a>
-          <a href="https://www.instagram.com"><img src="../../assets/img/contacts/instagram_logo_hover.png" class="instagram-logo-hover"><img src="../../assets/img/contacts/instagram_logo.png" alt="Instagram Logo" class="instagram-logo"></a>
-          <a href="https://www.linkedin.com"><img src="../../assets/img/contacts/linkedin_logo_hover.png" class="linkedin-logo-hover"><img src="../../assets/img/contacts/linkedin_logo.png" alt="LinkedIn Logo" class="linkedin-logo"></a>
-        </span>
-        <span class="desc-container"><div class="space-between-line">Description:</div> 
-          <div class="person-description-tab">{{ person.description }}</div>
-        </span>
-        <nuxt-link v-if="person.cv_link != null" id="person-cv" :to="`${person.cv_link}`" target="_blank">See {{ person.name }} {{ person.surname }}'s CV</nuxt-link>
+      <NuxtLink v-if="person.id!=0" :to="`/our_team/${person.id-1}`">
+        <span class="prs-arrow-enabled">&#8249;</span>
+      </NuxtLink>
+
+      <span v-if="person.id==0">
+          <span class="prs-arrow-disabled">&#8249;</span>
+      </span>
+
+
+      <div class="person-container">
+        <img class="person-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/People/${person.id}.jpg`" />
+        <div class="person-info">
+          <span class="person-name-and-surname">{{ person.name }} {{ person.surname }}</span>
+          <span class="person-role">{{ person.role }}</span>
+          <hr class="separator" />
+
+          <div><strong>Joined</strong> &emsp; {{ person.hiring_date }}</div> 
+          
+          <span> <div class="space-between-line">E-Mail:</div>
+            <nuxt-link class="mail" :to="`mailto:${person.email}`">&#9993;&emsp;{{ person.email }}</nuxt-link>
+          </span>
+
+          <span> <div class="space-between-line">Social:</div>
+            <a href="https://twitter.com/home"><img src="../../assets/img/contacts/twitter_logo_hover.png" class="twitter-logo-hover"><img src="../../assets/img/contacts/twitter_logo.png" alt="Twitter Logo" class="twitter-logo"></a>
+            <a href="https://www.instagram.com"><img src="../../assets/img/contacts/instagram_logo_hover.png" class="instagram-logo-hover"><img src="../../assets/img/contacts/instagram_logo.png" alt="Instagram Logo" class="instagram-logo"></a>
+            <a href="https://www.linkedin.com"><img src="../../assets/img/contacts/linkedin_logo_hover.png" class="linkedin-logo-hover"><img src="../../assets/img/contacts/linkedin_logo.png" alt="LinkedIn Logo" class="linkedin-logo"></a>
+          </span>
+          <span class="desc-container"><div class="space-between-line">Description:</div> 
+            <div class="person-description-tab">{{ person.description }}</div>
+          </span>
+          <nuxt-link v-if="person.cv_link != null" id="person-cv" :to="`${person.cv_link}`" target="_blank">See {{ person.name }} {{ person.surname }}'s CV</nuxt-link>
+        </div>
       </div>
+
+      <NuxtLink v-if="person.id<14" :to="`/our_team/${person.id+1}`">
+          <span class="prs-arrow-enabled">&#8250;</span>
+        </NuxtLink>
+
+        <span v-if="person.id>=14">
+          <span class="prs-arrow-disabled">&#8250;</span>
+        </span>
+
     </div>
+
+
+
 
     <hr class="separator " />
     
@@ -88,6 +113,38 @@
 </script>
 
 <style>
+  .person-page {
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .prs-arrow-enabled {
+    font-size: 3em;
+    color: ghostwhite;
+    margin: 0px 10px;
+    border-radius: 10px;
+    padding: 70px 20px;
+    transition: all 0.2s;
+  }
+
+  .prs-arrow-enabled:hover {
+    color: black;
+    background-color: ghostwhite;
+    box-shadow: 3px 5px 30px 0 rgba(172,172,172,.5);
+  }
+
+  .prs-arrow-disabled {
+    font-size: 3em;
+    margin: 0px 10px;
+    border-radius: 10px;
+    padding: 10px 25px;
+    color: gray;
+    cursor: not-allowed;
+    
+  }
+
   .person-container {
     display: flex;
     flex-direction: row;
