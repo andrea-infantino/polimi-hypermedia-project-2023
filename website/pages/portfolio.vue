@@ -35,8 +35,10 @@
             </div>
     </div>
 
+    <hr class="separator " />
+
         <div class="most_relevant_projects">
-            <h1 class="header">Our most relevant project</h1>
+            <h1 class="header">This is our most relevant project at the moment:</h1>
             
             <div class="first">
                 <ProjectCard :id = "first.id" :title  = "first.title" :link = "'/projects/' + first.id" :img_bool="true" />
@@ -44,10 +46,12 @@
 
         </div>
 
+        <hr class="separator " />
+
         <div class="links">
-            <NuxtLink id="to_most_relevant_projects" to="/most_relevant_projects" class="my_link">Most Relevant Projects</NuxtLink><br>
-            <NuxtLink id="to_all_projects" to="/projects" class="my_link">All Projects</NuxtLink><br>
-            <NuxtLink id="to_projects_by_area" to="/projects_by_area" class="my_link">Projects by Area</NuxtLink>
+            <NuxtLink id="to_all_projects" to="/projects" class="prtf-link">Check all the projects</NuxtLink><br>
+            <NuxtLink id="to_most_relevant_projects" to="/most_relevant_projects" class="prtf-link">See the most relevant projects</NuxtLink><br>
+            <NuxtLink id="to_projects_by_area" to="/projects_by_area" class="prtf-link">Check the projects by area</NuxtLink>
         </div>
     </main>
 </template>
@@ -99,24 +103,29 @@
     }
 
     .links {
+        display: flex;
+        justify-content: space-between;
         text-align: center;
-        margin-bottom: 3%;
+        margin: 3% 0%;
     }
 
-    .my_link {
-        color: rgba(255, 255, 255, 0.826);
+    .prtf-link {
+        color: ghostwhite;
+        position: relative;
         font-size: 20px;
-        font-weight: 700;
-        text-decoration: none;
-        margin-left: 40px;
-        margin-right: 40px;
+        font-weight: bold;
+        margin: auto;
+        border-radius: 10px;
+        padding: 10px 20px;
+        transition: all 0.2s;
     }
 
-    .my_link:hover {
-        color: #ffffff;
-        font-size: 22px;
-        font-weight: 700;
+    .prtf-link:hover {
+        color: black;
+        background-color: rgba(248, 248, 255, 0.9);
+        box-shadow: 3px 5px 20px 0 rgba(172,172,172,.5);
         text-decoration: underline;
+        padding: 10px 30px;
     }
 
 </style>

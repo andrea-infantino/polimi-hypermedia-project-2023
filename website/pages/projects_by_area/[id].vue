@@ -15,26 +15,27 @@
         
         <div class="Area_container">
             <div class="area-info">
-                <div class="area-header">
+                <div class="area-prj-header">
                     <NuxtLink v-if="area.id!=0" :to="`/projects_by_area/${area.id-1}`">
-                        <span class="arrow-enabled">&#8249;</span>
+                        <span class="area-prj-arrow-enabled">&#8249;</span>
                     </NuxtLink>
 
                     <span v-if="area.id==0">
-                        <span class="arrow-disabled">&#8249;</span>
+                        <span class="area-prj-arrow-disabled">&#8249;</span>
                     </span>
 
                     <img class="prj-by-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" />
 
                     <NuxtLink v-if="area.id<4" :to="`/projects_by_area/${area.id+1}`">
-                        <span class="arrow-enabled">&#8250;</span>
+                        <span class="area-prj-arrow-enabled">&#8250;</span>
                     </NuxtLink>
 
                     <span v-if="area.id>=4">
-                        <span class="arrow-disabled">&#8250;</span>
+                        <span class="area-prj-arrow-disabled">&#8250;</span>
                     </span>
 
-                </div>          
+                </div>  
+
                 <span class="related-projects">
                     <div class="related-projects-container">
                         <ProjectCard v-for = "project of area.Projects" :id="project.id" :title="project.title" :link="'/projects/' + project.id" :img_bool="true" />
@@ -73,10 +74,42 @@
     margin-top: 30px;
   }
 
+  .area-prj-header {
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+
   .prj-by-area-img {
     height: auto;
     width: 15%;
     margin: 10px;
+  }
+
+  .area-prj-arrow-enabled {
+    font-size: 3em;
+    color: ghostwhite;
+    margin: 0px 250px;
+    border-radius: 10px;
+    padding: 50px 25px;
+    transition: all 0.2s;
+  }
+
+  .area-prj-arrow-enabled:hover {
+    color: black;
+    background-color: ghostwhite;
+    box-shadow: 3px 5px 30px 0 rgba(172,172,172,.5);
+  }
+
+  .area-prj-arrow-disabled {
+    font-size: 3em;
+    margin: 0px 250px;
+    border-radius: 10px;
+    padding: 50px 25px;
+    color: gray;
+    cursor: not-allowed;
+    
   }
 
   .related-projects-container {

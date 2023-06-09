@@ -16,21 +16,21 @@
         <div class="Area_container">
           <div class="area-header">
             <NuxtLink v-if="area.id!=0" :to="`/all_areas/${area.id-1}`">
-              <span class="arrow-enabled">&#8249;</span>
+              <span class="area-arrow-enabled">&#8249;</span>
             </NuxtLink>
 
             <span v-if="area.id==0">
-              <span class="arrow-disabled">&#8249;</span>
+              <span class="area-arrow-disabled">&#8249;</span>
             </span>
 
             <img class="full-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" />
 
             <NuxtLink v-if="area.id<4" :to="`/all_areas/${area.id+1}`">
-              <span class="arrow-enabled">&#8250;</span>
+              <span class="area-arrow-enabled">&#8250;</span>
             </NuxtLink>
 
             <span v-if="area.id>=4">
-              <span class="arrow-disabled">&#8250;</span>
+              <span class="area-arrow-disabled">&#8250;</span>
             </span>
 
           </div>
@@ -65,15 +65,20 @@
 
         computed: {
           renderedDescription() {
-            // Assuming you have retrieved the area description from the database and assigned it to the 'area.description' variable
             let description = this.area.description;
 
-            // Use DOMParser to parse the HTML tags and create a DOM object
-            let parser = new DOMParser();
-            let parsedDescription = parser.parseFromString(description, "text/html");
-
-            // Return the innerHTML of the parsed DOM object
-            return parsedDescription.body.innerHTML;
+            //check if DOMParser is available
+            if (typeof DOMParser !== 'undefined') {
+              //use DOMParser to parse the HTML tags and create a DOM object
+              let parser = new DOMParser();
+              let parsedDescription = parser.parseFromString(description, "text/html");
+              
+              //return the innerHTML of the parsed DOM object
+              return parsedDescription.body.innerHTML;
+            } else {
+              //fallback for server-side rendering. render the text as is
+              return description;
+            }
           }
         }
 
@@ -110,7 +115,7 @@
     justify-content: center;
   }
   
-  .arrow-enabled {
+  .area-arrow-enabled {
     font-size: 3em;
     color: ghostwhite;
     margin: 0px 250px;
@@ -119,13 +124,13 @@
     transition: all 0.2s;
   }
 
-  .arrow-enabled:hover {
+  .area-arrow-enabled:hover {
     color: black;
     background-color: ghostwhite;
     box-shadow: 3px 5px 30px 0 rgba(172,172,172,.5);
   }
 
-  .arrow-disabled {
+  .area-arrow-disabled {
     font-size: 3em;
     margin: 0px 250px;
     border-radius: 10px;

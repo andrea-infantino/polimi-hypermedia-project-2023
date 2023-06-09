@@ -11,6 +11,11 @@
       </div>
     </div>
 
+    <span class="our-team-text">Meet our team. We include talented individuals, unified by our purpose and our core values of <b>teamwork</b>, <b>continuos learning</b> and <b>leadership</b>.<br>
+      We inspire and encourage people to believe in and challenge themselves, discover their passion and realize their potential.</span>
+
+    <hr class="separator " />
+
     <div id="people-container">
       <PersonCard v-for = "person of importance_order" :id = "person.id" :name = "person.name" :surname = "person.surname" :role = "person.role" :link = "'/our_team/' + person.id" />
     </div>
@@ -38,8 +43,13 @@
 
 
 <style>
-  #people-container
-  {
+  .our-team-text {
+      text-align: center;
+      font-size: 18px;
+      margin: 30px;
+  }
+
+  #people-container {
     padding: 30px;
     display: flex;
     flex-wrap: wrap;

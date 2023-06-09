@@ -10,6 +10,8 @@
             </div>
         </div>
 
+        <span class="mrp-text">Check out our 5 most relevant project:</span>
+
         <div class="most_relevant_projects">
             
             <div class="first">
@@ -23,9 +25,11 @@
 
         </div>
 
+        <hr class="separator " />
+
         <div class="links">
-            <NuxtLink id="to_all_projects" to="/projects" class="my_link">All Projects</NuxtLink><br>
-            <NuxtLink id="to_projects_by_area" to="/projects_by_area" class="my_link">Projects by Area</NuxtLink>
+            <NuxtLink id="to_all_projects" to="/projects" class="mrp-link">See all the projects</NuxtLink><br>
+            <NuxtLink id="to_projects_by_area" to="/projects_by_area" class="mrp-link">Check the projects divided by area</NuxtLink>
         </div>
     </main>
 </template>
@@ -40,6 +44,13 @@
 </script>
 
 <style>
+    .mrp-text {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 30px 0px 10px;
+    }
+    
     .first {
         display: flex;
         justify-content: center;
@@ -81,20 +92,23 @@
         text-align: center;
     }
 
-    .my_link {
-        color: rgba(255, 255, 255, 0.826);
+    .mrp-link {
+        color: ghostwhite;
+        position: relative;
         font-size: 20px;
-        font-weight: 700;
-        text-decoration: none;
-        margin-left: 40px;
-        margin-right: 40px;
+        font-weight: bold;
+        margin: auto;
+        border-radius: 10px;
+        padding: 10px 20px;
+        transition: all 0.2s;
     }
 
-    .my_link:hover {
-        color: #ffffff;
-        font-size: 22px;
-        font-weight: 700;
+    .mrp-link:hover {
+        color: black;
+        background-color: rgba(248, 248, 255, 0.9);
+        box-shadow: 3px 5px 20px 0 rgba(172,172,172,.5);
         text-decoration: underline;
+        padding: 10px 30px;
     }
 
 </style>

@@ -10,7 +10,7 @@
             </div>
         </div>
 
-        <h1 class="intro"><strong><center>Welcome to our enchanted realm of venture capital for wizards!</center></strong></h1>
+        <h1 class="au-intro"><strong><center>Welcome to our enchanted realm of venture capital for wizards!</center></strong></h1>
         
         <div class="paragraphs">
             <section class="about-vision">
@@ -32,11 +32,13 @@
             </section>
         </div>
         
-        <h2 class="outro">Let's embark on a fantastical journey together, where dreams are turned into reality, and the possibilities are as infinite as the stars in the night sky.</h2>
+        <h2 class="au-outro">Let's embark on a fantastical journey together, where dreams are turned into reality, and the possibilities are as infinite as the stars in the night sky.</h2>
+
+        <hr class="separator " />
         
         <div class="links">
-            <NuxtLink id="to_our_team" to="/our_team" class="my_link">Our Team</NuxtLink><br>
-            <NuxtLink id="to_contacts" to="/contacts" class="my_link">Contacts</NuxtLink>
+            <NuxtLink id="to_our_team" to="/our_team" class="au-link">Meet Our Team</NuxtLink><br>
+            <NuxtLink id="to_contacts" to="/contacts" class="au-link">Contact us</NuxtLink>
         </div>
 
     </main>
@@ -44,20 +46,16 @@
 
 <style>
 
-    .intro {
-        color:white;
-        margin-left: 40px;
-        margin-right: 40px;
-        margin-top: 40px;
-        margin-bottom: -10px;
+    .au-intro {
+        color: ghostwhite;
+        font-size: 22px;
+        margin: 40px 50px -10px;
     }
 
-    .outro {
-        color:white;
-        margin-left: 40px;
-        margin-right: 40px;
-        margin-top: 20px;
-        margin-bottom: 25px;
+    .au-outro {
+        color: ghostwhite;
+        font-size: 20px;
+        margin: 20px 50px 25px;
         text-align: center;
     }
 
@@ -91,20 +89,23 @@
         text-align: center;
     }
 
-    .my_link {
-        color: rgba(255, 255, 255, 0.826);
-        font-size: 25px;
-        font-weight: 700;
-        text-decoration: none;
-        margin-left: 40px;
-        margin-right: 40px;
+    .au-link {
+        color: ghostwhite;
+        position: relative;
+        font-size: 20px;
+        font-weight: bold;
+        margin: auto;
+        border-radius: 10px;
+        padding: 10px 20px;
+        transition: all 0.2s;
     }
 
-    .my_link:hover {
-        color: #ffffff;
-        font-size: 27px;
-        font-weight: 700;
+    .au-link:hover {
+        color: black;
+        background-color: rgba(248, 248, 255, 0.9);
+        box-shadow: 3px 5px 20px 0 rgba(172,172,172,.5);
         text-decoration: underline;
+        padding: 10px 30px;
     }
     
 </style>

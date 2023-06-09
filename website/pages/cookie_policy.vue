@@ -63,7 +63,7 @@
 
             <section class="section">
                 <div class="heading">6. Contact Us</div>
-                <p class="par-pp">If you have any questions, concerns, or requests regarding this Privacy Policy or the handling of your information, please contact us using the information available at <NuxtLink id="to_contacts" to="/contacts">this link</NuxtLink>.</p>                
+                <p class="par-pp">If you have any questions, concerns, or requests regarding this Privacy Policy or the handling of your information, please contact us using the information available at <NuxtLink id="to_contacts" to="/contacts" class="cp-contact">this link</NuxtLink>.</p>                
             </section>
 
             <section class="section">
@@ -124,13 +124,13 @@
         text-align: center;
     }
 
-    #to_contacts {
+    .cp-contact {
         color: #1E3D58;
         font-weight: bold;
         text-decoration: none;
     }
 
-    #to_contacts:hover {
+    .cp-contact:hover {
         color: #057DCD;
         font-weight: bold;
         text-decoration: underline;
