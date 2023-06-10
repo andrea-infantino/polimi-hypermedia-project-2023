@@ -10,7 +10,7 @@
         </div>
       </div>
 
-      <h1 class="intro"><center><strong>Check our projects for each area of investment:</strong></center></h1>
+      <h1 class="area-prj-intro"><center><strong>Check our projects for each area of investment:</strong></center></h1>
   
       <div id="list-container">
         <SingleArea v-for = "area of areas" :id = "area.id" :name = "area.name + ' projects'" :link = "'/projects_by_area/' + area.id" />
@@ -24,6 +24,12 @@
     
     
   <style>
+    .area-prj-intro {
+      color: ghostwhite;
+      font-size: 22px;
+      margin: 30px 0px 10px;
+    }
+
     #list-container {
       padding: 3% 15%;
       display: flex;
