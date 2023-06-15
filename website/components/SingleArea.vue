@@ -59,4 +59,8 @@
         transition: background-color 0.5s, color 0.5s, transform 0.5s;
     }
 
+    .area:active {
+        transform: scale(0.95);
+    }
+
 </style>

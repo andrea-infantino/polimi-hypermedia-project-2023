@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="showButton" @click="scrollToTop" class="scroll-to-top-btn">&#10514;</div>
+    <div v-if="showButton" @click="scrollToTop" class="scroll-to-top-btn">&#8679;</div>
   </div>
 </template>
 
@@ -53,8 +53,12 @@ export default {
 
 .scroll-to-top-btn:hover {
   font-weight: bold;
-  padding: 15px 17px;
+  padding-bottom: 12px;
   box-shadow: 3px 5px 10px 0 rgba(172,172,172,.5);
+}
+
+.scroll-to-top-btn:active {
+  transform: scale(0.9);
 }
 
 </style>

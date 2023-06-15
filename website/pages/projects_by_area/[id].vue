@@ -5,9 +5,7 @@
 
     <main>
         <div class="title-area">
-            <NuxtLink to="/projects_by_area">
-                <div class="back-button">&lArr;</div>
-            </NuxtLink>
+            <a href="" class="back-button" @click.prevent="$router.back()">&#8630;</a>
             <div class="title">
                 {{ area.name }} Projects
             </div>

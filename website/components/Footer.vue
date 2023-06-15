@@ -14,9 +14,9 @@
             </div>
 
             <div class="socials"> <b>Follow us:</b>
-                <a href="https://twitter.com/home"><img src="../assets/img/contacts/twitter_logo_hover.png" alt="Twitter Logo" class="twitter-footer"></a>
-                <a href="https://www.instagram.com"><img src="../assets/img/contacts/instagram_logo_hover.png" alt="Instagram Logo" class="instagram-footer"></a>
-                <a href="https://www.linkedin.com"><img src="../assets/img/contacts/linkedin_logo_hover.png" alt="LinkedIn Logo" class="linkedin-footer"></a>
+                <a href="https://twitter.com/home" target=”_blank”><img src="../assets/img/contacts/twitter_logo_hover.png" alt="Twitter Logo" class="twitter-footer"></a>
+                <a href="https://www.instagram.com" target=”_blank”><img src="../assets/img/contacts/instagram_logo_hover.png" alt="Instagram Logo" class="instagram-footer"></a>
+                <a href="https://www.linkedin.com" target=”_blank”><img src="../assets/img/contacts/linkedin_logo_hover.png" alt="LinkedIn Logo" class="linkedin-footer"></a>
             </div>
 
         </div>
@@ -68,7 +68,11 @@
     }
 
     .linkedin-footer:hover, .instagram-footer:hover, .twitter-footer:hover {
-        transform: scale(1.15);
+        transform: scale(1.1);
+    }
+
+    .linkedin-footer:active, .instagram-footer:active, .twitter-footer:active {
+        transform: scale(1);
     }
     
     .bottom {

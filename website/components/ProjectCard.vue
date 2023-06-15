@@ -27,8 +27,7 @@
         margin: 2px;
     }
 
-    .card
-    {
+    .card {
         display: flex;
         flex-flow: column;
         width: fit-content;
@@ -43,5 +42,9 @@
         background-color:rgba(248, 248, 255, 0.8);
         color: black;
         transform: translate3d(0px, -5px, 5px);
+    }
+
+    .card:active {
+        transform: scale(0.95);
     }
 </style>

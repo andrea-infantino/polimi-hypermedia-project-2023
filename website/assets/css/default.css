@@ -32,15 +32,19 @@ main {
 .landmark {
       color: black;
       border-radius: 5px;
-      transition: 0.5s;
       padding: 10px 20px 10px 20px;
       align-self: center;
       vertical-align: center;
+      transition: 0.3s;
 }
 
 .landmark:hover {
       transform: translate3d(0px, -5px, 5px);
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.landmark:active {
+      transform: scale(0.95);
 }
 
 .title-area {
@@ -66,12 +70,15 @@ main {
       margin-left: 20px;
       padding: 5px;
       border-radius: 5px;
-      transition: 0.5s;
+      transition: 0.3s;
 }
 
 .back-button:hover {
-      transform: translate3d(0px, -5px, 5px);
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.back-button:active {
+      transform: scale(0.9);
 }
 
 .separator {

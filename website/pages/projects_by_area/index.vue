@@ -5,6 +5,7 @@
 
     <main>
       <div class="title-area">
+        <a href="" class="back-button" @click.prevent="$router.back()">&#8630;</a>
         <div class="title">
           PROJECTS BY AREA
         </div>

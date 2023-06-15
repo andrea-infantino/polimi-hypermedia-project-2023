@@ -5,12 +5,11 @@
 
     <main>
         <div class="title-area">
-          <NuxtLink to="/all_areas">
-            <div class="back-button">&lArr;</div>
-          </NuxtLink>
-            <div class="title">
-                {{ area.name }}
-            </div>
+          
+          <a href="" class="back-button" @click.prevent="$router.back()">&#8630;</a>
+          <div class="title">
+            {{ area.name }}
+          </div>
         </div>
         
         <div class="Area_container">
@@ -128,6 +127,10 @@
     color: black;
     background-color: ghostwhite;
     box-shadow: 3px 5px 30px 0 rgba(172,172,172,.5);
+  }
+
+  .area-arrow-enabled:active {
+    font-size: 2.7em;
   }
 
   .area-arrow-disabled {

@@ -13,8 +13,7 @@
 </script>
 
 <style>
-    .img
-    {
+    .img {
         border-radius: 5px;
         height: 300px;
         width: 300px;
@@ -28,13 +27,12 @@
         margin: 2px;
     }
 
-    .role{
+    .role {
         font-size: medium;
         margin: 2px;
     }
 
-    .card
-    {
+    .card {
         display: flex;
         flex-flow: column;
         width: fit-content;
@@ -44,9 +42,14 @@
         border-radius: 5px;
         transition: background-color 0.5s, color 0.5s, transform 0.5s;
     }
+
     .card:hover {
         background-color:rgba(248, 248, 255, 0.8);
         color: black;
         transform: translate3d(0px, -5px, 5px);
+    }
+
+    .card:active {
+        transform: scale(0.95);
     }
 </style>

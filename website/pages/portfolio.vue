@@ -5,6 +5,7 @@
 
     <main>
         <div class="title-area">
+            <a href="" class="back-button" @click.prevent="$router.back()">&#8630;</a>
             <div class="title">
                 PORTFOLIO
             </div>
@@ -126,6 +127,10 @@
         box-shadow: 3px 5px 20px 0 rgba(172,172,172,.5);
         text-decoration: underline;
         padding: 10px 30px;
+    }
+
+    .prtf-link:active {
+        transform: scale(0.95);
     }
 
 </style>

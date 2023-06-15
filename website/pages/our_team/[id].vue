@@ -6,10 +6,12 @@
     <main>
 
     <div class="title-area">
-      <NuxtLink to="/our_team">
-        <div class="back-button">&lArr;</div>
-      </NuxtLink>
-      <div class="title">OUR TEAM</div>
+      <a href="" class="back-button" @click.prevent="$router.back()">&#8630;</a>
+      <div class="clickable-title">
+        <NuxtLink to="/our_team" class="clickable-title">
+          OUR TEAM
+        </NuxtLink>
+      </div>
     </div>
 
 
@@ -118,6 +120,14 @@
     display: flex;
     align-items: center;
     margin-top: 30px;
+  }
+
+  .clickable-title {
+    font-weight: bold;
+    font-size: 40px;
+    margin: 20px;
+    text-align: center;
+    color: black;
   }
 
   .prs-arrow-enabled {

@@ -6,7 +6,7 @@
     <main>
         <div class="title-area">
             <div class="title">
-            COOKIE POLICY
+                COOKIE POLICY
             </div>
         </div>
 
