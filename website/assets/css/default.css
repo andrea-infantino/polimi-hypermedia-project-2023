@@ -1,7 +1,7 @@
 @font-face {
       font-family: "Poppins";
-      src: local("Poppins"),
-       url(../font/Poppins.ttf) format("truetype");
+      src: local("Poppins"), url(../font/Poppins.ttf) format("truetype");
+      font-display: swap; /* temporarily show a system font until custom font is loaded */
   }
 
 html, body {

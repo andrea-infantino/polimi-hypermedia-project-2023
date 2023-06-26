@@ -50,6 +50,19 @@
     </main>
 </template>
 
+<script setup>
+    const description = ref('In this page you will find more information on our vision, partnerships, team and activities.')
+    const keywords = ref('About Us, Vision, Partnerships, Team, Activities')
+
+    useHead({
+        meta: [
+            { name: 'description', content: description },
+            { name: 'keywords', content: keywords }
+        ]
+    })
+</script>
+
+
 <style>
 
     .au-intro {

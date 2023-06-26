@@ -63,6 +63,16 @@
     //split the projects so we can display the first one differently
     const first = Projects.value[0];
 
+    const description = ref('In this page you can find more information on the investment process.')
+    const keywords = ref('Portfolio, Entrepreneurship, Innovation, Investment, Startups, Capital, Financial Returns, Impact, Innovation')
+
+    useHead({
+        meta: [
+            { name: 'description', content: description },
+            { name: 'keywords', content: keywords }
+        ]
+    })
+
 </script>
 
 <style>

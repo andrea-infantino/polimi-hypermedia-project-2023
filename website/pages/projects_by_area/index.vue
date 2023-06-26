@@ -21,6 +21,16 @@
     
   <script setup>
     const { data: areas } = await useFetch('/api/all_areas')
+  
+    const description = ref('In this page you will find the projects for each area of investment.')
+    const keywords = ref('Projects By Area, Projects, Investments, Area')
+
+    useHead({
+        meta: [
+            { name: 'description', content: description },
+            { name: 'keywords', content: keywords }
+        ]
+    })
   </script>
     
     

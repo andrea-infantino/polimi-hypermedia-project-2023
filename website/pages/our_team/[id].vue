@@ -107,6 +107,18 @@
           }
       }
 
+      const description = ref('In this page you will find ' + person.name + ' ' + person.surname + '\'s personal information.')
+      const keywords = ref('Team, ' + person.name + ' ' + person.surname + ', ' + person.role)
+
+      console.log(keywords.value)
+
+      useHead({
+        meta: [
+          { name: 'description', content: description },
+          { name: 'keywords', content: keywords }
+        ]
+      })
+
       return {
         person, supervised_proj, team_proj
       }

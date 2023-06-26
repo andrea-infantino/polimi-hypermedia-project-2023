@@ -94,6 +94,17 @@
                   }
               }
           }
+
+          const description = ref('In this page you can find all the information about the project ' + project.title + '.')
+          const keywords = ref('Project, ' + project.title + ', ' + project.Areas.map(area => area.name).join(', '))
+
+          useHead({
+            meta: [
+              { name: 'description', content: description },
+              { name: 'keywords', content: keywords }
+            ]
+          })
+
           return {
               project, team, supervisor
           }

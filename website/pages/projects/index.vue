@@ -39,6 +39,16 @@
     letters2.value = Projects.value.map(project => project.title[0]).filter((value, index, self) => self.indexOf(value) === index)
     letters1.value = letters2.value.splice(0, letters2.value.length/2)
 
+    const description = ref('In this page you will find all of our ongoing projects.')
+    const keywords = ref('Projects, Investments')
+
+    useHead({
+        meta: [
+            { name: 'description', content: description },
+            { name: 'keywords', content: keywords }
+        ]
+    })
+
   </script>
   
   <style>

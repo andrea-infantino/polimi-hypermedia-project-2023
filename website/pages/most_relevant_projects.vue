@@ -41,7 +41,17 @@
     //split the projects so we can display the first one differently
     const first = Projects.value[0];
     const others = Projects.value.slice(1, Projects.value.length);
-    
+
+    const description = ref('In this page you will find the 5 most relevant projects.')
+    const keywords = ref('Projects, Investments, Most Relevant Projects, Top Projects, Most Important Projects')
+
+    useHead({
+        meta: [
+            { name: 'description', content: description },
+            { name: 'keywords', content: keywords }
+        ]
+    })
+
 </script>
 
 <style>

@@ -111,6 +111,19 @@
     </main>
 </template>
 
+<script setup>
+    const description = ref('In this page you will find our Privacy Policy.')
+    const keywords = ref('Privacy Policy, Personal Information, Non-Personal Information, Data Security, Children\'s Security')
+
+    useHead({
+        meta: [
+            { name: 'description', content: description },
+            { name: 'keywords', content: keywords }
+        ]
+    })
+</script>
+
+
 <style>
 
     .update_date {

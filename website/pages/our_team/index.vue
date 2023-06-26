@@ -40,6 +40,18 @@
     }
   }
 
+  const description = ref('In this page you will find all of our team members.')
+  const keywords = ref('Team, Teamwork, People, Members, ' + roles.join(', '))
+
+  console.log(keywords.value)
+
+  useHead({
+      meta: [
+          { name: 'description', content: description },
+          { name: 'keywords', content: keywords }
+      ]
+  })
+
 </script>
 
 

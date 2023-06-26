@@ -57,6 +57,17 @@
         async asyncData() {
             const route = useRoute()
             const area = await $fetch('/api/all_areas/' + route.params.id)
+
+            const description = ref('In this page you will find all the information related to ' + area.name + '.')
+            const keywords = ref('Area of Investment, ' + area.name)
+
+            useHead({
+              meta: [
+                { name: 'description', content: description },
+                { name: 'keywords', content: keywords }
+              ]
+            })
+
             return {
                 area
             }

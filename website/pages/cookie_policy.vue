@@ -81,6 +81,18 @@
     </main>
 </template>
 
+<script setup>
+    const description = ref('In this page you will find our Cookie Policy.')
+    const keywords = ref('Cookie Policy, Consent, Necessary Cookies, Analytical and Performance Cookies, Functional Cookies, Advertising and Targeting Cookies, Third-Party Cookies')
+
+    useHead({
+        meta: [
+            { name: 'description', content: description },
+            { name: 'keywords', content: keywords }
+        ]
+    })
+</script>
+
 <style>
 
     .update_date {

@@ -51,6 +51,16 @@
             
             const area = await $fetch('/api/projects_by_area/' + route.params.id)
 
+            const description = ref('In this page you can find all the projects related to the area you selected, ' + area.name + '. Click on the project to see more details.')
+            const keywords = ref('Projects by Area, ' + area.name)
+
+            useHead({
+                meta: [
+                    { name: 'description', content: description },
+                    { name: 'keywords', content: keywords }
+                ]
+            })
+
             return {
                 area
             }
