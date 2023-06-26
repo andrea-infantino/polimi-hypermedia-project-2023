@@ -1,7 +1,7 @@
 <template>
     <NuxtLink :to = "link" >
         <div class="card">
-            <img v-show="img_bool===true" class="project_img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${id}.jpg`" />
+            <img v-if="img_bool===true" class="project_img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${id}.jpg`" :alt="`${title}'s logo`" />
             <span class="project_title">{{ title }}</span>
         </div>
     </NuxtLink>

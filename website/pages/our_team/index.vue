@@ -6,7 +6,7 @@
     <main>
 
     <div class="title-area">
-      <a href="" class="back-button" @click.prevent="$router.back()">&#8630;</a>
+      <a href="" class="back-button" @click.prevent="$router.back()" role="button" aria-label="Back button">&#8630;</a>
       <div class="title">
         OUR TEAM
       </div>

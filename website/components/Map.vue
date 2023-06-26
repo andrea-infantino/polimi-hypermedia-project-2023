@@ -1,3 +1,4 @@
+<!-- to remove probably -->
 <template>
   <div id="map" ref="map"></div>
 </template>

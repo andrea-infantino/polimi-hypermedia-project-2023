@@ -3,7 +3,7 @@
         <div class="bottom">          
             <div class="logo-footer">
                 <NuxtLink to="/">
-                    <img src="../assets/img/logo.png" id="logo" class="logo-img"/>
+                    <img src="../assets/img/logo.png" id="logo" class="logo-img" alt="Company logo"/>
                 </NuxtLink>
 
             </div>

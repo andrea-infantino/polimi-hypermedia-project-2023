@@ -2,7 +2,7 @@
     <header>
         <div id="landmarks-list">
             <NuxtLink to="/">
-                <img src="../assets/img/logo.png" id="logo" class="logo-header" />
+                <img src="../assets/img/logo.png" id="logo" class="logo-header" alt="Company logo" />
             </NuxtLink>
             <nav id="top-bar">
                 <NuxtLink class="landmark" to="/most_relevant_projects">MOST RELEVANT PROJECTS</NuxtLink>

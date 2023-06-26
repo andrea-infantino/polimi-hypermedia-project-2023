@@ -1,10 +1,12 @@
 <template>
-    <div class = 'page'>
-        <Header />
-        <slot />
-        <ScrollToTop />
-        <Footer />
-    </div>
+    <html lang="en">
+        <div class = 'page'>
+            <Header />
+            <slot />
+            <ScrollToTop />
+            <Footer />
+        </div>
+    </html>
 </template>
 
 <style>

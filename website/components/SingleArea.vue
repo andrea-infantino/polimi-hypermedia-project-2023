@@ -1,7 +1,7 @@
 <template>
     <NuxtLink :to = "link">
         <div class="area">
-            <img class="img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${id}.png`"/>
+            <img class="img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${id}.png`" :alt="`${name} area symbol`"/>
             <span class="name">{{ name }}</span>
         </div>
     </NuxtLink>

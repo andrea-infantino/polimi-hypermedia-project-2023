@@ -6,7 +6,7 @@
     <main>
 
     <div class="title-area">
-      <a href="" class="back-button" @click.prevent="$router.back()">&#8630;</a>
+      <a href="" class="back-button" @click.prevent="$router.back()" role="button" aria-label="Back button">&#8630;</a>
       <div class="clickable-title">
         <NuxtLink to="/our_team" class="clickable-title">
           OUR TEAM
@@ -18,16 +18,16 @@
     <div class="person-page">
 
       <NuxtLink v-if="person.id!=0" :to="`/our_team/${person.id-1}`">
-        <span class="prs-arrow-enabled">&#8249;</span>
+        <span class="prs-arrow-enabled" role="button" aria-label="Previous person button">&#8249;</span>
       </NuxtLink>
 
       <span v-if="person.id==0">
-          <span class="prs-arrow-disabled">&#8249;</span>
+          <span class="prs-arrow-disabled" role="button" aria-label="Disabled previous person button">&#8249;</span>
       </span>
 
 
       <div class="person-container">
-        <img class="person-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/People/${person.id}.jpg`" />
+        <img class="person-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/People/${person.id}.jpg`" :alt="`${person.name} ${person.surname}'s photo`"/>
         <div class="person-info">
           <span class="person-name-and-surname">{{ person.name }} {{ person.surname }}</span>
           <span class="person-role">{{ person.role }}</span>
@@ -52,11 +52,11 @@
       </div>
 
       <NuxtLink v-if="person.id<14" :to="`/our_team/${person.id+1}`">
-          <span class="prs-arrow-enabled">&#8250;</span>
+          <span class="prs-arrow-enabled" role="button" aria-label="Next person button">&#8250;</span>
         </NuxtLink>
 
         <span v-if="person.id>=14">
-          <span class="prs-arrow-disabled">&#8250;</span>
+          <span class="prs-arrow-disabled" role="button" aria-label="Disabled next person button">&#8250;</span>
         </span>
 
     </div>

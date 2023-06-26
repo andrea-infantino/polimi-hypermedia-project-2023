@@ -5,7 +5,7 @@
 
     <main>
         <div class="title-area">
-            <a href="" class="back-button" @click.prevent="$router.back()">&#8630;</a>
+            <a href="" class="back-button" @click.prevent="$router.back()" role="button" aria-label="Back button">&#8630;</a>
             <div class="title">
                 {{ area.name }} Projects
             </div>
@@ -15,21 +15,21 @@
             <div class="area-info">
                 <div class="area-prj-header">
                     <NuxtLink v-if="area.id!=0" :to="`/projects_by_area/${area.id-1}`">
-                        <span class="area-prj-arrow-enabled">&#8249;</span>
+                        <span class="area-prj-arrow-enabled" role="button" aria-label="Previous area button">&#8249;</span>
                     </NuxtLink>
 
                     <span v-if="area.id==0">
-                        <span class="area-prj-arrow-disabled">&#8249;</span>
+                        <span class="area-prj-arrow-disabled" role="button" aria-label="Disabled previous area button">&#8249;</span>
                     </span>
 
                     <img class="prj-by-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" />
 
                     <NuxtLink v-if="area.id<4" :to="`/projects_by_area/${area.id+1}`">
-                        <span class="area-prj-arrow-enabled">&#8250;</span>
+                        <span class="area-prj-arrow-enabled" role="button" aria-label="Next area button">&#8250;</span>
                     </NuxtLink>
 
                     <span v-if="area.id>=4">
-                        <span class="area-prj-arrow-disabled">&#8250;</span>
+                        <span class="area-prj-arrow-disabled" role="button" aria-label="Disabled next area button">&#8250;</span>
                     </span>
 
                 </div>  

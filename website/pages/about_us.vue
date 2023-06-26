@@ -5,7 +5,7 @@
 
     <main>
         <div class="title-area">
-            <a href="" class="back-button" @click.prevent="$router.back()">&#8630;</a>
+            <a href="" class="back-button" @click.prevent="$router.back()" role="button" aria-label="Back button">&#8630;</a>
             <div class="title">
                 ABOUT US
             </div>
@@ -18,7 +18,7 @@
                 <div class="heading">Our vision</div>
                 <p class="par">At Wizarding Ventures, our vision as a venture capital firm is to fuel the magic of entrepreneurship and innovation. We believe in the power of visionary ideas to transform industries, drive economic growth, and create positive societal impact. Our mission is to identify, invest in, and support exceptional startups that are pushing the boundaries of what's possible. By providing not only financial capital but also strategic guidance, industry expertise, and valuable connections, we aim to empower entrepreneurs to realize their full potential. Together, we seek to shape a future where innovation thrives, solutions are created, and dreams become reality.</p>
                 <div class="btn-container">
-                    <NuxtLink id="to_portfolio" to="/portfolio" class="au-btn">Read more</NuxtLink>
+                    <NuxtLink id="to_portfolio" to="/portfolio" class="au-btn">Check our portfolio</NuxtLink>
                 </div>
             </section>
 

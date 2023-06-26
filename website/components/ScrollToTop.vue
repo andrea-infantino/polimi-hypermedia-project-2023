@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="showButton" @click="scrollToTop" class="scroll-to-top-btn">&#8679;</div>
+    <div v-if="showButton" @click="scrollToTop" class="scroll-to-top-btn" role="button" aria-label="Scroll to top button">&#8679;</div>
   </div>
 </template>
 

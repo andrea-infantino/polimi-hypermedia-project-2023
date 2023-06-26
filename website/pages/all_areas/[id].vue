@@ -15,21 +15,21 @@
         <div class="Area_container">
           <div class="area-header">
             <NuxtLink v-if="area.id!=0" :to="`/all_areas/${area.id-1}`">
-              <span class="area-arrow-enabled">&#8249;</span>
+              <span class="area-arrow-enabled" role="button" aria-label="Previous area button">&#8249;</span>
             </NuxtLink>
 
             <span v-if="area.id==0">
-              <span class="area-arrow-disabled">&#8249;</span>
+              <span class="area-arrow-disabled" role="button" aria-label="Disabled previous area button">&#8249;</span>
             </span>
 
-            <img class="full-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" />
+            <img class="full-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} logo`"/>
 
             <NuxtLink v-if="area.id<4" :to="`/all_areas/${area.id+1}`">
-              <span class="area-arrow-enabled">&#8250;</span>
+              <span class="area-arrow-enabled" role="button" aria-label="Next area button">&#8250;</span>
             </NuxtLink>
 
             <span v-if="area.id>=4">
-              <span class="area-arrow-disabled">&#8250;</span>
+              <span class="area-arrow-disabled" role="button" aria-label="Disabled next area button">&#8250;</span>
             </span>
 
           </div>

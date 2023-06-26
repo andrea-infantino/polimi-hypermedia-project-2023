@@ -5,7 +5,7 @@
 
   <main>
       <div class="title-area">
-        <a href="" class="back-button" @click.prevent="$router.back()">&#8630;</a>
+        <a href="" class="back-button" @click.prevent="$router.back()" role="button" aria-label="Back button">&#8630;</a>
 
         <div class="title">
             {{ project.title }}
@@ -15,11 +15,11 @@
     <div class="project-page">
 
       <NuxtLink v-if="project.id!=0" :to="`/projects/${project.id-1}`">
-        <span class="prj-arrow-enabled">&#8249;</span>
+        <span class="prj-arrow-enabled" role="button" aria-label="Previous project arrow">&#8249;</span>
       </NuxtLink>
 
       <span v-if="project.id==0">
-          <span class="prj-arrow-disabled">&#8249;</span>
+          <span class="prj-arrow-disabled" role="button" aria-label="Disabled previous project arrow">&#8249;</span>
       </span>
 
 
@@ -38,7 +38,7 @@
               <span>
                   <b>Team:</b> <br>
                   <div class="project-people-container-tab">
-                      <NuxtLink v-for = "person of team" :to="`/our_team/${person.id}`" class="area-person-link">• {{ person.surname }} {{ person.name }} <br> </NuxtLink>
+                      <NuxtLink v-for = "person of team" v-show="team.length!=0" :to="`/our_team/${person.id}`" class="area-person-link">• {{ person.surname }} {{ person.name }} <br> </NuxtLink>
                   </div>
               </span>
 
@@ -57,17 +57,17 @@
               
           </div>
           <div class="project-img-container">
-                <img class="project_img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" />
+                <img class="project_img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" :alt="`${project.title}'s logo`" />
           </div>
       </div>
 
 
       <NuxtLink v-if="project.id<19" :to="`/projects/${project.id+1}`">
-        <span class="prj-arrow-enabled">&#8250;</span>
+        <span class="prj-arrow-enabled" role="button" aria-label="Next project button">&#8250;</span>
       </NuxtLink>
 
       <span v-if="project.id>=19">
-        <span class="prj-arrow-disabled">&#8250;</span>
+        <span class="prj-arrow-disabled" role="button" aria-label="Disabled next project button">&#8250;</span>
       </span>
 
     </div>
