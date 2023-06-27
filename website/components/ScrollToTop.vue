@@ -19,7 +19,7 @@ export default {
       })
     },
     handleScroll() {
-      if (window.pageYOffset > 200) {
+      if (window.pageYOffset > 300) {
         this.showButton = true;
       } else {
         this.showButton = false;
@@ -47,7 +47,6 @@ export default {
   color: black;
   font-size: 16px;
   cursor: pointer;
-  transition: all 0.2s;
   border: 3px solid #1E3D58;
 }
 
