@@ -196,7 +196,7 @@
   display: inline-block;
   margin: 1em;
   color: black;
-  background-color: #fff6f6d2;
+  background-color: #fff6f6e3;
   box-shadow: 10px 10px 20px 0 rgba(172,172,172,.5);
   padding: 20px 30px;
   border-radius: 10px;

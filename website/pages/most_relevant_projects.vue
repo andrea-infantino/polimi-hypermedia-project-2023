@@ -29,8 +29,8 @@
         <hr class="separator " />
 
         <div class="links">
-            <NuxtLink id="to_all_projects" to="/projects" class="mrp-link">See all the projects</NuxtLink><br>
-            <NuxtLink id="to_projects_by_area" to="/projects_by_area" class="mrp-link">Check the projects divided by area</NuxtLink>
+            <NuxtLink id="to_all_projects" to="/projects"><button class="mrp-link">See all the projects</button></NuxtLink>
+            <NuxtLink id="to_projects_by_area" to="/projects_by_area"><button class="mrp-link">Check the projects divided by area</button></NuxtLink>
         </div>
     </main>
 </template>
@@ -101,10 +101,15 @@
 
     .links {
         text-align: center;
+        display: flex;
+        justify-content: space-around;
     }
 
     .mrp-link {
         color: ghostwhite;
+        background-color: transparent;
+        font-family: Poppins, sans-serif;
+        border: transparent;
         position: relative;
         font-size: 20px;
         font-weight: bold;

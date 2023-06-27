@@ -254,7 +254,7 @@
 
   .person-description-tab {
     color: black;
-    background-color: #fff6f6d2;
+    background-color: #fff6f6e3;
     box-shadow: 15px 15px 30px 0 rgba(172,172,172,.5);
     padding: 10px 20px;
     border-radius: 10px;

@@ -101,7 +101,7 @@
     }
 
     .section {
-        background-color: #fff6f6d2;
+        background-color: #fff6f6e3;
         -webkit-box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
         box-shadow: 15px 15px 30px 0 rgba(172,172,172,.5);
         padding: 40px;

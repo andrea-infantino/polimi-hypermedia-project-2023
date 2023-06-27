@@ -50,9 +50,9 @@
         <hr class="separator " />
 
         <div class="links">
-            <NuxtLink id="to_all_projects" to="/projects" class="prtf-link">Check all the projects</NuxtLink><br>
-            <NuxtLink id="to_most_relevant_projects" to="/most_relevant_projects" class="prtf-link">See the most relevant projects</NuxtLink><br>
-            <NuxtLink id="to_projects_by_area" to="/projects_by_area" class="prtf-link">Check the projects by area</NuxtLink>
+            <NuxtLink id="to_all_projects" to="/projects"><button class="prtf-link">Check all the projects</button></NuxtLink>
+            <NuxtLink id="to_most_relevant_projects" to="/most_relevant_projects"><button class="prtf-link">See the most relevant projects</button></NuxtLink>
+            <NuxtLink id="to_projects_by_area" to="/projects_by_area"><button class="prtf-link">Check the projects by area</button></NuxtLink>
         </div>
     </main>
 </template>
@@ -92,7 +92,7 @@
     }
 
     .portfolio-section {
-        background-color: #fff6f6d2;
+        background-color: #fff6f6e3;
         -webkit-box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
         box-shadow: 15px 15px 30px 0 rgba(172,172,172,.5);
         padding: 20px 40px;
@@ -122,6 +122,9 @@
 
     .prtf-link {
         color: ghostwhite;
+        background-color: transparent;
+        border: transparent;
+        font-family: Poppins, sans-serif;
         position: relative;
         font-size: 20px;
         font-weight: bold;
