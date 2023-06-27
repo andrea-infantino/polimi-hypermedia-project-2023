@@ -5,13 +5,13 @@
 
     <main>
         <div class="title-area">
-            <a href="" class="back-button" @click.prevent="$router.back()" role="button" aria-label="Back button">&#8630;</a>
+            <a href="" class="back-button" @click.prevent="$router.back()" role="button" aria-label="Back button">&#10554;</a>
             <div class="title">
                 ABOUT US
             </div>
         </div>
 
-        <h1 class="au-intro"><strong><center>Welcome to our enchanted realm of venture capital for wizards!</center></strong></h1>
+        <h1 class="au-intro">Welcome to our enchanted realm of venture capital for wizards!</h1>
         
         <div class="paragraphs">
             <section class="about-section">
@@ -66,9 +66,11 @@
 <style>
 
     .au-intro {
+        text-align: center;
+        font-weight: bold;
         color: ghostwhite;
         font-size: 22px;
-        margin: 40px 50px -10px;
+        margin: 40px 50px 10px;
     }
 
     .au-outro {
@@ -83,7 +85,7 @@
         -webkit-box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
         box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
         padding: 40px;
-        margin: 40px 150px;
+        margin: 2% 10%;
         height: 100%;
         border-radius: 10px;
     }

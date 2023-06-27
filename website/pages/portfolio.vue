@@ -5,7 +5,7 @@
 
     <main>
         <div class="title-area">
-            <a href="" class="back-button" @click.prevent="$router.back()" role="button" aria-label="Back button">&#8630;</a>
+            <a href="" class="back-button" @click.prevent="$router.back()" role="button" aria-label="Back button">&#10554;</a>
             <div class="title">
                 PORTFOLIO
             </div>
@@ -96,7 +96,7 @@
         -webkit-box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
         box-shadow: 15px 15px 30px 0 rgba(172,172,172,.5);
         padding: 20px 40px;
-        margin: 10px 150px;
+        margin: 1% 10%;
         height: 100%;
         border-radius: 10px;
     }

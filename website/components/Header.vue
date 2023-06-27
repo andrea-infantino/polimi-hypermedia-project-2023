@@ -33,14 +33,15 @@
                         <img src="../assets/img/logo.png" class="logo-mobile" alt="Company logo" @click="toggleMobileNav" />
                     </NuxtLink>
                     <hr class="separator-mobile " />
-                    <li @click="toggleMobileNav"><NuxtLink class="landmark" to="/most_relevant_projects">MOST RELEVANT PROJECTS</NuxtLink></li>
-                    <li @click="toggleMobileNav"><NuxtLink class="landmark" to="/portfolio">PORTFOLIO</NuxtLink></li>
-                    <li @click="toggleMobileNav"><NuxtLink class="landmark" to="/projects">ALL PROJECTS</NuxtLink></li>
-                    <li @click="toggleMobileNav"><NuxtLink class="landmark" to="/projects_by_area">PROJECTS BY AREA</NuxtLink></li>
-                    <li @click="toggleMobileNav"><NuxtLink class="landmark" to="/all_areas">ALL AREAS</NuxtLink></li>
-                    <li @click="toggleMobileNav"><NuxtLink class="landmark" to="/our_team">OUR TEAM</NuxtLink></li>
-                    <li @click="toggleMobileNav"><NuxtLink class="landmark" to="/about_us">ABOUT US</NuxtLink></li>
-                    <li @click="toggleMobileNav"><NuxtLink class="landmark" to="/contacts">CONTACTS</NuxtLink></li>
+                    <li><NuxtLink @click="toggleMobileNav" class="landmark" to="/most_relevant_projects">MOST RELEVANT PROJECTS</NuxtLink></li>
+                    <li><NuxtLink @click="toggleMobileNav" class="landmark" to="/portfolio">PORTFOLIO</NuxtLink></li>
+                    <li><NuxtLink @click="toggleMobileNav" class="landmark" to="/projects">ALL PROJECTS</NuxtLink></li>
+                    <li><NuxtLink @click="toggleMobileNav" class="landmark" to="/projects_by_area">PROJECTS BY AREA</NuxtLink></li>
+                    <li><NuxtLink @click="toggleMobileNav" class="landmark" to="/all_areas">ALL AREAS</NuxtLink></li>
+                    <li><NuxtLink @click="toggleMobileNav" class="landmark" to="/our_team">OUR TEAM</NuxtLink></li>
+                    <li><NuxtLink @click="toggleMobileNav" class="landmark" to="/about_us">ABOUT US</NuxtLink></li>
+                    <li><NuxtLink @click="toggleMobileNav" class="landmark" to="/contacts">CONTACTS</NuxtLink></li>
+                    <li @click="toggleMobileNav" class="close-cross">&#10006;</li>
                 </ul>
             </transition>
 
@@ -62,6 +63,7 @@
             if (process.client) {
                 window.addEventListener('resize', this.checkScreen);
                 this.checkScreen();
+                console.log("sono dentro con " + this.windowWidth);
             }
         },
 
@@ -170,7 +172,6 @@
         width: 100%;
         height: 100%;
         max-width: 250px;
-
         background-color: #E8EEF1;
         top: 0;
         left: 0;
@@ -195,20 +196,21 @@
         padding: 10% 0;
     }
 
-    .scrolled-nav {
-        background-color: black;
-        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
-
-        nav {
-            padding: 8px 0;
-
-            .branding {
-                img {
-                    width: 40px;
-                    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
-                }
-            }
-        }
+    .close-cross {
+        color: black;
+        margin: 20px;
+        transition: 0.3s;
+        cursor: pointer;
     }
 
+    .close-cross:hover {
+        color: darkred  ;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+        transform: translateY(-5px);
+    }
+
+    .close-cross:active {
+        transform: scale(0.95);
+    }
 </style>
