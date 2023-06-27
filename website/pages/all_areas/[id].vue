@@ -4,8 +4,7 @@
     </Head>
 
     <main>
-        <div class="title-area">
-          
+        <div class="title-area">          
           <a href="" class="back-button" @click.prevent="$router.back()">&#8630;</a>
           <div class="title">
             {{ area.name }}
@@ -120,6 +119,7 @@
   .full-area-img {
     display: flex;
     width: 25%;
+    height: auto;
     margin: 0 auto;
     margin-top: 30px;
     justify-content: center;

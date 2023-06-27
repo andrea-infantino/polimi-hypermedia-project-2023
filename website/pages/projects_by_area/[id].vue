@@ -22,7 +22,13 @@
                         <span class="area-prj-arrow-disabled" role="button" aria-label="Disabled previous area button">&#8249;</span>
                     </span>
 
-                    <img class="prj-by-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} area logo`" />
+                    <div class="pba-img-link">
+                        <img class="prj-by-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} area logo`" />
+
+                        <NuxtLink :to="`/all_areas/${area.id}`" :title="`${area.name} area`">
+                            <span class="full-area-link">See the full description</span>
+                        </NuxtLink>
+                    </div>
 
                     <NuxtLink v-if="area.id<4" :to="`/projects_by_area/${area.id+1}`">
                         <span class="area-prj-arrow-enabled" role="button" aria-label="Next area button">&#8250;</span>
@@ -90,17 +96,37 @@
   }
 
   .prj-by-area-img {
+    width: 20%;
     height: auto;
-    width: 15%;
     margin: 10px;
+  }
+
+  .pba-img-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .full-area-link {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 2px 10px;
+    transition: padding 0.3s, background-color 0.3s, color 0.3s;
+  }
+
+  .full-area-link:hover {
+    text-decoration: underline;
+    color: black;
+    background-color: rgba(248, 248, 255, 0.900);
+    padding: 2px 15px;
   }
 
   .area-prj-arrow-enabled {
     font-size: 3em;
     color: ghostwhite;
-    margin: 0px 250px;
     border-radius: 10px;
-    padding: 50px 25px;
+    padding: 30px 20px;
     transition: all 0.2s;
   }
 
@@ -112,9 +138,8 @@
 
   .area-prj-arrow-disabled {
     font-size: 3em;
-    margin: 0px 250px;
     border-radius: 10px;
-    padding: 50px 25px;
+    padding: 30px 20px;
     color: gray;
     cursor: not-allowed;
     

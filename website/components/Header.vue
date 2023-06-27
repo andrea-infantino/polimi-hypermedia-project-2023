@@ -3,7 +3,7 @@
         <nav>
             <div class="branding">
                 <NuxtLink to="/">
-                    <img src="../assets/img/logo.png" id="logo" class="logo-header" alt="Company logo" />
+                    <img src="../assets/img/logo.png" id="logo" class="logo-header" alt="Company logo" title="Homepage"/>
                 </NuxtLink>
             </div>
             <ul v-show="!mobile" class="navigation">
@@ -62,7 +62,6 @@
             if (process.client) {
                 window.addEventListener('resize', this.checkScreen);
                 this.checkScreen();
-                console.log("sono dentro con " + this.windowWidth);
             }
         },
 

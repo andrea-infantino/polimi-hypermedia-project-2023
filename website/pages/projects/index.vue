@@ -26,6 +26,13 @@
         </div>
       </div>
 
+      <hr class="separator " />
+
+      <div class="links">
+          <NuxtLink id="to_most_relevant_projects" to="/most_relevant_projects" class="mrp-link">See the most relevant projects</NuxtLink><br>
+          <NuxtLink id="to_projects_by_area" to="/projects_by_area" class="mrp-link">Check the projects divided by area</NuxtLink>
+      </div>
+
     </main>
   </template>
   

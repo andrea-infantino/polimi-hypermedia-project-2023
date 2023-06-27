@@ -110,8 +110,6 @@
       const description = ref('In this page you will find ' + person.name + ' ' + person.surname + '\'s personal information.')
       const keywords = ref('Team, ' + person.name + ' ' + person.surname + ', ' + person.role)
 
-      console.log(keywords.value)
-
       useHead({
         meta: [
           { name: 'description', content: description },
@@ -140,6 +138,17 @@
     margin: 20px;
     text-align: center;
     color: black;
+    transition: all 0.3s;
+  }
+
+  .clickable-title:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    transform: translateY(-5px);
+  }
+
+  .clickable-title:active {
+    transform: scale(0.95);
   }
 
   .prs-arrow-enabled {
@@ -305,7 +314,6 @@
     color: black;
     background-color: rgba(248, 248, 255, 0.900);
     padding: 2px 15px;
-
   }
 
   .space-between-line {

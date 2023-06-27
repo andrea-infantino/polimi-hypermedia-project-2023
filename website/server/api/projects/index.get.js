@@ -1,5 +1,4 @@
 import { serverSupabaseClient } from '#supabase/server'
-import { ascending } from 'ol/array'
 
 export default defineEventHandler(async (event) => {
     const client = serverSupabaseClient(event)
