@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.972366525132!2d-0.12665052356223183!3d51.532066671818846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761bfa8c541837%3A0xc2579139afeace3e!2sPlatform%20Nine%20and%20Three-Quarters!5e0!3m2!1sit!2sit!4v1686225616069!5m2!1sit!2sit" width="700" height="400" class="gmap" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.972366525132!2d-0.12665052356223183!3d51.532066671818846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761bfa8c541837%3A0xc2579139afeace3e!2sPlatform%20Nine%20and%20Three-Quarters!5e0!3m2!1sit!2sit!4v1686225616069!5m2!1sit!2sit" width="700" height="400" class="gmap" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map pinned to our address"></iframe>
             <div class="map-description">
                 <div class="text-2">You can find us here</div><br>
                 <div class="address">Platform 9 ¾<br>King’s Cross, Euston Rd.<br>London, United Kingdom</div>

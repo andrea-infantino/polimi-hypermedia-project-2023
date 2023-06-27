@@ -22,29 +22,28 @@
           <span class="prj-arrow-disabled" role="button" aria-label="Disabled previous project arrow">&#8249;</span>
       </span>
 
-
-
       <div class="project-container">
+
           <div class="project-info">
               <span class="project-year">
-                  <b>Foundation year:</b>&emsp; {{ project.foundation_year }} </span>
-              <span>
+                  <b>Foundation year:</b>&emsp; {{ project.foundation_year }} 
+              </span>
               <span>
                   <b>Supervisor:</b> <br>
                   <div class="project-people-container-tab">
                       <NuxtLink :to="`/our_team/${supervisor.id}`" class="area-person-link">• {{ supervisor.surname }} {{ supervisor.name }} <br> </NuxtLink>
                   </div>
               </span>
-              <span>
+              <span v-if="team.length!=0">
                   <b>Team:</b> <br>
                   <div class="project-people-container-tab">
-                      <NuxtLink v-for = "person of team" v-show="team.length!=0" :to="`/our_team/${person.id}`" class="area-person-link">• {{ person.surname }} {{ person.name }} <br> </NuxtLink>
+                      <NuxtLink v-for = "person of team" :to="`/our_team/${person.id}`" class="area-person-link">• {{ person.surname }} {{ person.name }} <br> </NuxtLink>
                   </div>
               </span>
-
+              <span>
                   <b>Areas:</b> <br>
                   <div class="project-area-container-tab">
-                      <NuxtLink v-for = "area of project.Areas" :to="`/all_areas/${area.id}`" class="area-person-link"> <img class="area-logo" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`"/>{{ area.name }}</NuxtLink>
+                      <NuxtLink v-for = "area of project.Areas" :to="`/all_areas/${area.id}`" class="area-person-link"> <img class="area-logo" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} area logo`"/>{{ area.name }}</NuxtLink>
                   </div>
               </span>
               <span class="description-text"><b>Description:</b> <br> 
@@ -53,14 +52,13 @@
               <span class="description-text"><b>Problem:</b> <br> 
                   <span class="prj-description">{{ project.problem_text }}</span>
               </span>
-              
-              
           </div>
-          <div class="project-img-container">
-                <img class="project_img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" :alt="`${project.title}'s logo`" />
-          </div>
-      </div>
 
+          <div class="project-img-container">
+              <img class="project_img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" :alt="`${project.title}'s logo`" />
+          </div>
+
+      </div>
 
       <NuxtLink v-if="project.id<19" :to="`/projects/${project.id+1}`">
         <span class="prj-arrow-enabled" role="button" aria-label="Next project button">&#8250;</span>
@@ -71,7 +69,6 @@
       </span>
 
     </div>
-
 
   </main>
 </template>

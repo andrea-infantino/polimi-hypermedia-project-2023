@@ -22,7 +22,7 @@
                         <span class="area-prj-arrow-disabled" role="button" aria-label="Disabled previous area button">&#8249;</span>
                     </span>
 
-                    <img class="prj-by-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" />
+                    <img class="prj-by-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} area logo`" />
 
                     <NuxtLink v-if="area.id<4" :to="`/projects_by_area/${area.id+1}`">
                         <span class="area-prj-arrow-enabled" role="button" aria-label="Next area button">&#8250;</span>
