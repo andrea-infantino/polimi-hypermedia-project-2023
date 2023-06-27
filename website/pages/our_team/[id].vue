@@ -51,11 +51,11 @@
         </div>
       </div>
 
-      <NuxtLink v-if="person.id<14" :to="`/our_team/${person.id+1}`">
+      <NuxtLink v-if="person.id<(numOfPeople-1)" :to="`/our_team/${person.id+1}`">
           <span class="prs-arrow-enabled" role="button" aria-label="Next person button">&#8250;</span>
         </NuxtLink>
 
-        <span v-if="person.id>=14">
+        <span v-if="person.id>=(numOfPeople-1)">
           <span class="prs-arrow-disabled" role="button" aria-label="Disabled next person button">&#8250;</span>
         </span>
 
@@ -94,6 +94,9 @@
       const route = useRoute()
       const person = await $fetch('/api/our_team/' + route.params.id)
 
+      const people = await $fetch('/api/our_team')
+      const numOfPeople = people.length
+
       const supervised_proj = ref([])
       const team_proj = ref([])
 
@@ -118,7 +121,7 @@
       })
 
       return {
-        person, supervised_proj, team_proj
+        person, supervised_proj, team_proj, numOfPeople
       }
     }
   })

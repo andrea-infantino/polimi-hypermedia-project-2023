@@ -30,11 +30,11 @@
                         </NuxtLink>
                     </div>
 
-                    <NuxtLink v-if="area.id<4" :to="`/projects_by_area/${area.id+1}`">
+                    <NuxtLink v-if="area.id<(numOfAreas-1)" :to="`/projects_by_area/${area.id+1}`">
                         <span class="area-prj-arrow-enabled" role="button" aria-label="Next area button">&#8250;</span>
                     </NuxtLink>
 
-                    <span v-if="area.id>=4">
+                    <span v-if="area.id>=(numOfAreas-1)">
                         <span class="area-prj-arrow-disabled" role="button" aria-label="Disabled next area button">&#8250;</span>
                     </span>
 
@@ -54,8 +54,10 @@
     export default defineNuxtComponent({
         async asyncData() {
             const route = useRoute()
-            
             const area = await $fetch('/api/projects_by_area/' + route.params.id)
+
+            const areas = await $fetch('/api/all_areas')
+            const numOfAreas = areas.length
 
             const description = ref('In this page you can find all the projects related to the area you selected, ' + area.name + '. Click on the project to see more details.')
             const keywords = ref('Projects by Area, ' + area.name)
@@ -68,7 +70,7 @@
             })
 
             return {
-                area
+                area, numOfAreas
             }
         }
     })

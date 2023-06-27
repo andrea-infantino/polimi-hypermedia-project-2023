@@ -60,11 +60,11 @@
 
       </div>
 
-      <NuxtLink v-if="project.id<19" :to="`/projects/${project.id+1}`">
+      <NuxtLink v-if="project.id<(numOfProjects-1)" :to="`/projects/${project.id+1}`">
         <span class="prj-arrow-enabled" role="button" aria-label="Next project button">&#8250;</span>
       </NuxtLink>
 
-      <span v-if="project.id>=19">
+      <span v-if="project.id>=(numOfProjects-1)">
         <span class="prj-arrow-disabled" role="button" aria-label="Disabled next project button">&#8250;</span>
       </span>
 
@@ -78,6 +78,9 @@
       async asyncData() {
           const route = useRoute()
           const project = await $fetch('/api/projects/' + route.params.id)
+
+          const projects = await $fetch('/api/projects') // maybe it can be optimized
+          const numOfProjects = projects.length
 
           //to distinguish between supervisor and other members of the team
           const team = ref([])
@@ -103,7 +106,7 @@
           })
 
           return {
-              project, team, supervisor
+              project, team, supervisor, numOfProjects
           }
       }
   })

@@ -23,11 +23,11 @@
 
             <img class="full-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} logo`"/>
 
-            <NuxtLink v-if="area.id<4" :to="`/all_areas/${area.id+1}`">
+            <NuxtLink v-if="area.id<(numOfAreas-1)" :to="`/all_areas/${area.id+1}`">
               <span class="area-arrow-enabled" role="button" aria-label="Next area button">&#8250;</span>
             </NuxtLink>
 
-            <span v-if="area.id>=4">
+            <span v-if="area.id>=(numOfAreas-1)">
               <span class="area-arrow-disabled" role="button" aria-label="Disabled next area button">&#8250;</span>
             </span>
 
@@ -57,6 +57,9 @@
             const route = useRoute()
             const area = await $fetch('/api/all_areas/' + route.params.id)
 
+            const areas = await $fetch('/api/all_areas')
+            const numOfAreas = areas.length
+
             const description = ref('In this page you will find all the information related to ' + area.name + '.')
             const keywords = ref('Area of Investment, ' + area.name)
 
@@ -68,7 +71,7 @@
             })
 
             return {
-                area
+                area, numOfAreas
             }
         },
 
