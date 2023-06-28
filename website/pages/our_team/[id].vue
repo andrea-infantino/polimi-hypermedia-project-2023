@@ -6,9 +6,9 @@
   <main>
 
     <div class="title-area">
-      <a href="" class="back-button" @click.prevent="$router.back()" role="button" aria-label="Back button">&#10554;</a>
+      <MyBackButton />
       <div class="clickable-title">
-        <NuxtLink to="/our_team" class="clickable-title">
+        <NuxtLink to="/our_team" class="clickable-title-link">
           OUR TEAM
         </NuxtLink>
       </div>
@@ -69,14 +69,14 @@
     <div class="person-projects-container">
         <div class="person-projects-title">{{ person.name }} {{ person.surname }}'s projects</div>    
         
-        <div class="supervised-projects-container" v-show="supervised_proj.length!=0">
+        <div class="supervised-projects-container" v-if="supervised_proj.length!=0">
             <div class="supervised-title">As supervisor:</div>
             <div class="person-supervised-projects">
                 <ProjectCard v-for = "project of supervised_proj" :id="project.id" :title="project.title" :link="'/projects/' + project.id" :img_bool="true" />
             </div>
         </div>
 
-        <div class="team-projects-container">
+        <div class="team-projects-container" v-if="team_proj.length!=0">
             <div class="team-title">As team member:</div>
             <div class="person-team-projects">
                 <ProjectCard v-for = "project of team_proj" :id="project.id" :title="project.title" :link="'/projects/' + project.id" :img_bool="true" />
@@ -136,21 +136,24 @@
   }
 
   .clickable-title {
-    font-weight: bold;
-    font-size: 40px;
     margin: 20px;
     text-align: center;
-    color: black;
-    transition: all 0.3s;
   }
 
-  .clickable-title:hover {
+  .clickable-title-link {
+    font-weight: bold;
+    font-size: 40px;
+    color: black;
+    transition: all 0.3s; 
+  }
+
+  .clickable-title-link:hover {
     text-decoration: underline;
     text-underline-offset: 6px;
     transform: translateY(-5px);
-  }
+  } /* non fa translateY */
 
-  .clickable-title:active {
+  .clickable-title-link:active {
     transform: scale(0.95);
   }
 

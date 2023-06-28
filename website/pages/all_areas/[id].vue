@@ -4,8 +4,8 @@
     </Head>
 
     <main>
-        <div class="title-area">          
-          <a href="" class="back-button" @click.prevent="$router.back()">&#10554;</a>
+        <div class="title-area"> 
+          <MyBackButton />         
           <div class="title">
             {{ area.name }}
           </div>
@@ -159,7 +159,7 @@
 
   .area-description {
     color: black;
-    background-color: #fff6f6d2;
+    background-color: #fff6f6e3;
     box-shadow: 15px 15px 30px 0 rgba(172,172,172,.5);
     padding: 40px 60px;
     margin: 25px 0px;
