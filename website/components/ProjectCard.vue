@@ -1,7 +1,9 @@
 <template>
     <NuxtLink :to = "link" >
         <div class="card">
-            <img v-if="img_bool===true" class="project_img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${id}.jpg`" :alt="`${title}'s logo`" />
+            <div class="prj-card-img-container" v-if="img_bool===true">
+                <img class="project_img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${id}.jpg`" :alt="`${title}'s logo`" />
+            </div>
             <span class="project_title">{{ title }}</span>
         </div>
     </NuxtLink>
@@ -12,10 +14,15 @@
 </script>
 
 <style>
+    .prj-card-img-container {
+        width: 300px;
+        align-self: center;
+    }
+
     .project_img {
         border-radius: 5px;
         height: auto;
-        width: 300px;
+        width: 100%;
         margin-bottom: 10px;
         align-self: center;
         background-size: cover;

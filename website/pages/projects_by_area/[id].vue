@@ -14,7 +14,7 @@
         <div class="Area_container">
             <div class="area-info">
                 <div class="area-prj-header">
-                  <NuxtLink :to="isPreviousDisabled ? '#' : `/projects_by_area/${area.id-1}`" :class="{ 'disabled': isPreviousDisabled }" class="prj-area-button">
+                  <NuxtLink :to="isPreviousDisabled ? '#' : `/projects_by_area/${area.id-1}`" :class="{ 'disabled': isPreviousDisabled }" class="prj-area-button" role="button" aria-label="Previous area projects button">
                     &#8249;
                   </NuxtLink>
 
@@ -26,7 +26,7 @@
                         </NuxtLink>
                     </div>
 
-                    <NuxtLink :to="isNextDisabled ? '#' : `/projects_by_area/${area.id+1}`" :class="{ 'disabled': isNextDisabled }" class="prj-area-button">
+                    <NuxtLink :to="isNextDisabled ? '#' : `/projects_by_area/${area.id+1}`" :class="{ 'disabled': isNextDisabled }" class="prj-area-button" role="button" aria-label="Next area projects button">
                       &#8250;
                     </NuxtLink> 
 

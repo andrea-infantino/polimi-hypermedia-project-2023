@@ -13,13 +13,13 @@
         
         <div class="Area_container">
           <div class="area-header">
-            <NuxtLink :to="isPreviousDisabled ? '#' : `/all_areas/${area.id-1}`" :class="{ 'disabled': isPreviousDisabled }" class="area-button">
+            <NuxtLink :to="isPreviousDisabled ? '#' : `/all_areas/${area.id-1}`" :class="{ 'disabled': isPreviousDisabled }" class="area-button" role="button" aria-label="Previous area button">
               &#8249;
             </NuxtLink> 
 
             <img class="full-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} logo`"/>
 
-            <NuxtLink :to="isNextDisabled ? '#' : `/all_areas/${area.id+1}`" :class="{ 'disabled': isNextDisabled }" class="area-button">
+            <NuxtLink :to="isNextDisabled ? '#' : `/all_areas/${area.id+1}`" :class="{ 'disabled': isNextDisabled }" class="area-button" role="button" aria-label="Next area button">
               &#8250;
             </NuxtLink> 
 

@@ -17,37 +17,43 @@
 
     <div class="person-page">
       
-      <NuxtLink :to="isPreviousDisabled ? '#' : `/our_team/${person.id-1}`" :class="{ 'disabled': isPreviousDisabled }" class="person-button">
+      <NuxtLink :to="isPreviousDisabled ? '#' : `/our_team/${person.id-1}`" :class="{ 'disabled': isPreviousDisabled }" class="person-button" role="button" aria-label="Previous person button">
         &#8249;
       </NuxtLink> 
 
 
       <div class="person-container">
-        <img class="person-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/People/${person.id}.jpg`" :alt="`${person.name} ${person.surname}'s photo`"/>
-        <div class="person-info">
-          <span class="person-name-and-surname">{{ person.name }} {{ person.surname }}</span>
-          <span class="person-role">{{ person.role }}</span>
-          <hr class="separator" />
+        <div class="person-img-info">
+            <img class="person-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/People/${person.id}.jpg`" :alt="`${person.name} ${person.surname}'s photo`"/>
+            <div class="person-info">
+              <span class="person-name-and-surname">{{ person.name }} {{ person.surname }}</span>
+              <span class="person-role">{{ person.role }}</span>
+              <hr class="separator" />
 
-          <div><strong>Joined</strong> &emsp; {{ person.hiring_date }}</div> 
-          
-          <span> <div class="space-between-line">E-Mail:</div>
-            <nuxt-link class="mail" :to="`mailto:${person.email}`">&#9993;&emsp;{{ person.email }}</nuxt-link>
-          </span>
+              <div><strong>Joined</strong> &emsp; {{ person.hiring_date }}</div> 
+              
+              <span> <div class="space-between-line">E-Mail:</div>
+                <nuxt-link class="mail" :to="`mailto:${person.email}`">&#9993;&emsp;{{ person.email }}</nuxt-link>
+              </span>
 
-          <span> <div class="space-between-line">Social:</div>
-            <a href="https://twitter.com/home"><img src="../../assets/img/contacts/twitter_logo_hover.png" class="twitter-logo-hover" alt="Coloured Twitter logo"><img src="../../assets/img/contacts/twitter_logo.png" alt="Black and white Twitter Logo" class="twitter-logo"></a>
-            <a href="https://www.instagram.com"><img src="../../assets/img/contacts/instagram_logo_hover.png" class="instagram-logo-hover" alt="Coloured Instagram logo"><img src="../../assets/img/contacts/instagram_logo.png" alt="Black and white Instagram Logo" class="instagram-logo"></a>
-            <a href="https://www.linkedin.com"><img src="../../assets/img/contacts/linkedin_logo_hover.png" class="linkedin-logo-hover" alt="Coloured LinkedIn logo"><img src="../../assets/img/contacts/linkedin_logo.png" alt="Black and white LinkedIn Logo" class="linkedin-logo"></a>
-          </span>
-          <span class="desc-container"><div class="space-between-line">Description:</div> 
-            <div class="person-description-tab">{{ person.description }}</div>
-          </span>
-          <nuxt-link v-if="person.cv_link != null" id="person-cv" :to="`${person.cv_link}`" target="_blank">See {{ person.name }} {{ person.surname }}'s CV</nuxt-link>
+              <span> <div class="space-between-line">Social:</div>
+                <a href="https://twitter.com/home"><img src="../../assets/img/contacts/twitter_logo_hover.png" class="twitter-logo-hover" alt="Coloured Twitter logo"><img src="../../assets/img/contacts/twitter_logo.png" alt="Black and white Twitter Logo" class="twitter-logo"></a>
+                <a href="https://www.instagram.com"><img src="../../assets/img/contacts/instagram_logo_hover.png" class="instagram-logo-hover" alt="Coloured Instagram logo"><img src="../../assets/img/contacts/instagram_logo.png" alt="Black and white Instagram Logo" class="instagram-logo"></a>
+                <a href="https://www.linkedin.com"><img src="../../assets/img/contacts/linkedin_logo_hover.png" class="linkedin-logo-hover" alt="Coloured LinkedIn logo"><img src="../../assets/img/contacts/linkedin_logo.png" alt="Black and white LinkedIn Logo" class="linkedin-logo"></a>
+              </span>
+
+              <nuxt-link v-if="person.cv_link != null" id="person-cv" :to="`${person.cv_link}`" target="_blank">See {{ person.name }} {{ person.surname }}'s CV</nuxt-link>
+        
+            </div>
         </div>
+
+        <span class="desc-container"><div class="space-between-line">Description:</div> 
+            <div class="person-description-tab">{{ person.description }}</div>
+        </span>
+        
       </div>
 
-      <NuxtLink :to="isNextDisabled ? '#' : `/our_team/${person.id+1}`" :class="{ 'disabled': isNextDisabled }" class="person-button">
+      <NuxtLink :to="isNextDisabled ? '#' : `/our_team/${person.id+1}`" :class="{ 'disabled': isNextDisabled }" class="person-button"  role="button" aria-label="Next person button">
         &#8250;
       </NuxtLink> 
     </div>
@@ -129,7 +135,6 @@
   .person-page {
     justify-content: space-around;
     display: flex;
-
     margin-top: 30px;
   }
 
@@ -157,9 +162,9 @@
 
   .person-button {
     position: sticky;
-    top: 15vh;
+    top: 35vh;
     font-size: 3em;
-    height: 10vh;
+    height: 12vh;
     color: ghostwhite;
     margin: 0px 10px 50px;
     border-radius: 10px;
@@ -190,19 +195,19 @@
 
   .person-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column !important;
     flex-wrap: wrap;
     justify-content: center;
     align-self: center;
     gap: 60px;
-    max-width: 1200px;
+    width: 70%;
     margin: 30px;
   }
 
   .person-img {
     border-radius: 5px;
     height: 420px;
-    width: 420px;
+    width: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-image:url('~/assets/img/user_default_photo.jpg');
     background-size: cover;
@@ -212,9 +217,16 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    gap: 20px;
+    /* width: 50%; */
+  }
+
+  .person-img-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    max-width: 500px;
   }
 
   .person-name-and-surname {
@@ -313,7 +325,7 @@
     padding-bottom: 12px;
   }
 
-  .tab, .mail {
+  .mail {
     display: inline-block;
     margin-left: 1em;
     border-radius: 5px;

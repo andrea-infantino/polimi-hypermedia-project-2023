@@ -10,6 +10,7 @@
                 CONTACTS
             </div>
         </div>
+
         <div class="contacts-info">
             <div class="mail-number">
                 <div class="text-1">Contact us for more information<br>about our investments</div><br>
@@ -23,18 +24,19 @@
                     <a href="https://www.linkedin.com" target="_blank"><img src="../assets/img/contacts/linkedin_logo_hover.png" alt="LinkedIn Logo" class="linkedin-logo-footer"></a>
                 </div>
             </div>
-            <div>
+            <div class="contacts-img-div">
                 <img alt="Team photo" src="../assets/img/contacts/contacts_photo.jpg" class="contacts-img">
             </div>
         </div>
+
         <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.972366525132!2d-0.12665052356223183!3d51.532066671818846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761bfa8c541837%3A0xc2579139afeace3e!2sPlatform%20Nine%20and%20Three-Quarters!5e0!3m2!1sit!2sit!4v1686225616069!5m2!1sit!2sit" width="700" height="400" class="gmap" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map pinned to our address"></iframe>
             <div class="map-description">
                 <div class="text-2">You can find us here</div><br>
                 <div class="address">Platform 9 ¾<br>King’s Cross, Euston Rd.<br>London, United Kingdom</div>
             </div>
-
         </div>
+
     </main>
 </template>
   
@@ -63,21 +65,32 @@
 <style scoped>
     .map, .contacts-info {
         padding: 20px;
-        justify-content: space-evenly;
+        justify-content: center;
+        margin: 2% 5%;
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        float: left;
+    }
+
+    .contacts-img-div {
+        text-align: center;
+        width: 50%;
     }
     
     .contacts-img {
-        width: 90%;
+        align-self: center;
+        width: 100%;
         height: auto;
         border-radius: 10px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
     .map-description, .mail-number {
-        padding-top: 10%;
         text-align: center;
+        margin: auto;
         color: white;
+        padding: 2vw 0;
     }
 
     .gmap {
@@ -87,12 +100,10 @@
 
     .mail, .num-1, .num-2, .address {
         color: white;
-        font-size: 19px;
+        font-size: 3vh;
         display: inline-block;
-        margin-left: 1em;
         border-radius: 5px;
-        padding: 2px 5px;
-        transition: padding 0.3s, background-color 0.3s, color 0.3s;
+        transition: all 0.3s;
     }
 
     .mail:hover, .num-1:hover, .num-2:hover {
@@ -104,11 +115,11 @@
 
     .text-1, .text-2 {
         font-weight: bold;
-        font-size: 30px;
+        font-size: 5vh;
     }
 
     .social-media {
-        padding-top: 25px;
+        padding-top: 2vh;
     }
 
     .twitter-logo-footer, .instagram-logo-footer, .linkedin-logo-footer {

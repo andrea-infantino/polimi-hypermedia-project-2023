@@ -107,6 +107,7 @@
         font-family: Poppins, sans-serif;
         padding: 10px 20px;
         transition: all 0.2s;
+        cursor: pointer;
     }
 
     .au-btn:hover {
