@@ -6,7 +6,7 @@
                     <img src="../assets/img/logo.png" id="logo" class="logo-header" alt="Company logo" title="Homepage"/>
                 </NuxtLink>
             </div>
-            <ul v-show="!mobile" class="navigation">
+            <ul v-if="!mobile" class="navigation">
                 <li><NuxtLink class="landmark" to="/most_relevant_projects">Most Relevant Projects</NuxtLink></li>
                 <li><NuxtLink class="landmark" to="/portfolio">Portfolio</NuxtLink></li>
                 <li><NuxtLink class="landmark" to="/projects">All Projects</NuxtLink></li>
@@ -15,10 +15,10 @@
                 <li><NuxtLink class="landmark" to="/our_team">Our Team</NuxtLink></li>
                 <li><NuxtLink class="landmark" to="/about_us">About Us</NuxtLink></li>
                 <li><NuxtLink class="landmark" to="/contacts">Contacts</NuxtLink></li>
-            </ul>
+            </ul>   
 
             <div class="icon">
-                <i @click="toggleMobileNav" v-show="mobile" :class="{ 'icon-active': mobileNav }">
+                <i @click="toggleMobileNav" v-show="mobile" class="hamburger-menu" :class="{ 'icon-active': mobileNav }">
                     <svg viewBox="0 0 100 67" width="40" height="40">
                         <rect width="100" height="17" rx="10"></rect>
                         <rect y="33" width="100" height="17" rx="10"></rect>
@@ -63,7 +63,6 @@
             if (process.client) {
                 window.addEventListener('resize', this.checkScreen);
                 this.checkScreen();
-                console.log("sono dentro con " + this.windowWidth);
             }
         },
 
@@ -154,9 +153,8 @@
         height: 100%;
     }
 
-    i {
+    .hamburger-menu {
         cursor: pointer;
-        font-size: 24px;
         transition: 0.8s ease all;
     }
 
