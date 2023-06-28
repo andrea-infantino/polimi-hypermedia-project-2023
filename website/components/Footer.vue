@@ -56,6 +56,7 @@
         vertical-align: text-bottom;
         margin-top: 13px;
         padding-right: 20px;
+        flex-wrap: wrap;
     }
 
     .linkedin-footer, .instagram-footer, .twitter-footer {
@@ -78,6 +79,7 @@
     .bottom {
         display: flex;
         justify-content: space-evenly;
+        flex-wrap: wrap;
     }
 
     .rights {

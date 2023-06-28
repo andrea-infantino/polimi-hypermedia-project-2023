@@ -100,9 +100,10 @@
     }
 
     .links {
-        text-align: center;
         display: flex;
         justify-content: space-around;
+        margin: 3% 0%;
+        flex-wrap: wrap;
     }
 
     .mrp-link {

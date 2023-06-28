@@ -113,13 +113,6 @@
         text-align: center;
     }
 
-    .links {
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-        margin: 3% 0%;
-    }
-
     .prtf-link {
         color: ghostwhite;
         background-color: transparent;

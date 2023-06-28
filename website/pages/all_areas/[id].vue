@@ -13,23 +13,15 @@
         
         <div class="Area_container">
           <div class="area-header">
-            <NuxtLink v-if="area.id!=0" :to="`/all_areas/${area.id-1}`">
-              <span class="area-arrow-enabled" role="button" aria-label="Previous area button">&#8249;</span>
-            </NuxtLink>
-
-            <span v-if="area.id==0">
-              <span class="area-arrow-disabled" role="button" aria-label="Disabled previous area button">&#8249;</span>
-            </span>
+            <NuxtLink :to="isPreviousDisabled ? '#' : `/all_areas/${area.id-1}`" :class="{ 'disabled': isPreviousDisabled }" class="area-button">
+              &#8249;
+            </NuxtLink> 
 
             <img class="full-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} logo`"/>
 
-            <NuxtLink v-if="area.id<(numOfAreas-1)" :to="`/all_areas/${area.id+1}`">
-              <span class="area-arrow-enabled" role="button" aria-label="Next area button">&#8250;</span>
-            </NuxtLink>
-
-            <span v-if="area.id>=(numOfAreas-1)">
-              <span class="area-arrow-disabled" role="button" aria-label="Disabled next area button">&#8250;</span>
-            </span>
+            <NuxtLink :to="isNextDisabled ? '#' : `/all_areas/${area.id+1}`" :class="{ 'disabled': isNextDisabled }" class="area-button">
+              &#8250;
+            </NuxtLink> 
 
           </div>
 
@@ -91,9 +83,16 @@
               //fallback for server-side rendering. render the text as is
               return description;
             }
+          },
+
+          isNextDisabled() {
+            return this.area.id === this.numOfAreas - 1;
+          },
+
+          isPreviousDisabled() {
+            return this.area.id === 0;
           }
         }
-
     })  
 </script>
 
@@ -128,7 +127,7 @@
     justify-content: center;
   }
   
-  .area-arrow-enabled {
+  .area-button {
     font-size: 3em;
     color: ghostwhite;
     margin: 0px 250px;
@@ -137,24 +136,24 @@
     transition: all 0.2s;
   }
 
-  .area-arrow-enabled:hover {
+  .area-button:hover {
     color: black;
     background-color: ghostwhite;
     box-shadow: 3px 5px 30px 0 rgba(172,172,172,.5);
   }
 
-  .area-arrow-enabled:active {
-    font-size: 2.7em;
+  .area-button:active {
+    box-shadow: 3px 5px 30px 15px rgba(172,172,172,.6);
   }
 
-  .area-arrow-disabled {
-    font-size: 3em;
-    margin: 0px 250px;
-    border-radius: 10px;
-    padding: 70px 25px;
+  .area-button.disabled {
     color: gray;
     cursor: not-allowed;
-    
+  }
+
+  .area-button.disabled:hover {
+    background-color: transparent;
+    box-shadow: 0 0;
   }
 
   .area-description {

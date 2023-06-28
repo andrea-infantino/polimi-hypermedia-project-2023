@@ -52,12 +52,11 @@ export default {
 
 .scroll-to-top-btn:hover {
   font-weight: bold;
-  padding-bottom: 12px;
   box-shadow: 3px 5px 10px 0 rgba(172,172,172,.5);
 }
 
 .scroll-to-top-btn:active {
-  transform: scale(0.9);
+  box-shadow: 3px 5px 10px 10px rgba(172,172,172,.5);
 }
 
 </style>

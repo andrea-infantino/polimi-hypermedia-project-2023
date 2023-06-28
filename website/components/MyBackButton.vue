@@ -1,28 +1,42 @@
 <template>
-    <a href="" class="back-button" @click.prevent="$router.back()" role="button" aria-label="Back button">&#10554;</a>
+    <button class="bb-box">
+        <a href="" class="back-button" @click.prevent="$router.back()" role="button" aria-label="Back button">&#10554;</a>  
+    </button>
 </template>
 
-<style>
+<style scoped>
+
+    button {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .bb-box {
+        position: absolute;
+        width: 7vh;
+        height: 7vh;
+        margin: 1%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        transition: all 0.1s ease-out;
+    }
 
     .back-button {
-        position: absolute;
         color: black;
         font-weight: bolder;
         font-size: xx-large;
-        margin-top: 1%;
-        margin-left: 20px;
-        padding: 5px;
-        border-radius: 50%;
-        transition: 0.3s;
-        z-index: 5;
     }
 
-    .back-button:hover {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .bb-box:hover {
+        background-color: rgba(0, 0, 0, 0.1);
     }
 
-    .back-button:active {
-        transform: scale(0.9);
+    .bb-box:active {
+        background-color: rgba(0, 0, 0, 0.2);
     }
 
 </style>

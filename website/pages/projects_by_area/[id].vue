@@ -14,13 +14,9 @@
         <div class="Area_container">
             <div class="area-info">
                 <div class="area-prj-header">
-                    <NuxtLink v-if="area.id!=0" :to="`/projects_by_area/${area.id-1}`">
-                        <span class="area-prj-arrow-enabled" role="button" aria-label="Previous area button">&#8249;</span>
-                    </NuxtLink>
-
-                    <span v-if="area.id==0">
-                        <span class="area-prj-arrow-disabled" role="button" aria-label="Disabled previous area button">&#8249;</span>
-                    </span>
+                  <NuxtLink :to="isPreviousDisabled ? '#' : `/projects_by_area/${area.id-1}`" :class="{ 'disabled': isPreviousDisabled }" class="prj-area-button">
+                    &#8249;
+                  </NuxtLink>
 
                     <div class="pba-img-link">
                         <img class="prj-by-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} area logo`" />
@@ -30,13 +26,9 @@
                         </NuxtLink>
                     </div>
 
-                    <NuxtLink v-if="area.id<(numOfAreas-1)" :to="`/projects_by_area/${area.id+1}`">
-                        <span class="area-prj-arrow-enabled" role="button" aria-label="Next area button">&#8250;</span>
-                    </NuxtLink>
-
-                    <span v-if="area.id>=(numOfAreas-1)">
-                        <span class="area-prj-arrow-disabled" role="button" aria-label="Disabled next area button">&#8250;</span>
-                    </span>
+                    <NuxtLink :to="isNextDisabled ? '#' : `/projects_by_area/${area.id+1}`" :class="{ 'disabled': isNextDisabled }" class="prj-area-button">
+                      &#8250;
+                    </NuxtLink> 
 
                 </div>  
 
@@ -72,7 +64,18 @@
             return {
                 area, numOfAreas
             }
+        },
+
+        computed: {
+          isNextDisabled() {
+            return this.area.id === this.numOfAreas - 1;
+          },
+
+          isPreviousDisabled() {
+            return this.area.id === 0;
+          }
         }
+
     })
 </script>
 
@@ -124,27 +127,35 @@
     padding: 2px 15px;
   }
 
-  .area-prj-arrow-enabled {
+  .prj-area-button {
+    position: sticky;
+    top: 20vh;
     font-size: 3em;
+    height: 10vh;
     color: ghostwhite;
     border-radius: 10px;
-    padding: 30px 20px;
+    padding: 50px 20px;
     transition: all 0.2s;
   }
 
-  .area-prj-arrow-enabled:hover {
+  .prj-area-button:hover {
     color: black;
     background-color: ghostwhite;
     box-shadow: 3px 5px 30px 0 rgba(172,172,172,.5);
   }
 
-  .area-prj-arrow-disabled {
-    font-size: 3em;
-    border-radius: 10px;
-    padding: 30px 20px;
+  .prj-area-button:active {
+    box-shadow: 3px 5px 30px 15px rgba(172,172,172,.6);
+  }
+
+  .prj-area-button.disabled {
     color: gray;
     cursor: not-allowed;
-    
+  }
+
+  .prj-area-button.disabled:hover {
+    background-color: transparent;
+    box-shadow: 0 0;
   }
 
   .related-projects-container {

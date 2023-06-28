@@ -16,14 +16,10 @@
 
 
     <div class="person-page">
-
-      <NuxtLink v-if="person.id!=0" :to="`/our_team/${person.id-1}`">
-        <span class="prs-arrow-enabled" role="button" aria-label="Previous person button">&#8249;</span>
-      </NuxtLink>
-
-      <span v-if="person.id==0">
-          <span class="prs-arrow-disabled" role="button" aria-label="Disabled previous person button">&#8249;</span>
-      </span>
+      
+      <NuxtLink :to="isPreviousDisabled ? '#' : `/our_team/${person.id-1}`" :class="{ 'disabled': isPreviousDisabled }" class="person-button">
+        &#8249;
+      </NuxtLink> 
 
 
       <div class="person-container">
@@ -51,18 +47,10 @@
         </div>
       </div>
 
-      <NuxtLink v-if="person.id<(numOfPeople-1)" :to="`/our_team/${person.id+1}`">
-          <span class="prs-arrow-enabled" role="button" aria-label="Next person button">&#8250;</span>
-        </NuxtLink>
-
-        <span v-if="person.id>=(numOfPeople-1)">
-          <span class="prs-arrow-disabled" role="button" aria-label="Disabled next person button">&#8250;</span>
-        </span>
-
+      <NuxtLink :to="isNextDisabled ? '#' : `/our_team/${person.id+1}`" :class="{ 'disabled': isNextDisabled }" class="person-button">
+        &#8250;
+      </NuxtLink> 
     </div>
-
-
-
 
     <hr class="separator " />
     
@@ -123,6 +111,16 @@
       return {
         person, supervised_proj, team_proj, numOfPeople
       }
+    },
+
+    computed: {
+      isNextDisabled() {
+        return this.person.id === this.numOfPeople - 1;
+      },
+
+      isPreviousDisabled() {
+        return this.person.id === 0;
+      }
     }
   })
 </script>
@@ -131,7 +129,7 @@
   .person-page {
     justify-content: space-around;
     display: flex;
-    align-items: center;
+
     margin-top: 30px;
   }
 
@@ -157,29 +155,37 @@
     transform: scale(0.95);
   }
 
-  .prs-arrow-enabled {
+  .person-button {
+    position: sticky;
+    top: 15vh;
     font-size: 3em;
+    height: 10vh;
     color: ghostwhite;
-    margin: 0px 10px;
+    margin: 0px 10px 50px;
     border-radius: 10px;
     padding: 70px 20px;
     transition: all 0.2s;
   }
 
-  .prs-arrow-enabled:hover {
+  .person-button:hover {
     color: black;
     background-color: ghostwhite;
     box-shadow: 3px 5px 30px 0 rgba(172,172,172,.5);
   }
 
-  .prs-arrow-disabled {
-    font-size: 3em;
-    margin: 0px 10px;
-    border-radius: 10px;
-    padding: 10px 25px;
+  .person-button:active {
+    box-shadow: 3px 5px 30px 15px rgba(172,172,172,.6);
+  }
+
+  .person-button.disabled {
     color: gray;
     cursor: not-allowed;
     
+  }
+
+  .person-button.disabled:hover {
+    background-color: transparent;
+    box-shadow: 0 0;
   }
 
   .person-container {
