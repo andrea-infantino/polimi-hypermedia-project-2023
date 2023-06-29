@@ -2,7 +2,7 @@
     <NuxtLink :to = "link" >
         <div class="card">
             <img class="img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/People/${id}.jpg`" :alt="`${name} ${surname}'s photo`" />
-            <span class="name_surname">{{ name }} {{ surname }}</span>
+            <span class="name_surname">{{ surname }} {{ name }}</span>
             <span class="role">{{ role }}</span>
         </div>
     </NuxtLink>

@@ -213,10 +213,6 @@
     font-weight: bold;
   }
 
-  .project-year {
-    padding-right: 10vh;
-  }
-
   .prj-description {
     display: inline-block;
     margin: 1em;
@@ -251,10 +247,10 @@
 
   .area-person-link {
     color: ghostwhite;
-    margin-left: 1em;
     border-radius: 5px;
     padding: 3px 5px;
-    transition: padding 0.3s, background-color 0.3s, color 0.3s;
+    margin: 0 10px 0 15px;
+    transition: all 0.3s ease;
   }
 
   .area-person-link:hover {
@@ -262,6 +258,7 @@
     color: black;
     background-color: rgba(248, 248, 255, 0.900);
     padding: 3px 15px;
+    margin: 0 0 0 5px;
   }
 
   .area-person-link:hover .area-logo {

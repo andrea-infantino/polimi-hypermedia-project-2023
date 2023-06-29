@@ -6,16 +6,17 @@
     <main>
         <MyTitle :title="'OUR TEAM'" />
 
-        <span class="our-team-text">Meet our team. We include talented individuals, unified by our purpose and our core values of <b>teamwork</b>, <b>continuos learning</b> and <b>leadership</b>.<br>
+        <span class="our-team-text">Meet our team. We include talented individuals, unified by our purpose and our core values of <b>teamwork</b>, <b>continuous learning</b> and <b>leadership</b>.<br>
           We inspire and encourage people to believe in and challenge themselves, discover their passion and realize their potential.</span>
 
         <hr class="separator " />
 
-        <div id="sorting-selector">
-        <label for="sorting-selector">Sort by:</label>
+        <div id="sorting-selector-team">
+        <label for="sorting-selector-team">Sort by:</label>
             <select class="menu" id="order" v-model="order">
               <option value="Role">Role</option>
               <option value="A-Z">A-Z</option>
+              <option value="Z-A">Z-A</option>
             </select>
         </div>
 
@@ -47,7 +48,9 @@
         return importance_order.value
       }
       else if (order.value == "A-Z") 
-        return people.value
+        return [...people.value]
+      else if (order.value == "Z-A") 
+        return [...people.value].reverse()
   })
 
   const description = ref('In this page you will find all of our team members.')
@@ -81,7 +84,7 @@
     max-width: 1200px;
   }
 
-  #sorting-selector {
+  #sorting-selector-team, #sorting-selector-proj {
     display: flex;
     flex-direction: row;
     justify-content: center;
