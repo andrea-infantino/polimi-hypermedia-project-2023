@@ -11,7 +11,7 @@
           </div>
         </div>
         
-        <div class="Area_container">
+        <div class="area_container">
           <div class="area-header">
             <NuxtLink :to="isPreviousDisabled ? '#' : `/all_areas/${area.id-1}`" :class="{ 'disabled': isPreviousDisabled }" class="area-button" role="button" aria-label="Previous area button">
               &#8249;
@@ -97,6 +97,12 @@
 </script>
 
 <style>
+  .area_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   .area-header {
     justify-content: space-around;
@@ -111,16 +117,15 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     gap: 50px;
-    max-width: 75%;
+    width: 80vw;
     margin-top: 30px;
   }
   
   .full-area-img {
     display: flex;
-    width: 25%;
+    width: 40vh;
     height: auto;
     margin: 0 auto;
     margin-top: 30px;
@@ -130,7 +135,7 @@
   .area-button {
     font-size: 3em;
     color: ghostwhite;
-    margin: 0px 250px;
+    margin: 0px 12vw;
     border-radius: 10px;
     padding: 70px 25px;
     transition: all 0.2s;
@@ -160,7 +165,7 @@
     color: black;
     background-color: #fff6f6e3;
     box-shadow: 15px 15px 30px 0 rgba(172,172,172,.5);
-    padding: 40px 60px;
+    padding: 7vh 8vh;
     margin: 25px 0px;
     border-radius: 10px;
     white-space: pre-wrap;

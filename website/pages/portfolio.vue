@@ -50,9 +50,9 @@
         <hr class="separator " />
 
         <div class="links">
-            <NuxtLink id="to_all_projects" to="/projects"><button class="prtf-link">Check all the projects</button></NuxtLink>
-            <NuxtLink id="to_most_relevant_projects" to="/most_relevant_projects"><button class="prtf-link">See the most relevant projects</button></NuxtLink>
-            <NuxtLink id="to_projects_by_area" to="/projects_by_area"><button class="prtf-link">Check the projects by area</button></NuxtLink>
+            <NuxtLink id="to_all_projects" to="/projects"><button class="bottom-link">Check all the projects</button></NuxtLink>
+            <NuxtLink id="to_most_relevant_projects" to="/most_relevant_projects"><button class="bottom-link">See the most relevant projects</button></NuxtLink>
+            <NuxtLink id="to_projects_by_area" to="/projects_by_area"><button class="bottom-link">Check the projects by area</button></NuxtLink>
         </div>
     </main>
 </template>
@@ -112,31 +112,4 @@
         color:white;
         text-align: center;
     }
-
-    .prtf-link {
-        color: ghostwhite;
-        background-color: transparent;
-        border: transparent;
-        font-family: Poppins, sans-serif;
-        position: relative;
-        font-size: 20px;
-        font-weight: bold;
-        margin: auto;
-        border-radius: 10px;
-        padding: 10px 20px;
-        transition: all 0.2s;
-    }
-
-    .prtf-link:hover {
-        color: black;
-        background-color: rgba(248, 248, 255, 0.9);
-        box-shadow: 3px 5px 20px 0 rgba(172,172,172,.5);
-        text-decoration: underline;
-        padding: 10px 30px;
-    }
-
-    .prtf-link:active {
-        transform: scale(0.95);
-    }
-
 </style>

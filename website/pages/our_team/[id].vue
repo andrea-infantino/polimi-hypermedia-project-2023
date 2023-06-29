@@ -225,7 +225,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     gap: 20px;
   }
 
@@ -239,10 +239,8 @@
     width: fit-content;
     opacity: 0.9;
     align-self: center;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 30px;
+    margin-top: 10px;
   }
 
   .person-role {
@@ -280,7 +278,7 @@
     color: black;
     background-color: #fff6f6e3;
     box-shadow: 15px 15px 30px 0 rgba(172,172,172,.5);
-    padding: 10px 20px;
+    padding: 2vh 4vh;
     border-radius: 10px;
   }
 
@@ -327,10 +325,10 @@
 
   .mail {
     display: inline-block;
-    margin-left: 1em;
     border-radius: 5px;
     padding: 2px 5px;
-    transition: padding 0.3s, background-color 0.3s, color 0.3s;
+    margin: 0 10px;
+    transition: all 0.3s;
   }
 
   .mail:hover {
@@ -338,6 +336,7 @@
     color: black;
     background-color: rgba(248, 248, 255, 0.900);
     padding: 2px 15px;
+    margin: 0;
   }
 
   .space-between-line {

@@ -11,8 +11,8 @@
             </div>
         </div>
         
-        <div class="Area_container">
-            <div class="area-info">
+        <div class="area-container">
+            <div class="prj-area-info">
                 <div class="area-prj-header">
                   <NuxtLink :to="isPreviousDisabled ? '#' : `/projects_by_area/${area.id-1}`" :class="{ 'disabled': isPreviousDisabled }" class="prj-area-button" role="button" aria-label="Previous area projects button">
                     &#8249;
@@ -80,14 +80,18 @@
 </script>
 
 <style>
-  .area-info {
+  .area-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .prj-area-info {
     color: ghostwhite;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 2vw;
     gap: 50px;
     max-width: 80%;
     margin-top: 30px;
@@ -101,7 +105,7 @@
   }
 
   .prj-by-area-img {
-    width: 20%;
+    width: 20vh;
     height: auto;
     margin: 10px;
   }
@@ -111,13 +115,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0 10vw;
   }
 
   .full-area-link {
     display: inline-block;
     border-radius: 5px;
     padding: 2px 10px;
-    transition: padding 0.3s, background-color 0.3s, color 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    margin: 0 5px;
   }
 
   .full-area-link:hover {
@@ -125,6 +132,7 @@
     color: black;
     background-color: rgba(248, 248, 255, 0.900);
     padding: 2px 15px;
+    margin: 0;
   }
 
   .prj-area-button {

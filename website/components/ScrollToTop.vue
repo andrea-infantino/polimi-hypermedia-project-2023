@@ -38,9 +38,6 @@ export default {
 <style>
 
 .scroll-to-top-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
   padding: 10px 17px;
   border-radius: 15px;
   background-color: #E8EEF1;
