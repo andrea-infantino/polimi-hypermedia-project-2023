@@ -41,16 +41,6 @@
 </template>
   
 <script setup>
-    /*
-    import Map from '../components/Map.vue';
-
-    export default {
-        components: {
-            Map,
-        },
-    };
-    */
-
     const description = ref('In this page you will find our contact information and our location.')
     const keywords = ref('Contact Us, email, phone number, address, location, social')
 
