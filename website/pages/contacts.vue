@@ -61,6 +61,7 @@
     .contacts-img-div {
         text-align: center;
         width: 50%;
+        min-width: 300px;
     }
     
     .contacts-img {
@@ -89,6 +90,7 @@
         display: inline-block;
         border-radius: 5px;
         transition: all 0.3s;
+        padding: 2px 0;
     }
 
     .mail:hover, .num-1:hover, .num-2:hover {
@@ -101,6 +103,7 @@
     .text-1, .text-2 {
         font-weight: bold;
         font-size: 5vh;
+        margin-top: 15px;
     }
 
     .social-media {

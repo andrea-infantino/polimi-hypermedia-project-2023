@@ -28,11 +28,11 @@
             </div>
 
             <transition name="mobile-nav">
-                <ul v-show="mobileNav" class="dropdown-nav">
+                <ul v-show="mobileNav" class="dropdown-nav" ref="dropdownNav">
                     <NuxtLink to="/">
                         <img src="../assets/img/logo.png" class="logo-mobile" alt="Company logo" @click="toggleMobileNav" />
                     </NuxtLink>
-                    <hr class="separator-mobile " />
+                    <hr class="separator-mobile" />
                     <li><NuxtLink @click="toggleMobileNav" class="landmark" to="/most_relevant_projects">MOST RELEVANT PROJECTS</NuxtLink></li>
                     <li><NuxtLink @click="toggleMobileNav" class="landmark" to="/portfolio">PORTFOLIO</NuxtLink></li>
                     <li><NuxtLink @click="toggleMobileNav" class="landmark" to="/projects">ALL PROJECTS</NuxtLink></li>
@@ -44,7 +44,9 @@
                     <li @click="toggleMobileNav" class="close-cross">&#10006;</li>
                 </ul>
             </transition>
-
+            <transition name="dropdown-overlay">
+                <div v-if="mobileNav" class="dropdown-overlay" @click="toggleMobileNav"></div>
+            </transition>
         </nav>
     </header>
 </template>
@@ -59,10 +61,19 @@
             };
         },
 
-        created() {
+        mounted() {
             if (process.client) {
                 window.addEventListener('resize', this.checkScreen);
                 this.checkScreen();
+
+                document.addEventListener('click', this.handleClickOutside);
+            }
+        },
+
+        beforeUnmount() {
+            if (process.client) {
+                window.removeEventListener('resize', this.checkScreen);
+                document.removeEventListener('click', this.handleClickOutside);
             }
         },
 
@@ -73,10 +84,16 @@
 
             checkScreen() {
                 this.windowWidth = document.documentElement.clientWidth;
-                if (this.windowWidth < 800) {
+                if (this.windowWidth < 1000) {
                     this.mobile = true;
                 } else {
                     this.mobile = false;
+                    this.mobileNav = false;
+                }
+            },
+
+            handleClickOutside(event) {
+                if (!this.$refs.dropdownNav.contains(event.target) && !this.$refs.dropdownNav.previousElementSibling.contains(event.target)) {
                     this.mobileNav = false;
                 }
             },
@@ -128,7 +145,7 @@
     .branding {
         display: flex;
         align-items: center;
-        padding-right: 4%;
+        margin: 0.5vh 1vh;
     }
 
     img {
@@ -167,12 +184,14 @@
         display: flex;
         flex-direction: column;
         position: fixed;
-        width: 100%;
+        width: 60%;
         height: 100%;
-        max-width: 250px;
+        min-width: 270px;
         background-color: #E8EEF1;
         top: 0;
         left: 0;
+        margin-top: 0;
+        z-index: 500;
         border-right: 5px solid #1E3D58;
     }
 
@@ -181,7 +200,7 @@
     }
 
     .mobile-nav-enter-from, .mobile-nav-leave-to {
-        transform: translateX(-280px);
+        transform: translateX(-100%);
     }
 
     .mobile-nav-enter-to {
@@ -190,8 +209,14 @@
 
     .logo-mobile {
         width: 50%;
+        max-width: 200px;
+        min-width: 120px;
         height: auto;
-        padding: 10% 0;
+        margin-top: 5vh;
+    }
+
+    .separator-mobile {
+        margin: 3vh 0;
     }
 
     .close-cross {
@@ -202,7 +227,7 @@
     }
 
     .close-cross:hover {
-        color: darkred  ;
+        color: rgb(200, 0, 0)  ;
         text-decoration: underline;
         text-underline-offset: 6px;
         transform: translateY(-5px);
@@ -211,4 +236,30 @@
     .close-cross:active {
         transform: scale(0.95);
     }
+
+    .dropdown-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  transition: opacity 0.5s;
+}
+
+.dropdown-overlay-enter-active,
+.dropdown-overlay-leave-active {
+  transition: opacity 0.5s;
+}
+
+.dropdown-overlay-enter-from,
+.dropdown-overlay-leave-to {
+  opacity: 0;
+}
+
+.dropdown-overlay-enter-to,
+.dropdown-overlay-leave-from {
+  opacity: 1;
+}
 </style>

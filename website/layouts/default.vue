@@ -18,7 +18,7 @@
     .scroll-button {
         position: sticky;
         width: 50px;
-        margin: 0 0 15px auto;
+        margin: 0 10px 15px auto;
         bottom: 3vh;
         right: 3vh;
         z-index: 99;

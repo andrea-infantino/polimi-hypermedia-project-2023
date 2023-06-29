@@ -28,9 +28,9 @@
               </span>
 
               <span> <div class="space-between-line">Social:</div>
-                <a href="https://twitter.com/home"><img src="../../assets/img/contacts/twitter_logo_hover.png" class="twitter-logo-hover" alt="Coloured Twitter logo"><img src="../../assets/img/contacts/twitter_logo.png" alt="Black and white Twitter Logo" class="twitter-logo"></a>
-                <a href="https://www.instagram.com"><img src="../../assets/img/contacts/instagram_logo_hover.png" class="instagram-logo-hover" alt="Coloured Instagram logo"><img src="../../assets/img/contacts/instagram_logo.png" alt="Black and white Instagram Logo" class="instagram-logo"></a>
-                <a href="https://www.linkedin.com"><img src="../../assets/img/contacts/linkedin_logo_hover.png" class="linkedin-logo-hover" alt="Coloured LinkedIn logo"><img src="../../assets/img/contacts/linkedin_logo.png" alt="Black and white LinkedIn Logo" class="linkedin-logo"></a>
+                <a href="https://twitter.com/home" target="_blank"><img src="../../assets/img/contacts/twitter_logo_hover.png" class="twitter-logo-hover" alt="Coloured Twitter logo"><img src="../../assets/img/contacts/twitter_logo.png" alt="Black and white Twitter Logo" class="twitter-logo"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="../../assets/img/contacts/instagram_logo_hover.png" class="instagram-logo-hover" alt="Coloured Instagram logo"><img src="../../assets/img/contacts/instagram_logo.png" alt="Black and white Instagram Logo" class="instagram-logo"></a>
+                <a href="https://www.linkedin.com" target="_blank"><img src="../../assets/img/contacts/linkedin_logo_hover.png" class="linkedin-logo-hover" alt="Coloured LinkedIn logo"><img src="../../assets/img/contacts/linkedin_logo.png" alt="Black and white LinkedIn Logo" class="linkedin-logo"></a>
               </span>
 
               <nuxt-link v-if="person.cv_link != null" id="person-cv" :to="`${person.cv_link}`" target="_blank">See {{ person.name }} {{ person.surname }}'s CV</nuxt-link>

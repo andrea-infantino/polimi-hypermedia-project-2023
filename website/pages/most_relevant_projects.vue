@@ -113,6 +113,7 @@
         padding: 10px 20px;
         margin: 0 10px;
         transition: all 0.2s;
+        cursor: pointer;
     }
 
     .bottom-link:hover {
