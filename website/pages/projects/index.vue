@@ -4,12 +4,7 @@
     </Head>
 
     <main>
-      <div class="title-area">
-        <MyBackButton /> 
-        <div class="title">
-          ALL PROJECTS
-        </div>
-      </div>
+      <MyTitle :title="'ALL PROJECTS'" />
 
       <div class="alphabetical-projects">
         <div class="proj-left">

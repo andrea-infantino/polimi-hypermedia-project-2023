@@ -4,12 +4,7 @@
     </Head>
 
     <main>
-    <div class="title-area">
-      <MyBackButton />
-      <div class="title">
-        ALL AREAS
-      </div>
-    </div>
+        <MyTitle :title="'ALL AREAS'" />
 
     <span class="all-areas-text">Browse the areas of investment to know more about what we care and love:</span>
 

@@ -4,12 +4,7 @@
     </Head>
 
     <main>
-        <div class="title-area"> 
-          <MyBackButton />         
-          <div class="title">
-            {{ area.name }}
-          </div>
-        </div>
+        <MyTitle :title="area.name" />
         
         <div class="area_container">
           <div class="area-header">

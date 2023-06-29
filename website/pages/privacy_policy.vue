@@ -4,11 +4,7 @@
     </Head>
 
     <main>
-        <div class="title-area">
-            <div class="title">
-            PRIVACY POLICY
-            </div>
-        </div>
+        <MyTitle :title="'PRIVACY POLICY'" />
 
         <div class="update_date">
             <b>Effective Date: </b> 01/06/2023

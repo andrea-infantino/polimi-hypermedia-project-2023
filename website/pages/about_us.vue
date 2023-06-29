@@ -4,12 +4,7 @@
     </Head>
 
     <main>
-        <div class="title-area">
-            <MyBackButton /> 
-            <div class="title">
-                ABOUT US
-            </div>
-        </div>
+        <MyTitle :title="'ABOUT US'" />
 
         <h1 class="au-intro">Welcome to our enchanted realm of venture capital for wizards!</h1>
         

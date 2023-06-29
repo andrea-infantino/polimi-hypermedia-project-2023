@@ -4,12 +4,7 @@
     </Head>
 
     <main>
-        <div class="title-area">
-            <MyBackButton />
-            <div class="title">
-                CONTACTS
-            </div>
-        </div>
+        <MyTitle :title="'CONTACTS'" />
 
         <div class="contacts-info">
             <div class="mail-number">

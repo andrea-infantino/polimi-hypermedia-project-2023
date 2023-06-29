@@ -1,27 +1,22 @@
 <template>
-  <Head>
+    <Head>
         <Title>Our Team - Wizarding Ventures</Title>
     </Head>
 
     <main>
+        <MyTitle :title="'OUR TEAM'" />
 
-    <div class="title-area">
-      <MyBackButton /> 
-      <div class="title">
-        OUR TEAM
-      </div>
-    </div>
+        <span class="our-team-text">Meet our team. We include talented individuals, unified by our purpose and our core values of <b>teamwork</b>, <b>continuos learning</b> and <b>leadership</b>.<br>
+          We inspire and encourage people to believe in and challenge themselves, discover their passion and realize their potential.</span>
 
-    <span class="our-team-text">Meet our team. We include talented individuals, unified by our purpose and our core values of <b>teamwork</b>, <b>continuos learning</b> and <b>leadership</b>.<br>
-      We inspire and encourage people to believe in and challenge themselves, discover their passion and realize their potential.</span>
+        <hr class="separator " />
 
-    <hr class="separator " />
+        <div id="people-container">
+          <PersonCard v-for = "person of importance_order" :id = "person.id" :name = "person.name" :surname = "person.surname" :role = "person.role" :link = "'/our_team/' + person.id" />
+        </div>
 
-    <div id="people-container">
-      <PersonCard v-for = "person of importance_order" :id = "person.id" :name = "person.name" :surname = "person.surname" :role = "person.role" :link = "'/our_team/' + person.id" />
-    </div>
-
-  </main>
+    </main>
+    
 </template>
 
 <script setup>

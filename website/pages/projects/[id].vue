@@ -4,12 +4,7 @@
   </Head>
 
   <main>
-      <div class="title-area">
-        <MyBackButton /> 
-        <div class="title">
-            {{ project.title }}
-        </div>
-      </div>
+      <MyTitle :title="project.title" />
 
     <div class="project-page">
 

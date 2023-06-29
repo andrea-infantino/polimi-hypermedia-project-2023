@@ -4,12 +4,7 @@
     </Head>
 
     <main>
-        <div class="title-area">
-            <MyBackButton /> 
-            <div class="title">
-                PORTFOLIO
-            </div>
-        </div>
+        <MyTitle :title="'PORTFOLIO'" />
 
         <div class="portfolio-content">
             <div class="portfolio-section">

@@ -4,12 +4,7 @@
     </Head>
 
     <main>
-      <div class="title-area">
-        <MyBackButton />
-        <div class="title">
-          PROJECTS BY AREA
-        </div>
-      </div>
+      <MyTitle :title="'PROJECTS BY AREA'" />
 
       <h1 class="area-prj-intro"><center><strong>Check our projects for each area of investment:</strong></center></h1>
   

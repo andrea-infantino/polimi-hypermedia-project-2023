@@ -4,16 +4,7 @@
   </Head>
 
   <main>
-
-    <div class="title-area">
-      <MyBackButton />
-      <div class="clickable-title">
-        <NuxtLink to="/our_team" class="clickable-title-link">
-          OUR TEAM
-        </NuxtLink>
-      </div>
-    </div>
-
+    <MyTitle :title="'OUR TEAM'" :link="'/our_team/'" />
 
     <div class="person-page">
       
@@ -136,28 +127,6 @@
     justify-content: space-around;
     display: flex;
     margin-top: 30px;
-  }
-
-  .clickable-title {
-    margin: 20px;
-    text-align: center;
-  }
-
-  .clickable-title-link {
-    font-weight: bold;
-    font-size: 40px;
-    color: black;
-    transition: all 0.3s; 
-  }
-
-  .clickable-title-link:hover {
-    text-decoration: underline;
-    text-underline-offset: 6px;
-    transform: translateY(-5px);
-  } /* non fa translateY */
-
-  .clickable-title-link:active {
-    transform: scale(0.95);
   }
 
   .person-button {

@@ -4,12 +4,7 @@
     </Head>
 
     <main>
-        <div class="title-area">
-            <MyBackButton /> 
-            <div class="title">
-                MOST RELEVANT PROJECTS
-            </div>
-        </div>
+        <MyTitle :title="'MOST RELEVANT PROJECTS'" />
 
         <span class="mrp-text">Check out our 5 most relevant project:</span>
 

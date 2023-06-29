@@ -4,11 +4,7 @@
     </Head>
 
     <main>
-        <div class="title-area">
-            <div class="title">
-                COOKIE POLICY
-            </div>
-        </div>
+        <MyTitle :title="'COOKIE POLICY'" />
 
         <div class="update_date">
             <b>Effective Date: </b> 01/06/2023
