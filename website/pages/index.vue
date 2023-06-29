@@ -102,7 +102,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
     align-self: center;
     width: 100%;
     height: 10%;

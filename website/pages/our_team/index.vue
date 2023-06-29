@@ -11,29 +11,44 @@
 
         <hr class="separator " />
 
+        <div id="sorting-selector">
+        <label for="sorting-selector">Sort by:</label>
+            <select class="menu" id="order" v-model="order">
+              <option value="Role">Role</option>
+              <option value="A-Z">A-Z</option>
+            </select>
+        </div>
+
         <div id="people-container">
-          <PersonCard v-for = "person of importance_order" :id = "person.id" :name = "person.name" :surname = "person.surname" :role = "person.role" :link = "'/our_team/' + person.id" />
+          <PersonCard v-for = "person of sorted" :id = "person.id" :name = "person.name" :surname = "person.surname" :role = "person.role" :link = "'/our_team/' + person.id" />
         </div>
 
     </main>
-    
+
 </template>
 
 <script setup>
   const { data: people } = await useFetch('/api/our_team')
 
-  //to order people by role
+  const order = ref("Role") // default order
   const roles = ['Founder', 'Co-Founder', 'CFO', 'Investment Manager', 'Investment Analyst', 'Head of Impact', 'Office Manager', 'Partner']
 
-  const importance_order = ref([])
+  const sorted = computed ( () => {
+      if (order.value == "Role" || order.value == null || order.value == undefined || order.value == "") {
+        const importance_order = ref([])
 
-  for (let role of roles) {
-    for (let person of people.value) {
-      if (person.role === role) {
-        importance_order.value.push(person)
+        for (let role of roles) {
+          for (let person of people.value) {
+            if (person.role === role) {
+              importance_order.value.push(person)
+            }
+          }
+        }
+        return importance_order.value
       }
-    }
-  }
+      else if (order.value == "A-Z") 
+        return people.value
+  })
 
   const description = ref('In this page you will find all of our team members.')
   const keywords = ref('Team, Teamwork, People, Members, ' + roles.join(', '))
@@ -65,4 +80,30 @@
     gap: 50px;
     max-width: 1200px;
   }
+
+  #sorting-selector {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-self: center;
+    margin-top: 2%;
+    gap: 10px;
+    font-size: 18px;
+    min-width: 200px;
+  }
+
+  label {
+  font-weight: bold;
+  }
+
+  .menu {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 18px;
+    font-family: inherit;
+    cursor: pointer;
+  }
+
 </style>
