@@ -22,7 +22,7 @@
         justify-content: center;
         align-items: center;
         border-radius: 50%;
-        transition: all 0.1s ease-out;
+        transition: all 0.2s ease-out;
     }
 
     .back-button {

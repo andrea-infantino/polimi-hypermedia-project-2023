@@ -172,7 +172,17 @@
 
     .hamburger-menu {
         cursor: pointer;
-        transition: 0.8s ease all;
+        transition: 0.5s ease all;
+        padding: 7px 10px;
+        border-radius: 50%;
+    }
+
+    .hamburger-menu:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .hamburger-menu:active {
+        background-color: rgba(0, 0, 0, 0.2);
     }
 
     .icon-active {
@@ -183,6 +193,7 @@
     .dropdown-nav {
         display: flex;
         flex-direction: column;
+        align-items: center;
         position: fixed;
         width: 60%;
         height: 100%;
@@ -208,7 +219,6 @@
     }
 
     .logo-mobile {
-        width: 50%;
         max-width: 200px;
         min-width: 120px;
         height: auto;
@@ -224,6 +234,8 @@
         margin: 20px;
         transition: 0.3s;
         cursor: pointer;
+        width: 30px;
+        height: 30px;
     }
 
     .close-cross:hover {
@@ -238,28 +250,25 @@
     }
 
     .dropdown-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 99;
-  transition: opacity 0.5s;
-}
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 99;
+        transition: opacity 0.5s;
+    }
 
-.dropdown-overlay-enter-active,
-.dropdown-overlay-leave-active {
-  transition: opacity 0.5s;
-}
+    .dropdown-overlay-enter-active, .dropdown-overlay-leave-active {
+        transition: opacity 0.5s;
+    }
 
-.dropdown-overlay-enter-from,
-.dropdown-overlay-leave-to {
-  opacity: 0;
-}
+    .dropdown-overlay-enter-from, .dropdown-overlay-leave-to {
+        opacity: 0;
+    }
 
-.dropdown-overlay-enter-to,
-.dropdown-overlay-leave-from {
-  opacity: 1;
-}
+    .dropdown-overlay-enter-to, .dropdown-overlay-leave-from {
+        opacity: 1;
+    }
 </style>
