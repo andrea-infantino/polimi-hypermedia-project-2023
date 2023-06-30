@@ -13,7 +13,7 @@
         <img class="preview-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} logo`"/>
         <div class="preview-area-info">
           <div class="preview-area-title">{{ area.name }}</div>
-          <div class="preview-area-description">{{ truncatedAreaDescription(area.description) }}...</div>
+          <div v-html="truncatedAreaDescription(area.description)" class="preview-area-description"></div>
           <NuxtLink :to="`/all_areas/${area.id}`" aria-label="Area button">
             <button class="dark-btn">
               Learn more
@@ -42,9 +42,17 @@
   const keywords = ref('Areas, Investments, Projects, All Areas')
 
   const truncatedAreaDescription = (areaDescription) => {
-    const words = areaDescription.split(' ');
+    const words = areaDescription.substring(30).split(' ');
     const truncatedWords = words.slice(0, 50);
-    return truncatedWords.join(' ');
+    let description = truncatedWords.join(' ');
+
+    if (typeof DOMParser !== 'undefined') {
+      let parser = new DOMParser();
+      let parsedDescription = parser.parseFromString(description, "text/html");
+      return parsedDescription.body.innerHTML;
+    } else {
+      return description;
+    }
   };
 
   useHead({
