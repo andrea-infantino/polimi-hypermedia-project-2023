@@ -44,7 +44,7 @@
   const truncatedAreaDescription = (areaDescription) => {
     const words = areaDescription.substring(30).split(' ');
     const truncatedWords = words.slice(0, 50);
-    let description = truncatedWords.join(' ');
+    let description = truncatedWords.join(' ') + "...";
 
     if (typeof DOMParser !== 'undefined') {
       let parser = new DOMParser();
