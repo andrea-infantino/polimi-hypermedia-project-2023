@@ -8,10 +8,10 @@
             <div class="motto">
                 ❛I solemnly swear<br>I am up to no good❜
             </div>
-            <ScrollDownButton />
+            <ScrollDownButton @click="scrollDown" />
         </div>
 
-        <div class="welcome-section">
+        <div ref="welcome" class="welcome-section">
             <div class="welcome">
                 Welcome to<br><b>Wizarding Ventures</b>!
             </div>
@@ -114,10 +114,24 @@
     </main>
 </template>
 
-<script setup>
-    const { data: Projects } = await useFetch('/api/top_projects');
-
-    const projects = Projects.value.slice(0, Projects.value.length);
+<script>
+    export default {
+        async setup() {
+            const { data: Projects } = await useFetch('/api/top_projects');
+            const projects = Projects.value.slice(0, Projects.value.length);
+            return {
+                projects
+            }
+        },
+        methods: {
+            scrollDown() {
+                const elem = this.$refs.welcome
+                elem?.scrollIntoView({
+                    behavior: 'smooth'
+                })
+            }
+        }
+    }
 </script>
 
 <style scoped>

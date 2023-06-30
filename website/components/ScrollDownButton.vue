@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div @click="scrollDown" class="scrolldown-btn" role="button">
+        <div class="scrolldown-btn" role="button">
             <span></span>
             <span></span>
             <span></span>
@@ -8,19 +8,6 @@
         </div>
     </div>
 </template>
-  
-<script>
-    export default {
-        methods: {
-            scrollDown() {
-                window.scrollTo({
-                    top: 880,
-                    behavior: 'smooth'
-                })
-            }
-        }
-    }
-</script>
   
 <style>
     .scrolldown-btn {
