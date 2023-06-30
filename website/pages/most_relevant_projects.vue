@@ -104,7 +104,7 @@
     .bottom-link {
         color: ghostwhite;
         background-color: transparent;
-        font-family: Poppins, sans-serif;
+        font-family: inherit;
         border: transparent;
         position: relative;
         font-size: 20px;

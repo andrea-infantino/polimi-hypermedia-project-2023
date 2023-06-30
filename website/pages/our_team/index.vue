@@ -90,10 +90,10 @@
     justify-content: center;
     flex-wrap: wrap;
     align-self: center;
-    margin-top: 2%;
+    margin: 2%;
     gap: 10px;
     font-size: 18px;
-    min-width: 200px;
+    min-width: 300px;
   }
 
   label {
@@ -102,11 +102,13 @@
 
   .menu {
     border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: #fff;
+    border: none;
     font-size: 18px;
     font-family: inherit;
+    padding: 0 2vh;
     cursor: pointer;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.9)
   }
 
 </style>

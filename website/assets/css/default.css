@@ -13,6 +13,11 @@ html, body {
       color: ghostwhite;
 }
 
+a {
+      color: aliceblue;
+      text-decoration: none;
+  }
+
 body {
       margin: 0;
       background-image: url("~/assets/img/background.jpg");

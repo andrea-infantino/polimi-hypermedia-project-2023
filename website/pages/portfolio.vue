@@ -42,7 +42,7 @@
 
         </div>
 
-        <hr class="separator " />
+        <hr class="separator" />
 
         <div class="links">
             <NuxtLink id="to_all_projects" to="/projects"><button class="bottom-link">Check all the projects</button></NuxtLink>
