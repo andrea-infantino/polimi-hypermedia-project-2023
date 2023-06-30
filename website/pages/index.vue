@@ -27,7 +27,7 @@
             </div>
         </div>
 
-        <hr class="separator" />
+        <hr class="separator " />
 
         <div class="mission-section">
             <img class="mission-img" src="../assets/img/homepage/homepage_mission.jpg" alt="The Marauder's Map image"/>
@@ -94,8 +94,30 @@
                 </div>
             </div>
         </div>
+
+        <hr class="separator" />
+
+        <div class="top-prj">
+            <div class="top-prj-title">
+                Our most famous projects:
+            </div>
+            
+            <Carousel 
+                :id1="projects[0].id" :title1="projects[0].title" 
+                :id2="projects[1].id" :title2="projects[1].title" 
+                :id3="projects[2].id" :title3="projects[2].title" 
+                :id4="projects[3].id" :title4="projects[3].title" 
+                :id5="projects[4].id" :title5="projects[4].title" />
+        </div>
+
     </main>
 </template>
+
+<script setup>
+    const { data: Projects } = await useFetch('/api/top_projects');
+
+    const projects = Projects.value.slice(0, Projects.value.length);
+</script>
 
 <style scoped>
 
@@ -105,6 +127,14 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+    }
+
+    .top-prj-title {
+        font-size: min(6vw, min(5vh, 8vh));
+        font-weight: bold;
+        min-width: 200px;
+        margin: 50px 0;
+        text-align: center;
     }
 
     .hmpg-header {
