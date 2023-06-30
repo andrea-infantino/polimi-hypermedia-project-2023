@@ -169,7 +169,6 @@
     height: 12vh;
     font-size: 3em;
     color: ghostwhite;
-    margin: 0px 4vw;
     border-radius: 10px;
     padding: 90px 20px;
     transition: all 0.2s;

@@ -93,7 +93,8 @@
   }
 
   .area-prj-header {
-    justify-content: space-around;
+    justify-content: space-evenly;
+    width: 60%;
     display: flex;
     align-items: center;
     margin-top: 30px;
@@ -110,7 +111,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 10vw;
+    margin: 0 auto;
   }
 
   .prj-area-button {
@@ -147,7 +148,7 @@
   }
 
   .related-projects-container {
-    padding: 30px;
+    padding: 30px 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;

@@ -21,7 +21,7 @@
           </div>
 
             <div class="area-info">
-              <div v-html="renderedDescription"></div>
+              <div v-html="renderedDescription" class="db-clouds"></div>
 
                 <span class="related-projects-container">
                     <div class ="related-projects-title">
@@ -104,6 +104,7 @@
     display: flex;
     align-items: center;
     margin-top: 30px;
+    width: 100%
   }
   
   .area-info {
@@ -117,10 +118,14 @@
     width: 80vw;
     margin-top: 30px;
   }
+
+  .db-clouds {
+    width: 100%
+  }
   
   .full-area-img {
     display: flex;
-    width: 40vh;
+    width: min(40vw, 40vh);
     height: auto;
     margin: 0 auto;
     margin-top: 30px;
@@ -130,9 +135,8 @@
   .area-button {
     font-size: 3em;
     color: ghostwhite;
-    margin: 0px 12vw;
     border-radius: 10px;
-    padding: 70px 25px;
+    padding: 70px 20px;
     transition: all 0.2s;
   }
 
@@ -160,7 +164,7 @@
     color: black;
     background-color: #fff6f6e3;
     box-shadow: 15px 15px 30px 0 rgba(172,172,172,.5);
-    padding: 7vh 8vh;
+    padding: 3.3vw 4.3vw;
     margin: 25px 0px;
     border-radius: 10px;
     white-space: pre-wrap;
@@ -168,19 +172,18 @@
 
   .related-projects-container {
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
   }
 
   .related-projects-title {
     font-size: xx-large;
     font-weight: bolder;
-    margin-top: 20px 0px;
+    margin-top: 20px 0 0;
     align-self: center;
   }
 
   .related-projects {
-    padding: 30px;
+    padding: 30px 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;

@@ -6,7 +6,7 @@
     <main>
       <MyTitle :title="'PROJECTS BY AREA'" />
 
-      <h1 class="area-prj-intro"><center><strong>Check our projects for each area of investment:</strong></center></h1>
+      <h1 class="area-prj-intro">Check our projects for each area of investment:</h1>
   
       <div id="generic-cards-container">
         <SingleArea v-for = "area of areas" :id = "area.id" :name = "area.name + ' projects'" :link = "'/projects_by_area/' + area.id" />
@@ -41,6 +41,7 @@
     .area-prj-intro {
       color: ghostwhite;
       font-size: 22px;
-      margin: 30px 0px 10px;
+      margin: 30px 20px 10px;
+      text-align: center;
     }
   </style>

@@ -4,7 +4,7 @@
     </Head>
 
     <main>
-        <MyTitle :title="'ALL AREAS'" />
+        <MyTitle :title="'AREAS'" />
 
     <span class="all-areas-text">Browse the areas of investment to know more about what we care and love:</span>
 
@@ -14,9 +14,9 @@
         <div class="preview-area-info">
           <div class="preview-area-title">{{ area.name }}</div>
           <div v-html="truncatedAreaDescription(area.description)" class="preview-area-description"></div>
-          <NuxtLink :to="`/all_areas/${area.id}`" aria-label="Area button">
+          <NuxtLink :to="`/all_areas/${area.id}`" aria-label="Area button" :title="`${area.name} area`">
             <button class="dark-btn">
-              Learn more
+              See the full description
             </button>
           </NuxtLink>
         </div>
@@ -70,7 +70,7 @@
       text-align: center;
       font-weight: bold;
       font-size: 22px;
-      margin: 30px 0px 10px;
+      margin: 30px 10px 10px;
   }
 
   .full-area-container {

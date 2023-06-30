@@ -251,6 +251,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        overflow-x: hidden;
     }
 
     .team-img {

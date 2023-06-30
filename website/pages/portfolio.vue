@@ -73,7 +73,10 @@
 
 <style>
     .mrp-section-title {
-        color:white;
+        text-align: center;
+        padding: 20px;
+        font-size: 1.7rem;
+        color: white;
         text-align: center;
     }
 </style>

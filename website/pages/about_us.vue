@@ -41,7 +41,7 @@
             </section>
         </div>
         
-        <h2 class="au-outro">Let's embark on a fantastical journey together, where dreams are turned into reality,<br>and the possibilities are as infinite as the stars in the night sky!</h2>
+        <h2 class="au-outro">Let's embark on a fantastical journey together, where dreams are turned into reality, and the possibilities are as infinite as the stars in the night sky!</h2>
     </main>
 </template>
 
@@ -65,13 +65,13 @@
         font-weight: bold;
         color: ghostwhite;
         font-size: 22px;
-        margin: 40px 50px 10px;
+        margin: 40px 20px 10px;
     }
 
     .au-outro {
         color: ghostwhite;
         font-size: 20px;
-        margin: 20px 50px 25px;
+        margin: 20px 15vw 25px;
         text-align: center;
     }
 

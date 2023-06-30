@@ -1,5 +1,6 @@
 .light-btn {
     background-color: ghostwhite;
+    text-align: center;
     color: black;
     position: relative;
     font-size: 20px;
@@ -26,6 +27,7 @@
 
 .dark-btn {
     color: ghostwhite;
+    text-align: center;
     background-color: #1E3D58;
     position: relative;
     font-size: 20px;
@@ -54,6 +56,7 @@
 
 .transparent-btn {
     color: ghostwhite;
+    text-align: center;
     background-color: transparent;
     font-family: inherit;
     border: transparent;
@@ -81,6 +84,7 @@
 }
 
 .small-light-btn {
+    text-align: center;
     font-size: medium;
     color: black;
     background-color: ghostwhite;
@@ -107,6 +111,7 @@
 
 .small-transparent-btn {
     color: white;
+    text-align: center;
     display: inline-block;
     border-radius: 5px;
     padding: 3px 5px;

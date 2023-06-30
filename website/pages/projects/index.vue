@@ -4,7 +4,7 @@
     </Head>
 
     <main>
-      <MyTitle :title="'ALL PROJECTS'" />
+      <MyTitle :title="'PROJECTS'" />
 
       <div id="sorting-selector-proj">
         <label for="sorting-selector-proj">Sort by:</label>
@@ -50,7 +50,7 @@
       <hr class="separator" />
 
       <div class="bottom-links">
-          <NuxtLink id="to_most_relevant_projects" to="/most_relevant_projects" class="transparent-btn">See the most relevant projects</NuxtLink><br>
+          <NuxtLink id="to_most_relevant_projects" to="/most_relevant_projects" class="transparent-btn">See the most relevant projects</NuxtLink>
           <NuxtLink id="to_projects_by_area" to="/projects_by_area" class="transparent-btn">Check the projects divided by area</NuxtLink>
       </div>
 
@@ -115,6 +115,7 @@
   
   <style>
     .ordered-projects {
+      margin: 5vh 0;
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
@@ -133,11 +134,10 @@
     }
 
     .proj-block {
-      margin: 5vh 0;
       height: 120vh;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
+      justify-content: space-around;
     }
 
   </style>
