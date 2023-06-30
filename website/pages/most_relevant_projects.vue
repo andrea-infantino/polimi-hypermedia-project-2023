@@ -12,7 +12,6 @@
             
             <div class="first">
                 <ProjectCard :id = "first.id" :title  = "first.title" :link = "'/projects/' + first.id" :img_bool="true" />
-                <!-- <h3>#1<br></h3> -->
             </div>
 
             <div id="list-container">
@@ -21,7 +20,7 @@
 
         </div>
 
-        <hr class="separator " />
+        <hr class="separator" />
 
         <div class="links">
             <NuxtLink id="to_all_projects" to="/projects"><button class="bottom-link">See all the projects</button></NuxtLink>

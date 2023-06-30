@@ -29,6 +29,8 @@
         color: black;
         font-weight: bolder;
         font-size: xx-large;
+        border-radius: 50%;
+        padding: 5px 10px;
     }
 
     .bb-box:hover {

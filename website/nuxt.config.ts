@@ -17,6 +17,7 @@ export default defineNuxtConfig({
             meta: [
                 { charset: 'utf-8' },
                 { name: 'description', content: 'Wizarding Ventures website, where you can find all the information you need about us: projects, investments, areas of investment, contacts.' },
+                { name: 'og:image', content: 'https://i.imgur.com/HryjXvt.png' }, /* check if it works */
                 { name: 'author', content: 'Web Wizards' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             ],

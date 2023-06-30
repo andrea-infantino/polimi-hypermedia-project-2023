@@ -22,7 +22,7 @@
             <div class="portfolio-section">
                 <p class="par">
                     By investing in these pioneering ventures, we aim to contribute to the advancement of cutting-edge technologies, improve lives, and create sustainable value. Our portfolio represents a testament to our belief in the transformative potential of visionary ideas and the collective drive to shape a brighter future.<br>
-                    Please note that due to the confidentiality of certain investments, not all companies may be listed on this public portfolio page. For more information about our full portfolio, investment opportunities, or partnership inquiries, we invite you to contact our team directly.</p>
+                    Please note that due to the confidentiality of certain investments, not all companies may be listed on this public portfolio page. For more information about our full portfolio, investment opportunities, or partnership inquiries we invite you to <NuxtLink to="/contacts" class="cp-contact">contact our team directly</NuxtLink>.</p>
             </div>
 
             <div class="portfolio-section">

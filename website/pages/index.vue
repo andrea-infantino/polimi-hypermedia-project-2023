@@ -10,7 +10,7 @@
             </div>
         </div>
 
-        <div class="welcome-banner">
+        <div class="welcome-section">
             <div class="welcome">
                 Welcome to<br><b>Wizarding Ventures</b>!
             </div>
@@ -30,7 +30,7 @@
         <hr class="separator" />
 
         <div class="mission-section">
-            <img class="mission-img" src="../assets/img/homepage/homepage_mission.jpg" />
+            <img class="mission-img" src="../assets/img/homepage/homepage_mission.jpg" alt="The Marauder's Map image"/>
             <div class="mission-info">
                 <div class="mission-title">
                     Our mission
@@ -39,13 +39,13 @@
                     Our mission is to empower entrepreneurs and drive innovation by providing them with the financial capital, strategic guidance, and industry expertise needed to succeed. We believe that by supporting visionary entrepreneurs and transformative ideas, we can create a better future for all. We are committed to making a positive impact on society and the world at large through our investments and activities. We believe that by working together, we can achieve great things and make the world a better place. We are dedicated to helping entrepreneurs succeed and achieve their goals.
                 </div>
                 <div class="btn_container">
-                    <NuxtLink to="/about_us"><button class="light-btn">Learn more</button></NuxtLink>
+                    <NuxtLink to="/about_us"><button class="light-btn">Learn more about us</button></NuxtLink>
                 </div>
             </div>
         </div>
 
         <div class="team-section">
-            <img class="team-img" src="../assets/img/homepage/homepage_team.jpg" />
+            <img class="team-img" src="../assets/img/homepage/homepage_team.jpg" alt="Group photo"/>
             <div class="team-info">
                 <div class="team-title">
                     Who we are
@@ -54,7 +54,7 @@
                     We are a team of passionate entrepreneurs, investors, and industry experts who are committed to supporting the next generation of innovators. Our team has extensive experience in a wide range of industries, including technology, healthcare, renewable energies, education, transportation, and more. We are dedicated to leveraging our expertise and resources to help entrepreneurs succeed and achieve their goals. Our team is also committed to giving back to the community and making a positive impact on society. We believe that by working together, we can create a better future for all.
                 </div>
                 <div class="btn_container">
-                    <NuxtLink to="/our_team"><button class="dark-btn">Learn more</button></NuxtLink>
+                    <NuxtLink to="/our_team"><button class="dark-btn">Meet our team</button></NuxtLink>
                 </div>
             </div>
         </div>
@@ -62,7 +62,7 @@
         <hr class="separator " />
 
         <div class="prtf-section">
-            <img class="prtf-img" src="../assets/img/homepage/homepage_prtf.jpg" />
+            <img class="prtf-img" src="../assets/img/homepage/homepage_prtf.jpg" alt="Sketches of Harry Potter symbols" />
             <div class="prtf-info">
                 <div class="prtf-title">
                     Our portfolio
@@ -71,7 +71,7 @@
                     We invest in early-stage startups with strong potential for growth and success. Our investment process involves rigorous due diligence, market analysis, and risk assessment to ensure that we select companies with the highest probability of success. We are committed to helping entrepreneurs succeed and achieve their goals. We believe that by working together, we can create a better future for all. We are dedicated to helping entrepreneurs succeed and achieve their goals.
                 </div>
                 <div class="btn_container">
-                    <NuxtLink to="/portfolio"><button class="light-btn">Learn more</button></NuxtLink>
+                    <NuxtLink to="/portfolio"><button class="light-btn">Check our portfolio</button></NuxtLink>
                 </div>
             </div>
         </div>
@@ -121,13 +121,17 @@
     .motto {
         position: absolute;
         width: 80%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 10vh;
+        font-size: min(8vw, min(7vw, 10vh));
     }
 
-    .welcome-banner {
+    .welcome-section {
         text-align: center;
         align-items: center;
         vertical-align: center;
@@ -145,13 +149,14 @@
     .welcome {
         margin-top: 50px;
         text-align: center;
-        font-size: 10vh;
+        font-size: min(8vw, min(7vw, 10vh));
     }
     
     .welcome-txt {
         margin: 50px;
+        width: 90%;
         text-align: center;
-        font-size: 3vh;
+        font-size: min(4vw, min(3vh, 6vh));
         align-items: center;
         justify-content: center;
     }
@@ -161,41 +166,46 @@
         border-radius: 10px;
         width: 80%;
         background-color: #1E3D58;
-        display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: space-between;
+        display: inline-flex;
+        justify-content: space-around;
         align-items: center;
         margin: 20px;
-        padding: 50px;
+        padding: 3vw;
     }
 
     .strategy-title {
-        font-size: 5vh;
+        font-size: min(6vw, min(5vh, 8vh));
         font-weight: bold;
         width: 20%;
         min-width: 200px;
+        margin: 20px 0;
     }
 
     .strategy-txt {
         text-align: left;
         font-size: 3vh;
         width: 75%;
-        min-width: 300px;
+        height: auto;
+        font-size: inherit;
     }
     
 
-    .mission-section {
+    .mission-section, .prtf-section {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
         width: 100%;
         padding: 50px 0;
     }
 
-    .mission-img {
+    .mission-section {
+        flex-direction: row;
+    }
+
+    .mission-img, .prtf-img {
         width: 25%;
         min-width: 200px;
         height: auto;
@@ -204,7 +214,7 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     }
 
-    .mission-info {
+    .mission-info, .prtf-info {
         width: 60%;
         min-width: 450px;
         display: flex;
@@ -216,14 +226,15 @@
         background-color: rgba(0, 0, 0, 0.6);
     }
 
-    .mission-title {
-        font-size: 5vh;
+    .mission-title, .prtf-title {
+        font-size: min(6vw, min(5vh, 8vh));
         font-weight: bold;
         margin: 20px;
     }
 
-    .mission-txt {
+    .mission-txt, .prtf-txt {
         font-size: 2.8vh;
+        width: 75%;
         margin: 3vh;
     }
 
@@ -260,7 +271,7 @@
     }
 
     .team-title {
-        font-size: 5vh;
+        font-size: min(6vw, min(5vh, 8vh));
         font-weight: bold;
         margin: 3vh;
     }
@@ -271,45 +282,7 @@
     }
 
     .prtf-section {
-        display: flex;
-        flex-wrap: wrap;
         flex-direction: row-reverse;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
-        margin: 50px 0;
-    }
-
-    .prtf-img {
-        width: 25%;
-        min-width: 200px;
-        height: auto;
-        border-radius: 10px;
-        margin: 3vh;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-    }
-
-    .prtf-info {
-        width: 60%;
-        min-width: 450px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        padding: 30px 10px;
-        background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    .prtf-title {
-        font-size: 5vh;
-        font-weight: bold;
-        margin: 20px;
-    }
-
-    .prtf-txt {
-        font-size: 2.8vh;
-        margin: 3vh;
     }
 
     .prj-section {
@@ -334,7 +307,7 @@
     }
 
     .prj-title {
-        font-size: 5vh;
+        font-size: min(6vw, min(5vh, 8vh));
         font-weight: bold;
         margin: 20px;
     }
