@@ -23,14 +23,26 @@
         <v-img width="1000" height="1000" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${id3}.jpg`" />
       </NuxtLink>
     </v-carousel-item>
+
+    <v-carousel-item cover>
+      <NuxtLink :to="`/projects/${id4}`">
+        <v-img width="1000" height="1000" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${id4}.jpg`" />
+      </NuxtLink>
+    </v-carousel-item>
+
+    <v-carousel-item cover>
+      <NuxtLink :to="`/projects/${id5}`">
+        <v-img width="1000" height="1000" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${id5}.jpg`" />
+      </NuxtLink>
+    </v-carousel-item>
   </v-carousel>
      
 </template>
 <script setup>
-  const props = defineProps(['id1', 'title1',
-                          'id2', 'title2',
-                          'id3', 'title3',
-                          'id4', 'title4',
-                          'id5', 'title5'
-                        ]);
+  const props = defineProps(['id1',
+                             'id2',
+                             'id3',
+                             'id4',
+                             'id5',
+                            ]);
 </script>

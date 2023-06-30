@@ -102,12 +102,12 @@
                 Our most famous projects:
             </div>
             
-            <Carousel 
-                :id1="projects[0].id" :title1="projects[0].title" 
-                :id2="projects[1].id" :title2="projects[1].title" 
-                :id3="projects[2].id" :title3="projects[2].title" 
-                :id4="projects[3].id" :title4="projects[3].title" 
-                :id5="projects[4].id" :title5="projects[4].title" />
+            <HomepageCarousel 
+                :id1="projects[0].id"
+                :id2="projects[1].id"
+                :id3="projects[2].id" 
+                :id4="projects[3].id"
+                :id5="projects[4].id" />
         </div>
 
     </main>
