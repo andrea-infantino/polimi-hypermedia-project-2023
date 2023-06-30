@@ -29,12 +29,13 @@
                 <p class="white-cloud-text">
                     Thank you for visiting <strong>Wizarding Ventures</strong>' Portfolio Page. We are excited to share the success stories and transformative impact of our portfolio companies with you. Together, let's explore the world of innovation, entrepreneurship, and the extraordinary possibilities that lie ahead.</p>
             </div>
-    </div>
 
-    <hr class="separator " />
+        </div>
 
-        <div class="most_relevant_projects">
-            <h1 class="header">This is our most relevant project at the moment:</h1>
+        <hr class="separator" />
+
+        <div class="most-relevant-projects">
+            <h1 class="mrp-section-title">This is our most relevant project at the moment:</h1>
             
             <div class="first">
                 <ProjectCard :id = "first.id" :title  = "first.title" :link = "'/projects/' + first.id" :img_bool="true" />
@@ -44,11 +45,12 @@
 
         <hr class="separator" />
 
-        <div class="links">
+        <div class="bottom-links">
             <NuxtLink id="to_all_projects" to="/projects"><button class="transparent-btn">Check all the projects</button></NuxtLink>
             <NuxtLink id="to_most_relevant_projects" to="/most_relevant_projects"><button class="transparent-btn">See the most relevant projects</button></NuxtLink>
             <NuxtLink id="to_projects_by_area" to="/projects_by_area"><button class="transparent-btn">Check the projects by area</button></NuxtLink>
         </div>
+
     </main>
 </template>
 
@@ -70,7 +72,7 @@
 </script>
 
 <style>
-    .header {
+    .mrp-section-title {
         color:white;
         text-align: center;
     }

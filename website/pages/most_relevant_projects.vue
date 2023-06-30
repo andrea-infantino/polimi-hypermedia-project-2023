@@ -8,13 +8,13 @@
 
         <span class="mrp-text">Check out our 5 most relevant projects:</span>
 
-        <div class="most_relevant_projects">
+        <div class="most-relevant-projects">
             
             <div class="first">
                 <ProjectCard :id = "first.id" :title  = "first.title" :link = "'/projects/' + first.id" :img_bool="true" />
             </div>
 
-            <div id="list-container">
+            <div id="generic-cards-container">
                 <ProjectCard v-for = "project of others" :id = "project.id" :title  = "project.title" :link = "'/projects/' + project.id" :img_bool="true" />
             </div>
 
@@ -22,7 +22,7 @@
 
         <hr class="separator" />
 
-        <div class="links">
+        <div class="bottom-links">
             <NuxtLink id="to_all_projects" to="/projects"><button class="transparent-btn">See all the projects</button></NuxtLink>
             <NuxtLink id="to_projects_by_area" to="/projects_by_area"><button class="transparent-btn">Check the projects divided by area</button></NuxtLink>
         </div>
@@ -63,17 +63,5 @@
         padding-top: 15px;
         margin-bottom: 30px;
     }
-
-    .header {
-        color:white;
-        text-align: center;
-    }
-
-    .links {
-        display: flex;
-        justify-content: space-around;
-        margin: 3% 0%;
-        flex-wrap: wrap;
-    }
-
+    
 </style>

@@ -2,7 +2,7 @@
       font-family: "Poppins";
       src: local("Poppins"), url(../font/Poppins.ttf) format("truetype");
       font-display: swap; /* temporarily show a system font until custom font is loaded */
-  }
+}
 
 html, body {
       font-family: Poppins, sans-serif;
@@ -12,11 +12,6 @@ html, body {
       height: 100%; 
       color: ghostwhite;
 }
-
-a {
-      color: aliceblue;
-      text-decoration: none;
-  }
 
 body {
       margin: 0;
@@ -34,22 +29,10 @@ main {
       color: ghostwhite;
 }
 
-.landmark {
-      color: black;
-      padding: 0 10px;
-      display: inline-block;
-      transition: 0.3s;
-}
-
-.landmark:hover {
-      color: #1E3D58;
-      text-decoration: underline;
-      text-underline-offset: 6px;
-      transform: translateY(-5px);
-}
-
-.landmark:active {
-      transform: scale(0.95);
+img {
+      height: 40px;
+      width: auto;
+      transition: 0.5s ease all;
 }
 
 .separator {
@@ -70,6 +53,12 @@ main {
       background-image: linear-gradient(to right, rgba(30, 61, 88, 0), rgba(30, 61, 88, 255), rgba(30, 61, 88, 0));
 }
 
+/* Links style */
+a {
+      color: aliceblue;
+      text-decoration: none;
+}
+
 a:link {
       text-decoration: none;
 }
@@ -84,4 +73,68 @@ a:hover {
 
 a:active {
       text-decoration: none;
+}
+
+.bottom-links {
+      display: flex;
+      justify-content: space-around;
+      margin: 3% 0%;
+      flex-wrap: wrap;
+}
+
+.contact-link-text {
+      color: #1E3D58;
+      font-weight: bold;
+      text-decoration: none;
+}
+ 
+.contact-link-text:hover {
+      color: #057DCD;
+      font-weight: bold;
+      text-decoration: underline;
+}
+
+/* Sorting order selectors style */
+#sorting-selector-team, #sorting-selector-proj {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-self: center;
+      margin: 2%;
+      gap: 10px;
+      font-size: 18px;
+      min-width: 300px;
+}
+
+label {
+      font-weight: bold;
+}
+
+.menu {
+      border-radius: 5px;
+      border: none;
+      font-size: 18px;
+      font-family: inherit;
+      padding: 0 2vh;
+      cursor: pointer;
+      width: 50%;
+      background-color: rgba(255, 255, 255, 0.9);
+      appearance: auto;
+}
+
+/* Cards container style */
+#generic-cards-container {
+      padding: 3% 15%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      gap: 50px;
+}
+
+
+.update_date {
+      font-size: 18px;
+      margin: 30px 10px 10px 50px;
 }

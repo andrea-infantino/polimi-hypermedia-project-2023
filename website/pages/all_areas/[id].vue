@@ -6,7 +6,7 @@
     <main>
         <MyTitle :title="area.name" />
         
-        <div class="area_container">
+        <div class="area-container">
           <div class="area-header">
             <NuxtLink :to="isPreviousDisabled ? '#' : `/all_areas/${area.id-1}`" :class="{ 'disabled': isPreviousDisabled }" class="area-button" role="button" aria-label="Previous area button">
               &#8249;
@@ -23,12 +23,12 @@
             <div class="area-info">
               <div v-html="renderedDescription"></div>
 
-                <span class="related-projects">
+                <span class="related-projects-container">
                     <div class ="related-projects-title">
                       Related projects:
                     </div>
 
-                    <div class="related-projects-container">
+                    <div class="related-projects">
                         <ProjectCard v-for = "project of area.Projects" :id="project.id" :title="project.title" :link="'/projects/' + project.id" :img_bool="true" />
                     </div>
 
@@ -92,7 +92,7 @@
 </script>
 
 <style>
-  .area_container {
+  .area-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -166,7 +166,7 @@
     white-space: pre-wrap;
   }
 
-  .related-projects {
+  .related-projects-container {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -179,7 +179,7 @@
     align-self: center;
   }
 
-  .related-projects-container {
+  .related-projects {
     padding: 30px;
     display: flex;
     flex-wrap: wrap;

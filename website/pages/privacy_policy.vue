@@ -88,7 +88,7 @@
 
             <section class="white-cloud">
                 <div class="white-cloud-title">9. Contact Us</div>
-                <p class="white-cloud-text">If you have any questions, concerns, or requests regarding this Privacy Policy or the handling of your information, please contact us using the information available at <NuxtLink id="to_contacts" to="/contacts" class="pp-contact">this link</NuxtLink>.</p>                
+                <p class="white-cloud-text">If you have any questions, concerns, or requests regarding this Privacy Policy or the handling of your information, please contact us using the information available at <NuxtLink id="to_contacts" to="/contacts" class="contact-link-text">this link</NuxtLink>.</p>                
             </section>
 
             <section class="white-cloud">
@@ -111,44 +111,3 @@
         ]
     })
 </script>
-
-
-<style>
-
-    .update_date {
-        font-size: 18px;
-        margin: 30px 10px 10px 50px;
-    }
-    
-    .links {
-        text-align: center;
-    }
-
-    .pp-contact {
-        color: #1E3D58;
-        font-weight: bold;
-        text-decoration: none;
-    }
-
-    .pp-contact:hover {
-        color: #057DCD;
-        font-weight: bold;
-        text-decoration: underline;
-    }
-
-    .my_link {
-        color: ghostwhite;
-        font-size: 25px;
-        font-weight: 700;
-        text-decoration: none;
-        margin-left: 40px;
-        margin-right: 40px;
-    }
-
-    .my_link:hover {
-        font-size: 27px;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-    
-</style>

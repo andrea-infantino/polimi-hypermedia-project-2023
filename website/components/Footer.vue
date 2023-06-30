@@ -60,7 +60,7 @@
     }
 
     .linkedin-footer, .instagram-footer, .twitter-footer {
-        width: 30px;
+        width: 36px;
         height: auto;
         padding-left: 10px;
         position: relative;

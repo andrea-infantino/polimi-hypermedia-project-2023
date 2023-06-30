@@ -23,11 +23,11 @@
 
               <div><strong>Joined</strong> &emsp; {{ person.hiring_date }}</div> 
               
-              <span> <div class="space-between-line">E-Mail:</div>
+              <span> <div class="content-label">E-Mail:</div>
                 <nuxt-link class="small-transparent-btn" :to="`mailto:${person.email}`">&#9993;&emsp;{{ person.email }}</nuxt-link>
               </span>
 
-              <span> <div class="space-between-line">Social:</div>
+              <span> <div class="content-label">Social:</div>
                 <a href="https://twitter.com/home" target="_blank"><img src="../../assets/img/contacts/twitter_logo_hover.png" class="twitter-logo-hover" alt="Coloured Twitter logo"><img src="../../assets/img/contacts/twitter_logo.png" alt="Black and white Twitter Logo" class="twitter-logo"></a>
                 <a href="https://www.instagram.com" target="_blank"><img src="../../assets/img/contacts/instagram_logo_hover.png" class="instagram-logo-hover" alt="Coloured Instagram logo"><img src="../../assets/img/contacts/instagram_logo.png" alt="Black and white Instagram Logo" class="instagram-logo"></a>
                 <a href="https://www.linkedin.com" target="_blank"><img src="../../assets/img/contacts/linkedin_logo_hover.png" class="linkedin-logo-hover" alt="Coloured LinkedIn logo"><img src="../../assets/img/contacts/linkedin_logo.png" alt="Black and white LinkedIn Logo" class="linkedin-logo"></a>
@@ -138,8 +138,10 @@
     color: ghostwhite;
     margin: 0px 10px 50px;
     border-radius: 10px;
-    padding: 70px 20px;
+    padding: 90px 20px;
     transition: all 0.2s;
+    display: flex;
+    align-items: center;
   }
 
   .person-button:hover {
@@ -177,7 +179,7 @@
   .person-img {
     border-radius: 5px;
     height: 420px;
-    width: auto;
+    width: 420px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-image:url('~/assets/img/user_default_photo.jpg');
     background-size: cover;
@@ -188,7 +190,6 @@
     flex-wrap: wrap;
     flex-direction: column;
     gap: 20px;
-    /* width: 50%; */
   }
 
   .person-img-info {
@@ -264,15 +265,13 @@
     padding-bottom: 12px;
   }
 
-
-
-  .space-between-line {
+  .content-label {
     font-weight: bold;
     margin-bottom: 5px;
   }
 
   .twitter-logo, .twitter-logo-hover, .instagram-logo, .instagram-logo-hover, .linkedin-logo, .linkedin-logo-hover {
-    width: 35px;
+    width: 40px;
     height: auto;
     padding-right: 10px;
     position: relative;

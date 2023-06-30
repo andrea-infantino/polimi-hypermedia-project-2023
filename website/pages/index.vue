@@ -27,7 +27,7 @@
             </div>
         </div>
 
-        <hr class="separator " />
+        <hr class="separator" />
 
         <div class="mission-section">
             <img class="mission-img" src="../assets/img/homepage/homepage_mission.jpg" alt="The Marauder's Map image"/>

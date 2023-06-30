@@ -99,14 +99,14 @@
     }
 
     .twitter-logo-footer, .instagram-logo-footer, .linkedin-logo-footer {
-        width: 35px;
+        width: 40px;
         height: auto;
         padding-right: 10px;
         transition: ease-in-out 0.1s;
     }
 
     .twitter-logo-footer:hover, .instagram-logo-footer:hover, .linkedin-logo-footer:hover {
-        transform: scale3d(1.3, 1.3, 1.3);
+        transform: scale(1.2);
     }
 
 </style>

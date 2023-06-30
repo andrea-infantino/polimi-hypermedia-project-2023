@@ -120,8 +120,10 @@
     height: 10vh;
     color: ghostwhite;
     border-radius: 10px;
-    padding: 50px 20px;
+    padding: 70px 20px;
     transition: all 0.2s;
+    display: flex;
+    align-items: center;
   }
 
   .prj-area-button:hover {

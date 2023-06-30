@@ -171,8 +171,10 @@
     color: ghostwhite;
     margin: 0px 4vw;
     border-radius: 10px;
-    padding: 70px 20px;
+    padding: 90px 20px;
     transition: all 0.2s;
+    display: flex;
+    align-items: center;
   }
 
   .project-button:hover {
@@ -222,8 +224,6 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
-
-
   .small-transparent-btn:hover .area-logo {
     filter: invert(1);    
   }
@@ -237,7 +237,7 @@
     min-width: 250px;
   }
 
-  .project-people-container-tab {
+  .project-people-container-tab, .project-area-container-tab {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

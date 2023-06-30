@@ -41,7 +41,7 @@
             </section>
         </div>
         
-        <h2 class="au-outro">Let's embark on a fantastical journey together, where dreams are turned into reality,<br>and the possibilities are as infinite as the stars in the night sky.</h2>
+        <h2 class="au-outro">Let's embark on a fantastical journey together, where dreams are turned into reality,<br>and the possibilities are as infinite as the stars in the night sky!</h2>
     </main>
 </template>
 

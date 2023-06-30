@@ -8,9 +8,17 @@
 
       <h1 class="area-prj-intro"><center><strong>Check our projects for each area of investment:</strong></center></h1>
   
-      <div id="list-container">
+      <div id="generic-cards-container">
         <SingleArea v-for = "area of areas" :id = "area.id" :name = "area.name + ' projects'" :link = "'/projects_by_area/' + area.id" />
       </div>
+
+      <hr class="separator" />
+
+      <div class="bottom-links">
+          <NuxtLink id="to_most_relevant_projects" to="/most_relevant_projects" class="transparent-btn">See the most relevant projects</NuxtLink>
+          <NuxtLink id="to_all_projects" to="/projects" class="transparent-btn">Check all the projects</NuxtLink>
+      </div>
+
     </main>
   </template>
     
@@ -35,14 +43,4 @@
       font-size: 22px;
       margin: 30px 0px 10px;
     }
-
-    #list-container {
-      padding: 3% 15%;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: center;
-      gap: 50px;
-    }
-    
   </style>

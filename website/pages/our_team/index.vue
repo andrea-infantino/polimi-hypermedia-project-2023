@@ -9,7 +9,7 @@
         <span class="our-team-text">Meet our team. We include talented individuals, unified by our purpose and our core values of <b>teamwork</b>, <b>continuous learning</b> and <b>leadership</b>.<br>
           We inspire and encourage people to believe in and challenge themselves, discover their passion and realize their potential.</span>
 
-        <hr class="separator " />
+        <hr class="separator" />
 
         <div id="sorting-selector-team">
         <label for="sorting-selector-team">Sort by:</label>
@@ -83,33 +83,4 @@
     gap: 50px;
     max-width: 1200px;
   }
-
-  #sorting-selector-team, #sorting-selector-proj {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-self: center;
-    margin: 2%;
-    gap: 10px;
-    font-size: 18px;
-    min-width: 300px;
-  }
-
-  label {
-    font-weight: bold;
-  }
-
-  .menu {
-    border-radius: 5px;
-    border: none;
-    font-size: 18px;
-    font-family: inherit;
-    padding: 0 2vh;
-    cursor: pointer;
-    width: 50%;
-    background-color: rgba(255, 255, 255, 0.9);
-    appearance: auto;
-  }
-
 </style>
