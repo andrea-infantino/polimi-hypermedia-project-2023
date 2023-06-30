@@ -8,6 +8,7 @@
             <div class="motto">
                 ❛I solemnly swear<br>I am up to no good❜
             </div>
+            <ScrollDownButton />
         </div>
 
         <div class="welcome-section">
@@ -160,7 +161,6 @@
         transform: translate(-50%, -50%);
         font-size: min(8vw, min(7vw, 10vh));
     }
-
     .welcome-section {
         text-align: center;
         align-items: center;
