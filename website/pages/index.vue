@@ -14,13 +14,13 @@
             <div class="welcome">
                 Welcome to<br><b>Wizarding Ventures</b>!
             </div>
-            <div class="welcome-txt">
+            <div class="welcome-text">
                 We are a venture capital firm dedicated to supporting visionary entrepreneurs and transformative ideas that have the potential to reshape industries and drive positive change.
                 <div class="strategy-box">
                     <div class="strategy-title">
                         Strategy:
                     </div>
-                    <div class="strategy-txt">
+                    <div class="strategy-text">
                         We invest in early-stage startups with strong potential for growth and success. Our investment process involves rigorous due diligence, market analysis, and risk assessment to ensure that we select companies with the highest probability of success.
                     </div>
                 </div>
@@ -31,11 +31,11 @@
 
         <div class="mission-section">
             <img class="mission-img" src="../assets/img/homepage/homepage_mission.jpg" alt="The Marauder's Map image"/>
-            <div class="mission-info">
-                <div class="mission-title">
+            <div class="dark-cloud">
+                <div class="dark-cloud-title">
                     Our mission
                 </div>
-                <div class="mission-txt">
+                <div class="dark-cloud-text">
                     Our mission is to empower entrepreneurs and drive innovation by providing them with the financial capital, strategic guidance, and industry expertise needed to succeed. We believe that by supporting visionary entrepreneurs and transformative ideas, we can create a better future for all. We are committed to making a positive impact on society and the world at large through our investments and activities. We believe that by working together, we can achieve great things and make the world a better place. We are dedicated to helping entrepreneurs succeed and achieve their goals.
                 </div>
                 <div class="btn_container">
@@ -50,7 +50,7 @@
                 <div class="team-title">
                     Who we are
                 </div>
-                <div class="team-txt">
+                <div class="team-text">
                     We are a team of passionate entrepreneurs, investors, and industry experts who are committed to supporting the next generation of innovators. Our team has extensive experience in a wide range of industries, including technology, healthcare, renewable energies, education, transportation, and more. We are dedicated to leveraging our expertise and resources to help entrepreneurs succeed and achieve their goals. Our team is also committed to giving back to the community and making a positive impact on society. We believe that by working together, we can create a better future for all.
                 </div>
                 <div class="btn_container">
@@ -63,11 +63,11 @@
 
         <div class="prtf-section">
             <img class="prtf-img" src="../assets/img/homepage/homepage_prtf.jpg" alt="Sketches of Harry Potter symbols" />
-            <div class="prtf-info">
-                <div class="prtf-title">
+            <div class="dark-cloud">
+                <div class="dark-cloud-title">
                     Our portfolio
                 </div>
-                <div class="prtf-txt">
+                <div class="dark-cloud-text">
                     We invest in early-stage startups with strong potential for growth and success. Our investment process involves rigorous due diligence, market analysis, and risk assessment to ensure that we select companies with the highest probability of success. We are committed to helping entrepreneurs succeed and achieve their goals. We believe that by working together, we can create a better future for all. We are dedicated to helping entrepreneurs succeed and achieve their goals.
                 </div>
                 <div class="btn_container">
@@ -84,7 +84,7 @@
                 <div class="prj-title">
                     Areas of investment
                 </div>
-                <div class="prj-txt">
+                <div class="prj-text">
                     We invest in early-stage startups with strong potential for growth and success. Our investment process involves rigorous due diligence, market analysis, and risk assessment to ensure that we select companies with the highest probability of success. We are committed to helping entrepreneurs succeed and achieve their goals. We believe that by working together, we can create a better future for all. We are dedicated to helping entrepreneurs succeed and achieve their goals.
                     If you are curios about our investment, check our financied projects and areas of investment.
                 </div>
@@ -182,7 +182,7 @@
         font-size: min(8vw, min(7vw, 10vh));
     }
     
-    .welcome-txt {
+    .welcome-text {
         margin: 50px;
         width: 90%;
         text-align: center;
@@ -192,16 +192,16 @@
     }
 
     .strategy-box {
-        color: aliceblue;
+        color: white;
         border-radius: 10px;
-        width: 80%;
+        width: 100%;
         background-color: #1E3D58;
         flex-wrap: wrap;
         flex-direction: row;
         display: inline-flex;
         justify-content: space-around;
         align-items: center;
-        margin: 20px;
+        margin: 20px 0;
         padding: 3vw;
     }
 
@@ -209,16 +209,17 @@
         font-size: min(6vw, min(5vh, 8vh));
         font-weight: bold;
         width: 20%;
-        min-width: 200px;
-        margin: 20px 0;
+        min-width: 180px;
+        margin-top: 20px;
     }
 
-    .strategy-txt {
+    .strategy-text {
         text-align: left;
-        font-size: 3vh;
+        font-size: min(4vw, min(3vh, 6vh));
         width: 75%;
         height: auto;
         font-size: inherit;
+        margin: 20px 0;
     }
     
 
@@ -237,35 +238,11 @@
 
     .mission-img, .prtf-img {
         width: 25%;
-        min-width: 200px;
+        min-width: 150px;
         height: auto;
         border-radius: 10px;
         margin: 3vh;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-    }
-
-    .mission-info, .prtf-info {
-        width: 60%;
-        min-width: 450px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        padding: 30px 10px;
-        background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    .mission-title, .prtf-title {
-        font-size: min(6vw, min(5vh, 8vh));
-        font-weight: bold;
-        margin: 20px;
-    }
-
-    .mission-txt, .prtf-txt {
-        font-size: 2.8vh;
-        width: 75%;
-        margin: 3vh;
     }
 
     .team-section {
@@ -277,17 +254,16 @@
     }
 
     .team-img {
-        width: 100%;
+        width: max(110vh, max(100vw, 90vw));
         height: auto;
         z-index: 0;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     }
 
     .team-info {
-        width: 70%;
+        width: max(90vw, max(40vh, 20vh));
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         color: black;
         background-color: #E8EEF1;
@@ -303,12 +279,12 @@
     .team-title {
         font-size: min(6vw, min(5vh, 8vh));
         font-weight: bold;
-        margin: 3vh;
+        margin: min(1.5vw, min(0.5vh, 3.5vh));
     }
 
-    .team-txt {
-        font-size: 2.8vh;
-        margin: 3vh;
+    .team-text {
+        font-size: min(3.5vw, min(2.5vh, 5.5vh));
+        margin: 3vh 3vh 1vw;
     }
 
     .prtf-section {
@@ -326,7 +302,7 @@
     }
 
     .prj-info {
-        min-width: 450px;
+        min-width: 300px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -342,35 +318,15 @@
         margin: 20px;
     }
 
-    .prj-txt {
+    .prj-text {
         width: 90%;
-        font-size: 2.8vh;
-        margin: 3vh;
+        font-size: min(3.5vw, min(2.5vh, 5.5vh));
+        margin: 3vw;
     }
 
-    .light-btn {
-        background-color: ghostwhite;
-        color: black;
-        position: relative;
-        font-size: 20px;
-        font-weight: bold;
-        margin: 0 10px;
-        border-radius: 10px;
-        border-color: transparent;
-        font-family: inherit;
-        padding: 10px 20px;
-        transition: all 0.2s;
-        cursor: pointer;
+    .dark-btn, .light-btn {
+        margin-top: 10px;
+        font-size: min(3.5vw, min(3vh, 6vh));
     }
-
-    .light-btn:hover {
-        box-shadow: 3px 5px 20px 0 rgba(172,172,172,.5);
-        text-decoration: underline;
-        padding: 10px 30px;
-        margin: 0;
-    }
-
-    .light-btn:active {
-        box-shadow: 3px 5px 20px 14px rgba(172,172,172,.5);
-    }
+    
 </style>

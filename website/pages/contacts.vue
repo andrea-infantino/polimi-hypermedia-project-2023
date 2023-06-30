@@ -9,9 +9,9 @@
         <div class="contacts-info">
             <div class="mail-number">
                 <div class="text-1">Contact us for more information<br>about our investments</div><br>
-                <a class="num-1" href="tel:123-456-7890">&#9742;&emsp;123-456-7890</a><br>
-                <a class="num-2" href="tel:123-456-7891">&#9742;&emsp;123-456-7891</a><br><br>
-                <a class="mail" href="mailto:info@webwizards.com">
+                <a class="small-transparent-btn" href="tel:123-456-7890">&#9742;&emsp;123-456-7890</a><br>
+                <a class="small-transparent-btn" href="tel:123-456-7891">&#9742;&emsp;123-456-7891</a><br><br>
+                <a class="small-transparent-btn" href="mailto:info@webwizards.com">
                     &#9993;&emsp;<strong>info@webwizards.com</strong></a>
                 <div class="social-media">
                     <a href="https://twitter.com/home" target="_blank"><img src="../assets/img/contacts/twitter_logo_hover.png" alt="Twitter Logo" class="twitter-logo-footer"></a>
@@ -84,20 +84,8 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
-    .mail, .num-1, .num-2, .address {
-        color: white;
+    .small-transparent-btn, .address {
         font-size: 3vh;
-        display: inline-block;
-        border-radius: 5px;
-        transition: all 0.3s;
-        padding: 2px 0;
-    }
-
-    .mail:hover, .num-1:hover, .num-2:hover {
-        text-decoration: underline;
-        color: black;
-        background-color: rgba(248, 248, 255, 0.900);
-        padding: 2px 15px;
     }
 
     .text-1, .text-2 {

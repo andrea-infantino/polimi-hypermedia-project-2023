@@ -50,8 +50,8 @@
       <hr class="separator " />
 
       <div class="links">
-          <NuxtLink id="to_most_relevant_projects" to="/most_relevant_projects" class="bottom-link">See the most relevant projects</NuxtLink><br>
-          <NuxtLink id="to_projects_by_area" to="/projects_by_area" class="bottom-link">Check the projects divided by area</NuxtLink>
+          <NuxtLink id="to_most_relevant_projects" to="/most_relevant_projects" class="transparent-btn">See the most relevant projects</NuxtLink><br>
+          <NuxtLink id="to_projects_by_area" to="/projects_by_area" class="transparent-btn">Check the projects divided by area</NuxtLink>
       </div>
 
     </main>

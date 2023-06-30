@@ -23,8 +23,8 @@
         <hr class="separator" />
 
         <div class="links">
-            <NuxtLink id="to_all_projects" to="/projects"><button class="bottom-link">See all the projects</button></NuxtLink>
-            <NuxtLink id="to_projects_by_area" to="/projects_by_area"><button class="bottom-link">Check the projects divided by area</button></NuxtLink>
+            <NuxtLink id="to_all_projects" to="/projects"><button class="transparent-btn">See all the projects</button></NuxtLink>
+            <NuxtLink id="to_projects_by_area" to="/projects_by_area"><button class="transparent-btn">Check the projects divided by area</button></NuxtLink>
         </div>
     </main>
 </template>
@@ -74,34 +74,6 @@
         justify-content: space-around;
         margin: 3% 0%;
         flex-wrap: wrap;
-    }
-
-    .bottom-link {
-        color: ghostwhite;
-        background-color: transparent;
-        font-family: inherit;
-        border: transparent;
-        position: relative;
-        font-size: 20px;
-        font-weight: bold;
-        border-radius: 10px;
-        padding: 10px 20px;
-        margin: 0 10px;
-        transition: all 0.2s;
-        cursor: pointer;
-    }
-
-    .bottom-link:hover {
-        color: black;
-        background-color: rgba(248, 248, 255, 0.9);
-        box-shadow: 3px 5px 20px 0 rgba(172,172,172,.5);
-        text-decoration: underline;
-        padding: 10px 30px;
-        margin: 0;
-    }
-
-    .bottom-link:active {
-        box-shadow: 3px 5px 20px 14px rgba(172,172,172,.5);
     }
 
 </style>

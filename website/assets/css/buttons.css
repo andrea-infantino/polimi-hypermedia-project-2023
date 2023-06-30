@@ -1,0 +1,124 @@
+.light-btn {
+    background-color: ghostwhite;
+    color: black;
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 10px;
+    border-radius: 10px;
+    border-color: transparent;
+    font-family: inherit;
+    padding: 10px 20px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.light-btn:hover {
+    box-shadow: 3px 5px 20px 0 rgba(172, 172, 172, 0.5);
+    text-decoration: underline;
+    padding: 10px 30px;
+    margin: 0;
+}
+
+.light-btn:active {
+    box-shadow: 3px 5px 20px 14px rgba(172, 172, 172, 0.5);
+}
+
+.dark-btn {
+    color: ghostwhite;
+    background-color: #1E3D58;
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    border-color: transparent;
+    font-family: inherit;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.dark-btn:hover {
+    color: black;
+    background-color: #E8EEF1;
+    box-shadow: 3px 5px 20px 0 rgba(40, 40, 40, 0.8);
+    text-decoration: underline;
+    padding: 10px 30px;
+    margin: 0;
+}
+
+.dark-btn:active {
+    box-shadow: 3px 5px 20px 10px rgba(40, 40, 40, 0.8);
+}
+
+.transparent-btn {
+    color: ghostwhite;
+    background-color: transparent;
+    font-family: inherit;
+    border: transparent;
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.transparent-btn:hover {
+    color: black;
+    background-color: rgba(248, 248, 255, 0.9);
+    box-shadow: 3px 5px 20px 0 rgba(172, 172, 172, 0.5);
+    text-decoration: underline;
+    padding: 10px 30px;
+    margin: 0;
+}
+
+.transparent-btn:active {
+    box-shadow: 3px 5px 20px 14px rgba(172, 172 ,172 , 0.5);
+}
+
+.small-light-btn {
+   font-size: medium;
+   color: black;
+   background-color: ghostwhite;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   width: fit-content;
+   opacity: 0.9;
+   align-self: center;
+   text-align: center;
+   padding: 5px 15px;
+   transition: opacity 0.1s, padding 0.3s;
+ }
+
+ .small-light-btn:hover {
+   padding: 5px 30px;
+   text-decoration: underline;
+   opacity: 1;
+   box-shadow: 4px 4px 8px 1px rgba(141, 141, 141, 0.5);
+ }
+
+ .small-light-btn:active {
+   box-shadow: 4px 4px 8px 5px rgba(141, 141, 141, 0.6);
+ }
+
+ .small-transparent-btn {
+   color: white;
+   display: inline-block;
+   border-radius: 5px;
+   padding: 3px 5px;
+   margin: 0 10px 0 15px;
+   transition: all 0.3s;
+   width: fit-content;
+ }
+
+ .small-transparent-btn:hover {
+   text-decoration: underline;
+   color: black;
+   background-color: rgba(248, 248, 255, 0.9);
+   padding: 3px 15px;
+   margin: 0 0 0 5px;
+ }

@@ -24,7 +24,7 @@
               <div><strong>Joined</strong> &emsp; {{ person.hiring_date }}</div> 
               
               <span> <div class="space-between-line">E-Mail:</div>
-                <nuxt-link class="mail" :to="`mailto:${person.email}`">&#9993;&emsp;{{ person.email }}</nuxt-link>
+                <nuxt-link class="small-transparent-btn" :to="`mailto:${person.email}`">&#9993;&emsp;{{ person.email }}</nuxt-link>
               </span>
 
               <span> <div class="space-between-line">Social:</div>
@@ -33,7 +33,7 @@
                 <a href="https://www.linkedin.com" target="_blank"><img src="../../assets/img/contacts/linkedin_logo_hover.png" class="linkedin-logo-hover" alt="Coloured LinkedIn logo"><img src="../../assets/img/contacts/linkedin_logo.png" alt="Black and white LinkedIn Logo" class="linkedin-logo"></a>
               </span>
 
-              <nuxt-link v-if="person.cv_link != null" id="person-cv" :to="`${person.cv_link}`" target="_blank">See {{ person.name }} {{ person.surname }}'s CV</nuxt-link>
+              <nuxt-link v-if="person.cv_link != null" class="small-light-btn" :to="`${person.cv_link}`" target="_blank">See {{ person.name }} {{ person.surname }}'s CV</nuxt-link>
         
             </div>
         </div>
@@ -223,27 +223,6 @@
     overflow: hidden;
   }
 
-  #person-cv {
-    font-size: medium;
-    color: black;
-    background-color: ghostwhite;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 5px;
-    width: fit-content;
-    opacity: 0.9;
-    align-self: center;
-    text-align: center;
-    padding: 5px 15px;
-    transition: opacity 0.1s, padding 0.3s;
-  }
-
-  #person-cv:hover {
-    padding: 5px 30px;
-    text-decoration: underline;
-    opacity: 1;
-    box-shadow: 4px 4px 8px 1px rgba(141, 141, 141, 0.462);
-  }
-
   .person-projects-title {
     font-size: xx-large;
     font-weight: bolder;
@@ -285,21 +264,7 @@
     padding-bottom: 12px;
   }
 
-  .mail {
-    display: inline-block;
-    border-radius: 5px;
-    padding: 2px 5px;
-    margin: 0 10px;
-    transition: all 0.3s;
-  }
 
-  .mail:hover {
-    text-decoration: underline;
-    color: black;
-    background-color: rgba(248, 248, 255, 0.900);
-    padding: 2px 15px;
-    margin: 0;
-  }
 
   .space-between-line {
     font-weight: bold;

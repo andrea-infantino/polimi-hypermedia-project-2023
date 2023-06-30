@@ -4,6 +4,7 @@ export default defineNuxtConfig({
         'vuetify/styles/main.sass',
         '~/assets/css/default.css',
         '~/assets/css/clouds.css',
+        '~/assets/css/buttons.css',
         '@mdi/font/css/materialdesignicons.css'
     ],
 

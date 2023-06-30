@@ -27,19 +27,19 @@
                 <span>
                     <b>Supervisor:</b> <br>
                     <div class="project-people-container-tab">
-                        <NuxtLink :to="`/our_team/${supervisor.id}`" class="area-person-link">• {{ supervisor.surname }} {{ supervisor.name }} <br> </NuxtLink>
+                        <NuxtLink :to="`/our_team/${supervisor.id}`" class="small-transparent-btn">• {{ supervisor.surname }} {{ supervisor.name }} <br> </NuxtLink>
                     </div>
                 </span>
                 <span v-if="team.length!=0">
                     <b>Team:</b> <br>
                     <div class="project-people-container-tab">
-                        <NuxtLink v-for = "person of team" :to="`/our_team/${person.id}`" class="area-person-link">• {{ person.surname }} {{ person.name }} <br> </NuxtLink>
+                        <NuxtLink v-for = "person of team" :to="`/our_team/${person.id}`" class="small-transparent-btn">• {{ person.surname }} {{ person.name }} <br> </NuxtLink>
                     </div>
                 </span>
                 <span>
                     <b>Areas:</b> <br>
                     <div class="project-area-container-tab">
-                        <NuxtLink v-for = "area of project.Areas" :to="`/all_areas/${area.id}`" class="area-person-link"> <img class="area-logo" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} area logo`"/>{{ area.name }}</NuxtLink>
+                        <NuxtLink v-for = "area of project.Areas" :to="`/all_areas/${area.id}`" class="small-transparent-btn"> <img class="area-logo" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} area logo`"/>{{ area.name }}</NuxtLink>
                     </div>
                 </span>
             </div>
@@ -222,23 +222,9 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
-  .area-person-link {
-    color: ghostwhite;
-    border-radius: 5px;
-    padding: 3px 5px;
-    margin: 0 10px 0 15px;
-    transition: all 0.3s ease;
-  }
 
-  .area-person-link:hover {
-    text-decoration: underline;
-    color: black;
-    background-color: rgba(248, 248, 255, 0.900);
-    padding: 3px 15px;
-    margin: 0 0 0 5px;
-  }
 
-  .area-person-link:hover .area-logo {
+  .small-transparent-btn:hover .area-logo {
     filter: invert(1);    
   }
 
@@ -251,10 +237,17 @@
     min-width: 250px;
   }
 
+  .project-people-container-tab {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
   .project_img {
     width: 100%;
     height: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
+  
 </style>

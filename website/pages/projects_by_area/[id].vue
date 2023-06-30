@@ -17,7 +17,7 @@
                         <img class="prj-by-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} area logo`" />
 
                         <NuxtLink :to="`/all_areas/${area.id}`" :title="`${area.name} area`">
-                            <span class="full-area-link">See the full description</span>
+                            <span class="small-transparent-btn">See the full description</span>
                         </NuxtLink>
                     </div>
 
@@ -111,23 +111,6 @@
     align-items: center;
     justify-content: center;
     margin: 0 10vw;
-  }
-
-  .full-area-link {
-    display: inline-block;
-    border-radius: 5px;
-    padding: 2px 10px;
-    transition: all 0.3s;
-    text-align: center;
-    margin: 0 5px;
-  }
-
-  .full-area-link:hover {
-    text-decoration: underline;
-    color: black;
-    background-color: rgba(248, 248, 255, 0.900);
-    padding: 2px 15px;
-    margin: 0;
   }
 
   .prj-area-button {

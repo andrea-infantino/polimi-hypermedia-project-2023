@@ -79,33 +79,5 @@
         text-align: center;
         margin-top: 20px;
     }
-
-    .dark-btn {
-        color: ghostwhite;
-        background-color: #1E3D58;
-        position: relative;
-        font-size: 20px;
-        font-weight: bold;
-        border-radius: 10px;
-        border-color: transparent;
-        font-family: inherit;
-        padding: 10px 20px;
-        margin: 0 10px;
-        transition: all 0.2s;
-        cursor: pointer;
-    }
-
-    .dark-btn:hover {
-        color: black;
-        background-color: #E8EEF1;
-        box-shadow: 3px 5px 20px 0 rgba(40, 40, 40, 0.8);
-        text-decoration: underline;
-        padding: 10px 30px;
-        margin: 0;
-    }
-
-    .dark-btn:active {
-        box-shadow: 3px 5px 20px 10px rgba(40, 40, 40, 0.8);
-    }
     
 </style>
