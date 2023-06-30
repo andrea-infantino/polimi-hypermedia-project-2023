@@ -38,8 +38,9 @@
             </div>
         </div>
 
-        <span class="desc-container"><div class="space-between-line">Description:</div> 
-            <div class="person-description-tab">{{ person.description }}</div>
+        <span class="desc-container">
+            <span class="description-cloud-title">Description:</span> 
+            <span class="description-cloud">{{ person.description }}</span>
         </span>
         
       </div>
@@ -241,14 +242,6 @@
     text-decoration: underline;
     opacity: 1;
     box-shadow: 4px 4px 8px 1px rgba(141, 141, 141, 0.462);
-  }
-
-  .person-description-tab {
-    color: black;
-    background-color: #fff6f6e3;
-    box-shadow: 15px 15px 30px 0 rgba(172,172,172,.5);
-    padding: 2vh 4vh;
-    border-radius: 10px;
   }
 
   .person-projects-title {

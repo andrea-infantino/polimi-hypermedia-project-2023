@@ -1,0 +1,44 @@
+.white-cloud {
+    background-color: #fff6f6e3;
+    -webkit-box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
+    box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
+    padding: 40px;
+    margin: 2% 10%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.white-cloud-title {
+    font-size: 35px;
+    line-height: 1;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.white-cloud-subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+
+.white-cloud-text {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: black;
+}
+
+.description-cloud {
+    display: inline-block;
+    color: black;
+    background-color: #fff6f6e3;
+    box-shadow: 10px 10px 20px 0 rgba(172,172,172,.5);
+    padding: 2vh 4vh;
+    border-radius: 10px;
+    margin: 0.8em 1.5em 1.5em;
+}
+
+.description-cloud-title {
+    font-weight: bolder;
+}

@@ -36,16 +36,16 @@
 
   const sorted = computed ( () => {
       if (order.value == "Role" || order.value == null || order.value == undefined || order.value == "") {
-        const importance_order = ref([])
+        let importance_order = []
 
         for (let role of roles) {
           for (let person of people.value) {
             if (person.role === role) {
-              importance_order.value.push(person)
+              importance_order.push(person)
             }
           }
         }
-        return importance_order.value
+        return importance_order
       }
       else if (order.value == "A-Z") 
         return [...people.value]

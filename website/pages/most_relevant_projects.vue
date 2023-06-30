@@ -6,7 +6,7 @@
     <main>
         <MyTitle :title="'MOST RELEVANT PROJECTS'" />
 
-        <span class="mrp-text">Check out our 5 most relevant project:</span>
+        <span class="mrp-text">Check out our 5 most relevant projects:</span>
 
         <div class="most_relevant_projects">
             
@@ -60,32 +60,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 30px;
+        padding-top: 15px;
         margin-bottom: 30px;
-    }
-
-    .text-content {
-        background-color: #fff6f6d2;
-        -webkit-box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
-        box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
-        padding: 40px;
-        margin-top: 30px;
-        margin-bottom:30px;
-        margin-left: 100px;
-        margin-right: 100px;
-        height: 100%;
-    }
-
-    .text-content:hover {
-        background-color: rgba(255, 252, 244, 0.979);
-        box-shadow: 40px 40px 80px 0  rgba(172,172,172,.5);
-    }
-
-    .par {
-        margin-bottom: 10px;
-        font-size: 18px;
-        line-height: 1.6;
-        color: black;
     }
 
     .header {

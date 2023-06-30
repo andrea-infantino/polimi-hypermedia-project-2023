@@ -47,11 +47,13 @@
         </div>
 
         <div class="long-description">
-            <span class="description-text"><b>Description:</b> <br> 
-                <span class="prj-description">{{ project.presentation_text }}</span>
+            <span>  
+                <span class="description-cloud-title">Description:</span>
+                <span class="description-cloud">{{ project.presentation_text }}</span>
             </span>
-            <span class="description-text"><b>Problem:</b> <br> 
-                <span class="prj-description">{{ project.problem_text }}</span>
+            <span>
+                <span class="description-cloud-title">Problem:</span>
+                <span class="description-cloud">{{ project.problem_text }}</span>
             </span>
         </div>
 
@@ -193,34 +195,9 @@
     box-shadow: 0 0;
   }
 
-  /* .project-title {
-    font-size: xx-large;
-    font-weight: bold;
-    color: black;
-    background-color: ghostwhite;
-    opacity: 0.9;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: fit-content;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 5px;
-  } */
-
   .project-area {
     font-size: x-large;
     font-weight: bold;
-  }
-
-  .prj-description {
-    display: inline-block;
-    margin: 1em;
-    color: black;
-    background-color: #fff6f6e3;
-    box-shadow: 10px 10px 20px 0 rgba(172,172,172,.5);
-    padding: 20px 30px;
-    border-radius: 10px;
   }
 
   .project-people-container {
