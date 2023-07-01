@@ -20,20 +20,34 @@
 
           </div>
 
-            <div class="area-info">
-              <div v-html="renderedDescription" class="db-clouds"></div>
+          <div class="area-info">
+            <div v-html="renderedDescription" class="db-clouds"></div>
 
-                <span class="related-projects-container">
-                    <div class ="related-projects-title">
-                      Related projects:
-                    </div>
+              <span class="related-projects-container">
+                <div class ="related-projects-title">
+                  Related projects:
+                </div>
 
-                    <div class="related-projects">
-                        <ProjectCard v-for = "project of area.Projects" :id="project.id" :title="project.title" :link="'/projects/' + project.id" :img_bool="true" />
-                    </div>
+                
+            </span>
+          </div>
 
-                </span>
-            </div>
+          <div class="related-projects">
+            <v-carousel v-if="numOfAreas > 1"
+              hide-delimiter-background
+              hide-delimiters
+              height="500"
+            >  
+              <v-carousel-item v-for="project of area.Projects">
+                <NuxtLink :to="`/projects/${project.id}`">
+                  <v-img width="850" height="850" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" />
+                </NuxtLink>
+              </v-carousel-item>
+            </v-carousel>
+            <NuxtLink v-else-if="numOfAreas == 1" :to="`/projects/${area.Projects[0].id}`">
+              <v-img width="850" height="850" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${area.Projects[0].id}.jpg`" />
+            </NuxtLink>
+          </div>
         </div>
     </main>
 </template>
@@ -184,13 +198,6 @@
 
   .related-projects {
     padding: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-self: center;
-    gap: 50px;
-    max-width: 1200px;  
   }
 
 </style>
