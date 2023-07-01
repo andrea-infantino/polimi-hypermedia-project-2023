@@ -19,28 +19,24 @@
 
           <div class="area-info">
             <div v-html="renderedDescription" class="db-clouds"></div>
-            <span class="related-projects-container">
-              <div class ="related-projects-title">
-                Related projects:
-              </div>
-            </span>
           </div>
 
-          <div class="related-projects">
-            <v-carousel v-if="numOfAreas > 1"
-              hide-delimiter-background
-              height="500"
-              color="blue"
-            >  
-              <v-carousel-item v-for="project of area.Projects">
-                <NuxtLink :to="`/projects/${project.id}`">
-                  <v-img width="850" height="850" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" />
-                </NuxtLink>
-              </v-carousel-item>
-            </v-carousel>
-            <NuxtLink style="margin: -100px 0;" v-else-if="numOfAreas == 1" :to="`/projects/${area.Projects[0].id}`">
-              <v-img width="670" height="670" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${area.Projects[0].id}.jpg`" />
-            </NuxtLink>
+          <div class="related-projects-container">
+            <div class ="related-projects-title">
+                Related projects:
+            </div>
+            <div class="carousel-container">
+              <v-carousel v-if="numOfAreas > 1" hide-delimiter-background height="500" color="#43B0F1" class="carousel">  
+                <v-carousel-item v-for="project of area.Projects">
+                  <NuxtLink :to="`/projects/${project.id}`">
+                    <v-img width="850" height="850" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" class="carousel-item"/>
+                  </NuxtLink>
+                </v-carousel-item>
+              </v-carousel>
+              <NuxtLink style="margin: -100px 0;" v-else-if="numOfAreas == 1" :to="`/projects/${area.Projects[0].id}`">
+                <v-img width="670" height="670" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${area.Projects[0].id}.jpg`" />
+              </NuxtLink>
+            </div>
           </div>
 
         </div>
@@ -136,8 +132,7 @@
     display: flex;
     width: min(40vw, 40vh);
     height: auto;
-    margin: 0 auto;
-    margin-top: 30px;
+    margin: 2vw 5vw;
     justify-content: center;
   }
   
@@ -180,19 +175,26 @@
   }
 
   .related-projects-container {
-    text-align: center;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    margin: 30px 0;
   }
 
   .related-projects-title {
     font-size: xx-large;
     font-weight: bolder;
-    margin-top: 20px 0 0;
+    margin: 20px 0;
     align-self: center;
   }
 
-  .related-projects {
-    padding: 30px 0;
+  .carousel-container, .carousel {
+  }
+
+  .carousel-item {
+    border-radius: 10px;
   }
 
 </style>

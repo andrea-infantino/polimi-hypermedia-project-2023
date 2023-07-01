@@ -123,6 +123,7 @@
                 projects
             }
         },
+        
         methods: {
             scrollDown() {
                 const elem = this.$refs.welcome
