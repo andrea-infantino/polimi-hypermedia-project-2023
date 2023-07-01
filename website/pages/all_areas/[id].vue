@@ -11,32 +11,26 @@
             <NuxtLink :to="isPreviousDisabled ? '#' : `/all_areas/${area.id-1}`" :class="{ 'disabled': isPreviousDisabled }" class="area-button" role="button" aria-label="Previous area button">
               &#8249;
             </NuxtLink> 
-
             <img class="full-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} logo`"/>
-
             <NuxtLink :to="isNextDisabled ? '#' : `/all_areas/${area.id+1}`" :class="{ 'disabled': isNextDisabled }" class="area-button" role="button" aria-label="Next area button">
               &#8250;
             </NuxtLink> 
-
           </div>
 
           <div class="area-info">
             <div v-html="renderedDescription" class="db-clouds"></div>
-
-              <span class="related-projects-container">
-                <div class ="related-projects-title">
-                  Related projects:
-                </div>
-
-                
+            <span class="related-projects-container">
+              <div class ="related-projects-title">
+                Related projects:
+              </div>
             </span>
           </div>
 
           <div class="related-projects">
             <v-carousel v-if="numOfAreas > 1"
               hide-delimiter-background
-              hide-delimiters
               height="500"
+              color="blue"
             >  
               <v-carousel-item v-for="project of area.Projects">
                 <NuxtLink :to="`/projects/${project.id}`">
@@ -44,10 +38,11 @@
                 </NuxtLink>
               </v-carousel-item>
             </v-carousel>
-            <NuxtLink v-else-if="numOfAreas == 1" :to="`/projects/${area.Projects[0].id}`">
-              <v-img width="850" height="850" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${area.Projects[0].id}.jpg`" />
+            <NuxtLink style="margin: -100px 0;" v-else-if="numOfAreas == 1" :to="`/projects/${area.Projects[0].id}`">
+              <v-img width="670" height="670" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${area.Projects[0].id}.jpg`" />
             </NuxtLink>
           </div>
+
         </div>
     </main>
 </template>

@@ -51,23 +51,46 @@
     </div>
 
     <hr class="separator " />
-    
-    <div class="person-projects-container">
-        <div class="person-projects-title">{{ person.name }} {{ person.surname }}'s projects</div>    
-        
-        <div class="supervised-projects-container" v-if="supervised_proj.length!=0">
-            <div class="supervised-title">As supervisor:</div>
-            <div class="person-supervised-projects">
-                <ProjectCard v-for = "project of supervised_proj" :id="project.id" :title="project.title" :link="'/projects/' + project.id" :img_bool="true" />
-            </div>
-        </div>
 
-        <div class="team-projects-container" v-if="team_proj.length!=0">
-            <div class="team-title">As team member:</div>
-            <div class="person-team-projects">
-                <ProjectCard v-for = "project of team_proj" :id="project.id" :title="project.title" :link="'/projects/' + project.id" :img_bool="true" />
-            </div>
-        </div>
+    <div class="person-projects-title">{{ person.name }} {{ person.surname }}'s projects</div>
+    
+    <div class="person-projects-container">    
+      
+      <div class="supervised-projects-container" v-if="supervised_proj.length!=0">
+          <div class="supervised-title">As supervisor:</div>
+            <v-carousel v-if="supervised_proj.length > 1"
+              hide-delimiter-background
+              height="400"
+              color="blue"
+            >  
+              <v-carousel-item v-for="project of supervised_proj">
+                <NuxtLink :to="`/projects/${project.id}`">
+                  <v-img width="700" height="700" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" />
+                </NuxtLink>
+              </v-carousel-item>
+            </v-carousel>
+            <NuxtLink style="margin: -73px 0;" v-else-if="supervised_proj.length == 1" :to="`/projects/${supervised_proj[0].id}`">
+              <v-img width="545" height="545" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${supervised_proj[0].id}.jpg`" />
+            </NuxtLink>
+      </div>
+
+      <div class="team-projects-container" v-if="team_proj.length!=0">
+        <div class="team-title">As team member:</div>
+        <v-carousel v-if="team_proj.length > 1"
+          hide-delimiter-background
+          height="400"
+          color="blue"
+        >  
+          <v-carousel-item v-for="project of team_proj">
+            <NuxtLink :to="`/projects/${project.id}`">
+              <v-img width="700" height="700" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" />
+            </NuxtLink>
+          </v-carousel-item>
+        </v-carousel>
+        <NuxtLink style="margin: -73px 0;" v-else-if="team_proj.length == 1" :to="`/projects/${team_proj[0].id}`">
+          <v-img width="545" height="545" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${team_proj[0].id}.jpg`" />
+        </NuxtLink>
+      </div>
 
     </div>
 
@@ -227,7 +250,7 @@
   .person-projects-title {
     font-size: xx-large;
     font-weight: bolder;
-    margin-top: 20px;
+    margin-top: 50px;
     align-self: center;
   }
 
@@ -235,10 +258,10 @@
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-self: center;
-    gap: 50px;
+    gap: 100px;
     max-width: 90%;
   }
 
@@ -249,14 +272,6 @@
     justify-content: center;
     align-self: center;
     margin-bottom: 3%;
-  }
-
-  .person-supervised-projects, .person-team-projects {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-self: center;
   }
 
   .supervised-title, .team-title {
