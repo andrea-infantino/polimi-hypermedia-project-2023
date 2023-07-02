@@ -114,10 +114,6 @@
     width: 80vw;
     margin-top: 30px;
   }
-
-  .db-clouds {
-    width: 100%
-  }
   
   .full-area-img {
     display: flex;
@@ -164,34 +160,4 @@
     border-radius: 10px;
     white-space: pre-wrap;
   }
-
-  .area-div-carousel {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 60px 0;
-        margin-bottom: 20px;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.4);
-    }
-
-    .area-carousel-title {
-        font-size: min(5vw, min(4vh, 7vh));
-        font-weight: bold;
-        text-align: center;
-    }
-
-    .area-carousel-container {
-        margin: 20px;
-        width: min(70vw, min(60vh, 90vh));
-    }
-
-    .area-carousel {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        margin: 20px 0;
-    }
 </style>

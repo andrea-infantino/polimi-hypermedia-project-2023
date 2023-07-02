@@ -1,0 +1,91 @@
+/* Homepage carousel */
+.hp-div-carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 60px 0;
+    margin-bottom: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hp-carousel-title {
+    font-size: min(5vw, min(4vh, 7vh));
+    font-weight: bold;
+    text-align: center;
+}
+
+.hp-carousel-container {
+    margin: 20px;
+    width: min(70vw, min(60vh, 90vh));
+}
+
+.hp-carousel {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Person carousels */
+.team-div-carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0;
+    margin-bottom: 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.team-carousel-title {
+    font-size: min(4.5vw, min(3.5vh, 6.5vh));
+    text-align: center;
+}
+
+.team-carousel-container {
+    margin: 20px;
+    width: min(70vw, min(60vh, 90vh));
+}
+
+.team-carousel {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Area carousel */
+.area-div-carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 60px 0;
+    margin-bottom: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.area-carousel-title {
+    font-size: min(5vw, min(4vh, 7vh));
+    font-weight: bold;
+    text-align: center;
+}
+
+.area-carousel-container {
+    margin: 20px;
+    width: min(70vw, min(60vh, 90vh));
+}
+
+.area-carousel {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+}

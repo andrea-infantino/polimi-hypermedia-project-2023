@@ -23,8 +23,9 @@
   </template>
     
   <script setup>
-    const { data: areas } = await useFetch('/api/all_areas')
+    const { data: areas } = await useFetch('/api/all_areas') //get all areas
   
+    //Search Engine Optimization
     const description = ref('In this page you will find the projects for each area of investment.')
     const keywords = ref('Projects By Area, Projects, Investments, Area')
 

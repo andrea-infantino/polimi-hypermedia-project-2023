@@ -11,13 +11,16 @@ export default {
       showButton: false,
     }
   },
+
   methods: {
+    
     scrollToTop() {
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       })
     },
+
     handleScroll() {
       if (window.pageYOffset > 300) {
         this.showButton = true;
@@ -26,9 +29,11 @@ export default {
       }
     },
   },
+
   beforeMount() {
     window.addEventListener('scroll', this.handleScroll);
   },
+
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll);
   },
@@ -36,24 +41,22 @@ export default {
 </script>
 
 <style>
+  .scroll-to-top-btn {
+    padding: 10px 17px;
+    border-radius: 15px;
+    background-color: #E8EEF1;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border: 3px solid #1E3D58;
+  }
 
-.scroll-to-top-btn {
-  padding: 10px 17px;
-  border-radius: 15px;
-  background-color: #E8EEF1;
-  color: black;
-  font-size: 16px;
-  cursor: pointer;
-  border: 3px solid #1E3D58;
-}
+  .scroll-to-top-btn:hover {
+    font-weight: bold;
+    box-shadow: 3px 5px 10px 0 rgba(172,172,172,.5);
+  }
 
-.scroll-to-top-btn:hover {
-  font-weight: bold;
-  box-shadow: 3px 5px 10px 0 rgba(172,172,172,.5);
-}
-
-.scroll-to-top-btn:active {
-  box-shadow: 3px 5px 10px 10px rgba(172,172,172,.5);
-}
-
+  .scroll-to-top-btn:active {
+    box-shadow: 3px 5px 10px 10px rgba(172,172,172,.5);
+  }
 </style>

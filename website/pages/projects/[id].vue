@@ -4,7 +4,7 @@
   </Head>
 
   <main>
-      <MyTitle :title="project.title" />
+    <MyTitle :title="project.title" />
 
     <div class="project-page">
 
@@ -72,9 +72,9 @@
   export default defineNuxtComponent({
       async asyncData() {
           const route = useRoute()
-          const project = await $fetch('/api/projects/' + route.params.id)
+          const project = await $fetch('/api/projects/' + route.params.id)  //get the specific project from its id
 
-          const projects = await $fetch('/api/projects') // maybe it can be optimized
+          const projects = await $fetch('/api/projects') //get all projects to calculate the total number (maybe it can be optimized by using a count query)
           const numOfProjects = projects.length
 
           //to distinguish between supervisor and other members of the team
@@ -90,6 +90,7 @@
               }
           }
 
+          //Search Engine Optimization
           const description = ref('In this page you can find all the information about the project ' + project.title + '.')
           const keywords = ref('Project, ' + project.title + ', ' + project.Areas.map(area => area.name).join(', '))
 
@@ -248,5 +249,4 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
-  
 </style>

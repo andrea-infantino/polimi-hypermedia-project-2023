@@ -1,11 +1,11 @@
 <template>
     <footer>
-        <div class="bottom">          
+        <div class="bottom">  
+
             <div class="logo-footer">
                 <NuxtLink to="/">
                     <img src="../assets/img/logo.png" id="logo" class="logo-img" alt="Company logo" title="Homepage"/>
                 </NuxtLink>
-
             </div>
                    
             <div class="rights">
@@ -20,8 +20,6 @@
             </div>
 
         </div>
-
-
     </footer>
 </template>
 
@@ -99,5 +97,4 @@
         color: #1E3D58;
         text-decoration: underline;
     }
-    
 </style>

@@ -36,6 +36,7 @@
 </template>
   
 <script setup>
+    //Search Engine Optimization
     const description = ref('In this page you will find our contact information and our location.')
     const keywords = ref('Contact Us, email, phone number, address, location, social')
 
@@ -108,5 +109,4 @@
     .twitter-logo-footer:hover, .instagram-logo-footer:hover, .linkedin-logo-footer:hover {
         transform: scale(1.2);
     }
-
 </style>

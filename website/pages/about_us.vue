@@ -46,6 +46,7 @@
 </template>
 
 <script setup>
+    //Search Engine Optimization
     const description = ref('In this page you will find more information on our vision, partnerships, team and activities.')
     const keywords = ref('About Us, Vision, Partnerships, Team, Activities')
 
@@ -59,7 +60,6 @@
 
 
 <style>
-
     .au-intro {
         text-align: center;
         font-weight: bold;
@@ -79,5 +79,4 @@
         text-align: center;
         margin-top: 20px;
     }
-    
 </style>

@@ -63,36 +63,43 @@
 
             <section class="white-cloud">
                 <div class="white-cloud-title">4. Cookies and Similar Technologies</div>
-                <p class="white-cloud-text">We may use cookies, web beacons, and similar technologies to collect non-personal information about your interactions with our website. These technologies help us analyze trends, administer the website, track users' movements around the site, and gather demographic information. You have the option to disable cookies through your browser settings, but please note that certain features of our website may not function properly without cookies.</p>                
+                <p class="white-cloud-text">
+                We may use cookies, web beacons, and similar technologies to collect non-personal information about your interactions with our website. These technologies help us analyze trends, administer the website, track users' movements around the site, and gather demographic information. You have the option to disable cookies through your browser settings, but please note that certain features of our website may not function properly without cookies.</p>                
             </section>
 
             <section class="white-cloud">
                 <div class="white-cloud-title">5. Data Security</div>
-                <p class="white-cloud-text">We implement reasonable security measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security</p>                
+                <p class="white-cloud-text">
+                We implement reasonable security measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security</p>                
             </section>
 
             <section class="white-cloud">
                 <div class="white-cloud-title">6. Third-Party Links</div>
-                <p class="white-cloud-text">Our website may contain links to third-party websites. This Privacy Policy does not apply to any third-party websites, and we are not responsible for the privacy practices or content of those websites. We encourage you to review the privacy policies of third-party websites before providing any personal information.</p>                
+                <p class="white-cloud-text">
+                Our website may contain links to third-party websites. This Privacy Policy does not apply to any third-party websites, and we are not responsible for the privacy practices or content of those websites. We encourage you to review the privacy policies of third-party websites before providing any personal information.</p>                
             </section>
 
             <section class="white-cloud">
                 <div class="white-cloud-title">7. Children's Privacy</div>
-                <p class="white-cloud-text">Wizarding Ventures is not intended for individuals under the age of 18. We do not knowingly collect personal information from children. If you believe that we have inadvertently collected information from a child, please contact us immediately, and we will take steps to remove that information from our records.</p>                
+                <p class="white-cloud-text">
+                Wizarding Ventures is not intended for individuals under the age of 18. We do not knowingly collect personal information from children. If you believe that we have inadvertently collected information from a child, please contact us immediately, and we will take steps to remove that information from our records.</p>                
             </section>
 
             <section class="white-cloud">
                 <div class="white-cloud-title">8. Changes to this Privacy Policy</div>
-                <p class="white-cloud-text">We may update this Privacy Policy from time to time, and any changes will be effective upon posting the revised version on our website. We encourage you to review this page periodically for any updates. Your continued use of Wizarding Ventures after the posting of changes constitutes your acceptance of such changes.</p>                
+                <p class="white-cloud-text">
+                We may update this Privacy Policy from time to time, and any changes will be effective upon posting the revised version on our website. We encourage you to review this page periodically for any updates. Your continued use of Wizarding Ventures after the posting of changes constitutes your acceptance of such changes.</p>                
             </section>
 
             <section class="white-cloud">
                 <div class="white-cloud-title">9. Contact Us</div>
-                <p class="white-cloud-text">If you have any questions, concerns, or requests regarding this Privacy Policy or the handling of your information, please contact us using the information available at <NuxtLink id="to_contacts" to="/contacts" class="contact-link-text">this link</NuxtLink>.</p>                
+                <p class="white-cloud-text">
+                If you have any questions, concerns, or requests regarding this Privacy Policy or the handling of your information, please contact us using the information available at <NuxtLink id="to_contacts" to="/contacts" class="contact-link-text">this link</NuxtLink>.</p>                
             </section>
 
             <section class="white-cloud">
-                <p class="white-cloud-text">Thank you for trusting <strong>Wizarding Ventures</strong> with your personal information.</p>                
+                <p class="white-cloud-text">
+                Thank you for trusting <strong>Wizarding Ventures</strong> with your personal information.</p>                
             </section>
 
         </div>
@@ -101,6 +108,7 @@
 </template>
 
 <script setup>
+    //Search Engine Optimization
     const description = ref('In this page you will find our Privacy Policy.')
     const keywords = ref('Privacy Policy, Personal Information, Non-Personal Information, Data Security, Children\'s Security')
 

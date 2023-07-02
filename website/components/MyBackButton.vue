@@ -5,7 +5,6 @@
 </template>
 
 <style scoped>
-
     button {
         border: none;
         background-color: transparent;
@@ -40,5 +39,4 @@
     .bb-box:active {
         background-color: rgba(0, 0, 0, 0.2);
     }
-
 </style>

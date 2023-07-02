@@ -30,12 +30,13 @@
 </template>
 
 <script setup>
-    const { data: Projects } = await useFetch('/api/top_projects');
+    const { data: Projects } = await useFetch('/api/top_projects'); //get the most relevant projects
 
     //split the projects so we can display the first one differently
     const first = Projects.value[0];
     const others = Projects.value.slice(1, Projects.value.length);
 
+    //Search Engine Optimization
     const description = ref('In this page you will find the 5 most relevant projects.')
     const keywords = ref('Projects, Investments, Most Relevant Projects, Top Projects, Most Important Projects')
 
@@ -45,7 +46,6 @@
             { name: 'keywords', content: keywords }
         ]
     })
-
 </script>
 
 <style>
@@ -63,5 +63,4 @@
         padding-top: 15px;
         margin-bottom: 30px;
     }
-    
 </style>

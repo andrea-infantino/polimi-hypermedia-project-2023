@@ -53,6 +53,11 @@ img {
       background-image: linear-gradient(to right, rgba(30, 61, 88, 0), rgba(30, 61, 88, 255), rgba(30, 61, 88, 0));
 }
 
+.update_date {
+      font-size: 18px;
+      margin: 30px 10px 10px 50px;
+}
+
 /* Links style */
 a {
       color: aliceblue;
@@ -132,10 +137,4 @@ label {
       flex-direction: row;
       justify-content: center;
       gap: 50px;
-}
-
-
-.update_date {
-      font-size: 18px;
-      margin: 30px 10px 10px 50px;
 }

@@ -26,6 +26,7 @@
         transform: translate(-50%, -50%);
         font-size: min(4vw, min(3vh, 6vh));
     }
+
     .scrolldown-btn:hover {
         opacity: .5;
     }
@@ -49,11 +50,13 @@
         -webkit-animation-delay: 0s;
         animation-delay: 0s;
     }
+
     .scrolldown-btn span:nth-of-type(2) {
         top: -56px;
         -webkit-animation-delay: .15s;
         animation-delay: .15s;
     }
+
     .scrolldown-btn span:nth-of-type(3) {
         top: -40px;
         -webkit-animation-delay: .3s;
@@ -71,5 +74,4 @@
             opacity: 0;
         }
     }
-  
 </style>

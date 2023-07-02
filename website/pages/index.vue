@@ -106,8 +106,8 @@
 <script>
     export default {
         async setup() {
-            const { data: Projects } = await useFetch('/api/top_projects');
-            const projects = Projects.value.slice(0, Projects.value.length);
+            const { data: projects } = await useFetch('/api/top_projects');  //get the most relevant projects
+
             return {
                 projects
             }
@@ -125,7 +125,6 @@
 </script>
 
 <style scoped>
-
     main {
         display: flex;
         flex-direction: column;
@@ -325,35 +324,4 @@
         margin-top: 10px;
         font-size: min(3.5vw, min(3vh, 6vh));
     }
-
-    .hp-div-carousel {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 60px 0;
-        margin-bottom: 20px;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.4);
-    }
-
-    .hp-carousel-title {
-        font-size: min(5vw, min(4vh, 7vh));
-        font-weight: bold;
-        text-align: center;
-    }
-
-    .hp-carousel-container {
-        margin: 20px;
-        width: min(70vw, min(60vh, 90vh));
-    }
-
-    .hp-carousel {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        margin: 20px 0;
-    }
-    
 </style>

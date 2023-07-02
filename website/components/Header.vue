@@ -1,11 +1,13 @@
 <template>
     <header>            
         <nav>
+            
             <div class="branding">
                 <NuxtLink to="/">
                     <img src="../assets/img/logo.png" id="logo" class="logo-header" alt="Company logo" title="Homepage"/>
                 </NuxtLink>
             </div>
+            
             <ul v-if="!mobile" class="navigation">
                 <li><NuxtLink class="landmark" to="/most_relevant_projects">Most Relevant Projects</NuxtLink></li>
                 <li><NuxtLink class="landmark" to="/portfolio">Portfolio</NuxtLink></li>
@@ -44,9 +46,11 @@
                     <li @click="toggleMobileNav" class="close-cross">&#10006;</li>
                 </ul>
             </transition>
+            
             <transition name="dropdown-overlay">
                 <div v-if="mobileNav" class="dropdown-overlay" @click="toggleMobileNav"></div>
             </transition>
+
         </nav>
     </header>
 </template>
@@ -283,5 +287,4 @@
     .landmark:active {
           transform: scale(0.95);
     }
-
 </style>

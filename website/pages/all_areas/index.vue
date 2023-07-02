@@ -6,41 +6,38 @@
     <main>
         <MyTitle :title="'AREAS'" />
 
-    <span class="all-areas-text">Browse the areas of investment to know more about what we care and love:</span>
+        <span class="all-areas-text">Browse the areas of investment to know more about what we care and love:</span>
 
-    <div class="full-area-container">
-      <div v-for="area of areas" :class="area.id%2 ? 'area-section-dx' : 'area-section-sx'">
-        <img class="preview-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} logo`"/>
-        <div class="preview-area-info">
-          <div class="preview-area-title">{{ area.name }}</div>
-          <div v-html="truncatedAreaDescription(area.description)" class="preview-area-description"></div>
-          <NuxtLink :to="`/all_areas/${area.id}`" aria-label="Area button" :title="`${area.name} area`">
-            <button class="dark-btn">
-              See the full description
-            </button>
-          </NuxtLink>
+        <div class="full-area-container">
+          <div v-for="area of areas" :class="area.id%2 ? 'area-section-dx' : 'area-section-sx'">
+            <img class="preview-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} logo`"/>
+            <div class="preview-area-info">
+              <div class="preview-area-title">{{ area.name }}</div>
+              <div v-html="truncatedAreaDescription(area.description)" class="preview-area-description"></div>
+              <NuxtLink :to="`/all_areas/${area.id}`" aria-label="Area button" :title="`${area.name} area`">
+                <button class="dark-btn">
+                  See the full description
+                </button>
+              </NuxtLink>
+            </div>
+          </div>
+          <!--<SingleArea v-for = "area of areas" :id = "area.id" :name = "area.name" :link = "'/all_areas/' + area.id" />-->
         </div>
-      
-      </div>
-      <!--<SingleArea v-for = "area of areas" :id = "area.id" :name = "area.name" :link = "'/all_areas/' + area.id" />-->
-    </div>
 
-    <hr class="separator" />
+        <hr class="separator" />
 
-      <div class="bottom-links">
-          <NuxtLink id="to_all_projects" to="/projects"><button class="transparent-btn">Check all the projects</button></NuxtLink>
-          <NuxtLink id="to_most_relevant_projects" to="/most_relevant_projects"><button class="transparent-btn">See the most relevant projects</button></NuxtLink>
-          <NuxtLink id="to_projects_by_area" to="/projects_by_area"><button class="transparent-btn">Check the projects by area</button></NuxtLink>
-      </div>
-  </main>
+        <div class="bottom-links">
+            <NuxtLink id="to_all_projects" to="/projects"><button class="transparent-btn">Check all the projects</button></NuxtLink>
+            <NuxtLink id="to_most_relevant_projects" to="/most_relevant_projects"><button class="transparent-btn">See the most relevant projects</button></NuxtLink>
+            <NuxtLink id="to_projects_by_area" to="/projects_by_area"><button class="transparent-btn">Check the projects by area</button></NuxtLink>
+        </div>
+    </main>
 </template>
   
 <script setup>
-  const { data: areas } = await useFetch('/api/all_areas')
+  const { data: areas } = await useFetch('/api/all_areas')  //get all areas
 
-  const description = ref('In this page you will find all the areas of investment of our projects.')
-  const keywords = ref('Areas, Investments, Projects, All Areas')
-
+  //truncate the area description to obtain a preview
   const truncatedAreaDescription = (areaDescription) => {
     const words = areaDescription.substring(30).split(' ');
     const truncatedWords = words.slice(0, 50);
@@ -55,22 +52,25 @@
     }
   };
 
+  //Search Engine Optimization
+  const description = ref('In this page you will find all the areas of investment of our projects.')
+  const keywords = ref('Areas, Investments, Projects, All Areas')
+
   useHead({
       meta: [
           { name: 'description', content: description },
           { name: 'keywords', content: keywords }
       ]
   });
-
 </script>
   
   
 <style>
   .all-areas-text {
-      text-align: center;
-      font-weight: bold;
-      font-size: 22px;
-      margin: 30px 10px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 30px 10px 10px;
   }
 
   .full-area-container {
@@ -132,5 +132,4 @@
     font-size: inherit;
     margin: 20px 0;
   }
-
 </style>

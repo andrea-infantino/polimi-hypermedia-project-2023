@@ -58,16 +58,17 @@
   </template>
   
   <script setup>
-    const { data: Projects } = await useFetch('/api/projects')
+    const { data: Projects } = await useFetch('/api/projects') //get all projects
 
-    const orderproj = ref("A-Z") // default order
+    const orderproj = ref("A-Z") //default order
     const column1 = ref([])
     const column2 = ref([])
 
+    //sort the projects based on the order selected by the user
     const sorted = computed(() => {
-      const projects = [...Projects.value]; // Create a copy of the Projects array
+      const projects = [...Projects.value]; //create a copy of the Projects array
 
-      if (orderproj.value === "A-Z" || orderproj.value === "Z-A") {
+      if (orderproj.value === "A-Z" || orderproj.value === "Z-A" || orderproj.value == null || orderproj.value == "" || orderproj.value == undefined) {
         const sortedProjects = (orderproj.value == "A-Z" ? projects : projects.reverse())
 
         const letters = sortedProjects.map((project) => project.title[0]).filter((value, index, self) => self.indexOf(value) === index);
@@ -100,7 +101,7 @@
       }
     });
 
-
+    //Search Engine Optimization
     const description = ref('In this page you will find all of our ongoing projects.')
     const keywords = ref('Projects, Investments')
 
@@ -110,7 +111,6 @@
             { name: 'keywords', content: keywords }
         ]
     })
-
   </script>
   
   <style>
@@ -139,5 +139,4 @@
       flex-direction: column;
       justify-content: space-around;
     }
-
   </style>

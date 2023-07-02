@@ -83,11 +83,12 @@
   export default defineNuxtComponent({
     async asyncData() {
       const route = useRoute()
-      const person = await $fetch('/api/our_team/' + route.params.id)
+      const person = await $fetch('/api/our_team/' + route.params.id) //get the specific person from their id
 
-      const people = await $fetch('/api/our_team')
+      const people = await $fetch('/api/our_team')  //get all the people to calculate the total number
       const numOfPeople = people.length
 
+      //distinguish between projects where the person is supervisor/team member
       const supervised_proj = ref([])
       const team_proj = ref([])
 
@@ -101,6 +102,7 @@
           }
       }
 
+      //Search Engine Optimization
       const description = ref('In this page you will find ' + person.name + ' ' + person.surname + '\'s personal information.')
       const keywords = ref('Team, ' + person.name + ' ' + person.surname + ', ' + person.role)
 
@@ -288,34 +290,4 @@
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
   }
-
-  .team-div-carousel {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 40px 0;
-        margin-bottom: 40px;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.4);
-    }
-
-    .team-carousel-title {
-        font-size: min(4.5vw, min(3.5vh, 6.5vh));
-        text-align: center;
-    }
-
-    .team-carousel-container {
-        margin: 20px;
-        width: min(70vw, min(60vh, 90vh));
-    }
-
-    .team-carousel {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        margin: 20px 0;
-    }
-
 </style>

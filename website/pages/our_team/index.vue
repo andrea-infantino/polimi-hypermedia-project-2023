@@ -29,11 +29,12 @@
 </template>
 
 <script setup>
-  const { data: people } = await useFetch('/api/our_team')
+  const { data: people } = await useFetch('/api/our_team') //get all the people
 
-  const order = ref("Role") // default order
-  const roles = ['Founder', 'Co-Founder', 'CFO', 'Investment Manager', 'Investment Analyst', 'Head of Impact', 'Office Manager', 'Partner']
+  const order = ref("Role") //default order
+  const roles = ['Founder', 'Co-Founder', 'CFO', 'Investment Manager', 'Investment Analyst', 'Head of Impact', 'Office Manager', 'Partner'] //roles in "importance" order
 
+  //sort people based on the order selected by the user
   const sorted = computed ( () => {
       if (order.value == "Role" || order.value == null || order.value == undefined || order.value == "") {
         let importance_order = []
@@ -53,6 +54,7 @@
         return [...people.value].reverse()
   })
 
+  //Search Engine Optimization
   const description = ref('In this page you will find all of our team members.')
   const keywords = ref('Team, Teamwork, People, Members, ' + roles.join(', '))
 
@@ -62,15 +64,14 @@
           { name: 'keywords', content: keywords }
       ]
   })
-
 </script>
 
 
 <style>
   .our-team-text {
-      text-align: center;
-      font-size: 18px;
-      margin: 30px;
+    text-align: center;
+    font-size: 18px;
+    margin: 30px;
   }
 
   #people-container {

@@ -41,11 +41,12 @@
     export default defineNuxtComponent({
         async asyncData() {
             const route = useRoute()
-            const area = await $fetch('/api/projects_by_area/' + route.params.id)
+            const area = await $fetch('/api/projects_by_area/' + route.params.id) //get the specific area's projects by its id
 
-            const areas = await $fetch('/api/all_areas')
+            const areas = await $fetch('/api/all_areas') //get all areas to calculate the total number
             const numOfAreas = areas.length
 
+            //Search Engine Optimization
             const description = ref('In this page you can find all the projects related to the area you selected, ' + area.name + '. Click on the project to see more details.')
             const keywords = ref('Projects by Area, ' + area.name)
 
@@ -70,7 +71,6 @@
             return this.area.id === 0;
           }
         }
-
     })
 </script>
 
@@ -157,5 +157,4 @@
     gap: 50px;
     max-width: 1200px;
   }
-
 </style>
