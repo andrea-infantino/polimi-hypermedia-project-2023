@@ -57,10 +57,10 @@
     display: inline-block;
     color: black;
     background-color: #fff6f6e3;
-    box-shadow: 10px 10px 20px 0 rgba(172,172,172,.5);
+    box-shadow: 10px 10px 10px 0 rgba(172,172,172,.5);
     padding: 2vh 4vh;
     border-radius: 10px;
-    margin: 0.8em 1.5em 1.5em;
+    margin: 0.8em 2vw 2em;
 }
 
 .description-cloud-title {

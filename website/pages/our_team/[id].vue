@@ -21,17 +21,20 @@
               <span class="person-role">{{ person.role }}</span>
               <hr class="separator" />
 
-              <div class="content-label">Joined &emsp; {{ person.hiring_date }}</div> 
+              <div class="label-div"><span class="content-label">Joined</span> &emsp; {{ person.hiring_date }}</div> 
               
-              <span> <div class="content-label">E-Mail:</div>
-                <nuxt-link class="small-transparent-btn" :to="`mailto:${person.email}`">&#9993;&emsp;{{ person.email }}</nuxt-link>
-              </span>
+              <div class="label-div"><span class="content-label">E-Mail:<br></span>
+                <NuxtLink class="small-transparent-btn" :to="`mailto:${person.email}`">
+                  <button v-if="showLargeEmail">&#9993;&emsp;{{ person.email }}</button>
+                  <button v-else>&emsp;&emsp;&emsp;&#9993;&emsp;&emsp;&emsp;</button>
+                </NuxtLink>
+              </div>
 
-              <span> <div class="content-label">Social:</div>
+              <div class="label-div"> <div class="content-label">Social:</div>
                 <a href="https://twitter.com/home" target="_blank"><img src="../../assets/img/contacts/twitter_logo_hover.png" class="twitter-logo-hover" alt="Coloured Twitter logo"><img src="../../assets/img/contacts/twitter_logo.png" alt="Black and white Twitter Logo" class="twitter-logo"></a>
                 <a href="https://www.instagram.com" target="_blank"><img src="../../assets/img/contacts/instagram_logo_hover.png" class="instagram-logo-hover" alt="Coloured Instagram logo"><img src="../../assets/img/contacts/instagram_logo.png" alt="Black and white Instagram Logo" class="instagram-logo"></a>
                 <a href="https://www.linkedin.com" target="_blank"><img src="../../assets/img/contacts/linkedin_logo_hover.png" class="linkedin-logo-hover" alt="Coloured LinkedIn logo"><img src="../../assets/img/contacts/linkedin_logo.png" alt="Black and white LinkedIn Logo" class="linkedin-logo"></a>
-              </span>
+            </div>
 
               <nuxt-link v-if="person.cv_link != null" class="small-light-btn" :to="`${person.cv_link}`" target="_blank">See {{ person.name }} {{ person.surname }}'s CV</nuxt-link>
         
@@ -126,6 +129,27 @@
       isPreviousDisabled() {
         return this.person.id === 0;
       }
+    },
+
+    data() {
+      return {
+        showLargeEmail: null
+      };
+    },
+
+    mounted() {
+      this.checkWindowWidth();
+      window.addEventListener('resize', this.checkWindowWidth);
+    },
+
+    beforeDestroy() {
+      window.removeEventListener('resize', this.checkWindowWidth);
+    },
+
+    methods: {
+      checkWindowWidth() {
+        this.showLargeEmail = window.innerWidth >= 550;
+      }
     }
   })
 </script>
@@ -134,10 +158,9 @@
   .person-page {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 30px;
     width: 100%;
-    overflow: hidden;
   }
 
   .person-button {
@@ -146,7 +169,7 @@
     font-size: 3em;
     height: 12vh;
     color: ghostwhite;
-    margin: 0px 10px 50px;
+    margin-bottom: 50px;
     border-radius: 10px;
     padding: 90px 20px;
     transition: all 0.2s;
@@ -183,22 +206,25 @@
     align-self: center;
     gap: 60px;
     width: 70%;
-    margin: 30px;
+    overflow: hidden;
   }
 
   .person-img {
     border-radius: 5px;
-    height: min(60vw, min(60vh, 80vh));
-    width: auto;
+    width: min(50vw, min(60vh, 80vh));
+    height: min(50vw, min(60vh, 80vh));
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-image:url('~/assets/img/user_default_photo.jpg');
     background-size: cover;
   }
 
   .person-info {
+    width: min(50vw, min(60vh, 80vh));
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    align-content: center;
+    align-items: center;
     gap: 20px;
   }
 
@@ -207,7 +233,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    row-gap: 20px;
+    gap: 20px;
     width: 100%;
   }
 
@@ -231,6 +257,10 @@
     align-self: center;
   }
 
+  .label-div {
+    width: 100%;
+  }
+
   .desc-container {
     overflow: hidden;
     width: 100%;
@@ -252,6 +282,7 @@
     width: 100%;
     margin-bottom: 3vw;
     background-color: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
   }
 
   .supervised-projects-container, .team-projects-container {
@@ -272,6 +303,7 @@
   .content-label {
     font-weight: bold;
     margin-bottom: 5px;
+    width: 100%;
     font-size: min(2.2vh, 5.2vw);
   }
 

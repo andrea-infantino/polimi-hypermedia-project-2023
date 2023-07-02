@@ -112,12 +112,14 @@
 .small-transparent-btn {
     color: white;
     text-align: center;
+    align-self: center;
     display: inline-block;
     border-radius: 5px;
     padding: 3px 5px;
     margin: 0 10px 0 15px;
     transition: all 0.3s;
     width: fit-content;
+    overflow: hidden;
 }
 
 .small-transparent-btn:hover {

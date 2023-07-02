@@ -1,6 +1,6 @@
 <template>
     <div class="title-area" :class="{ 'hideTitle' : !scrollUp }"> 
-        <MyBackButton />   
+        <MyBackButton class="bb-position"/>   
         <div v-if="link!=null" class="clickable-title">
             <NuxtLink :to="link" class="clickable-title-link">{{ title }}</NuxtLink>
         </div>
@@ -34,6 +34,13 @@
 </script>
 
 <style>
+
+    .bb-position {
+        position: absolute;
+        left: 2px;
+        top: auto;
+    }
+
     .title-area {
       padding: 10px;
       background-color: #E8EEF1;
@@ -42,6 +49,9 @@
       top: 83px;
       transition: all 0.3s;
       z-index: 98;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .title {
@@ -65,6 +75,7 @@
         font-size: 40px;
         color: black;
         transition: all 0.3s;
+        width: fit-content;
     }
 
     .clickable-title:hover {

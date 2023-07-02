@@ -157,6 +157,7 @@
         align-items: center;
         flex: 1;
         justify-content: flex-end;
+        gap: 1vw;
     }
 
     .icon {
@@ -279,6 +280,7 @@
 
     .landmark {
         font-size: min(2.7vw, min(2.1vh, 3.7vh));
+        padding: 10px 0px;
     }
 
     .landmark:hover, .landmark-mobile:hover {
