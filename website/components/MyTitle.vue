@@ -15,12 +15,14 @@
     let scrollUp = ref(true);
 
     const handleScroll = () => {
+        const scrollThreshold = 50;
+
         if (window.pageYOffset > lastScrollTop.value) {
-            scrollUp.value = false;
+            scrollUp.value = window.pageYOffset < scrollThreshold;
         } else {
             scrollUp.value = true;
         }
-        
+
         lastScrollTop.value = window.pageYOffset;
     };
 
