@@ -21,21 +21,12 @@
             <div v-html="renderedDescription" class="db-clouds"></div>
           </div>
 
-          <div class="related-projects-container">
-            <div class ="related-projects-title">
+          <div class="area-div-carousel">
+            <div class="area-carousel-title">
                 Related projects:
             </div>
-            <div class="carousel-container">
-              <v-carousel v-if="numOfAreas > 1" hide-delimiter-background height="500" color="#43B0F1" class="carousel">  
-                <v-carousel-item v-for="project of area.Projects">
-                  <NuxtLink :to="`/projects/${project.id}`">
-                    <v-img width="850" height="850" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" class="carousel-item"/>
-                  </NuxtLink>
-                </v-carousel-item>
-              </v-carousel>
-              <NuxtLink style="margin: -100px 0;" v-else-if="numOfAreas == 1" :to="`/projects/${area.Projects[0].id}`">
-                <v-img width="670" height="670" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${area.Projects[0].id}.jpg`" />
-              </NuxtLink>
+            <div class="area-carousel-container">
+                <ProjectsCarousel :projectsArray="area.Projects" class="area-carousel"/>
             </div>
           </div>
 
@@ -169,32 +160,38 @@
     background-color: #fff6f6e3;
     box-shadow: 15px 15px 30px 0 rgba(172,172,172,.5);
     padding: 3.3vw 4.3vw;
-    margin: 25px 0px;
+    margin: 30px 0px;
     border-radius: 10px;
     white-space: pre-wrap;
   }
 
-  .related-projects-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80vw;
-    margin: 30px 0;
-  }
+  .area-div-carousel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 60px 0;
+        margin-bottom: 20px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
 
-  .related-projects-title {
-    font-size: xx-large;
-    font-weight: bolder;
-    margin: 20px 0;
-    align-self: center;
-  }
+    .area-carousel-title {
+        font-size: min(5vw, min(4vh, 7vh));
+        font-weight: bold;
+        text-align: center;
+    }
 
-  .carousel-container, .carousel {
-  }
+    .area-carousel-container {
+        margin: 20px;
+        width: min(70vw, min(60vh, 90vh));
+    }
 
-  .carousel-item {
-    border-radius: 10px;
-  }
-
+    .area-carousel {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin: 20px 0;
+    }
 </style>

@@ -30,7 +30,7 @@
 }
 
 .dark-cloud {
-    width: 60%;
+    width: max(55vw, max(45vh, 25vh));
     display: flex;
     flex-direction: column;
     justify-content: center;

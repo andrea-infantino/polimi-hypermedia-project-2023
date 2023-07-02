@@ -2,14 +2,16 @@
     <NuxtLayout class="error-body">
         <main>
             <div class="error-area">
-                <img src="~/assets/img/magic.png" alt="Magic sparkles" class="magic">
-                <span class="error-404">404</span>  
-                <img src="~/assets/img/magic.png" alt="Magic sparkles" class="magic"><br>
+                <div class="error-header">
+                    <img src="~/assets/img/magic.png" alt="Magic sparkles" class="magic">
+                    <span class="error-404">404</span>  
+                    <img src="~/assets/img/magic.png" alt="Magic sparkles" class="magic">
+                </div>
                 <span class="error-text">Oops, something went wrong with your request!</span><br>                   
                 <div class="error-image-container">
                     <img src="~/assets/img/error_img.png" alt="Error image" class="error-img"><br>
                 </div>
-                <NuxtLink to ="/" class="return-homepage">RETURN TO HOMEPAGE</NuxtLink>
+                <NuxtLink to ="/"><button class="return-homepage">RETURN TO HOMEPAGE</button></NuxtLink>
             </div>
         </main>
     </NuxtLayout>
@@ -20,24 +22,37 @@
         background-color: #162f45;
     }
 
+    .error-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        overflow: hidden;
+    }
+
     .error-area {
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
     }
 
     .error-404 {
-        font-size: 15vh;
+        font-size: 14vh;
         font-weight: bold;
         color: ghostwhite;
     }
 
     .magic {
-        width: 10vh;
+        width: 25vh;
         height: auto;
-        padding: 5px 40px;
+        padding: 0 40px;
     }
 
     .error-text {
-        font-size: 5vh;
+        font-size: 4vh;
         font-weight: bold;
         opacity: 0.9;
         color: ghostwhite;
@@ -50,7 +65,8 @@
     .error-image-container {
         position: relative;
         overflow: hidden;
-        padding: 16vh;
+        width: 100%;
+        height: 32vh;
     }
 
     .error-img {

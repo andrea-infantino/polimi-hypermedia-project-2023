@@ -60,7 +60,30 @@
             </div>
         </div>
 
-        <hr class="separator " />
+        <div class="prj-section">
+            <div class="prj-info">
+                <div class="prj-title">
+                    Areas of investment
+                </div>
+                <div class="prj-text">
+                    We invest in early-stage startups with strong potential for growth and success. Our investment process involves rigorous due diligence, market analysis, and risk assessment to ensure that we select companies with the highest probability of success. We are committed to helping entrepreneurs succeed and achieve their goals. We believe that by working together, we can create a better future for all.<br>If you are curious about our investment, check our financied projects and areas of investment.
+                </div>
+                <div class="btn_container">
+                    <NuxtLink to="/projects"><button class="dark-btn">All projects</button></NuxtLink>
+                    <NuxtLink to="/all_areas"><button class="dark-btn">All areas</button></NuxtLink>
+                </div>
+            </div>
+        </div>
+
+        <div class="hp-div-carousel">
+            <div class="hp-carousel-title">
+                These are our most relevant projects right now:
+            </div>
+            <div class="hp-carousel-container">
+                <ProjectsCarousel :projectsArray="projects" class="hp-carousel"/>
+            </div>
+        </div>
+
 
         <div class="prtf-section">
             <img class="prtf-img" src="../assets/img/homepage/homepage_prtf.jpg" alt="Sketches of Harry Potter symbols" />
@@ -77,40 +100,6 @@
             </div>
         </div>
 
-
-        <hr class="separator " />
-
-        <div class="prj-section">
-            <div class="prj-info">
-                <div class="prj-title">
-                    Areas of investment
-                </div>
-                <div class="prj-text">
-                    We invest in early-stage startups with strong potential for growth and success. Our investment process involves rigorous due diligence, market analysis, and risk assessment to ensure that we select companies with the highest probability of success. We are committed to helping entrepreneurs succeed and achieve their goals. We believe that by working together, we can create a better future for all. We are dedicated to helping entrepreneurs succeed and achieve their goals.
-                    If you are curios about our investment, check our financied projects and areas of investment.
-                </div>
-                <div class="btn_container">
-                    <NuxtLink to="/projects"><button class="dark-btn">All projects</button></NuxtLink>
-                    <NuxtLink to="/all_areas"><button class="dark-btn">All areas</button></NuxtLink>
-                </div>
-            </div>
-        </div>
-
-        <hr class="separator" />
-
-        <div class="top-prj">
-            <div class="top-prj-title">
-                Our most famous projects:
-            </div>
-            
-            <HomepageCarousel 
-                :id1="projects[0].id"
-                :id2="projects[1].id"
-                :id3="projects[2].id" 
-                :id4="projects[3].id"
-                :id5="projects[4].id" />
-        </div>
-
     </main>
 </template>
 
@@ -123,7 +112,7 @@
                 projects
             }
         },
-        
+
         methods: {
             scrollDown() {
                 const elem = this.$refs.welcome
@@ -143,14 +132,6 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-    }
-
-    .top-prj-title {
-        font-size: min(6vw, min(5vh, 8vh));
-        font-weight: bold;
-        min-width: 200px;
-        margin: 50px 0;
-        text-align: center;
     }
 
     .hmpg-header {
@@ -186,7 +167,7 @@
         justify-content: center;
         box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
         color: black;
-        width: 80vw;
+        width: max(80vw, max(45vh, 25vh));
         margin: -8vh 0 60px;
         background-color: #E8EEF1;
     }
@@ -243,7 +224,6 @@
         flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
-        width: 100%;
         padding: 50px 0;
     }
 
@@ -266,7 +246,9 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        align-content: center;
         overflow-x: hidden;
+        width: 100%;
     }
 
     .team-img {
@@ -314,7 +296,7 @@
         justify-content: space-evenly;
         align-items: center;
         width: 100%;
-        margin: 50px;
+        margin: 50px 50px 0;
     }
 
     .prj-info {
@@ -323,7 +305,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;;
-        padding: 30px 10px;
+        padding: 70px 10px;
         color: black;
         background-color: #fff6f6e3;
     }
@@ -331,7 +313,6 @@
     .prj-title {
         font-size: min(6vw, min(5vh, 8vh));
         font-weight: bold;
-        margin: 20px;
     }
 
     .prj-text {
@@ -343,6 +324,36 @@
     .dark-btn, .light-btn {
         margin-top: 10px;
         font-size: min(3.5vw, min(3vh, 6vh));
+    }
+
+    .hp-div-carousel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 60px 0;
+        margin-bottom: 20px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .hp-carousel-title {
+        font-size: min(5vw, min(4vh, 7vh));
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .hp-carousel-container {
+        margin: 20px;
+        width: min(70vw, min(60vh, 90vh));
+    }
+
+    .hp-carousel {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin: 20px 0;
     }
     
 </style>

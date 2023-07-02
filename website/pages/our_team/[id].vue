@@ -21,7 +21,7 @@
               <span class="person-role">{{ person.role }}</span>
               <hr class="separator" />
 
-              <div><strong>Joined</strong> &emsp; {{ person.hiring_date }}</div> 
+              <div class="content-label">Joined &emsp; {{ person.hiring_date }}</div> 
               
               <span> <div class="content-label">E-Mail:</div>
                 <nuxt-link class="small-transparent-btn" :to="`mailto:${person.email}`">&#9993;&emsp;{{ person.email }}</nuxt-link>
@@ -56,41 +56,23 @@
     
     <div class="person-projects-container">    
       
-      <div class="supervised-projects-container" v-if="supervised_proj.length!=0">
-          <div class="supervised-title">As supervisor:</div>
-            <v-carousel v-if="supervised_proj.length > 1"
-              hide-delimiter-background
-              height="400"
-              color="blue"
-            >  
-              <v-carousel-item v-for="project of supervised_proj">
-                <NuxtLink :to="`/projects/${project.id}`">
-                  <v-img width="700" height="700" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" />
-                </NuxtLink>
-              </v-carousel-item>
-            </v-carousel>
-            <NuxtLink style="margin: -73px 0;" v-else-if="supervised_proj.length == 1" :to="`/projects/${supervised_proj[0].id}`">
-              <v-img width="545" height="545" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${supervised_proj[0].id}.jpg`" />
-            </NuxtLink>
-      </div>
+      <div class="team-div-carousel">
+            <div class="team-carousel-title">
+                As supervisor:
+            </div>
+            <div class="team-carousel-container">
+                <ProjectsCarousel :projectsArray="supervised_proj" class="team-carousel"/>
+            </div>
+        </div>
 
-      <div class="team-projects-container" v-if="team_proj.length!=0">
-        <div class="team-title">As team member:</div>
-        <v-carousel v-if="team_proj.length > 1"
-          hide-delimiter-background
-          height="400"
-          color="blue"
-        >  
-          <v-carousel-item v-for="project of team_proj">
-            <NuxtLink :to="`/projects/${project.id}`">
-              <v-img width="700" height="700" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" />
-            </NuxtLink>
-          </v-carousel-item>
-        </v-carousel>
-        <NuxtLink style="margin: -73px 0;" v-else-if="team_proj.length == 1" :to="`/projects/${team_proj[0].id}`">
-          <v-img width="545" height="545" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${team_proj[0].id}.jpg`" />
-        </NuxtLink>
-      </div>
+      <div class="team-div-carousel">
+            <div class="team-carousel-title">
+                As team member:
+            </div>
+            <div class="team-carousel-container">
+                <ProjectsCarousel :projectsArray="team_proj" class="team-carousel"/>
+            </div>
+        </div>
 
     </div>
 
@@ -148,9 +130,12 @@
 
 <style>
   .person-page {
-    justify-content: space-around;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     margin-top: 30px;
+    width: 100%;
+    overflow: hidden;
   }
 
   .person-button {
@@ -170,11 +155,11 @@
   .person-button:hover {
     color: black;
     background-color: ghostwhite;
-    box-shadow: 3px 5px 30px 0 rgba(172,172,172,.5);
+    box-shadow: 3px 5px 30px 0 rgba(172, 172,1 72, 0.5);
   }
 
   .person-button:active {
-    box-shadow: 3px 5px 30px 15px rgba(172,172,172,.6);
+    box-shadow: 3px 5px 30px 15px rgba(172, 172, 172, 0.6);
   }
 
   .person-button.disabled {
@@ -190,7 +175,7 @@
 
   .person-container {
     display: flex;
-    flex-direction: column !important;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-self: center;
@@ -201,8 +186,8 @@
 
   .person-img {
     border-radius: 5px;
-    height: 420px;
-    width: 420px;
+    height: min(60vw, min(60vh, 80vh));
+    width: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-image:url('~/assets/img/user_default_photo.jpg');
     background-size: cover;
@@ -220,49 +205,49 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 20px;
+    row-gap: 20px;
+    width: 100%;
   }
 
   .person-name-and-surname {
-    font-size: xx-large;
+    font-size: min(5vh, 8vw);
     font-weight: bold;
     color: black;
     background-color: ghostwhite;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5px;
-    width: fit-content;
     opacity: 0.9;
     align-self: center;
+    text-align: center;
     padding: 10px 30px;
     margin-top: 10px;
   }
 
   .person-role {
-    font-size: x-large;
+    font-size: min(3.5vh, 6.5vw);
     font-weight: bold;
     align-self: center;
   }
 
   .desc-container {
     overflow: hidden;
+    width: 100%;
   }
 
   .person-projects-title {
     font-size: xx-large;
     font-weight: bolder;
-    margin-top: 50px;
-    align-self: center;
+    margin: 40px 0;
+    text-align: center;
   }
 
   .person-projects-container {
-    padding: 30px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-self: center;
-    gap: 100px;
-    max-width: 90%;
+    width: 100%;
   }
 
   .supervised-projects-container, .team-projects-container {
@@ -283,6 +268,7 @@
   .content-label {
     font-weight: bold;
     margin-bottom: 5px;
+    font-size: min(2.2vh, 5.2vw);
   }
 
   .twitter-logo, .twitter-logo-hover, .instagram-logo, .instagram-logo-hover, .linkedin-logo, .linkedin-logo-hover {
@@ -302,4 +288,34 @@
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
   }
+
+  .team-div-carousel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 40px 0;
+        margin-bottom: 40px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .team-carousel-title {
+        font-size: min(4.5vw, min(3.5vh, 6.5vh));
+        text-align: center;
+    }
+
+    .team-carousel-container {
+        margin: 20px;
+        width: min(70vw, min(60vh, 90vh));
+    }
+
+    .team-carousel {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin: 20px 0;
+    }
+
 </style>

@@ -80,10 +80,11 @@
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
+        gap: 10px
     }
 
     .rights {
-        padding-top: 10px;
+        margin-top: 10px;
         font-size: 13px;
         color: black;
     }
