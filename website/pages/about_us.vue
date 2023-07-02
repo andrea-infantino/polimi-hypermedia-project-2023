@@ -19,7 +19,12 @@
 
             <section class="white-cloud">
                 <div class="white-cloud-title">Partnerships</div>
-                <p class="white-cloud-text">Partnerships are at the heart of our venture capital approach at Wizarding Ventures. We recognize the power of collaboration and believe that by working closely with entrepreneurs, investors, and industry experts, we can achieve greater success. We foster strong, long-term relationships built on trust, transparency, and shared goals. Our partnerships extend beyond capital investment, as we actively engage with our portfolio companies, providing strategic guidance, operational support, and access to our extensive network. Through these collaborative efforts, we aim to create a synergistic ecosystem where innovative ideas flourish, businesses thrive, and transformative impact is realized. Together, we can unlock the full potential of visionary startups and drive lasting value for all stakeholders involved.</p>
+                <div class="multimedia-cloud">
+                    <p class="white-cloud-text">Partnerships are at the heart of our venture capital approach at Wizarding Ventures. We recognize the power of collaboration and believe that by working closely with entrepreneurs, investors, and industry experts, we can achieve greater success. We foster strong, long-term relationships built on trust, transparency, and shared goals. Our partnerships extend beyond capital investment, as we actively engage with our portfolio companies, providing strategic guidance, operational support, and access to our extensive network. Through these collaborative efforts, we aim to create a synergistic ecosystem where innovative ideas flourish, businesses thrive, and transformative impact is realized. Together, we can unlock the full potential of visionary startups and drive lasting value for all stakeholders involved.</p>
+                    <div class="au-video-container">
+                        <iframe src="https://www.youtube.com/embed/X2RzASP6cbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="au-video"></iframe>
+                    </div>
+                </div>
                 <div class="btn-container">
                     <NuxtLink id="to_most_relevant_projects" to="/most_relevant_projects"><button class="dark-btn">See our top projects</button></NuxtLink>
                 </div>
@@ -78,5 +83,37 @@
     .btn-container {
         text-align: center;
         margin-top: 20px;
+    }
+
+    .multimedia-cloud {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .multimedia-cloud {
+            flex-direction: column;
+        }
+    }
+
+    .au-video-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 36vh;
+        float: right;
+    }
+
+    .au-video {
+        border-radius: 10px;
+        margin: 10px;
+        width: min(80vw, 59vh);
+        height: min(50vw, 34vh);
+        box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.2);
     }
 </style>

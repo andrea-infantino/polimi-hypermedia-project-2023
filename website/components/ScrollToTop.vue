@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div v-if="showButton" @click="scrollToTop" class="scroll-to-top-btn" role="button" aria-label="Scroll to top button">&#8679;</div>
+    <transition name="slide-up">
+      <div v-if="showButton" @click="scrollToTop" class="scroll-to-top-btn" role="button" aria-label="Scroll to top button">&#8679;</div>
+    </transition>
   </div>
 </template>
 
@@ -13,12 +15,11 @@ export default {
   },
 
   methods: {
-    
     scrollToTop() {
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
-      })
+      });
     },
 
     handleScroll() {
@@ -51,12 +52,12 @@ export default {
     border: 3px solid #1E3D58;
   }
 
-  .scroll-to-top-btn:hover {
-    font-weight: bold;
-    box-shadow: 3px 5px 10px 0 rgba(172,172,172,.5);
+  .slide-up-enter, .slide-up-leave-to {
+    opacity: 0;
+    transform: translateY(150%);
   }
 
-  .scroll-to-top-btn:active {
-    box-shadow: 3px 5px 10px 10px rgba(172,172,172,.5);
+  .slide-up-enter-active, .slide-up-leave-active {
+    transition: all 0.2s ease-in-out;
   }
 </style>
