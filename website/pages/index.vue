@@ -323,5 +323,5 @@
     .dark-btn, .light-btn {
         margin-top: 10px;
         font-size: min(3.5vw, min(3vh, 6vh));
-    }
+    }    
 </style>

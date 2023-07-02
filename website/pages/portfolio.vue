@@ -57,6 +57,8 @@
 <script setup>
     //get the most relevant project
     const { data: Projects } = await useFetch('/api/portfolio');
+
+    //split the projects so we can display the first one differently
     const first = Projects.value[0];
 
     //Search Engine Optimization

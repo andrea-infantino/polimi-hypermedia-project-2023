@@ -35,14 +35,14 @@
                         <img src="../assets/img/logo.png" class="logo-mobile" alt="Company logo" @click="toggleMobileNav" />
                     </NuxtLink>
                     <hr class="separator-mobile" />
-                    <li><NuxtLink @click="toggleMobileNav" class="landmark" to="/most_relevant_projects">Most Relevant Projects</NuxtLink></li>
-                    <li><NuxtLink @click="toggleMobileNav" class="landmark" to="/portfolio">Portfolio</NuxtLink></li>
-                    <li><NuxtLink @click="toggleMobileNav" class="landmark" to="/projects">Projects</NuxtLink></li>
-                    <li><NuxtLink @click="toggleMobileNav" class="landmark" to="/projects_by_area">Projects By Area</NuxtLink></li>
-                    <li><NuxtLink @click="toggleMobileNav" class="landmark" to="/all_areas">Areas</NuxtLink></li>
-                    <li><NuxtLink @click="toggleMobileNav" class="landmark" to="/our_team">Our Team</NuxtLink></li>
-                    <li><NuxtLink @click="toggleMobileNav" class="landmark" to="/about_us">About Us</NuxtLink></li>
-                    <li><NuxtLink @click="toggleMobileNav" class="landmark" to="/contacts">Contacts</NuxtLink></li>
+                    <li><NuxtLink @click="toggleMobileNav" class="landmark-mobile" to="/most_relevant_projects">Most Relevant Projects</NuxtLink></li>
+                    <li><NuxtLink @click="toggleMobileNav" class="landmark-mobile" to="/portfolio">Portfolio</NuxtLink></li>
+                    <li><NuxtLink @click="toggleMobileNav" class="landmark-mobile" to="/projects">Projects</NuxtLink></li>
+                    <li><NuxtLink @click="toggleMobileNav" class="landmark-mobile" to="/projects_by_area">Projects By Area</NuxtLink></li>
+                    <li><NuxtLink @click="toggleMobileNav" class="landmark-mobile" to="/all_areas">Areas</NuxtLink></li>
+                    <li><NuxtLink @click="toggleMobileNav" class="landmark-mobile" to="/our_team">Our Team</NuxtLink></li>
+                    <li><NuxtLink @click="toggleMobileNav" class="landmark-mobile" to="/about_us">About Us</NuxtLink></li>
+                    <li><NuxtLink @click="toggleMobileNav" class="landmark-mobile" to="/contacts">Contacts</NuxtLink></li>
                     <li @click="toggleMobileNav" class="close-cross">&#10006;</li>
                 </ul>
             </transition>
@@ -270,21 +270,42 @@
         opacity: 1;
     }
 
+    .landmark, .landmark-mobile {
+        color: black;
+        padding: 0 10px;
+        display: inline-block;
+        transition: 0.3s;
+    }
+
     .landmark {
-      color: black;
-      padding: 0 10px;
-      display: inline-block;
-      transition: 0.3s;
+        font-size: min(2.7vw, min(2.1vh, 3.7vh));
     }
 
-    .landmark:hover {
-          color: #1E3D58;
-          text-decoration: underline;
-          text-underline-offset: 6px;
-          transform: translateY(-5px);
+    .landmark:hover, .landmark-mobile:hover {
+        color: #1E3D58;
+        transform: translateY(-5px);
     }
 
-    .landmark:active {
-          transform: scale(0.95);
+    .landmark-mobile:hover {
+        text-decoration: underline;
+        text-underline-offset: 6px;
     }
+
+    .landmark:active, .landmark-mobile:active {
+        transform: scale(0.95);
+    }
+
+    .landmark::after {
+        content: '';
+        width: 0px;
+        height: 2px;
+        display: block;
+        background: #1E3D58;
+        transition: all 0.3s;
+    }
+
+    .landmark:hover::after {
+        width: 100%;
+    }
+
 </style>

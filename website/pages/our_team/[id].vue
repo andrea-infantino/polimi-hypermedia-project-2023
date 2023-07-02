@@ -56,7 +56,7 @@
     
     <div class="person-projects-container">    
       
-      <div class="team-div-carousel">
+      <div v-if="supervised_proj.length!=0" class="team-div-carousel">
             <div class="team-carousel-title">
                 As supervisor:
             </div>
@@ -65,7 +65,7 @@
             </div>
         </div>
 
-      <div class="team-div-carousel">
+      <div v-if="team_proj.length!=0" class="team-div-carousel">
             <div class="team-carousel-title">
                 As team member:
             </div>
@@ -250,6 +250,8 @@
     justify-content: center;
     align-self: center;
     width: 100%;
+    margin-bottom: 3vw;
+    background-color: rgba(0, 0, 0, 0.4);
   }
 
   .supervised-projects-container, .team-projects-container {

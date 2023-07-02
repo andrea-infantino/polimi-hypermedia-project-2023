@@ -15,6 +15,7 @@
     font-size: min(5vw, min(4vh, 7vh));
     font-weight: bold;
     text-align: center;
+    margin: 0 5px;
 }
 
 .hp-carousel-container {
@@ -33,13 +34,12 @@
 .team-div-carousel {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width: 100%;
-    padding: 40px 0;
-    margin-bottom: 40px;
+    width: 50%;
+    min-width: 500px;
+    margin: 2vw 0;
     color: white;
-    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .team-carousel-title {
@@ -48,7 +48,7 @@
 }
 
 .team-carousel-container {
-    margin: 20px;
+    margin: 2vw;
     width: min(70vw, min(60vh, 90vh));
 }
 
@@ -56,7 +56,7 @@
     width: 100%;
     height: auto;
     border-radius: 10px;
-    margin: 20px 0;
+    margin: 2vw 0;
 }
 
 /* Area carousel */

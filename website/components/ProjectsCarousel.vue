@@ -1,6 +1,6 @@
 <template>
   
-  <v-carousel v-if="projectsArray.length > 1"
+  <v-carousel v-if="projectsArray && projectsArray.length > 1"
     cycle interval="3000"
     hide-delimiter-background
     height="auto"
@@ -17,7 +17,7 @@
   </v-carousel>
 
 
-  <div v-else>
+  <div v-else="projectsArray && projectsArray.length === 1">
     <NuxtLink :to="`/projects/${projectsArray[0].id}`">
       <div class="single-proj">
       <v-img :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${projectsArray[0].id}.jpg`" class="carousel-img"/>
