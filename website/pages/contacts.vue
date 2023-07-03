@@ -32,6 +32,16 @@
             </div>
         </div>
 
+        <div class="form-cnt">
+            <div class="form-description">
+                <div class="form-title">Send us a message</div><br>
+                <div class="form-text">Are you interested in partecipating?<br>Do you have some particular question?<br>Do not hesitate to contact us by compiling this form!</div>
+            </div>
+            <div class="form">
+                <ContactForm></ContactForm>
+            </div>
+        </div>
+
     </main>
 </template>
   
@@ -49,7 +59,7 @@
 </script>
 
 <style scoped>
-    .map, .contacts-info {
+    .map, .contacts-info, .form-cnt {
         padding: 20px;
         justify-content: center;
         margin: 2% 5%;
@@ -73,7 +83,7 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
-    .map-description, .mail-number {
+    .map-description, .mail-number, .form-description {
         text-align: center;
         margin: auto;
         color: white;
@@ -85,11 +95,11 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
-    .small-transparent-btn, .address {
+    .small-transparent-btn, .address, .form-text {
         font-size: 3vh;
     }
 
-    .text-1, .text-2 {
+    .text-1, .text-2, .form-title {
         font-weight: bold;
         font-size: 5vh;
         margin-top: 15px;
@@ -108,5 +118,8 @@
 
     .twitter-logo-footer:hover, .instagram-logo-footer:hover, .linkedin-logo-footer:hover {
         transform: scale(1.2);
+    }
+    .form {
+        width: 700px;
     }
 </style>
