@@ -67,20 +67,20 @@
             let desc_par3 = this.area.desc_col3;
             let descriptions = [];
 
-            // Check if DOMParser is available
+            //check if DOMParser is available
             if (typeof DOMParser !== 'undefined') {
-              // Use DOMParser to parse the HTML tags and create a DOM object
+              //use DOMParser to parse the HTML tags and create a DOM object
               let parser = new DOMParser();
               let parsedDescription1 = parser.parseFromString(desc_par1, "text/html");
               let parsedDescription2 = parser.parseFromString(desc_par2, "text/html");
               let parsedDescription3 = parser.parseFromString(desc_par3, "text/html");
 
-              // Push the innerHTML of the parsed DOM objects to the descriptions array
+              //push the innerHTML of the parsed DOM objects to the descriptions array
               descriptions.push(parsedDescription1.body.innerHTML);
               descriptions.push(parsedDescription2.body.innerHTML);
               descriptions.push(parsedDescription3.body.innerHTML);
             } else {
-              // Fallback for server-side rendering. Render the texts as is
+              //fallback for server-side rendering, render the texts as is
               descriptions.push(desc_par1);
               descriptions.push(desc_par2);
               descriptions.push(desc_par3);

@@ -34,25 +34,18 @@
 </template>
   
 <script setup>
-  const { data: areas } = await useFetch('/api/all_areas')  //get all areas
+  const { data: areas } = await useFetch('/api/all_areas'); //get all areas
 
   //truncate the area description to obtain a preview
   const truncatedAreaDescription = (areaDescription) => {
-    const truncatedWords = areaDescription.split(' ').slice(0, 50);
+    const truncatedWords = areaDescription.split(' ').slice(0, 55);
     let description = truncatedWords.join(' ') + "...";
-
-    if (typeof DOMParser !== 'undefined') {
-      let parser = new DOMParser();
-      let parsedDescription = parser.parseFromString(desc_col1, "text/html");
-      return parsedDescription.body.innerHTML;
-    } else {
       return description;
-    }
   };
 
   //Search Engine Optimization
-  const description = ref('In this page you will find all the areas of investment of our projects.')
-  const keywords = ref('Areas, Investments, Projects, All Areas')
+  const description = ref('In this page you will find all the areas of investment of our projects.');
+  const keywords = ref('Areas, Investments, Projects, All Areas');
 
   useHead({
       meta: [

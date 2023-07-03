@@ -8,7 +8,7 @@
             <div class="motto">
                 ❛I solemnly swear<br>I am up to no good❜
             </div>
-            <ScrollDownButton @click="scrollDown" />
+            <ScrollDownButton @click="scrollDown" class="scroll-down-button"/>
         </div>
 
         <div ref="welcome" class="welcome-section">
@@ -31,7 +31,7 @@
         <hr class="separator" />
 
         <div class="mission-section">
-            <img class="mission-img" src="../assets/img/homepage/homepage_mission.jpg" alt="The Marauder's Map image"/>
+            <img class="mission-img" src="../assets/img/homepage/homepage_mission.jpg" alt=""/>
             <div class="dark-cloud">
                 <div class="dark-cloud-title">
                     Our mission
@@ -89,7 +89,7 @@
 
 
         <div class="prtf-section">
-            <img class="prtf-img" src="../assets/img/homepage/homepage_prtf.jpg" alt="Sketches of Harry Potter symbols" />
+            <img class="prtf-img" src="../assets/img/homepage/homepage_prtf.jpg" alt="" />
             <div class="dark-cloud">
                 <div class="dark-cloud-title">
                     Our portfolio
@@ -118,10 +118,16 @@
 
         methods: {
             scrollDown() {
-                const elem = this.$refs.welcome
-                elem?.scrollIntoView({
-                    behavior: 'smooth'
-                })
+                const elem = this.$refs.welcome;
+                const offset = -120;
+                
+                if (elem) {
+                    const targetPos = elem.offsetTop + offset;
+                    window.scrollTo({
+                        top: targetPos,
+                        behavior: 'smooth'
+                    });
+                }
             }
         }
     }
