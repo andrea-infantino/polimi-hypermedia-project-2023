@@ -22,7 +22,7 @@
                 <div class="multimedia-cloud">
                     <p class="white-cloud-text">Partnerships are at the heart of our venture capital approach at Wizarding Ventures. We recognize the power of collaboration and believe that by working closely with entrepreneurs, investors, and industry experts, we can achieve greater success. We foster strong, long-term relationships built on trust, transparency, and shared goals. Our partnerships extend beyond capital investment, as we actively engage with our portfolio companies, providing strategic guidance, operational support, and access to our extensive network. Through these collaborative efforts, we aim to create a synergistic ecosystem where innovative ideas flourish, businesses thrive, and transformative impact is realized. Together, we can unlock the full potential of visionary startups and drive lasting value for all stakeholders involved.</p>
                     <div class="au-video-container">
-                        <iframe src="https://www.youtube.com/embed/X2RzASP6cbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="au-video"></iframe>
+                        <iframe src="https://www.youtube.com/embed/X2RzASP6cbA?cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="au-video"></iframe>
                     </div>
                 </div>
                 <div class="btn-container">

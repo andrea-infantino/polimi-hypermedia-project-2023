@@ -112,6 +112,10 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    padding: 3%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.5);
   }
 
   .prj-area-button {

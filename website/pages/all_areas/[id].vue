@@ -10,15 +10,17 @@
           <div class="area-header">
             <NuxtLink :to="isPreviousDisabled ? '#' : `/all_areas/${area.id-1}`" :class="{ 'disabled': isPreviousDisabled }" class="area-button" role="button" aria-label="Previous area button">
               &#8249;
-            </NuxtLink> 
-            <img class="full-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} logo`"/>
+            </NuxtLink>
+            <div class="full-area-img-container">
+              <img class="full-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} logo`"/>
+            </div>
             <NuxtLink :to="isNextDisabled ? '#' : `/all_areas/${area.id+1}`" :class="{ 'disabled': isNextDisabled }" class="area-button" role="button" aria-label="Next area button">
               &#8250;
             </NuxtLink> 
           </div>
 
           <div class="area-info">
-            <div v-html="renderedDescription" class="db-clouds"></div>
+            <div v-for="(description, index) in renderedDescriptions" :key="index" v-html="description" class="area-description"></div>
           </div>
 
           <div class="area-div-carousel">
@@ -59,21 +61,32 @@
         },
 
         computed: {
-          renderedDescription() {
-            let description = this.area.description;
+          renderedDescriptions() {
+            let desc_par1 = this.area.desc_col1;
+            let desc_par2 = this.area.desc_col2;
+            let desc_par3 = this.area.desc_col3;
+            let descriptions = [];
 
-            //check if DOMParser is available
+            // Check if DOMParser is available
             if (typeof DOMParser !== 'undefined') {
-              //use DOMParser to parse the HTML tags and create a DOM object
+              // Use DOMParser to parse the HTML tags and create a DOM object
               let parser = new DOMParser();
-              let parsedDescription = parser.parseFromString(description, "text/html");
-              
-              //return the innerHTML of the parsed DOM object
-              return parsedDescription.body.innerHTML;
+              let parsedDescription1 = parser.parseFromString(desc_par1, "text/html");
+              let parsedDescription2 = parser.parseFromString(desc_par2, "text/html");
+              let parsedDescription3 = parser.parseFromString(desc_par3, "text/html");
+
+              // Push the innerHTML of the parsed DOM objects to the descriptions array
+              descriptions.push(parsedDescription1.body.innerHTML);
+              descriptions.push(parsedDescription2.body.innerHTML);
+              descriptions.push(parsedDescription3.body.innerHTML);
             } else {
-              //fallback for server-side rendering. render the text as is
-              return description;
+              // Fallback for server-side rendering. Render the texts as is
+              descriptions.push(desc_par1);
+              descriptions.push(desc_par2);
+              descriptions.push(desc_par3);
             }
+
+            return descriptions;
           },
 
           isNextDisabled() {
@@ -110,16 +123,21 @@
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    gap: 50px;
     width: 80vw;
     margin-top: 30px;
+  }
+
+  .full-area-img-container {
+    padding: 2%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.5);
   }
   
   .full-area-img {
     display: flex;
     width: min(40vw, 40vh);
     height: auto;
-    margin: 2vw 5vw;
     justify-content: center;
   }
   
@@ -158,6 +176,5 @@
     padding: 3.3vw 4.3vw;
     margin: 30px 0px;
     border-radius: 10px;
-    white-space: pre-wrap;
   }
 </style>

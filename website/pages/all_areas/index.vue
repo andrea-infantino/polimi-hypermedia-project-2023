@@ -13,7 +13,7 @@
             <img class="preview-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} logo`"/>
             <div class="preview-area-info">
               <div class="preview-area-title">{{ area.name }}</div>
-              <div v-html="truncatedAreaDescription(area.description)" class="preview-area-description"></div>
+              <div v-html="truncatedAreaDescription(area.desc_col1)" class="preview-area-description"></div>
               <NuxtLink :to="`/all_areas/${area.id}`" aria-label="Area button" :title="`${area.name} area`">
                 <button class="dark-btn">
                   See the full description
@@ -21,7 +21,6 @@
               </NuxtLink>
             </div>
           </div>
-          <!--<SingleArea v-for = "area of areas" :id = "area.id" :name = "area.name" :link = "'/all_areas/' + area.id" />-->
         </div>
 
         <hr class="separator" />
@@ -39,13 +38,12 @@
 
   //truncate the area description to obtain a preview
   const truncatedAreaDescription = (areaDescription) => {
-    const words = areaDescription.substring(30).split(' ');
-    const truncatedWords = words.slice(0, 50);
+    const truncatedWords = areaDescription.split(' ').slice(0, 50);
     let description = truncatedWords.join(' ') + "...";
 
     if (typeof DOMParser !== 'undefined') {
       let parser = new DOMParser();
-      let parsedDescription = parser.parseFromString(description, "text/html");
+      let parsedDescription = parser.parseFromString(desc_col1, "text/html");
       return parsedDescription.body.innerHTML;
     } else {
       return description;
