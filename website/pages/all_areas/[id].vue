@@ -22,6 +22,7 @@
           <div class="area-info">
             <div v-for="(description, index) in renderedDescriptions" :key="index" v-html="description" class="area-description"></div>
           </div>
+          <!--<img class="area-decorative-img" :src="`../../assets/img/all_areas/${area.name}_1.jpg`" alt="">-->
 
           <div class="area-div-carousel">
             <div class="area-carousel-title">
@@ -129,9 +130,6 @@
 
   .full-area-img-container {
     padding: 2%;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.5);
   }
   
   .full-area-img {
@@ -177,4 +175,10 @@
     margin: 30px 0px;
     border-radius: 10px;
   }
+  
+  /*
+  .area-decorative-img {
+    width: 100%;
+    height: auto;
+  }*/
 </style>

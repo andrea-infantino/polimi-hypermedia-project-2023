@@ -8,23 +8,24 @@
 
         <div class="paragraphs">
             <div class="white-cloud">
+                <img class="prft1-img" src="../assets/img/portfolio/prtf1.jpg" alt="">
                 <p class="white-cloud-text">
-                Welcome to <strong>Wizarding Ventures</strong>' Portfolio Page. We are delighted to present our carefully curated selection of investments in innovative startups across a wide range of industries. Our venture capital firm is committed to supporting visionary entrepreneurs and transformative ideas that have the potential to reshape industries and drive positive change.<br>
-                Within our diverse portfolio, you will discover dynamic companies revolutionizing sectors such as technology, healthcare, renewable energies, education, transportation, and more. Each investment undergoes a rigorous evaluation process, considering factors such as market potential, scalability, and alignment with our core values.</p>
+                Welcome to <b>Wizarding Ventures</b>' Portfolio Page. We are delighted to present our carefully curated selection of investments in innovative startups across a wide range of industries. Our venture capital firm is committed to supporting <b>visionary entrepreneurs</b> and transformative ideas that have the potential to reshape industries and drive positive change.<br>
+                Within our diverse portfolio, you will discover dynamic companies revolutionizing sectors such as technology, healthcare, renewable energies, education, transportation, and more. Each investment undergoes a rigorous evaluation process, considering factors such as market potential, scalability, and alignment with our <b>core values</b>.</p>
             </div>
             
             <div class="white-cloud">
-                <img class="prft1-img" src="../assets/img/portfolio/prtf1.jpg" alt="">
+                <img class="prtf2-img" src="../assets/img/portfolio/prtf2.jpg" alt="">
                 <p class="white-cloud-text">
-                We take an active approach to supporting our portfolio companies, offering more than just capital. Our experienced team provides strategic guidance, industry insights, and valuable connections to help entrepreneurs navigate the challenges of scaling their businesses, accessing new markets, and maximizing their potential for success.<br>
-                At <strong>Wizarding Ventures</strong>, we believe in the power of entrepreneurship to create significant financial returns while making a lasting impact on society. Our investments are not only driven by financial considerations but also by our commitment to excellence, innovation, and sustainability. We seek out startups that are at the forefront of emerging trends and have the potential to address pressing global challenges.</p>
+                We take an active approach to supporting our portfolio companies, offering more than just capital. Our experienced team provides <b>strategic guidance</b>, industry insights, and valuable <b>connections</b> to help entrepreneurs navigate the challenges of scaling their businesses, accessing new markets, and maximizing their potential for success.<br>
+                At <b>Wizarding Ventures</b>, we believe in the power of <b>entrepreneurship</b> to create significant financial returns while making a lasting impact on society. Our investments are not only driven by financial considerations but also by our commitment to <b>excellence</b>, <b>innovation</b>, and <b>sustainability</b>. We seek out startups that are at the forefront of emerging trends and have the potential to address pressing global challenges.</p>
             </div>
 
             <div class="white-cloud">
-                <img class="prtf2-img" src="../assets/img/portfolio/prtf2.jpg" alt="">
+                <img class="prtf3-img" src="../assets/img/portfolio/prtf3.jpg" alt="">
                 <p class="white-cloud-text">
-                By investing in these pioneering ventures, we aim to contribute to the advancement of cutting-edge technologies, improve lives, and create sustainable value. Our portfolio represents a testament to our belief in the transformative potential of visionary ideas and the collective drive to shape a brighter future.<br>
-                Please note that due to the confidentiality of certain investments, not all companies may be listed on this public portfolio page. For more information about our full portfolio, investment opportunities, or partnership inquiries we invite you to <NuxtLink to="/contacts" class="contact-link-text">contact our team directly</NuxtLink>.</p>
+                By investing in these <b>pioneering ventures</b>, we aim to contribute to the advancement of cutting-edge technologies, improve lives, and create sustainable value. Our portfolio represents a testament to our belief in the transformative potential of <b>visionary ideas</b> and the collective drive to shape a brighter future.<br>
+                Moreover, our dedicated team of <b>experts</b> closely collaborates with our portfolio companies, offering strategic guidance and resources to nurture their growth and maximize their <b>impact</b>. For more information about our full portfolio, investment opportunities, or partnership inquiries we invite you to <NuxtLink to="/contacts" class="contact-link-text">contact our team directly</NuxtLink>.</p>
             </div>
 
             <div class="white-cloud">
@@ -84,7 +85,7 @@
         text-align: center;
     }
 
-    .prft1-img, .prtf2-img {
+    .prft1-img, .prtf2-img, .prtf3-img {
         float: right;
         margin-left: 30px;
         width: 13.5%;
@@ -93,10 +94,17 @@
         box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
     }
 
-    .prtf2-img {
+    .prft1-img {
         float: left;
         margin-right: 40px;
         margin-left: 0px;
-        width: 26.5%;
+        width: 20%;
+    }
+
+    .prtf3-img {
+        float: left;
+        margin-right: 40px;
+        margin-left: 0px;
+        width: 29%;
     }
 </style>
