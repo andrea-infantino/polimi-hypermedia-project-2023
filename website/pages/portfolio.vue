@@ -88,6 +88,7 @@
     .prft1-img, .prtf2-img, .prtf3-img {
         float: right;
         margin-left: 30px;
+        margin-bottom: 15px;
         width: 13.5%;
         height: auto;
         border-radius: 10px;

@@ -31,7 +31,7 @@
         <hr class="separator" />
 
         <div class="mission-section">
-            <img class="mission-img" src="../assets/img/homepage/homepage_mission.jpg" alt=""/>
+            <img class="mission-img" src="../assets/img/homepage/homepage_mission.gif" alt=""/>
             <div class="dark-cloud">
                 <div class="dark-cloud-title">
                     Our mission
@@ -89,7 +89,7 @@
 
 
         <div class="prtf-section">
-            <img class="prtf-img" src="../assets/img/homepage/homepage_prtf.jpg" alt="" />
+            <img class="prtf-img" src="../assets/img/homepage/homepage_prtf.webp" alt="" />
             <div class="dark-cloud">
                 <div class="dark-cloud-title">
                     Our portfolio
@@ -243,10 +243,14 @@
         width: 25%;
         min-width: 150px;
         height: auto;
-        border-radius: 10px;
         margin: 3vh;
+    }
+
+    .prtf-img {
+        border-radius: 10px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     }
+
 
     .team-section {
         display: flex;

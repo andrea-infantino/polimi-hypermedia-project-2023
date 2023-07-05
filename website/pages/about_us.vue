@@ -123,6 +123,7 @@
     .au-vision-img, .au-partnership-img, .au-activities-img {
         float: left;
         margin-right: 40px;
+        margin-bottom: 15px;
         width: 16%;
         height: auto;
         border-radius: 10px;
