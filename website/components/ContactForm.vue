@@ -6,6 +6,7 @@
          label="E-mail"
          variant="solo"
          autocomplete="email"
+         placeholder="example@mail.com"
         ></v-text-field>
   
         <v-textarea class="form-elem"

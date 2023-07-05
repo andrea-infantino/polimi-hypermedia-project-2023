@@ -31,7 +31,7 @@
                 <div class="multimedia-cloud">
                     <p class="white-cloud-text">Our team at Wizarding Ventures is a collective of <b>experienced professionals</b> passionate about supporting the growth and success of <b>startups</b>. With diverse backgrounds and expertise spanning various industries, we bring a wealth of knowledge and insights to the table. Our team members are not only skilled investors but also <b>strategic</b> thinkers, mentors, and connectors. We work closely with entrepreneurs, providing hands-on guidance, helping them navigate challenges, and unlocking opportunities for growth. Our collaborative and <b>dynamic approach</b> fosters a supportive and empowering environment where innovative ideas can thrive. Together, we are dedicated to making a meaningful <b>impact</b> in the venture capital landscape and shaping a future of innovation and entrepreneurship.</p>
                     <div class="au-video-container">
-                        <iframe src="https://www.youtube.com/embed/X2RzASP6cbA?cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="au-video"></iframe>
+                        <iframe src="https://www.youtube.com/embed/X2RzASP6cbA?cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="au-video" aria-label="Team video"></iframe>
                     </div>
                 </div>
                 <div class="btn-container">

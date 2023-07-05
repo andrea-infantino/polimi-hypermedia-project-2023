@@ -9,14 +9,7 @@
             </div>
             
             <ul v-if="!mobile" class="navigation">
-                <li><NuxtLink class="landmark" to="/most_relevant_projects">Most Relevant Projects</NuxtLink></li>
-                <li><NuxtLink class="landmark" to="/portfolio">Portfolio</NuxtLink></li>
-                <li><NuxtLink class="landmark" to="/projects">Projects</NuxtLink></li>
-                <li><NuxtLink class="landmark" to="/projects_by_area">Projects By Area</NuxtLink></li>
-                <li><NuxtLink class="landmark" to="/all_areas">Areas</NuxtLink></li>
-                <li><NuxtLink class="landmark" to="/our_team">Our Team</NuxtLink></li>
-                <li><NuxtLink class="landmark" to="/about_us">About Us</NuxtLink></li>
-                <li><NuxtLink class="landmark" to="/contacts">Contacts</NuxtLink></li>
+                <li v-for="link in links" :key="link.path"><NuxtLink class="landmark" :to="link.path">{{ link.title }}</NuxtLink></li>
             </ul>   
 
             <div class="icon">
@@ -35,14 +28,7 @@
                         <img src="../assets/img/logo.png" class="logo-mobile" alt="Company logo" @click="toggleMobileNav" />
                     </NuxtLink>
                     <hr class="separator-mobile" />
-                    <li><NuxtLink @click="toggleMobileNav" class="landmark-mobile" to="/most_relevant_projects">Most Relevant Projects</NuxtLink></li>
-                    <li><NuxtLink @click="toggleMobileNav" class="landmark-mobile" to="/portfolio">Portfolio</NuxtLink></li>
-                    <li><NuxtLink @click="toggleMobileNav" class="landmark-mobile" to="/projects">Projects</NuxtLink></li>
-                    <li><NuxtLink @click="toggleMobileNav" class="landmark-mobile" to="/projects_by_area">Projects By Area</NuxtLink></li>
-                    <li><NuxtLink @click="toggleMobileNav" class="landmark-mobile" to="/all_areas">Areas</NuxtLink></li>
-                    <li><NuxtLink @click="toggleMobileNav" class="landmark-mobile" to="/our_team">Our Team</NuxtLink></li>
-                    <li><NuxtLink @click="toggleMobileNav" class="landmark-mobile" to="/about_us">About Us</NuxtLink></li>
-                    <li><NuxtLink @click="toggleMobileNav" class="landmark-mobile" to="/contacts">Contacts</NuxtLink></li>
+                    <li v-for="link in links"><NuxtLink @click="toggleMobileNav" class="landmark-mobile" :to="link.path">{{ link.title }}</NuxtLink></li>
                     <li @click="toggleMobileNav" class="close-cross">&#10006;</li>
                 </ul>
             </transition>
@@ -62,6 +48,16 @@
                 mobile: null,
                 mobileNav: null,
                 windowWidth: null,
+                links: [
+                    { title: 'Most Relevant Projects', path: '/most_relevant_projects' },
+                    { title: 'Portfolio', path: '/portfolio' },
+                    { title: 'Projects', path: '/projects' },
+                    { title: 'Projects By Area', path: '/projects_by_area' },
+                    { title: 'Areas', path: '/all_areas' },
+                    { title: 'Our Team', path: '/our_team' },
+                    { title: 'About Us', path: '/about_us' },
+                    { title: 'Contacts', path: '/contacts' },
+                ],
             };
         },
 

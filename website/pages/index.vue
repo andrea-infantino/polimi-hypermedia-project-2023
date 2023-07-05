@@ -55,7 +55,7 @@
                     We are a team of passionate entrepreneurs, investors, and industry experts who are committed to supporting the next generation of innovators. Our team has extensive experience in a wide range of industries, including technology, healthcare, renewable energies, education, transportation, and more. We are dedicated to leveraging our expertise and resources to help entrepreneurs succeed and achieve their goals. Our team is also committed to giving back to the community and making a positive impact on society. We believe that by working together, we can create a better future for all.
                 </div>
                 <div class="hp-video-container">
-                    <iframe src="https://www.youtube.com/embed/fFGS4zZWGoA?cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="hp-video"></iframe>
+                    <iframe src="https://www.youtube.com/embed/fFGS4zZWGoA?cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="hp-video" label="Team video"></iframe>
                 </div>
                 <div class="btn_container">
                     <NuxtLink to="/our_team"><button class="dark-btn">Meet our team</button></NuxtLink>
