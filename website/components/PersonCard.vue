@@ -1,7 +1,7 @@
 <template>
     <NuxtLink :to = "link" >
         <div class="card">
-            <img class="card-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/People/${id}.jpg`" :alt="`${name} ${surname}'s photo`" />
+            <img class="person-card-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/People/${id}.jpg`" :alt="`${name} ${surname}'s photo`" />
             <span class="name_surname">{{ surname }} {{ name }}</span>
             <span class="role">{{ role }}</span>
         </div>
@@ -13,6 +13,15 @@
 </script>
 
 <style>
+    .person-card-img {
+        border-radius: 5px;
+        margin: auto;
+        vertical-align: middle;
+        height: 300px;
+        width: 300px;
+        margin-bottom: 10px;
+        background-size: cover;
+    }
     .name_surname {
         font-weight: bold;
         font-size: larger;

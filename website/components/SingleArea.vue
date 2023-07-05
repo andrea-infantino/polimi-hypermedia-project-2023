@@ -1,7 +1,7 @@
 <template>
     <NuxtLink :to = "link">
         <div class="area">
-            <img class="card-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${id}.png`" :alt="`${name} area symbol`"/>
+            <img class="area-card-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${id}.png`" :alt="`${name} area symbol`"/>
             <span class="area-name">{{ name }}</span>
         </div>
     </NuxtLink>
@@ -12,7 +12,7 @@
 </script>
 
 <style>
-    .card-img {
+    .area-card-img {
         display: flex;
         border-radius: 5px;
         margin: auto;
@@ -24,7 +24,7 @@
         transition: 0.5s;
     }
 
-    .area:hover .card-img {
+    .area:hover .area-card-img {
         filter: invert(1);
         transition: 0.5s;
     }
