@@ -9,8 +9,7 @@
         ></v-text-field>
   
         <v-textarea class="form-elem"
-         no-resize="true"
-         single-line="false"
+         
          v-model="text"
          :rules="text_rules"
          label="Text Message"
@@ -20,6 +19,7 @@
         <v-btn class="form-elem"
          :disabled="!isFormValid"
          type="submit"
+         @click="submit()"
         >
             submit
             <v-dialog
@@ -27,14 +27,24 @@
              width="auto"
              activator="parent"
             >
-                <v-card>
-                    <div class="dialog-div">
-                    Message successfullty sent!
+                <v-card v-if="ack!=0" class="dialog-card">
+                    <div v-if="ack==1" style="color: green;" class="dialog-div">
+                        Message successfully sent!
+                    </div>
+                    <div v-else-if="ack==-1" style="color: red" class="dialog-div">
+                        Ooooops! Something went wrong. Try again.
                     </div>
                     <v-card-actions>
-                    <v-btn class="dialog-btn" color="primary" block @click="dialog = false;email = '';text = '';">Ok</v-btn>
+                    <v-btn v-if="ack!=0" class="dialog-btn" color="primary" block @click="dialog = false;ack=0">Ok</v-btn>
                     </v-card-actions>
                 </v-card>
+                <v-progress-circular
+                     v-else
+                     :size="100"
+                     :width="8"
+                     indeterminate
+                     color="white"
+                ></v-progress-circular>
             </v-dialog>
         </v-btn>
     </v-form>
@@ -50,7 +60,7 @@ export default {
                 if (!value)
                     return 'You must enter an E-mail.';
 
-                if (/^[a-z.-]+@[a-z.-]+\.[a-z]+$/i.test(value))
+                if (/^[0-9a-z.-]+@[0-9a-z.-]+\.[a-z]+$/i.test(value))
                     return true;
                 
                 return 'Invalid E-mail! Insert a valid one.'
@@ -65,15 +75,37 @@ export default {
             }
         ],
         dialog: false,
-        isFormValid: false
+        isFormValid: false,
+        ack: 0
     }),
 
     methods: {
-        async submit (event) {
-            /*
-            const results = await event;
-            SAVE SENT MESSAGE
-            */
+        async submit () {
+            let temp = 0;
+            try {
+                await $fetch('/api/contactForm', {
+                    method: "POST",
+                    body: {
+                        email: this.email,
+                        message: this.text
+                    }
+                })
+                
+                temp = 1;
+            }
+            catch{
+                temp = -1;
+            }
+            const self = this;
+            setTimeout(function() {
+                self.$nextTick(function() {
+                    self.ack = temp
+                    if(temp==1) {
+                        self.email = null;
+                        self.text = null;
+                    }
+                })
+            }, 2000);
         }
     }
 }
