@@ -8,9 +8,11 @@
 
         <div class="contacts-info">
             <div class="mail-number">
-                <div class="text-1">Contact us for more information<br>about our investments</div><br>
-                <a class="small-transparent-btn" href="tel:123-456-7890">&#9742;&emsp;123-456-7890</a><br>
-                <a class="small-transparent-btn" href="tel:123-456-7891">&#9742;&emsp;123-456-7891</a><br><br>
+                <div class="text-1">Contact us for more information<br>about our investments</div>
+                <div class="numbers">
+                    <a class="small-transparent-btn" href="tel:123-456-7890">&#9742;&emsp;123-456-7890</a>
+                    <a class="small-transparent-btn" href="tel:123-456-7891">&#9742;&emsp;123-456-7891</a>
+                </div>
                 <a class="small-transparent-btn" href="mailto:info@webwizards.com">
                     &#9993;&emsp;<strong>info@webwizards.com</strong></a>
                 <div class="social-media">
@@ -81,6 +83,14 @@
         height: auto;
         border-radius: 10px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .numbers{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: fit-content;
+        margin: 30px auto;
     }
 
     .map-description, .mail-number, .form-description {
