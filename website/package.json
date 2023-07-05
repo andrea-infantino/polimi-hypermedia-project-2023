@@ -14,7 +14,7 @@
     "nuxt": "^3.5.0"
   },
   "dependencies": {
-    "@mdi/font": "^7.2.96",
+    "@fortawesome/fontawesome-free": "^6.4.0",
     "material-design-icons-iconfont": "^6.7.0",
     "sass": "^1.63.6",
     "vuetify": "^3.3.6"

@@ -6,7 +6,7 @@ export default defineNuxtConfig({
         '~/assets/css/clouds.css',
         '~/assets/css/buttons.css',
         '~/assets/css/carousels.css',
-        '@mdi/font/css/materialdesignicons.css'
+        '@fortawesome/fontawesome-free/css/all.css'
     ],
 
     build: {
