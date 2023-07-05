@@ -96,10 +96,10 @@
       const team_proj = ref([])
 
       for (let project of person.Projects) {
-          for(let entry of person.Partecipations) {
-              if (project.id == entry.project_id && entry.is_project_manager) {
+          for(let entry of person.Participations) {
+              if (project.id == entry.project_id && entry.is_project_supervisor) {
                   supervised_proj.value.push(project)
-              } else if (project.id == entry.project_id && !entry.is_project_manager) {
+              } else if (project.id == entry.project_id && !entry.is_project_supervisor) {
                   team_proj.value.push(project)
               }
           }

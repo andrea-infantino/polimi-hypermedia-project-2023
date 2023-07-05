@@ -81,10 +81,10 @@
           const team = ref([])
           const supervisor = ref({})
 
-          for(let entry of project.Partecipations) {
+          for(let entry of project.Participations) {
               for(let person of project.People) {
                   if(person.id == entry.person_id) {
-                      if(entry.is_project_manager == true) supervisor.value = person
+                      if(entry.is_project_supervisor == true) supervisor.value = person
                       else team.value.push(person)
                   }
               }

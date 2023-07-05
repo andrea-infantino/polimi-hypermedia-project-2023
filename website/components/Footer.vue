@@ -94,7 +94,7 @@
     }
 
     #to_privacy_policy:hover, #to_cookie_policy:hover {
-        color: #1E3D58;
+        color: #057DCD;
         text-decoration: underline;
     }
 </style>
