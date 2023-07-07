@@ -18,7 +18,7 @@
 
 
   <div v-else="projectsArray && projectsArray.length === 1">
-    <NuxtLink :to="`/projects/${projectsArray[0].id}`" :aria-label="`Link to ${project.title} page`">
+    <NuxtLink :to="`/projects/${projectsArray[0].id}`" :aria-label="`Link to ${projectsArray[0].title} page`">
       <div class="single-proj">
       <v-img :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${projectsArray[0].id}.jpg`" class="carousel-img"/>
       </div>
