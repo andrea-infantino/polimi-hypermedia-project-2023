@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink :to = "link" >
+    <NuxtLink :to = "link" :aria-label="`Link to ${title} page`">
         <div class="card">
             <div class="prj-card-img-container" v-if="img_bool===true">
                 <img class="project_img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${id}.jpg`" :alt="`${title}'s logo`" />

@@ -20,7 +20,7 @@
           </div>
 
           <div class="area-info">
-            <div v-for="(description, index) in renderedDescriptions" :key="index" v-html="description" class="area-description"></div>
+            <div v-for="col of desc_columns" v-html="col" class="area-description"></div>
           </div>
           <!--<img class="area-decorative-img" :src="`../../assets/img/all_areas/${area.name}_1.jpg`" alt="">-->
 
@@ -49,6 +49,8 @@
             const description = ref('In this page you will find all the information related to ' + area.name + '.')
             const keywords = ref('Area of Investment, ' + area.name)
 
+            const desc_columns = [area.desc_col1, area.desc_col2, area.desc_col3]
+
             useHead({
               meta: [
                 { name: 'description', content: description },
@@ -57,39 +59,11 @@
             })
 
             return {
-                area, numOfAreas
+                area, numOfAreas, desc_columns
             }
         },
 
         computed: {
-          renderedDescriptions() {
-            let desc_par1 = this.area.desc_col1;
-            let desc_par2 = this.area.desc_col2;
-            let desc_par3 = this.area.desc_col3;
-            let descriptions = [];
-
-            //check if DOMParser is available
-            if (typeof DOMParser !== 'undefined') {
-              //use DOMParser to parse the HTML tags and create a DOM object
-              let parser = new DOMParser();
-              let parsedDescription1 = parser.parseFromString(desc_par1, "text/html");
-              let parsedDescription2 = parser.parseFromString(desc_par2, "text/html");
-              let parsedDescription3 = parser.parseFromString(desc_par3, "text/html");
-
-              //push the innerHTML of the parsed DOM objects to the descriptions array
-              descriptions.push(parsedDescription1.body.innerHTML);
-              descriptions.push(parsedDescription2.body.innerHTML);
-              descriptions.push(parsedDescription3.body.innerHTML);
-            } else {
-              //fallback for server-side rendering, render the texts as is
-              descriptions.push(desc_par1);
-              descriptions.push(desc_par2);
-              descriptions.push(desc_par3);
-            }
-
-            return descriptions;
-          },
-
           isNextDisabled() {
             return this.area.id === this.numOfAreas - 1;
           },

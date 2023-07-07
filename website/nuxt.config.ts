@@ -13,7 +13,11 @@ export default defineNuxtConfig({
         transpile: ["vuetify"],
     },
     
-    modules: ['@nuxtjs/supabase'],
+    modules: ['@nuxtjs/supabase', '@nuxt/content'],
+
+    content: {
+        // Options
+    },
     
     ssr: true,
     

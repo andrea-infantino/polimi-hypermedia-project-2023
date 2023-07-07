@@ -2,7 +2,7 @@
     <div class="title-area" :class="{ 'hideTitle' : !scrollUp }"> 
         <MyBackButton class="bb-position"/>   
         <div v-if="link!=null" class="clickable-title">
-            <NuxtLink :to="link" class="clickable-title-link">{{ title }}</NuxtLink>
+            <NuxtLink :to="link" class="clickable-title-link" :aria-label="`Link to ${title}`">{{ title }}</NuxtLink>
         </div>
         <div v-else class="title">{{ title }}</div>
     </div>

@@ -9,7 +9,7 @@
             </div>
             
             <ul v-if="!mobile" class="navigation">
-                <li v-for="link in links" :key="link.path"><NuxtLink class="landmark" :to="link.path">{{ link.title }}</NuxtLink></li>
+                <li v-for="link in links" :key="link.path"><NuxtLink class="landmark" :to="link.path" :aria-label="`Link to ${link.title}`">{{ link.title }}</NuxtLink></li>
             </ul>   
 
             <div class="icon">
@@ -28,7 +28,7 @@
                         <img src="../assets/img/logo.png" class="logo-mobile" alt="Company logo" @click="toggleMobileNav" />
                     </NuxtLink>
                     <hr class="separator-mobile" />
-                    <li v-for="link in links"><NuxtLink @click="toggleMobileNav" class="landmark-mobile" :to="link.path">{{ link.title }}</NuxtLink></li>
+                    <li v-for="link in links"><NuxtLink @click="toggleMobileNav" class="landmark-mobile" :to="link.path" :aria-label="`Link to ${link.title}`">{{ link.title }}</NuxtLink></li>
                     <li @click="toggleMobileNav" class="close-cross">&#10006;</li>
                 </ul>
             </transition>

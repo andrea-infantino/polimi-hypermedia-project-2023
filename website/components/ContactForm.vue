@@ -117,12 +117,15 @@ export default {
         font-size: 15pt;
         margin-bottom: 15px;
     }
+
     .form-elem input {
         font-size: 15pt;
     }
+
     .dialog-btn {
         font-size: 15pt;
     }
+    
     .dialog-div {
         font-size: 15pt;
         padding: 10px 15px 5px 15px;

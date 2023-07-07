@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink :to = "link">
+    <NuxtLink :to = "link" :aria-label="`Link to ${name} page`">
         <div class="area">
             <img class="area-card-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${id}.png`" :alt="`${name} area symbol`"/>
             <span class="area-name">{{ name }}</span>

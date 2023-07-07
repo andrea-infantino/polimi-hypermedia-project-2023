@@ -16,9 +16,9 @@
                 <a class="small-transparent-btn" href="mailto:info@webwizards.com">
                     &#9993;&emsp;<strong>info@webwizards.com</strong></a>
                 <div class="social-media">
-                    <a href="https://twitter.com/home" target="_blank"><img src="../assets/img/contacts/twitter_logo_hover.png" alt="Twitter Logo" class="twitter-logo-footer"></a>
-                    <a href="https://www.instagram.com" target="_blank"><img src="../assets/img/contacts/instagram_logo_hover.png" alt="Instagram Logo" class="instagram-logo-footer"></a>
-                    <a href="https://www.linkedin.com" target="_blank"><img src="../assets/img/contacts/linkedin_logo_hover.png" alt="LinkedIn Logo" class="linkedin-logo-footer"></a>
+                    <a href="https://twitter.com/home" target="_blank" aria-label="Link to Twitter"><img src="../assets/img/contacts/twitter_logo_hover.png" alt="Twitter Logo" class="twitter-logo-footer"></a>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Link to Instagram"><img src="../assets/img/contacts/instagram_logo_hover.png" alt="Instagram Logo" class="instagram-logo-footer"></a>
+                    <a href="https://www.linkedin.com" target="_blank" aria-label="Link to LinkedIn"><img src="../assets/img/contacts/linkedin_logo_hover.png" alt="LinkedIn Logo" class="linkedin-logo-footer"></a>
                 </div>
             </div>
             <div class="contacts-img-div">

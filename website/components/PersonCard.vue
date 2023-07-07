@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink :to = "link" >
+    <NuxtLink :to = "link" :aria-label="`Link to ${name} ${surname} page`">
         <div class="card">
             <img class="person-card-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/People/${id}.jpg`" :alt="`${name} ${surname}'s photo`" />
             <span class="name_surname">{{ surname }} {{ name }}</span>

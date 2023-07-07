@@ -9,7 +9,7 @@
     class="carousel">
     
     <v-carousel-item v-for="project of projectsArray" :key="project.id" cover>
-      <NuxtLink :to="`/projects/${project.id}`">
+      <NuxtLink :to="`/projects/${project.id}`" :aria-label="`Link to ${project.title} page`">
         <v-img :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" class="carousel-img"/>
         <div class="carousel-proj-title">{{ project.title }}</div>
       </NuxtLink>
@@ -18,7 +18,7 @@
 
 
   <div v-else="projectsArray && projectsArray.length === 1">
-    <NuxtLink :to="`/projects/${projectsArray[0].id}`">
+    <NuxtLink :to="`/projects/${projectsArray[0].id}`" :aria-label="`Link to ${project.title} page`">
       <div class="single-proj">
       <v-img :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${projectsArray[0].id}.jpg`" class="carousel-img"/>
       </div>

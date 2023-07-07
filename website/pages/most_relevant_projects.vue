@@ -23,8 +23,8 @@
         <hr class="separator" />
 
         <div class="bottom-links">
-            <NuxtLink id="to_all_projects" to="/projects"><button class="transparent-btn">See all the projects</button></NuxtLink>
-            <NuxtLink id="to_projects_by_area" to="/projects_by_area"><button class="transparent-btn">Check the projects divided by area</button></NuxtLink>
+            <NuxtLink id="to_all_projects" to="/projects" aria-label="Link to all projects"><button class="transparent-btn">See all the projects</button></NuxtLink>
+            <NuxtLink id="to_projects_by_area" to="/projects_by_area" aria-label="Link to projects by area"><button class="transparent-btn">Check the projects divided by area</button></NuxtLink>
         </div>
     </main>
 </template>

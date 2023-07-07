@@ -40,7 +40,7 @@
                     Our mission is to empower entrepreneurs and drive innovation by providing them with the financial capital, strategic guidance, and industry expertise needed to succeed. We believe that by supporting visionary entrepreneurs and transformative ideas, we can create a better future for all. We are committed to making a positive impact on society and the world at large through our investments and activities. We believe that by working together, we can achieve great things and make the world a better place. We are dedicated to helping entrepreneurs succeed and achieve their goals.
                 </div>
                 <div class="btn_container">
-                    <NuxtLink to="/about_us"><button class="light-btn">Learn more about us</button></NuxtLink>
+                    <NuxtLink to="/about_us" aria-label="Link to about us"><button class="light-btn">Learn more about us</button></NuxtLink>
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
                     <iframe src="https://www.youtube.com/embed/fFGS4zZWGoA?cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="hp-video" label="Team video"></iframe>
                 </div>
                 <div class="btn_container">
-                    <NuxtLink to="/our_team"><button class="dark-btn">Meet our team</button></NuxtLink>
+                    <NuxtLink to="/our_team" aria-label="Link to our team"><button class="dark-btn">Meet our team</button></NuxtLink>
                 </div>
             </div>
         </div>
@@ -72,8 +72,8 @@
                     We invest in early-stage startups with strong potential for growth and success. Our investment process involves rigorous due diligence, market analysis, and risk assessment to ensure that we select companies with the highest probability of success. We are committed to helping entrepreneurs succeed and achieve their goals. We believe that by working together, we can create a better future for all.<br>If you are curious about our investment, check our financied projects and areas of investment.
                 </div>
                 <div class="btn_container">
-                    <NuxtLink to="/projects"><button class="dark-btn">All projects</button></NuxtLink>
-                    <NuxtLink to="/all_areas"><button class="dark-btn">All areas</button></NuxtLink>
+                    <NuxtLink to="/projects" aria-label="Link to all projects"><button class="dark-btn">All projects</button></NuxtLink>
+                    <NuxtLink to="/all_areas" aria-label="Link to all areas"><button class="dark-btn">All areas</button></NuxtLink>
                 </div>
             </div>
         </div>
@@ -98,7 +98,7 @@
                     We invest in early-stage startups with strong potential for growth and success. Our investment process involves rigorous due diligence, market analysis, and risk assessment to ensure that we select companies with the highest probability of success. We are committed to helping entrepreneurs succeed and achieve their goals. We believe that by working together, we can create a better future for all. We are dedicated to helping entrepreneurs succeed and achieve their goals.
                 </div>
                 <div class="btn_container">
-                    <NuxtLink to="/portfolio"><button class="light-btn">Check our portfolio</button></NuxtLink>
+                    <NuxtLink to="/portfolio" aria-label="Link to portfolio"><button class="light-btn">Check our portfolio</button></NuxtLink>
                 </div>
             </div>
         </div>
