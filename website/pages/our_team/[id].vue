@@ -16,6 +16,8 @@
       <div class="person-container">
         <div class="person-img-info">
             <img class="person-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/People/${person.id}.jpg`" :alt="`${person.name} ${person.surname}'s photo`"/>
+            
+            <!-- personal information and contacts -->
             <div class="person-info">
               <span class="person-name-and-surname">{{ person.name }} {{ person.surname }}</span>
               <span class="person-role">{{ person.role }}</span>
@@ -34,13 +36,13 @@
                 <a href="https://twitter.com/home" target="_blank"><img src="../../assets/img/contacts/twitter_logo_hover.png" class="twitter-logo-hover" alt="Coloured Twitter logo"><img src="../../assets/img/contacts/twitter_logo.png" alt="Black and white Twitter Logo" class="twitter-logo"></a>
                 <a href="https://www.instagram.com" target="_blank"><img src="../../assets/img/contacts/instagram_logo_hover.png" class="instagram-logo-hover" alt="Coloured Instagram logo"><img src="../../assets/img/contacts/instagram_logo.png" alt="Black and white Instagram Logo" class="instagram-logo"></a>
                 <a href="https://www.linkedin.com" target="_blank"><img src="../../assets/img/contacts/linkedin_logo_hover.png" class="linkedin-logo-hover" alt="Coloured LinkedIn logo"><img src="../../assets/img/contacts/linkedin_logo.png" alt="Black and white LinkedIn Logo" class="linkedin-logo"></a>
-            </div>
+              </div>
 
               <nuxt-link v-if="person.cv_link != null" class="small-light-btn" :to="`${person.cv_link}`" target="_blank">See {{ person.name }} {{ person.surname }}'s CV</nuxt-link>
-        
             </div>
         </div>
 
+        <!-- person description -->
         <span class="desc-container">
             <span class="description-cloud-title">Description:</span> 
             <span class="description-cloud">{{ person.description }}</span>
@@ -58,23 +60,24 @@
     <div class="person-projects-title">{{ person.name }} {{ person.surname }}'s projects</div>
     
     <div class="person-projects-container">    
-      
+      <!-- carousel containing projects supervised by this person -->  
       <div v-if="supervised_proj.length!=0" class="team-div-carousel">
-            <div class="team-carousel-title">
-                As supervisor:
-            </div>
-            <div class="team-carousel-container">
-                <ProjectsCarousel :projectsArray="supervised_proj" class="team-carousel"/>
-            </div>
-        </div>
+          <div class="team-carousel-title">
+              As supervisor:
+          </div>
+          <div class="team-carousel-container">
+              <ProjectsCarousel :projectsArray="supervised_proj" class="team-carousel"/>
+          </div>
+      </div>
 
+      <!-- carousel containing projects participated by the person as team member -->
       <div v-if="team_proj.length!=0" class="team-div-carousel">
-            <div class="team-carousel-title">
-                As team member:
-            </div>
-            <div class="team-carousel-container">
-                <ProjectsCarousel :projectsArray="team_proj" class="team-carousel"/>
-            </div>
+          <div class="team-carousel-title">
+              As team member:
+          </div>
+          <div class="team-carousel-container">
+              <ProjectsCarousel :projectsArray="team_proj" class="team-carousel"/>
+          </div>
         </div>
 
     </div>

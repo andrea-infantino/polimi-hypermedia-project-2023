@@ -8,25 +8,25 @@
         
         <div class="area-container">
             <div class="prj-area-info">
+                <!-- area header (image + next and previous buttons) -->
                 <div class="area-prj-header">
                   <NuxtLink :to="isPreviousDisabled ? '#' : `/projects_by_area/${area.id-1}`" :class="{ 'disabled': isPreviousDisabled }" class="prj-area-button" role="button" aria-label="Previous area projects button">
                     &#8249;
                   </NuxtLink>
 
-                    <div class="pba-img-link">
-                        <img class="prj-by-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} area logo`" />
+                  <div class="pba-img-link">
+                      <img class="prj-by-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} area logo`" />
+                      <NuxtLink :to="`/all_areas/${area.id}`" :title="`${area.name} area`">
+                          <span class="small-transparent-btn">See the full description</span>
+                      </NuxtLink>
+                  </div>
 
-                        <NuxtLink :to="`/all_areas/${area.id}`" :title="`${area.name} area`">
-                            <span class="small-transparent-btn">See the full description</span>
-                        </NuxtLink>
-                    </div>
-
-                    <NuxtLink :to="isNextDisabled ? '#' : `/projects_by_area/${area.id+1}`" :class="{ 'disabled': isNextDisabled }" class="prj-area-button" role="button" aria-label="Next area projects button">
-                      &#8250;
-                    </NuxtLink> 
-
+                  <NuxtLink :to="isNextDisabled ? '#' : `/projects_by_area/${area.id+1}`" :class="{ 'disabled': isNextDisabled }" class="prj-area-button" role="button" aria-label="Next area projects button">
+                    &#8250;
+                  </NuxtLink> 
                 </div>  
 
+                <!-- projects related to this area -->
                 <span class="related-projects">
                     <div class="related-projects-container">
                         <ProjectCard v-for = "project of area.Projects" :id="project.id" :title="project.title" :link="'/projects/' + project.id" :img_bool="true" />

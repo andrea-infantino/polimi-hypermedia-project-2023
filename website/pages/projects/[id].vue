@@ -25,18 +25,21 @@
                     <b>Foundation year:</b>&emsp; {{ project.foundation_year }} 
                 </span>
                 <span>
+                    <!-- project supervisor -->
                     <b>Supervisor:</b> <br>
                     <div class="project-people-container-tab">
                         <NuxtLink :to="`/our_team/${supervisor.id}`" class="small-transparent-btn">• {{ supervisor.surname }} {{ supervisor.name }} <br> </NuxtLink>
                     </div>
                 </span>
                 <span v-if="team.length!=0">
+                    <!-- project team members -->
                     <b>Team:</b> <br>
                     <div class="project-people-container-tab">
                         <NuxtLink v-for = "person of team" :to="`/our_team/${person.id}`" class="small-transparent-btn">• {{ person.surname }} {{ person.name }} <br> </NuxtLink>
                     </div>
                 </span>
                 <span>
+                    <!-- related areas -->
                     <b>Areas:</b> <br>
                     <div class="project-area-container-tab">
                         <NuxtLink v-for = "area of project.Areas" :to="`/all_areas/${area.id}`" class="small-transparent-btn"> <img class="area-logo" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} area logo`"/>{{ area.name }}</NuxtLink>
@@ -46,6 +49,7 @@
         
         </div>
 
+        <!-- project description -->
         <div class="long-description">
             <span>  
                 <span class="description-cloud-title">Description:</span>

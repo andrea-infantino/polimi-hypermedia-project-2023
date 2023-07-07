@@ -11,6 +11,7 @@
 
         <hr class="separator" />
 
+        <!-- menu enabling users to sort people by role or alphabetically -->
         <div id="sorting-selector-team">
         <label for="sorting-selector-team">Sort by:</label>
             <select class="menu" id="order" v-model="order">
@@ -20,6 +21,7 @@
             </select>
         </div>
 
+        <!-- preview of each person (name, surname, role and link to their page) -->
         <div id="people-container">
           <PersonCard v-for = "person of sorted" :id = "person.id" :name = "person.name" :surname = "person.surname" :role = "person.role" :link = "'/our_team/' + person.id" />
         </div>
@@ -36,6 +38,7 @@
 
   //sort people based on the order selected by the user
   const sorted = computed ( () => {
+      //by role or default
       if (order.value == "Role" || order.value == null || order.value == undefined || order.value == "") {
         let importance_order = []
 
@@ -48,8 +51,10 @@
         }
         return importance_order
       }
-      else if (order.value == "A-Z") 
+      //alphabetically
+      else if (order.value == "A-Z")
         return [...people.value]
+      //reverse alphabetically
       else if (order.value == "Z-A") 
         return [...people.value].reverse()
   })

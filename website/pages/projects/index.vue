@@ -54,6 +54,8 @@
   const { data: Projects } = await useFetch('/api/projects') //get all projects
 
   const orderproj = ref("A-Z") //default order
+  
+  //visually split the columns in two
   const column1 = ref([])
   const column2 = ref([])
 
@@ -62,7 +64,9 @@
     const projects = [...Projects.value]; //create a copy of the Projects array
 
     if (orderproj.value === "A-Z" || orderproj.value === "Z-A" || orderproj.value == null || orderproj.value == "" || orderproj.value == undefined) {
-      const sortedProjects = (orderproj.value == "A-Z" ? projects : projects.reverse())
+      //alphabetical order or default
+
+      const sortedProjects = (orderproj.value == "A-Z" ? projects : projects.reverse()) //reverse the array if the order is Z-A
 
       const letters = sortedProjects.map((project) => project.title[0]).filter((value, index, self) => self.indexOf(value) === index);
 
@@ -72,6 +76,8 @@
       return sortedProjects;
 
     } else if (orderproj.value === "Relevance") {
+      //relevance order
+
       const sortedProjects = projects.sort((a, b) => b.score - a.score);
 
       column1.value = sortedProjects.slice(0, Math.ceil(sortedProjects.length / 2));
@@ -80,6 +86,8 @@
       return sortedProjects;
 
     } else if (orderproj.value === "Newest first" || orderproj.value === "Oldest first") {
+      //date order
+
       const sortOrder = orderproj.value === "Newest first" ? -1 : 1;
 
       const sortedProjects = projects.sort((a, b) => (b.foundation_year - a.foundation_year) * sortOrder);
@@ -87,10 +95,7 @@
       column1.value = sortedProjects.slice(0, Math.ceil(sortedProjects.length / 2));
       column2.value = sortedProjects.slice(Math.ceil(sortedProjects.length / 2));
 
-      return sortedProjects;
-      
-    } else {
-      return projects;
+      return sortedProjects;  
     }
   });
 
@@ -145,5 +150,4 @@
     background-color: rgba(0, 0, 0, 0.5); 
     box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.5);
   }
-
 </style>

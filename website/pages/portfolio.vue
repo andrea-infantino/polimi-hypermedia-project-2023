@@ -7,6 +7,7 @@
         <MyTitle :title="'PORTFOLIO'" />
 
         <ContentRenderer :data="data">
+            <!-- rendering the paragraphs iteratively -->
             <div class="paragraphs">
                 <div v-for="paragraph in data[0].paragraphs" class="white-cloud">
                     <img v-if="paragraph.id==1" class="prft1-img" src="../assets/img/portfolio/prtf1.jpg" alt="">

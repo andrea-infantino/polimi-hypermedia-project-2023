@@ -7,6 +7,7 @@
         <MyTitle :title="area.name" />
         
         <div class="area-container">
+          <!-- area header (image + next and previous buttons) -->
           <div class="area-header">
             <NuxtLink :to="isPreviousDisabled ? '#' : `/all_areas/${area.id-1}`" :class="{ 'disabled': isPreviousDisabled }" class="area-button" role="button" aria-label="Previous area button">
               &#8249;
@@ -19,11 +20,13 @@
             </NuxtLink> 
           </div>
 
+          <!-- area description -->
           <div class="area-info">
             <div v-for="col of desc_columns" v-html="col" class="area-description"></div>
           </div>
           <!--<img class="area-decorative-img" :src="`../../assets/img/all_areas/${area.name}_1.jpg`" alt="">-->
 
+          <!-- carousel with preview of the projects related to this area -->
           <div class="area-div-carousel">
             <div class="area-carousel-title">
                 Related projects:
@@ -41,15 +44,16 @@
     export default defineNuxtComponent({
         async asyncData() {
             const route = useRoute()
-            const area = await $fetch('/api/all_areas/' + route.params.id)
+            const area = await $fetch('/api/all_areas/' + route.params.id)  //get the specific area from its id
 
-            const areas = await $fetch('/api/all_areas')
+            const areas = await $fetch('/api/all_areas')  //get all areas to calculate the total number
             const numOfAreas = areas.length
 
+            const desc_columns = [area.desc_col1, area.desc_col2, area.desc_col3] //array with the 3 columns containing the description
+
+            //Search Engine Optimization
             const description = ref('In this page you will find all the information related to ' + area.name + '.')
             const keywords = ref('Area of Investment, ' + area.name)
-
-            const desc_columns = [area.desc_col1, area.desc_col2, area.desc_col3]
 
             useHead({
               meta: [

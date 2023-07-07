@@ -36,7 +36,6 @@
 </script>
 
 <style>
-
     .bb-position {
         position: absolute;
         left: 2px;
@@ -104,5 +103,4 @@
     .clickable-title-link {
         color: black;
     }
-
 </style>

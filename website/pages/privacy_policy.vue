@@ -9,6 +9,7 @@
         <ContentRenderer :data="data">
             <div class="update_date" v-html="data[0].date"></div>
 
+            <!-- rendering the paragraphs iteratively -->
             <div class="paragraphs">
                 <section v-for="paragraph in data[0].paragraphs" class="white-cloud">
                     <div v-if="paragraph.title!=null" class="white-cloud-title">{{ paragraph.title }}</div>

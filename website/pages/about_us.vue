@@ -9,7 +9,7 @@
         <ContentRenderer :data="data">
             <h1 class="au-intro">{{ data[0].intro }}</h1>
 
-            
+            <!-- rendering the paragraphs iteratively -->
             <div class="paragraphs" v-for="paragraph in data[0].paragraphs">
                 <section class="white-cloud">
                     <!-- handling (left) images separately -->

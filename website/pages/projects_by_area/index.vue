@@ -8,6 +8,7 @@
 
       <h1 class="area-prj-intro">Check our projects for each area of investment:</h1>
   
+      <!-- preview of each area (name, logo and link to the page containing the area projects)-->
       <div id="generic-cards-container">
         <SingleArea v-for = "area of areas" :id = "area.id" :name = "area.name + ' projects'" :link = "'/projects_by_area/' + area.id" />
       </div>

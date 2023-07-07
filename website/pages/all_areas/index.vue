@@ -9,6 +9,7 @@
         <span class="all-areas-text">Browse the areas of investment to know more about what we care and love:</span>
 
         <div class="full-area-container">
+          <!-- preview of each area (name, logo, short description and link to its page)-->
           <div v-for="area of areas" :class="area.id%2 ? 'area-section-dx' : 'area-section-sx'">
             <img class="preview-area-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas/${area.id}.png`" :alt="`${area.name} logo`"/>
             <div class="preview-area-info">

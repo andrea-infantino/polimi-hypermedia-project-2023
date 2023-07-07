@@ -3,14 +3,14 @@
         <div class="bottom">  
 
             <div class="logo-footer">
-                <NuxtLink to="/">
-                    <img src="../assets/img/logo.png" id="logo" class="logo-img" alt="Company logo" title="Homepage"/>
+                <NuxtLink to="/" title="Homepage">
+                    <img src="../assets/img/logo.png" id="logo" class="logo-img" alt="Company logo"/>
                 </NuxtLink>
             </div>
                    
             <div class="rights">
                 <strong>© 2023 Wizarding Ventures S.P.A.</strong><br>
-                All rights reserved. <NuxtLink id="to_privacy_policy" to="/privacy_policy"> Privacy Policy</NuxtLink> · <NuxtLink id="to_cookie_policy" to="/cookie_policy">Cookie Policy</NuxtLink>
+                All rights reserved. <NuxtLink id="to_privacy_policy" to="/privacy_policy" aria-label="Link to Privacy Policy"> Privacy Policy</NuxtLink> · <NuxtLink id="to_cookie_policy" to="/cookie_policy" aria-label="Link to Cookie Policy">Cookie Policy</NuxtLink>
             </div>
 
             <div class="socials"> <b>Follow us:</b>

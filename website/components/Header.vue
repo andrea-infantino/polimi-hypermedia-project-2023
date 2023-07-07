@@ -3,15 +3,17 @@
         <nav>
             
             <div class="branding">
-                <NuxtLink to="/">
-                    <img src="../assets/img/logo.png" id="logo" class="logo-header" alt="Company logo" title="Homepage"/>
+                <NuxtLink to="/" title="Homepage">
+                    <img src="../assets/img/logo.png" id="logo" class="logo-header" alt="Company logo"/>
                 </NuxtLink>
             </div>
             
+            <!-- desktop version landmarks -->
             <ul v-if="!mobile" class="navigation">
                 <li v-for="link in links" :key="link.path"><NuxtLink class="landmark" :to="link.path" :aria-label="`Link to ${link.title}`">{{ link.title }}</NuxtLink></li>
             </ul>   
 
+            <!-- mobile version hamburger menu -->
             <div class="icon">
                 <i @click="toggleMobileNav" v-show="mobile" class="hamburger-menu" :class="{ 'icon-active': mobileNav }">
                     <svg viewBox="0 0 100 67" width="40" height="40">
@@ -24,7 +26,7 @@
 
             <transition name="mobile-nav">
                 <ul v-show="mobileNav" class="dropdown-nav" ref="dropdownNav">
-                    <NuxtLink to="/">
+                    <NuxtLink to="/" title="Homepage">
                         <img src="../assets/img/logo.png" class="logo-mobile" alt="Company logo" @click="toggleMobileNav" />
                     </NuxtLink>
                     <hr class="separator-mobile" />
@@ -305,5 +307,4 @@
     .landmark:hover::after {
         width: 100%;
     }
-
 </style>
