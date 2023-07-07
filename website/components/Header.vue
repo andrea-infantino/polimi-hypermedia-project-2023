@@ -50,7 +50,7 @@
                 mobile: null,
                 mobileNav: null,
                 windowWidth: null,
-                isHomePage: true,
+                isHomePage: null,
                 links: [
                     { title: 'Most Relevant Projects', path: '/most_relevant_projects' },
                     { title: 'Portfolio', path: '/portfolio' },
@@ -72,12 +72,12 @@
                 document.addEventListener('click', this.handleClickOutside);
                 
                 //check if the current route is the homepage
-                this.isHomePage = this.$route.path === '/';
+                this.isHomePage = this.$route.path == '/' ? true : false;
                 //watch for route changes and update isHomePage boolean accordingly
                 this.$watch(
                     '$route',
                     function (to) {
-                        this.isHomePage = to.path === '/';
+                        this.isHomePage = to.path == '/' ? true : false;
                     },
                     { immediate: true }
                 );
@@ -102,6 +102,13 @@
         methods: {
             toggleMobileNav() {
                 this.mobileNav = !this.mobileNav;
+                if (this.mobileNav) {
+                    document.documentElement.style.overflow = 'hidden';
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.documentElement.style.overflow = '';
+                    document.body.style.overflow = '';
+                }
             },
 
             checkScreen() {
@@ -111,6 +118,8 @@
                 } else {
                     this.mobile = false;
                     this.mobileNav = false;
+                    document.documentElement.style.overflow = '';
+                    document.body.style.overflow = '';
                 }
             },
 
