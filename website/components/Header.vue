@@ -102,13 +102,6 @@
         methods: {
             toggleMobileNav() {
                 this.mobileNav = !this.mobileNav;
-                if (this.mobileNav) {
-                    document.documentElement.style.overflow = 'hidden';
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    document.documentElement.style.overflow = '';
-                    document.body.style.overflow = '';
-                }
             },
 
             checkScreen() {
@@ -118,8 +111,6 @@
                 } else {
                     this.mobile = false;
                     this.mobileNav = false;
-                    document.documentElement.style.overflow = '';
-                    document.body.style.overflow = '';
                 }
             },
 
