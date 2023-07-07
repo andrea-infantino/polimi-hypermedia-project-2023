@@ -145,12 +145,15 @@
     .hmpg-header {
         text-align: center;
         vertical-align: center;
-        height: 100vh;
+        height: 115vh;
         width: 100%;
         background-image: url("../assets/img/homepage/homepage_top.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        position: absolute;
+        top: 0;
+        z-index: 0;
     }
 
     .motto {
@@ -160,7 +163,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: min(8vw, min(7vw, 10vh));
@@ -169,6 +172,7 @@
         text-align: center;
         align-items: center;
         vertical-align: center;
+        z-index: 2;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
@@ -176,8 +180,9 @@
         box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
         color: black;
         width: max(80vw, max(45vh, 25vh));
-        margin: -8vh 0 60px;
+        margin: 90vh 0 60px;
         background-color: #E8EEF1;
+        position: relative;
     }
 
     .welcome {

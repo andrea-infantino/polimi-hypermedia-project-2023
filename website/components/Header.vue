@@ -1,5 +1,5 @@
 <template>
-    <header>            
+    <header :class="{ 'header-transparent': isHomePage, 'header-colored': !isHomePage }">
         <nav>
             
             <div class="branding">
@@ -17,7 +17,7 @@
             <div class="icon">
                 <i @click="toggleMobileNav" v-show="mobile" class="hamburger-menu" :class="{ 'icon-active': mobileNav }">
                     <svg viewBox="0 0 100 67" width="40" height="40">
-                        <rect width="100" height="17" rx="10"></rect>
+                        <rect y="00" width="100" height="17" rx="10"></rect>
                         <rect y="33" width="100" height="17" rx="10"></rect>
                         <rect y="66" width="100" height="17" rx="10"></rect>
                     </svg>
@@ -25,7 +25,7 @@
             </div>
 
             <transition name="mobile-nav">
-                <ul v-show="mobileNav" class="dropdown-nav" ref="dropdownNav">
+                <ul v-show="mobileNav" class="dropdown-nav" :class="{ 'inverted': isHomePage, '': !isHomePage }" ref="dropdownNav">
                     <NuxtLink to="/" title="Homepage">
                         <img src="../assets/img/logo.png" class="logo-mobile" alt="Company logo" @click="toggleMobileNav" />
                     </NuxtLink>
@@ -36,7 +36,7 @@
             </transition>
             
             <transition name="dropdown-overlay">
-                <div v-if="mobileNav" class="dropdown-overlay" @click="toggleMobileNav"></div>
+                <div v-if="mobileNav" class="dropdown-overlay" :class="{ 'inverted': isHomePage, '': !isHomePage }" @click="toggleMobileNav"></div>
             </transition>
 
         </nav>
@@ -50,6 +50,7 @@
                 mobile: null,
                 mobileNav: null,
                 windowWidth: null,
+                isHomePage: true,
                 links: [
                     { title: 'Most Relevant Projects', path: '/most_relevant_projects' },
                     { title: 'Portfolio', path: '/portfolio' },
@@ -69,6 +70,25 @@
                 this.checkScreen();
 
                 document.addEventListener('click', this.handleClickOutside);
+                
+                //check if the current route is the homepage
+                this.isHomePage = this.$route.path === '/';
+                //watch for route changes and update isHomePage boolean accordingly
+                this.$watch(
+                    '$route',
+                    function (to) {
+                        this.isHomePage = to.path === '/';
+                    },
+                    { immediate: true }
+                );
+
+                window.addEventListener(
+                    'scroll',
+                    function () {
+                        //check if the current route is the homepage and scrolled to the top
+                        this.isHomePage = this.$route.path === '/' && window.pageYOffset === 0;
+                    }.bind(this)
+                );
             }
         },
 
@@ -82,6 +102,13 @@
         methods: {
             toggleMobileNav() {
                 this.mobileNav = !this.mobileNav;
+                if (this.mobileNav) {
+                    document.documentElement.style.overflow = 'hidden';
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.documentElement.style.overflow = '';
+                    document.body.style.overflow = '';
+                }
             },
 
             checkScreen() {
@@ -91,6 +118,8 @@
                 } else {
                     this.mobile = false;
                     this.mobileNav = false;
+                    document.documentElement.style.overflow = '';
+                    document.body.style.overflow = '';
                 }
             },
 
@@ -104,6 +133,11 @@
 </script>
 
 <style>
+
+    .inverted {
+        filter: invert(1) !important;
+    }
+
     header {
         background-color: #E8EEF1;
         position: sticky;
@@ -111,9 +145,21 @@
         z-index: 99;
         max-width: 100%;
         border-bottom: 5px solid #1E3D58;
-        transition: 0.5s ease all;
+        transition: 0.3s ease all;
         color: black;
         text-align: center;
+    }
+
+    .header-transparent {
+        border-bottom: 5px solid transparent;
+        filter: invert(1) !important;
+        background-color: transparent;
+    }
+
+    .header-colored {
+        background-color: #E8EEF1;
+        border-bottom: 5px solid #1E3D58;
+        color: black;
     }
 
     nav {
@@ -121,14 +167,14 @@
         display: flex;
         flex-direction: row;
         padding: 12px 0;
-        transition: 0.5s ease all;
+        transition: 0.2s ease all;
         width: 95%;
         margin: 0 auto;
     }
 
     ul, .link {
         font-weight: 600;
-        color: white;
+        color: inherit;
         list-style: none;
         text-decoration: none;
     }
@@ -140,7 +186,7 @@
 
     .link {
         font-size: 14px;
-        transition: 0.5s ease all;
+        transition: 0.2s ease all;
         padding-bottom: 4px;
     }
 
@@ -188,14 +234,14 @@
     }
 
     .dropdown-nav {
+        background-color: #E8EEF1;
         display: flex;
         flex-direction: column;
         align-items: center;
         position: fixed;
         width: 60%;
-        height: 100%;
+        height: 100vh;
         min-width: 270px;
-        background-color: #E8EEF1;
         top: 0;
         left: 0;
         margin-top: 0;
@@ -247,14 +293,14 @@
     }
 
     .dropdown-overlay {
+        filter: invert(0);
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 120vh;
         background-color: rgba(0, 0, 0, 0.5);
         z-index: 99;
-        transition: opacity 0.5s;
     }
 
     .dropdown-overlay-enter-active, .dropdown-overlay-leave-active {
@@ -270,7 +316,6 @@
     }
 
     .landmark, .landmark-mobile {
-        color: black;
         padding: 0 10px;
         display: inline-block;
         transition: 0.3s;

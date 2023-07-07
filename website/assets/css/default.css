@@ -59,7 +59,7 @@ img {
 
 /* Links style */
 a {
-      color: aliceblue;
+      color: inherit;
       text-decoration: none;
 }
 
