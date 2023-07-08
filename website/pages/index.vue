@@ -323,7 +323,7 @@
     }
 
     .prtf-section {
-        flex-direction: row;
+        flex-direction: row-reverse;
     }
 
     .invest-section {
