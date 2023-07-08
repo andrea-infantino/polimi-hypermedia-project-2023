@@ -103,7 +103,7 @@
             flex-direction: column-reverse;
             justify-content: space-around;
             gap: 20px;
-            margin: 10px 0;
+            margin: 10px 0 20px;
         }
 
         .rights {
@@ -114,6 +114,10 @@
             text-align: center;
             margin-top: 0px;
             padding-right: 0px;
+        }
+
+        .logo-footer {
+            padding: 0px;
         }
     }
 </style>

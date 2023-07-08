@@ -144,6 +144,7 @@
 
         .contacts-img {
             width: 90%;
+            margin: 0;
         }
 
         .form {
@@ -160,7 +161,17 @@
         }
 
         .map {
-            width: 90%;
+            width: 95%;
+            margin: 30px 10px 10px;
+            padding: 0;
+        }
+
+        .text-1, .text-2, .form-title {
+            font-size: 3vh;
+        }
+
+        .address, .form-text {
+            font-size: 2.2vh;
         }
     }
 </style>
