@@ -64,6 +64,9 @@
         </div>
 
         <div class="prj-section">
+            <div class="chart-container">
+                <HomepageChart />
+            </div>
             <div class="prj-info">
                 <div class="prj-title">
                     Areas of investment
@@ -320,31 +323,37 @@
     }
 
     .prtf-section {
-        flex-direction: row-reverse;
+        flex-direction: row;
     }
 
     .prj-section {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-evenly;
+        flex-direction: row-reverse;
+        justify-content: center;
         align-items: center;
         width: 100%;
         margin: 50px 50px 0;
-    }
-
-    .prj-info {
-        min-width: 300px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;;
-        padding: 70px 10px;
-        color: black;
         background-color: #fff6f6e3;
     }
 
-    .prj-title {
+    .chart-container {
+        width: 50%;
+        min-height: 500px;
+    }
+
+    .prj-info {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        padding: 70px 10px;
+        color: black;      
+    }
+
+    .prj-title{
         font-size: min(6vw, min(5vh, 8vh));
         font-weight: bold;
     }
