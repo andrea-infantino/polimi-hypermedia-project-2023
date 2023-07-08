@@ -23,7 +23,8 @@ export default {
             legend: {
                 labels: {
                     font: {
-                        size: 24
+                        size: 19,
+                        family: 'Poppins'
                     }
                 }
             }
@@ -40,10 +41,10 @@ export default {
       const {data: areas} = await useFetch('/api/getAreas');
       const {data: people} = await useFetch('/api/getPeople');
       const newData = {
-        labels: ['Our Projects','Our Areas of investment', 'Our Members'],
+        labels: ['Our Projects', 'Our Members','Our Areas of Investment'],
         datasets: [
           {
-            backgroundColor: ['#41B883', '#DD1B16', '#00D8FF'],
+            backgroundColor: ['#43B0F1', '#1E3D58', '#057DCD'],
             data: [projects2, areas, people]
           }
         ]
