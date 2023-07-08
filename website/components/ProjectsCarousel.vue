@@ -1,14 +1,13 @@
 <template>
   
   <v-carousel v-if="projectsArray && projectsArray.length > 1"
-    cycle interval="3000"
     hide-delimiter-background
     height="auto"
     show-arrows="hover"
     color="white"
     class="carousel">
     
-    <v-carousel-item fade v-for="project of projectsArray" :key="project.id" cover>
+    <v-carousel-item v-for="project of projectsArray" :key="project.id" cover>
       <NuxtLink :to="`/projects/${project.id}`" :aria-label="`Link to ${project.title} page`">
         <v-img :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" class="carousel-img"/>
         <div class="carousel-proj-title">{{ project.title }}</div>
