@@ -22,9 +22,11 @@
 
           <!-- area description -->
           <div class="area-info">
-            <div v-for="col of desc_columns" v-html="col" class="area-description"></div>
+            <div v-for="(col,index) of desc_columns" class="area-description">
+              <img class="area-decorative-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas_Decorative_Imgs/${area.name}_${index}.jpg`" alt="">  
+              <p v-html="col"></p>
+            </div>
           </div>
-          <!--<img class="area-decorative-img" :src="`../../assets/img/all_areas/${area.name}_1.jpg`" alt="">-->
 
           <!-- carousel with preview of the projects related to this area -->
           <div class="area-div-carousel">
@@ -76,7 +78,7 @@
             return this.area.id === 0;
           }
         }
-    })  
+    })
 </script>
 
 <style>
@@ -148,17 +150,21 @@
   .area-description {
     color: black;
     background-color: #fff6f6e3;
-    box-shadow: 15px 15px 30px 0 rgba(172,172,172,.5);
+    box-shadow: 15px 15px 30px 0 rgba(172, 172, 172, 0.5);
     padding: 3.3vw 4.3vw;
     margin: 30px 0px;
     border-radius: 10px;
   }
   
-  /*
+
   .area-decorative-img {
-    width: 100%;
-    height: auto;
-  }*/
+    height: 30vh;
+    width: auto;
+    border-radius: 10px;
+    float: right;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+    margin: 0 0 20px 20px;
+  }
 
   @media screen and (max-width: 768px) {
     .area-info {
@@ -169,6 +175,14 @@
     .area-description {
       padding: 30px 4vw;
       margin: 30px 0px;
+    }
+
+    .area-decorative-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      float: none;
+      margin: 0 0 20px;
     }
   }
 </style>
