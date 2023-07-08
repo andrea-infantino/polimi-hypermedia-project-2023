@@ -17,7 +17,7 @@
         <div class="main-info">
             
             <div class="project-img-container">
-                <img class="project_img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" :alt="`${project.title}'s logo`" />
+                <img class="project-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Projects/${project.id}.jpg`" :alt="`${project.title}'s logo`" />
             </div>
 
             <div class="project-info">
@@ -237,8 +237,9 @@
     flex-direction: column;
     align-self: center;
     overflow: hidden;
-    max-width: 30vw;
-    min-width: 250px;
+    width: 400px;
+    min-width: 200px;
+    margin: 20px 0;
   }
 
   .project-people-container-tab, .project-area-container-tab {
@@ -247,10 +248,21 @@
     flex-wrap: wrap;
   }
 
-  .project_img {
+  .project-img {
     width: 100%;
     height: auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  @media screen and (max-width: 600px) {
+    .project-button {
+      padding: 90px 10px;
+    }
+
+    .project-img-container {
+      width: 100%;
+      margin-bottom: 40px;
+    }
   }
 </style>

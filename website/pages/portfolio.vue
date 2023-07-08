@@ -94,4 +94,23 @@
         margin-left: 0px;
         width: 29%;
     }
+
+    @media screen and (max-width: 800px) {
+        .prft1-img {
+            float: right;
+            width: 40%;
+            margin: 0 0 15px 15px;
+        }
+
+        .prtf2-img {
+            width: 50%;
+            margin: 0 0 15px 15px;
+        }
+
+        .prtf3-img {
+            float: none;
+            margin: 0 0 15px;
+            width: 100%;
+        }
+    }
 </style>

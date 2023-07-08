@@ -84,8 +84,8 @@
     border-radius: 10px;
     color: black;
     background-color: #fff6f6e3;
-    -webkit-box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
-    box-shadow: 20px 20px 60px 0 rgba(172,172,172,.5);
+    -webkit-box-shadow: 20px 20px 60px 0 rgba(172, 172, 172, 0.5);
+    box-shadow: 20px 20px 60px 0 rgba(172, 172, 172, 0.5);
   }
 
   .area-section-dx {
@@ -101,7 +101,7 @@
   .preview-area-img {
     width: 40vh;
     height: auto;
-    min-width: 200px;
+    min-width: 100px;
     filter: invert(1);
     margin: 20px;
   }
@@ -123,5 +123,21 @@
   .preview-area-description {
     font-size: inherit;
     margin: 20px 0;
+  }
+
+  @media screen and (max-width: 700px) {
+    .full-area-container {
+      margin: 3vh 4vw;
+    }
+
+    .area-section-dx, .area-section-sx {
+      flex-direction: column;
+      margin: 0;
+    }
+
+    .preview-area-img {
+      width: 60%;
+      height: auto;
+    }
   }
 </style>

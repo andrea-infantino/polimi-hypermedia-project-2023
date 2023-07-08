@@ -89,4 +89,11 @@
     gap: 50px;
     max-width: 1200px;
   }
+
+  @media screen and (max-width: 600px) {
+    #people-container {
+      padding: 0;
+      margin: 30px 0;
+    }
+  }
 </style>

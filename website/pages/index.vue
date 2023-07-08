@@ -63,21 +63,21 @@
             </div>
         </div>
 
-        <div class="prj-section">
-            <div class="chart-container">
-                <HomepageChart />
+        <div class="invest-section">
+            <div class="invest-title">
+                Areas of investment
             </div>
-            <div class="prj-info">
-                <div class="prj-title">
-                    Areas of investment
+            <div class="invest-info">
+                <div class="chart-container">
+                    <HomepageChart />
                 </div>
-                <div class="prj-text">
+                <div class="invest-text">
                     We invest in early-stage startups with strong potential for growth and success. Our investment process involves rigorous due diligence, market analysis, and risk assessment to ensure that we select companies with the highest probability of success. We are committed to helping entrepreneurs succeed and achieve their goals. We believe that by working together, we can create a better future for all.<br>If you are curious about our investment, check our financied projects and areas of investment.
                 </div>
-                <div class="btn_container">
-                    <NuxtLink to="/projects" aria-label="Link to all projects"><button class="dark-btn">All projects</button></NuxtLink>
-                    <NuxtLink to="/all_areas" aria-label="Link to all areas"><button class="dark-btn">All areas</button></NuxtLink>
-                </div>
+            </div>
+            <div class="btn_container">
+                <NuxtLink to="/projects" aria-label="Link to all projects"><button class="dark-btn">All projects</button></NuxtLink>
+                <NuxtLink to="/all_areas" aria-label="Link to all areas"><button class="dark-btn">All areas</button></NuxtLink>
             </div>
         </div>
 
@@ -326,39 +326,39 @@
         flex-direction: row;
     }
 
-    .prj-section {
+    .invest-section {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row-reverse;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin: 50px 50px 0;
-        background-color: #fff6f6e3;
-    }
-
-    .chart-container {
-        width: 50%;
-        min-height: 500px;
-    }
-
-    .prj-info {
-        width: 50%;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align: justify;
-        padding: 70px 10px;
-        color: black;      
+        width: 100%;
+        margin: 0 50px;
+        padding: 50px 0;
+        background-color: #fff6f6e3;
+        color: black;
     }
 
-    .prj-title{
+    .chart-container {
+        width: 30%;
+        min-height: 30px;
+    }
+
+    .invest-info {
+        width: 90%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .invest-title{
         font-size: min(6vw, min(5vh, 8vh));
         font-weight: bold;
     }
 
-    .prj-text {
+    .invest-text {
         width: 90%;
         font-size: min(3.5vw, min(2.5vh, 5.5vh));
         margin: 3vw;
@@ -367,5 +367,40 @@
     .dark-btn, .light-btn {
         margin-top: 10px;
         font-size: min(3.5vw, min(3vh, 6vh));
-    }    
+    }
+
+    @media screen and (max-width: 768px) {
+        .welcome-section, .prtf-section {
+            width: 94%;
+        }
+
+        .mission-section, .prtf-section {
+            flex-direction: column;
+        }
+
+        .mission-img, .prtf-img {
+            width: 70%;
+            min-width: 150px;
+            height: auto;
+            margin: 3vh;
+        }
+
+        .team-info {
+            width: 98%;
+        }
+
+        .invest-info {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .invest-text {
+            margin-top: 0;
+        }
+
+        .chart-container {
+            width: 70%;
+            margin: 20px 0;
+        }
+    }
 </style>

@@ -159,4 +159,16 @@
     width: 100%;
     height: auto;
   }*/
+
+  @media screen and (max-width: 768px) {
+    .area-info {
+      width: 95%;
+      margin: 30px 20px 0;
+    }
+
+    .area-description {
+      padding: 30px 4vw;
+      margin: 30px 0px;
+    }
+  }
 </style>

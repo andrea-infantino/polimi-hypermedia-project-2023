@@ -144,10 +144,35 @@
     gap: 40px;
     border-radius: 10px;
     width: 40vw;
-    min-width: 360px;
     padding: 50px 70px 40px;
     margin: 25px 20px 60px;
     background-color: rgba(0, 0, 0, 0.5); 
     box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  @media screen and (max-width: 800px) {
+    .ordered-projects {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .proj-left, .proj-right {
+      width: 80vw;
+      margin: 25px 0 60px;
+      box-shadow: 10px 0 15px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .proj-left {
+      margin-bottom: 0;
+      border-radius: 10px 10px 0 0;
+      padding-bottom: 30px;
+    }
+
+    .proj-right {
+      margin-top: 0;
+      border-radius: 0 0 10px 10px;
+      padding-top: 30px;
+    }
   }
 </style>

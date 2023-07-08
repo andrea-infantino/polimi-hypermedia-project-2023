@@ -50,7 +50,7 @@
                 mobile: null,
                 mobileNav: null,
                 windowWidth: null,
-                isHomePage: null,
+                isHomePage: true,
                 links: [
                     { title: 'Most Relevant Projects', path: '/most_relevant_projects' },
                     { title: 'Portfolio', path: '/portfolio' },
@@ -70,24 +70,21 @@
                 this.checkScreen();
 
                 document.addEventListener('click', this.handleClickOutside);
-                
-                //check if the current route is the homepage
-                this.isHomePage = this.$route.path == '/' ? true : false;
-                //watch for route changes and update isHomePage boolean accordingly
-                this.$watch(
-                    '$route',
-                    function (to) {
-                        this.isHomePage = to.path == '/' ? true : false;
-                    },
-                    { immediate: true }
-                );
 
-                window.addEventListener(
-                    'scroll',
-                    function () {
+                window.onload = () => {
+                    //check if the current route is the homepage
+                    this.isHomePage = this.$route.path == '/' ? true : false;
+                };
+
+                //watch for route changes and update isHomePage boolean accordingly
+                this.$watch('$route', (to) => {
+                    this.isHomePage = to.path == '/';
+                }, { immediate: true });
+
+                window.addEventListener('scroll', () => {
                         //check if the current route is the homepage and scrolled to the top
                         this.isHomePage = this.$route.path === '/' && window.pageYOffset === 0;
-                    }.bind(this)
+                    }
                 );
             }
         },
@@ -104,22 +101,19 @@
                 this.mobileNav = !this.mobileNav;
                 if (this.mobileNav) {
                     document.documentElement.style.overflow = 'hidden';
-                    document.body.style.overflow = 'hidden';
                 } else {
                     document.documentElement.style.overflow = '';
-                    document.body.style.overflow = '';
                 }
             },
 
             checkScreen() {
                 this.windowWidth = document.documentElement.clientWidth;
-                if (this.windowWidth < 1000) {
+                if (this.windowWidth < 1060) {
                     this.mobile = true;
                 } else {
                     this.mobile = false;
                     this.mobileNav = false;
                     document.documentElement.style.overflow = '';
-                    document.body.style.overflow = '';
                 }
             },
 
@@ -201,7 +195,7 @@
         align-items: center;
         flex: 1;
         justify-content: flex-end;
-        gap: 1vw;
+        gap: 0.7vw;
     }
 
     .icon {
@@ -298,7 +292,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 120vh;
+        height: 100vh;
         background-color: rgba(0, 0, 0, 0.5);
         z-index: 99;
     }

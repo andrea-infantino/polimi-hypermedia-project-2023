@@ -21,9 +21,7 @@
                     <a href="https://www.linkedin.com" target="_blank" aria-label="Link to LinkedIn"><img src="../assets/img/contacts/linkedin_logo_hover.png" alt="LinkedIn Logo" class="linkedin-logo-footer"></a>
                 </div>
             </div>
-            <div class="contacts-img-div">
-                <img alt="Team photo" src="../assets/img/contacts/contacts_photo.jpg" class="contacts-img">
-            </div>
+            <img alt="Team photo" src="../assets/img/contacts/contacts_photo.jpg" class="contacts-img">
         </div>
 
         <div class="form-cnt">
@@ -70,18 +68,13 @@
         flex-wrap: wrap;
         float: left;
     }
-
-    .contacts-img-div {
-        text-align: center;
-        width: 50%;
-        min-width: 300px;
-    }
     
     .contacts-img {
         align-self: center;
-        width: 100%;
+        width: 650px;
         height: auto;
         border-radius: 10px;
+        margin-left: 20px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
@@ -136,10 +129,38 @@
     .form-cnt {
         background-color: rgba(255, 255, 255, 0.7);
         margin: 0;
-        padding: 60px;
+        padding: 60px 30px;
     }
 
     .form-description {
         color: black
+    }
+
+    @media screen and (max-width: 768px) {
+        .contacts-info {
+            flex-direction: column;
+            margin: 2% 0;
+        }
+
+        .contacts-img {
+            width: 90%;
+        }
+
+        .form {
+            width: 80%;
+        }
+
+        .form-cnt {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 2% 0;
+            padding: 20px;
+            gap: 15px;
+        }
+
+        .map {
+            width: 90%;
+        }
     }
 </style>

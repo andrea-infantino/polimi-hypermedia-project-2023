@@ -55,11 +55,11 @@
       </NuxtLink> 
     </div>
 
-    <hr class="separator " />
+    <hr class="separator" />
 
     <div class="person-projects-title">{{ person.name }} {{ person.surname }}'s projects</div>
     
-    <div class="person-projects-container">    
+    <div class="person-projects-container">
       <!-- carousel containing projects supervised by this person -->  
       <div v-if="supervised_proj.length!=0" class="team-div-carousel">
           <div class="team-carousel-title">
@@ -151,7 +151,7 @@
 
     methods: {
       checkWindowWidth() {
-        this.showLargeEmail = window.innerWidth >= 550;
+        this.showLargeEmail = window.innerWidth >= 600;
       }
     }
   })
@@ -207,6 +207,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-self: center;
+    align-items: center;
     gap: 60px;
     width: 70%;
     overflow: hidden;
@@ -229,6 +230,7 @@
     align-content: center;
     align-items: center;
     gap: 20px;
+    overflow: hidden;
   }
 
   .person-img-info {
@@ -262,18 +264,24 @@
 
   .label-div {
     width: 100%;
+    font-size: min(2.2vh, 5.2vw);
+    overflow: hidden;
   }
 
   .desc-container {
     overflow: hidden;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .person-projects-title {
     font-size: xx-large;
     font-weight: bolder;
-    margin: 40px 0;
+    padding: 40px 15px;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
   }
 
   .person-projects-container {
@@ -307,7 +315,6 @@
     font-weight: bold;
     margin-bottom: 5px;
     width: 100%;
-    font-size: min(2.2vh, 5.2vw);
   }
 
   .twitter-logo, .twitter-logo-hover, .instagram-logo, .instagram-logo-hover, .linkedin-logo, .linkedin-logo-hover {
@@ -327,4 +334,29 @@
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
   }
+
+  @media screen and (max-width: 600px) {
+    .person-button {
+      padding: 90px 10px;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+    .person-page {
+      gap: 5px;
+    }
+
+    .person-container {
+      width: 100%;
+    }
+
+    .person-name-and-surname {
+      font-size: xx-large;
+    }
+
+    .person-role, .person-projects-title {
+      font-size: x-large;
+    }
+  }
+
 </style>

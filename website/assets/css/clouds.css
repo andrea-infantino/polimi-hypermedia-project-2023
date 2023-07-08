@@ -61,8 +61,27 @@
     padding: 2vh 4vh;
     border-radius: 10px;
     margin: 0.8em 2vw 2em;
+    width: 90%;
 }
 
 .description-cloud-title {
     font-weight: bolder;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .description-cloud {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dark-cloud {
+        width: 95%;
+        padding: 3vh 1vw 6vh;
+    }
 }

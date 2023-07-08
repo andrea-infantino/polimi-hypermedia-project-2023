@@ -36,6 +36,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 73vh;
 
     }
 
@@ -107,6 +108,38 @@
         box-shadow: 0 4px 8px 0 rgba(187, 187, 187, 0.5),
                     0 6px 20px 0 rgba(187, 187, 187, 0.5);
         padding: 10px 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .error-404 {
+            font-size: 10vh;
+        }
+
+        .magic {
+            width: 15vh;
+        }
+
+        .error-text {
+            font-size: 4vh;
+        }
+
+        .error-img {
+            width: 40vh;
+        }
+
+        @keyframes slideIn {
+            0% {
+                right: -100%;
+            }
+            100% {
+                right: 10%;
+            }
+        }
+
+        .return-homepage {
+            font-size: 4vh;
+            padding: 6px 15px;
+        }
     }
 
 </style>

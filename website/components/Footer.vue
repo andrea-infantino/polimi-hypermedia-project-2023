@@ -97,4 +97,23 @@
         color: #057DCD;
         text-decoration: underline;
     }
+
+    @media screen and (max-width: 768px) {
+        .bottom {
+            flex-direction: column-reverse;
+            justify-content: space-around;
+            gap: 20px;
+            margin: 10px 0;
+        }
+
+        .rights {
+            margin-top: 0px;
+        }
+
+        .socials {
+            text-align: center;
+            margin-top: 0px;
+            padding-right: 0px;
+        }
+    }
 </style>

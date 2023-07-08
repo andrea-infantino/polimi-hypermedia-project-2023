@@ -131,6 +131,7 @@
 
 .scroll-down-button {
     position: absolute;
-    bottom: 20vh;
+    bottom: 25vh;
     left: 50vw;
+    transform: translateX(-50%);
 }
