@@ -59,20 +59,23 @@ export default {
         email_rules: [
             value => {
                 if (!value)
-                    return 'You must enter an E-mail.';
+                    return 'You must enter an E-mail';
 
                 if (/^[0-9a-z.-]+@[0-9a-z.-]+\.[a-z]+$/i.test(value))
                     return true;
                 
-                return 'Invalid E-mail! Insert a valid one.'
+                return 'Insert a valid e-mail'
             },
         ],
         text_rules: [
             value => {
-                if (value)
-                    return true
-                
-                return 'The text message can\'t be empty.'
+                if (!value)       
+                    return 'The text message can\'t be empty'
+
+                if (/^\s*$/.test(value))
+                    return 'The text message can\'t contain only spaces'
+
+                return true
             }
         ],
         dialog: false,
