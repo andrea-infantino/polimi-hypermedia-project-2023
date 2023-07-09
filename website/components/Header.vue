@@ -316,7 +316,7 @@
     }
 
     .landmark {
-        font-size: min(2.7vw, min(2.1vh, 3.7vh));
+        font-size: min(2.6vw, max(2.1vh, 13px));
         padding: 10px 0px;
     }
 
