@@ -38,14 +38,14 @@ export default {
     try {
       await useFetch();  //Without this, # of projects isn't shown when page is reloaded
       const {data: projects2} = await useFetch('/api/getProjects');
-      const {data: areas} = await useFetch('/api/getAreas');
       const {data: people} = await useFetch('/api/getPeople');
+      const {data: areas} = await useFetch('/api/getAreas');
       const newData = {
         labels: ['Our Projects', 'Our Members','Our Areas of Investment'],
         datasets: [
           {
-            backgroundColor: ['#43B0F1', '#1E3D58', '#057DCD'],
-            data: [projects2, areas, people]
+            backgroundColor: ['#43B0F1', '#057DCD', '#1E3D58'],
+            data: [projects2, people, areas]
           }
         ]
       }
