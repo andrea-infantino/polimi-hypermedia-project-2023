@@ -43,8 +43,7 @@
             const route = useRoute()
             const area = await $fetch('/api/projects_by_area/' + route.params.id) //get the specific area's projects by its id
 
-            const areas = await $fetch('/api/all_areas') //get all areas to calculate the total number
-            const numOfAreas = areas.length
+            const { data: numOfAreas } = await useFetch('/api/getAreas') //get the total number of areas
 
             //Search Engine Optimization
             const description = ref('In this page you can find all the projects related to the area you selected, ' + area.name + '. Click on the project to see more details.')

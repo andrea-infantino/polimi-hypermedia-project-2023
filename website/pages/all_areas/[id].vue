@@ -48,8 +48,7 @@
             const route = useRoute()
             const area = await $fetch('/api/all_areas/' + route.params.id)  //get the specific area from its id
 
-            const areas = await $fetch('/api/all_areas')  //get all areas to calculate the total number
-            const numOfAreas = areas.length
+            const { data: numOfAreas } = await useFetch('/api/getAreas')  //get the total number of areas
 
             const desc_columns = [area.desc_col1, area.desc_col2, area.desc_col3] //array with the 3 columns containing the description
 

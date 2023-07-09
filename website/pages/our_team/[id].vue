@@ -91,8 +91,7 @@
       const route = useRoute()
       const person = await $fetch('/api/our_team/' + route.params.id) //get the specific person from their id
 
-      const people = await $fetch('/api/our_team')  //get all the people to calculate the total number
-      const numOfPeople = people.length
+      const { data: numOfPeople } = await useFetch('/api/getPeople')  //get the total number of people
 
       //distinguish between projects where the person is supervisor/team member
       const supervised_proj = ref([])

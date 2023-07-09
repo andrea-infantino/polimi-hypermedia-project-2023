@@ -78,8 +78,7 @@
           const route = useRoute()
           const project = await $fetch('/api/projects/' + route.params.id)  //get the specific project from its id
 
-          const projects = await $fetch('/api/projects') //get all projects to calculate the total number (maybe it can be optimized by using a count query)
-          const numOfProjects = projects.length
+          const { data: numOfProjects } = await useFetch('/api/getProjects') //get the total number of projects
 
           //to distinguish between supervisor and other members of the team
           const team = ref([])
