@@ -13,7 +13,6 @@ export default defineEventHandler(async (event) => {
     ])
     
     if(error) {
-        alert(error.message);
         throw createError({statusCode: error.code, statusMessage: error.message})
     }
 
