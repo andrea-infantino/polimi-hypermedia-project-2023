@@ -7,14 +7,15 @@
          variant="solo"
          autocomplete="email"
          placeholder="example@mail.com"
+         aria-label="Email input field"
         ></v-text-field>
   
         <v-textarea class="form-elem"
-         
          v-model="text"
          :rules="text_rules"
          label="Text Message"
          variant="solo"
+         aria-label="Text message input field"
         ></v-textarea>
   
         <v-btn class="form-elem"

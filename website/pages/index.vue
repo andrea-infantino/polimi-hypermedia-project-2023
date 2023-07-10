@@ -8,7 +8,7 @@
             <div class="motto">
                 ❛I solemnly swear<br>I am up to no good❜
             </div>
-            <ScrollDownButton @click="scrollDown" class="scroll-down-button"/>
+            <ScrollDownButton @click="scrollDown" class="scroll-down-button" aria-label="Scroll down button"/>
         </div>
 
         <div ref="welcome" class="welcome-section">
