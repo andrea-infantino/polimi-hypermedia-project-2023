@@ -23,7 +23,7 @@
           <!-- area description -->
           <div class="area-info">
             <div v-for="(col,index) of desc_columns" class="area-description">
-              <img class="area-decorative-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas_Decorative_Imgs/${area.name}_${index}.jpg`" alt="">  
+              <img class="area-decorative-img" :src="`https://ctqezitrfesnhivpuulw.supabase.co/storage/v1/object/public/Images/Areas_Decorative_Imgs/${area.name}_${index}.jpg`" alt="">  <!--decorative img-->
               <p v-html="col"></p>
             </div>
           </div>

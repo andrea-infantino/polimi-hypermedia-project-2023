@@ -10,9 +10,9 @@
             <!-- rendering the paragraphs iteratively -->
             <div class="paragraphs">
                 <div v-for="paragraph in data[0].paragraphs" class="white-cloud">
-                    <img v-if="paragraph.id==1" class="prft1-img" src="../assets/img/portfolio/prtf1.jpg" alt="">
-                    <img v-if="paragraph.id==2" class="prtf2-img" src="../assets/img/portfolio/prtf2.jpg" alt="">
-                    <img v-if="paragraph.id==3" class="prtf3-img" src="../assets/img/portfolio/prtf3.jpg" alt="">
+                    <img v-if="paragraph.id==1" class="prft1-img" src="../assets/img/portfolio/prtf1.jpg" alt="">   <!--decorative img-->
+                    <img v-if="paragraph.id==2" class="prtf2-img" src="../assets/img/portfolio/prtf2.jpg" alt="">   <!--decorative img-->
+                    <img v-if="paragraph.id==3" class="prtf3-img" src="../assets/img/portfolio/prtf3.jpg" alt="">   <!--decorative img-->
                     <p class="white-cloud-text" v-html="paragraph.content"></p>
                 </div>
             </div>

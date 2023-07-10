@@ -13,15 +13,15 @@
             <div class="paragraphs" v-for="paragraph in data[0].paragraphs">
                 <section class="white-cloud">
                     <!-- handling (left) images separately -->
-                    <img v-if="paragraph.id==1" class="au-vision-img" src="../assets/img/about_us/au_vision.jpg" alt="">
-                    <img v-if="paragraph.id==4" class="au-activities-img" src="../assets/img/about_us/au_activities.jpg" alt="">
+                    <img v-if="paragraph.id==1" class="au-vision-img" src="../assets/img/about_us/au_vision.jpg" alt="">   <!--decorative img-->
+                    <img v-if="paragraph.id==4" class="au-activities-img" src="../assets/img/about_us/au_activities.jpg" alt="">   <!--decorative img-->
 
                     <div class="white-cloud-title">{{ paragraph.title }}</div>
 
                     <!-- handling (right) multimedia contents separately -->
-                    <img v-if="paragraph.id==2" class="au-partnership-img" src="../assets/img/about_us/au_partnership.jpg" alt="">
+                    <img v-if="paragraph.id==2" class="au-partnership-img" src="../assets/img/about_us/au_partnership.jpg" alt="">   <!--decorative img-->
                     <div v-if="paragraph.id==3" class="multimedia-cloud">
-                        <iframe src="https://www.youtube.com/embed/X2RzASP6cbA?cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="au-video" aria-label="Team video"></iframe>
+                        <iframe src="https://www.youtube.com/embed/X2RzASP6cbA?cc_lang_pref=en&cc_load_policy=1" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="au-video" aria-label="YouTube video of the team"></iframe>
                         <p class="white-cloud-text" v-html="data[0].paragraphs[2].content"></p>
                     </div>
                     

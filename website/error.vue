@@ -3,9 +3,9 @@
         <main>
             <div class="error-area">
                 <div class="error-header">
-                    <img src="~/assets/img/magic.png" alt="Magic sparkles" class="magic">
+                    <img src="~/assets/img/magic.png" alt="" class="magic">  <!--decorative img-->
                     <span class="error-404">404</span>  
-                    <img src="~/assets/img/magic.png" alt="Magic sparkles" class="magic">
+                    <img src="~/assets/img/magic.png" alt="" class="magic">  <!--decorative img-->
                 </div>
                 <span class="error-text">Oops, something went wrong with your request!</span><br>                   
                 <div class="error-image-container">

@@ -31,7 +31,7 @@
         <hr class="separator" />
 
         <div class="mission-section">
-            <img class="mission-img" src="../assets/img/homepage/homepage_mission.gif" alt=""/>
+            <img class="mission-img" src="../assets/img/homepage/homepage_mission.gif" alt=""/>   <!--decorative img-->
             <div class="dark-cloud">
                 <div class="dark-cloud-title">
                     Our mission
@@ -69,7 +69,7 @@
             </div>
             <div class="invest-info">
                 <div class="chart-container">
-                    <HomepageChart />
+                    <HomepageChart aria-label="Chart displaying the number of projects, areas of investment and members of the team"/>
                 </div>
                 <div class="invest-text">
                     We invest in early-stage startups with strong potential for growth and success. Our investment process involves rigorous due diligence, market analysis, and risk assessment to ensure that we select companies with the highest probability of success. We are committed to helping entrepreneurs succeed and achieve their goals. We believe that by working together, we can create a better future for all.<br>If you are curious about our investment, check our financied projects and areas of investment.
@@ -92,7 +92,7 @@
 
 
         <div class="prtf-section">
-            <img class="prtf-img" src="../assets/img/homepage/homepage_prtf.webp" alt="" />
+            <img class="prtf-img" src="../assets/img/homepage/homepage_prtf.webp" alt="" />   <!--decorative img-->
             <div class="dark-cloud">
                 <div class="dark-cloud-title">
                     Our portfolio
