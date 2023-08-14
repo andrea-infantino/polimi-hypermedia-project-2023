@@ -40,4 +40,4 @@ npm run dev -- -o
 
 ### Deliverables
 
-This is the [Design Document]() and this is the [Technology Documentation](), a brief description of the implementation of the web project.
+This is the [Design Document](https://github.com/InfantinoAndrea00/hypermedia_project_2023/blob/main/website/documentation/Website%20Design%20Report.pdf) and this is the [Technology Documentation](https://github.com/InfantinoAndrea00/hypermedia_project_2023/blob/main/website/documentation/Implementation%20Report.pdf), a brief description of the implementation of the web project.
